@@ -11,7 +11,9 @@ import NavBar from "../components/NavBar.vue";
 
 export default {
     data() {
-        return {};
+        return {
+            name: "FilterPage",
+        };
     },
     components: {
         Footer,

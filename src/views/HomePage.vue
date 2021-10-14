@@ -5,7 +5,9 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            name: "HomePage",
+        };
     },
 };
 </script>
