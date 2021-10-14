@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: "/filter",
-    name: "filter-page",
+    name: "Filter",
     component: () => import("../views/Filter.vue"),
   },
 ];
