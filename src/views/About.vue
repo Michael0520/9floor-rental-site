@@ -1,5 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div class="about">
+        <div class="btn btn-primary">123</div>
+    </div>
 </template>
+
+<style lang="scss">
+@import "../assets/custom.scss";
+</style>
