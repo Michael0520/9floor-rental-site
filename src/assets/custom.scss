@@ -2,10 +2,16 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$primary:#444647;
-$secondary:#857c7c;
-$light:#d2c8bd;
-$info:#945443;
+$theme-colors: (
+  "primary":    #444647,
+  "secondary":  #857c7c,
+  "success":    #945443,
+  "info":       #d2c8bd,
+  "warning":    $warning,
+  "danger":     #6a4234,
+  "light":      #f3f2ef,
+  "dark":       $dark,
+) !default;
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
