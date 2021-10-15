@@ -128,7 +128,10 @@ export default {
 <style lang="scss">
 @import "../assets/custom.scss";
 
-.index_footer-top {
-    max-width: 1280px;
+footer {
+    background-color: #f3f2ef;
+    .index_footer-top {
+        max-width: 1280px;
+    }
 }
 </style>

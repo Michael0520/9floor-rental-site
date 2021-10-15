@@ -2,12 +2,18 @@
     <!--  -->
 
     <!--  -->
-    <NavBar />
-    <Footer />
+    <div class="container">
+        <NavBar />
+        <Breadcrumb />
+        <RoomCard />
+        <Footer />
+    </div>
 </template>
 <script>
 import Footer from "../components/Footer.vue";
 import NavBar from "../components/NavBar.vue";
+import RoomCard from "../components/RoomCard.vue";
+import Breadcrumb from "../components/Breadcrumb.vue";
 
 export default {
     data() {
@@ -16,8 +22,10 @@ export default {
         };
     },
     components: {
-        Footer,
         NavBar,
+        Breadcrumb,
+        RoomCard,
+        Footer,
     },
 };
 </script>
