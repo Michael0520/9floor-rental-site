@@ -1,19 +1,19 @@
 <template >
     <div class="container-fluid">
-        <!-- TODO:NavBar -->
+        <!-- NavBar -->
         <div class="row">
             <div class="col-sm-12">
                 <NavBar />
             </div>
         </div>
-        <!-- TODO:Breadcrumb -->
+        <!-- Breadcrumb -->
         <div class="row">
             <div class="col-sm-12">
                 <Breadcrumb />
             </div>
         </div>
 
-        <!-- TODO:RoomCard -->
+        <!-- RoomCard -->
         <div class="row">
             <div
                 class="col-sm-12 col-md-6"
@@ -26,7 +26,7 @@
                 {{ index }}
             </div>
             <div class="col-sm-12 col-md-6">
-                <!-- TODO:Filter -->
+                <!-- Filter -->
             </div>
         </div>
 
