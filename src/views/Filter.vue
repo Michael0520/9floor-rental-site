@@ -1,11 +1,19 @@
 <template >
-    <!--  -->
+    <div class="container-fluid">
+        <!-- TODO:NavBar -->
+        <div class="row">
+            <div class="col-sm-12">
+                <NavBar />
+            </div>
+        </div>
+        <!-- TODO:Breadcrumb -->
+        <div class="row">
+            <div class="col-sm-12">
+                <Breadcrumb />
+            </div>
+        </div>
 
-    <!--  -->
-    <div class="container">
-        <NavBar />
-        <Breadcrumb />
-
+        <!-- TODO:RoomCard -->
         <div class="row">
             <div
                 class="col-sm-12 col-md-6"
@@ -16,7 +24,9 @@
                 {{ item.status }}
                 {{ item.price }}
                 {{ index }}
-                <!-- col-md-6 -->
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <!-- TODO:Filter -->
             </div>
         </div>
 
@@ -37,6 +47,7 @@ export default {
                 {
                     name: "仁愛",
                     status: "招募中",
+                    imgUrl: "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
                     price: 16500,
                 },
                 {
@@ -82,4 +93,24 @@ export default {
 </script>
 <style lang="scss">
 @import "~bootstrap/dist/css/bootstrap.css";
+
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h5,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: #444647;
+}
+h5 {
+    font-size: 15px;
+    line-height: 1.35;
+    letter-spacing: 2.5px;
+}
 </style>
