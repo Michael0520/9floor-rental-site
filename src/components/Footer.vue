@@ -1,5 +1,4 @@
 <template>
-    <p class="text-end">123123123</p>
     <footer class="index_footer container">
         <div class="row">
             <div class="col">
@@ -95,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="row border border-5">
+        <div class="row border-t">
             <div class="col">
                 <i class="fas fa-copyright">@copyright</i>
             </div>

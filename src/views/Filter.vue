@@ -5,7 +5,24 @@
     <div class="container">
         <NavBar />
         <Breadcrumb />
-        <RoomCard />
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <RoomCard />
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <RoomCard />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <RoomCard />
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <RoomCard />
+            </div>
+        </div>
+
         <Footer />
     </div>
 </template>

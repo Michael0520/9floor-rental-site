@@ -1,12 +1,10 @@
 <template>
-    <div class="bg-primary border border-5">123</div>
-
     <div class="index_room-card container">
         <div class="row">
             <div class="col">
                 <div class="index_card-wrapper">
                     <a href="#">
-                        <div class="index_card-image"></div>
+                        <div class="index_card-image img-fluid"></div>
                     </a>
                 </div>
             </div>
@@ -57,9 +55,7 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .index_room-card {
-    margin: 17px;
     padding-bottom: 7px;
-    background-color: pink;
     .index_card-wrapper {
         width: 100%;
         .index_card-image {
