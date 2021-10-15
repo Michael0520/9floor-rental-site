@@ -1,8 +1,11 @@
 <template>
     <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/filter">Filter</router-link>
+        <router-link to="/src/views/HomePage.vue">HomePage</router-link> |
+        <router-link to="/src/views/Room-detailPage.vue"
+            >Room-DetailPage</router-link
+        >
+        |
+        <router-link to="/filter">FilterPage</router-link>
     </div>
 
     <router-view />

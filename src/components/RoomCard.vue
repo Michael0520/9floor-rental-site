@@ -5,7 +5,7 @@
             <div class="col">
                 <div class="index_card-wrapper">
                     <a href="#">
-                        <div class="index_card-image" style=""></div>
+                        <div class="index_card-image"></div>
                     </a>
                 </div>
             </div>
@@ -64,7 +64,7 @@ export default {
             background-image: url("../assets/20200902-50a611e8ecd6f999ca037a57539c8465.png");
             background-size: cover;
             background-position: center center;
-            & :after {
+            &:after {
                 content: "";
                 display: block;
                 padding-top: 60%;

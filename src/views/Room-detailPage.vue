@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div class="container text-end">Room-detail-Page</div>
 </template>
 
 <script>
