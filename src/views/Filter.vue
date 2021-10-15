@@ -1,5 +1,5 @@
 <template >
-    <div class="container-fluid">
+    <div class="">
         <!-- NavBar -->
         <div class="row">
             <div class="col-sm-12">
@@ -93,24 +93,4 @@ export default {
 </script>
 <style lang="scss">
 @import "~bootstrap/dist/css/bootstrap.css";
-
-a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-h5,
-p {
-    padding: 0;
-    margin: 0;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    color: #444647;
-}
-h5 {
-    font-size: 15px;
-    line-height: 1.35;
-    letter-spacing: 2.5px;
-}
 </style>

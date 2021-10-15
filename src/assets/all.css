@@ -1,1 +1,45 @@
-/* No CSS *//*# sourceMappingURL=all.css.map */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #444647;
+}
+
+body li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #444647;
+}
+
+body a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body h5, body p {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  color: #444647;
+}
+
+body h5 h5, body p h5 {
+  font-size: 15px;
+  line-height: 1.35;
+  letter-spacing: 2.5px;
+}
+
+body .btn {
+  border-radius: 0;
+}
+/*# sourceMappingURL=all.css.map */

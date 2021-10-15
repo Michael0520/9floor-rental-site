@@ -2,14 +2,12 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$theme-colors: (
-  "primary":    #444647,
-  "secondary":  #857c7c,
-  "success":    #945443,
-  "info":       #d2c8bd,
-  "danger":     #6a4234,
-  "light":      #f3f2ef,
-) !default;
+$primary: #444647;
+$secondary: #857c7c;
+$success: #945443;
+$info: #d2c8bd;
+$danger: #6a4234;
+$light: #f3f2ef;
 
 
 // 3. Include remainder of required Bootstrap stylesheets

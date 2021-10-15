@@ -1,26 +1,52 @@
-// body{
-//     margin: 0;
-//     overflow-x: hidden;
-//     width: 100%;
-// }
 
-// ul{
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//     color:#444647;
-// }
-// li{
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//     color:#444647;
-// }
-// a{
-//     margin: 0;
-//     padding: 0;
-//     text-decoration: none;
-// }
-// .btn{
-//     border-radius: 0;
-// }
+
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color:#444647;
+    }
+    li{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color:#444647;
+    }
+    a{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    h5,p{
+        padding: 0;
+        margin: 0;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        color:#444647;
+        h5{
+            font-size: 15px;
+            line-height: 1.35;
+            letter-spacing: 2.5px;
+        }
+    }
+    .btn{
+        border-radius: 0;
+    }
+}
+
