@@ -1,6 +1,5 @@
 <template>
     <p class="text-end">123123123</p>
-    <!-- TODO:除了元件的樣式，其餘都吃不到樣式 -->
     <footer class="index_footer container">
         <div class="row">
             <div class="col">
