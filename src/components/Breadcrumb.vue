@@ -39,6 +39,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bootstrap/dist/css/bootstrap.css";
+
 .index_breadcrumb {
     display: flex;
     align-items: center;

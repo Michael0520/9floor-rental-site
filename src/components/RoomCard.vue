@@ -1,5 +1,6 @@
 <template>
-    <!-- TODO:w-100 吃不到 -->
+    <div class="bg-primary border border-5">123</div>
+
     <div class="index_room-card container">
         <div class="row">
             <div class="col">
@@ -53,6 +54,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bootstrap/dist/css/bootstrap.css";
+
 .index_room-card {
     margin: 17px;
     padding-bottom: 7px;

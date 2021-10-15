@@ -59,5 +59,5 @@ export default {
 
 
 <style lang="scss">
-// @import "../assets/custom.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
 </style>

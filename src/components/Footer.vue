@@ -1,4 +1,5 @@
 <template>
+    <p class="text-end">123123123</p>
     <!-- TODO:除了元件的樣式，其餘都吃不到樣式 -->
     <footer class="index_footer container">
         <div class="row">
@@ -96,7 +97,6 @@
             </div>
         </div>
         <div class="row border border-5">
-            <!-- TODO:border 線吃不到 -->
             <div class="col">
                 <i class="fas fa-copyright">@copyright</i>
             </div>
@@ -126,7 +126,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/custom.scss";
+// @import "../assets/custom.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
 
 footer {
     background-color: #f3f2ef;
