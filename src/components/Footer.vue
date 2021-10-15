@@ -5,7 +5,7 @@
             <div class="col-sm-12">
                 <div class="index_footer-top">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-sm-12 col-md-8">
                             <div class="index_footer-sitmap">
                                 <div class="row">
                                     <div class="col-md-4">
