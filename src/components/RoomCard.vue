@@ -1,5 +1,5 @@
 <template>
-    <div class="index_room-card container">
+    <div class="index_room-card">
         <div class="row">
             <div class="col">
                 <div class="index_card-wrapper">
@@ -55,6 +55,7 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .index_room-card {
+    margin: 17px;
     padding-bottom: 7px;
     .index_card-wrapper {
         width: 100%;

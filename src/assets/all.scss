@@ -1,12 +1,20 @@
-
-
-@mixin pad {
+@mixin xl {
+    @media (max-width: 1184px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+@mixin md {
     @media (max-width: 768px) {
         @content;
     }
 }
-@mixin mobile {
-    @media (max-width: 375px) {
+@mixin sm {
+    @media (max-width: 576px) {
         @content;
     }
 }

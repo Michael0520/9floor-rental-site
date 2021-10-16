@@ -220,7 +220,7 @@ footer {
         margin: auto;
         .index_footer-sitmap {
             display: flex;
-            @include pad {
+            @include md {
                 display: none;
             }
             .index_footer-column {
@@ -246,7 +246,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            @include pad {
+            @include md {
                 // TODO:RWD 尚未完成
                 justify-content: center;
                 align-items: center;
@@ -308,7 +308,7 @@ footer {
                 }
             }
         }
-        @include pad {
+        @include md {
             .index_footer-copyRight {
                 text-align: center;
             }

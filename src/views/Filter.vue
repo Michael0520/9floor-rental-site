@@ -13,78 +13,74 @@
             </div>
         </div>
 
-        <!-- RoomCard -->
-        <div class="index_content w-100 d-flex flex-row">
-            <div class="row">
-                <!-- sidebar -->
-                <div class="col-sm-12 col-md-1 index_side-bar">
-                    <div class="index_side-bar-content">
-                        <div class="index_vertical-word d-flex flex-column">
-                            <span>房</span>
-                            <span>源</span>
-                            <span>搜</span>
-                            <span>尋</span>
+        <!--  Room-content -->
+        <div class="row index_content w-100">
+            <!-- sider-bar -->
+            <div class="col-lg-1 index_side-bar">
+                <div class="index_side-bar-content">
+                    <div class="index_vertical-word">
+                        <span>房</span>
+                        <span>源</span>
+                        <span>搜</span>
+                        <span>尋</span>
+                    </div>
+                    <div class="index_vertical-en">Room search</div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-8">
+                <div class="row index_room-list">
+                    <div class="col-sm-12 col-md-6 index_sort">
+                        <div>6 筆結果</div>
+                        <div class="justify-content-end">
+                            <div>排序方式</div>
+                            <select
+                                class="
+                                    form-select form-select-sm
+                                    index_dropdown-basic
+                                "
+                                aria-label=".form-select-sm example"
+                            >
+                                <option selected>最新</option>
+                                <option value="1">最高價格</option>
+                                <option value="2">最低價格</option>
+                            </select>
                         </div>
-                        <div class="index_vertical-en">Room search</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <RoomCard />
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <!-- room-list -->
-                <div class="col-sm-12 col-md-7 index_room-list">
-                    <!-- sort -->
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 index_sort">
-                            <div>6 筆結果</div>
-                            <div>
-                                排序方式
-                                <div class="index_dropdown-basic">
-                                    <div
-                                        class="
-                                            index_dropdown-basic-content
-                                            index_value
-                                        "
-                                        role="button"
-                                        tabindex="0"
-                                    >
-                                        <p class="small">最新</p>
-                                        <i
-                                            class="
-                                                material-icons
-                                                index__icon___1quHO
-                                            "
-                                            >expand_more</i
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- room-card -->
-                    <!-- <div class="row">
-                        <div
-                            class="col-sm-12 col-md-6"
-                            v-for="(item, index) in roomList"
-                            :key="index"
-                        >
-                            {{ item.name }}
-                            {{ item.status }}
-                            {{ item.price }}
-                            {{ index }}
-                        </div>
-                    </div> -->
-                </div>
-
-                <!-- Filter -->
-                <div class="col-sm-12 col-md-3"></div>
-            </div>
-
-            <div class="row d-flex flex-row">
-                <div class="col">123</div>
-            </div>
+            <div class="col-lg-3 index_room-filter"></div>
         </div>
 
-        <Footer />
+        <!-- footer -->
+        <div class="row">
+            <div class="col">
+                <Footer />
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -92,6 +88,7 @@ import Footer from "../components/Footer.vue";
 import NavBar from "../components/NavBar.vue";
 // import RoomCard from "../components/RoomCard.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
+import RoomCard from "../components/RoomCard.vue";
 
 export default {
     data() {
@@ -140,7 +137,7 @@ export default {
     components: {
         NavBar,
         Breadcrumb,
-        // RoomCard,
+        RoomCard,
         Footer,
     },
 };
@@ -160,10 +157,12 @@ export default {
     flex-basis: 60px;
     flex-shrink: 0;
     .index_side-bar-content {
-        margin-top: 14px;
+        margin-top: 24px;
         transition: opacity 0.3s;
         opacity: 1;
         .index_vertical-word {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 20px;
             span {
                 margin-bottom: 2px;
@@ -178,8 +177,16 @@ export default {
             writing-mode: vertical-lr;
         }
     }
+    @include lg {
+        display: none;
+    }
 }
-
+.index_room-filter {
+    background-color: pink;
+    @include lg {
+        display: none;
+    }
+}
 .index_room-list {
     width: 100%;
     padding: 17px;
