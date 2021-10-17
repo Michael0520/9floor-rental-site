@@ -39,7 +39,7 @@
                 </a>
             </div>
         </div>
-        <div class="row index_home-content">
+        <div class="row gx-0 index_home-content">
             <div class="col-lg-1 index_side-bar index_left">
                 <div class="index_side-bar-content index_fade-in-out">
                     <div class="index_vertical-word">
@@ -64,7 +64,7 @@
                             index_co-living-slider index_co-living-section
                         "
                     >
-                        <div class="row gx-5">
+                        <div class="row gx-0">
                             <!-- <p class="vertical index_watermark">共居生活</p> -->
                             <div class="col-lg-6">
                                 <div class="index_left">
@@ -184,6 +184,55 @@
                         </div>
                     </div>
                 </div>
+                <!-- room-list-lg -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <RoomCard />
+                    </div>
+                    <div class="col-lg-6">
+                        <RoomCard />
+                    </div>
+                </div>
+                <!-- room-list-small -->
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <RoomCard />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <RoomCard />
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <RoomCard />
+                    </div>
+                </div>
+                <!-- more-room-section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="index_more-room">
+                            <div>
+                                加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
+                            </div>
+                            <a
+                                class="index_button index_primary"
+                                href="/zh-tw/room"
+                                ><div>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        fill="currentColor"
+                                        class="bi bi-search"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                        /></svg
+                                    >更多物件
+                                </div></a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-1 index_side-bar index_right">
                 <div class="index_side-bar-content index_fade-in-out"></div>
@@ -201,6 +250,7 @@
 
 <script>
 import Footer from "../components/Footer.vue";
+import RoomCard from "../components/RoomCard.vue";
 export default {
     data() {
         return {
@@ -209,6 +259,7 @@ export default {
     },
     components: {
         Footer,
+        RoomCard,
     },
 };
 </script>
@@ -387,18 +438,30 @@ export default {
                         height: 450px;
                     }
                 }
+                @include md {
+                    display: none;
+                }
             }
             .index_watermark {
                 position: absolute;
                 left: calc(50% - 22px);
-                margin-top: 110px;
                 font-size: 34px;
                 letter-spacing: 7.7px;
                 font-weight: 700;
+                writing-mode: vertical-rl;
+                @include md {
+                    display: none;
+                }
             }
         }
         .index_co-living-section {
             margin-bottom: 90px;
+        }
+        .index_more-room {
+            margin-bottom: 53px;
+            div {
+                margin-bottom: 24px;
+            }
         }
     }
 }
@@ -453,5 +516,21 @@ export default {
     width: 0;
     height: 0;
     opacity: 0;
+}
+.index_more-room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42px 0;
+    background-color: #e9ece5;
+    div {
+        max-width: 344px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.35;
+        letter-spacing: 2.5px;
+        text-align: center;
+        color: $primary;
+    }
 }
 </style>
