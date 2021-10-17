@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "../assets/custom.scss";
 
 .index_breadcrumb {
     display: flex;

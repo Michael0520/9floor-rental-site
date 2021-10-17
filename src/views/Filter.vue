@@ -16,17 +16,7 @@
         <!--  Room-content -->
         <div class="row index_content">
             <!-- sider-bar -->
-            <div class="col-lg-1 index_side-bar">
-                <div class="index_side-bar-content">
-                    <div class="index_vertical-word">
-                        <span>房</span>
-                        <span>源</span>
-                        <span>搜</span>
-                        <span>尋</span>
-                    </div>
-                    <div class="index_vertical-en">Room search</div>
-                </div>
-            </div>
+            <SiderBar />
             <div
                 class="col-lg-8 col-md-12"
                 style="border-top: 1px solid #d2c8bd"
@@ -375,9 +365,9 @@
 <script>
 import Footer from "../components/Footer.vue";
 import NavBar from "../components/NavBar.vue";
-// import RoomCard from "../components/RoomCard.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 import RoomCard from "../components/RoomCard.vue";
+import SiderBar from "../components/SiderBar.vue";
 
 export default {
     data() {
@@ -426,6 +416,7 @@ export default {
     components: {
         NavBar,
         Breadcrumb,
+        SiderBar,
         RoomCard,
         Footer,
     },
