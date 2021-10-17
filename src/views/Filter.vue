@@ -14,7 +14,7 @@
         </div>
 
         <!--  Room-content -->
-        <div class="row index_content w-100">
+        <div class="row index_content">
             <!-- sider-bar -->
             <div class="col-lg-1 index_side-bar">
                 <div class="index_side-bar-content">
@@ -27,7 +27,10 @@
                     <div class="index_vertical-en">Room search</div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-8">
+            <div
+                class="col-lg-8 col-md-12"
+                style="border-top: 1px solid #d2c8bd"
+            >
                 <div class="row index_room-list">
                     <div class="col-sm-12 col-md-6 index_sort">
                         <div>6 筆結果</div>
@@ -47,6 +50,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
                         <RoomCard />
@@ -115,7 +119,7 @@
                     <div class="col">
                         <p class="small index_clearButton">
                             預定入住日期
-                            <span role="presentation">
+                            <span role="presentation" style="cursor: pointer">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
@@ -472,7 +476,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    border-top: 1px solid $info;
     .index_sort {
         width: 100%;
         display: flex;
@@ -521,7 +524,8 @@ export default {
     width: 290px;
     border: 1px solid $info;
     padding: 30px 0;
-    @include lg {
+    @media screen and (max-width: 575px),
+        screen and(min-width:576px) and (max-width: 1100px) {
         display: none;
     }
     .index_dropdown-group {

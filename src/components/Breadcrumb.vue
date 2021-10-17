@@ -9,8 +9,8 @@
                 <a href="#">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="14"
+                        height="14"
                         fill="currentColor"
                         class="bi bi-house-door-fill index_home"
                         viewBox="0 0 16 16"
@@ -44,7 +44,7 @@ export default {
 .index_breadcrumb {
     display: flex;
     align-items: center;
-    height: 45px;
+    height: 50px;
     width: 100%;
     padding-left: 60px;
     a {
