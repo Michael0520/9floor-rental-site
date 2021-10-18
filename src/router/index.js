@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Filter01 from "../views/Filter01.vue";
+import FilterPage from "../views/Filter.vue";
 import HomePage from "../views/HomePage.vue";
-
+import RoomDetailPage from "../views/Room-detailPage.vue";
 const routes = [
   {
     path: "/home",
@@ -9,19 +9,14 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/src/views/Room-detailPage.vue",
+    path: "/roomDetailPage.vue",
     name: "Room-detailPage",
-    component: () => import("../views/Room-detailPage.vue"),
+    component: RoomDetailPage,
   },
   {
     path: "/filter",
     name: "FilterPage",
-    component: () => import("../views/Filter.vue"),
-  },
-  {
-    path: "/filter01",
-    name: "Filter01",
-    component: Filter01,
+    component: FilterPage,
   },
 ];
 

@@ -1,5 +1,5 @@
 <template >
-    <div class="container-fluid">
+    <div class="container-fluid no-padding">
         <!-- NavBar -->
         <div class="row">
             <div class="col-sm-12">
@@ -13,15 +13,11 @@
             </div>
         </div>
         <!--  Room-content -->
-        <div class="row gx-0">
+
+        <div class="index_content" style="display: flex; width: 100%">
             <!-- sider-bar -->
-            <div class="col-lg-1">
-                <SiderBar />
-            </div>
-            <div
-                class="col-lg-8 col-md-12"
-                style="border-top: 1px solid #d2c8bd"
-            >
+            <SiderBar />
+            <div class="" style="border-top: 1px solid #d2c8bd">
                 <div class="index_room-list">
                     <div class="index_sort">
                         <div>6 筆結果</div>
@@ -40,319 +36,295 @@
                             </select>
                         </div>
                     </div>
-                </div>
-                <!-- room-list -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
+
+                    <!-- room-list -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <RoomCard />
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <RoomCard />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- filter -->
-            <div class="col-lg-3">
-                <div class="index_room-filter">
-                    <div class="index_dropdown-group">
-                        <p class="small">城市</p>
-                        <select
-                            class="
-                                form-select form-select-sm
-                                index_dropdown-basic
-                            "
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected>全國</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">台北市</option>
-                            <option value="2">新北市</option>
-                        </select>
-                    </div>
-
-                    <div class="index_division"></div>
-
-                    <div class="index_dropdown-group">
-                        <p class="small">房型</p>
-                        <select
-                            class="
-                                form-select form-select-sm
-                                index_dropdown-basic
-                            "
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected>請選擇房型</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">男生宿舍房</option>
-                            <option value="2">女生宿舍房</option>
-                            <option value="3">混合宿舍房</option>
-                            <option value="4">雅房</option>
-                            <option value="5">獨立套房</option>
-                        </select>
-                    </div>
-                    <div class="index_dropdown-group">
-                        <p class="small index_clearButton">
-                            預定入住日期
-                            <span role="presentation" style="cursor: pointer">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    fill="currentColor"
-                                    class="bi bi-x-circle"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                                    />
-                                    <path
-                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                                    />
-                                </svg>
-                            </span>
-                        </p>
-                        <select
-                            class="
-                                form-select form-select-sm
-                                index_dropdown-basic
-                            "
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected>請選擇入住日期</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">入住日期</option>
-                        </select>
-                    </div>
-                    <div class="index_range-group">
-                        <p class="small">價格/月</p>
-                        <div class="rc-slider index_range">
-                            <div class="rc-slider-rail"></div>
-                            <div
-                                class="rc-slider-track rc-slider-track-1"
-                                style="left: 0%; width: 100%"
-                            ></div>
-                            <div class="rc-slider-step"></div>
-                            <div
-                                role="slider"
-                                tabindex="0"
-                                aria-valuemin="4000"
-                                aria-valuemax="42000"
-                                aria-valuenow="4000"
-                                aria-disabled="false"
-                                class="rc-slider-handle rc-slider-handle-1"
-                                style="left: 0%"
-                            ></div>
-                            <div
-                                role="slider"
-                                tabindex="0"
-                                aria-valuemin="4000"
-                                aria-valuemax="42000"
-                                aria-valuenow="42000"
-                                aria-disabled="false"
-                                class="rc-slider-handle rc-slider-handle-2"
-                                style="left: 100%"
-                            ></div>
-                            <div class="rc-slider-mark"></div>
-                        </div>
-                        <div class="index_unit">
-                            <div>NTD 4000</div>
-                            <div>NTD 42000</div>
-                        </div>
-                    </div>
-                    <div class="index_division"></div>
-                    <div class="index_dropdown-group">
-                        <p class="small">顯示特定居住空間</p>
-                        <select
-                            class="
-                                form-select form-select-sm
-                                index_dropdown-basic
-                            "
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected>顯示特定居住空間</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">全部</option>
-                            <option value="2">仁愛</option>
-                            <option value="3">辛亥-2F</option>
-                            <option value="4">玖樓璞園</option>
-                        </select>
-                    </div>
-                    <div class="index_accordion index_advance">
-                        <div class="index_head" role="presentation">
-                            <span>進階搜尋</span>
-                            <p class="small index_note"></p>
+            <div class="index_room-filter">
+                <div class="index_dropdown-group">
+                    <p class="small">城市</p>
+                    <select
+                        class="form-select form-select-sm index_dropdown-basic"
+                        aria-label=".form-select-sm example"
+                    >
+                        <option selected>全國</option>
+                        <!-- TODO:value 可以來改為動態更新 -->
+                        <option value="1">台北市</option>
+                        <option value="2">新北市</option>
+                    </select>
+                </div>
+                <div class="index_division"></div>
+                <div class="index_dropdown-group">
+                    <p class="small">房型</p>
+                    <select
+                        class="form-select form-select-sm index_dropdown-basic"
+                        aria-label=".form-select-sm example"
+                    >
+                        <option selected>請選擇房型</option>
+                        <!-- TODO:value 可以來改為動態更新 -->
+                        <option value="1">男生宿舍房</option>
+                        <option value="2">女生宿舍房</option>
+                        <option value="3">混合宿舍房</option>
+                        <option value="4">雅房</option>
+                        <option value="5">獨立套房</option>
+                    </select>
+                </div>
+                <div class="index_dropdown-group">
+                    <p class="small index_clearButton">
+                        預定入住日期
+                        <span role="presentation" style="cursor: pointer">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
                                 height="16"
                                 fill="currentColor"
-                                class="bi bi-chevron-down"
+                                class="bi bi-x-circle"
                                 viewBox="0 0 16 16"
                             >
                                 <path
-                                    fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                />
+                                <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
                                 />
                             </svg>
+                        </span>
+                    </p>
+                    <select
+                        class="form-select form-select-sm index_dropdown-basic"
+                        aria-label=".form-select-sm example"
+                    >
+                        <option selected>請選擇入住日期</option>
+                        <!-- TODO:value 可以來改為動態更新 -->
+                        <option value="1">入住日期</option>
+                    </select>
+                </div>
+                <div class="index_range-group">
+                    <p class="small">價格/月</p>
+                    <div class="rc-slider index_range">
+                        <div class="rc-slider-rail"></div>
+                        <div
+                            class="rc-slider-track rc-slider-track-1"
+                            style="left: 0%; width: 100%"
+                        ></div>
+                        <div class="rc-slider-step"></div>
+                        <div
+                            role="slider"
+                            tabindex="0"
+                            aria-valuemin="4000"
+                            aria-valuemax="42000"
+                            aria-valuenow="4000"
+                            aria-disabled="false"
+                            class="rc-slider-handle rc-slider-handle-1"
+                            style="left: 0%"
+                        ></div>
+                        <div
+                            role="slider"
+                            tabindex="0"
+                            aria-valuemin="4000"
+                            aria-valuemax="42000"
+                            aria-valuenow="42000"
+                            aria-disabled="false"
+                            class="rc-slider-handle rc-slider-handle-2"
+                            style="left: 100%"
+                        ></div>
+                        <div class="rc-slider-mark"></div>
+                    </div>
+                    <div class="index_unit">
+                        <div>NTD 4000</div>
+                        <div>NTD 42000</div>
+                    </div>
+                </div>
+                <div class="index_division"></div>
+                <div class="index_dropdown-group">
+                    <p class="small">顯示特定居住空間</p>
+                    <select
+                        class="form-select form-select-sm index_dropdown-basic"
+                        aria-label=".form-select-sm example"
+                    >
+                        <option selected>顯示特定居住空間</option>
+                        <!-- TODO:value 可以來改為動態更新 -->
+                        <option value="1">全部</option>
+                        <option value="2">仁愛</option>
+                        <option value="3">辛亥-2F</option>
+                        <option value="4">玖樓璞園</option>
+                    </select>
+                </div>
+                <div class="index_accordion index_advance">
+                    <div class="index_head" role="presentation">
+                        <span>進階搜尋</span>
+                        <p class="small index_note"></p>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="index_accordion-content">
+                        <div class="index_range-group">
+                            <p class="small">價格/月</p>
+                            <div class="rc-slider index_range">
+                                <div class="rc-slider-rail"></div>
+                                <div
+                                    class="rc-slider-track rc-slider-track-1"
+                                    style="left: 0%; width: 100%"
+                                ></div>
+                                <div class="rc-slider-step"></div>
+                                <div
+                                    role="slider"
+                                    tabindex="0"
+                                    aria-valuemin="4000"
+                                    aria-valuemax="42000"
+                                    aria-valuenow="4000"
+                                    aria-disabled="false"
+                                    class="rc-slider-handle rc-slider-handle-1"
+                                    style="left: 0%"
+                                ></div>
+                                <div
+                                    role="slider"
+                                    tabindex="0"
+                                    aria-valuemin="4000"
+                                    aria-valuemax="42000"
+                                    aria-valuenow="42000"
+                                    aria-disabled="false"
+                                    class="rc-slider-handle rc-slider-handle-2"
+                                    style="left: 100%"
+                                ></div>
+                                <div class="rc-slider-mark"></div>
+                            </div>
+                            <div class="index_unit">
+                                <div>NTD 4000</div>
+                                <div>NTD 42000</div>
+                            </div>
                         </div>
-                        <div class="index_accordion-content">
-                            <div class="index_range-group">
-                                <p class="small">價格/月</p>
-                                <div class="rc-slider index_range">
-                                    <div class="rc-slider-rail"></div>
-                                    <div
-                                        class="
-                                            rc-slider-track rc-slider-track-1
-                                        "
-                                        style="left: 0%; width: 100%"
-                                    ></div>
-                                    <div class="rc-slider-step"></div>
-                                    <div
-                                        role="slider"
-                                        tabindex="0"
-                                        aria-valuemin="4000"
-                                        aria-valuemax="42000"
-                                        aria-valuenow="4000"
-                                        aria-disabled="false"
-                                        class="
-                                            rc-slider-handle rc-slider-handle-1
-                                        "
-                                        style="left: 0%"
-                                    ></div>
-                                    <div
-                                        role="slider"
-                                        tabindex="0"
-                                        aria-valuemin="4000"
-                                        aria-valuemax="42000"
-                                        aria-valuenow="42000"
-                                        aria-disabled="false"
-                                        class="
-                                            rc-slider-handle rc-slider-handle-2
-                                        "
-                                        style="left: 100%"
-                                    ></div>
-                                    <div class="rc-slider-mark"></div>
-                                </div>
-                                <div class="index_unit">
-                                    <div>NTD 4000</div>
-                                    <div>NTD 42000</div>
-                                </div>
-                            </div>
-                            <div
-                                class="index_selector-group index_select-group"
-                            >
-                                <p class="small">第二人入住</p>
-                                <div class="index_selector">
-                                    <label class="" for="double--1"
-                                        ><input
-                                            type="radio"
-                                            id="double--1"
-                                            name="double"
-                                            value="-1"
-                                        />全部</label
-                                    ><label class="" for="double-1"
-                                        ><input
-                                            type="radio"
-                                            id="double-1"
-                                            name="double"
-                                            value="1"
-                                        />可以</label
-                                    ><label class="" for="double-0"
-                                        ><input
-                                            type="radio"
-                                            id="double-0"
-                                            name="double"
-                                            value="0"
-                                        />不可以</label
-                                    >
-                                </div>
-                            </div>
-                            <div
-                                class="index_selector-group index_select-group"
-                            >
-                                <p class="small">養寵物</p>
-                                <div class="index_selector">
-                                    <label class="" for="double--1"
-                                        ><input
-                                            type="radio"
-                                            id="double--1"
-                                            name="double"
-                                            value="-1"
-                                        />全部</label
-                                    ><label class="" for="double-1"
-                                        ><input
-                                            type="radio"
-                                            id="double-1"
-                                            name="double"
-                                            value="1"
-                                        />可以</label
-                                    ><label class="" for="double-0"
-                                        ><input
-                                            type="radio"
-                                            id="double-0"
-                                            name="double"
-                                            value="0"
-                                        />不可以</label
-                                    >
-                                </div>
-                            </div>
-                            <div class="index_dropdown-group">
-                                <p class="small">居住空間特色</p>
-                                <select
-                                    class="
-                                        form-select form-select-sm
-                                        index_dropdown-basic
-                                    "
-                                    aria-label=".form-select-sm example"
+                        <div class="index_selector-group index_select-group">
+                            <p class="small">第二人入住</p>
+                            <div class="index_selector">
+                                <label class="" for="double--1"
+                                    ><input
+                                        type="radio"
+                                        id="double--1"
+                                        name="double"
+                                        value="-1"
+                                    />全部</label
+                                ><label class="" for="double-1"
+                                    ><input
+                                        type="radio"
+                                        id="double-1"
+                                        name="double"
+                                        value="1"
+                                    />可以</label
+                                ><label class="" for="double-0"
+                                    ><input
+                                        type="radio"
+                                        id="double-0"
+                                        name="double"
+                                        value="0"
+                                    />不可以</label
                                 >
-                                    <option selected>請選擇居住空間特色</option>
-                                    <!-- TODO:value 可以來改為動態更新 -->
-                                    <option value="1">居住空間特色</option>
-                                </select>
                             </div>
-                            <div class="index_division"></div>
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="flexCheckChecked"
-                                    checked
-                                />
-                                <label
-                                    class="form-check-label small"
-                                    for="flexCheckChecked"
+                        </div>
+                        <div class="index_selector-group index_select-group">
+                            <p class="small">養寵物</p>
+                            <div class="index_selector">
+                                <label class="" for="double--1"
+                                    ><input
+                                        type="radio"
+                                        id="double--1"
+                                        name="double"
+                                        value="-1"
+                                    />全部</label
+                                ><label class="" for="double-1"
+                                    ><input
+                                        type="radio"
+                                        id="double-1"
+                                        name="double"
+                                        value="1"
+                                    />可以</label
+                                ><label class="" for="double-0"
+                                    ><input
+                                        type="radio"
+                                        id="double-0"
+                                        name="double"
+                                        value="0"
+                                    />不可以</label
                                 >
-                                    顯示目前無法預訂房間
-                                </label>
                             </div>
+                        </div>
+                        <div class="index_dropdown-group">
+                            <p class="small">居住空間特色</p>
+                            <select
+                                class="
+                                    form-select form-select-sm
+                                    index_dropdown-basic
+                                "
+                                aria-label=".form-select-sm example"
+                            >
+                                <option selected>請選擇居住空間特色</option>
+                                <!-- TODO:value 可以來改為動態更新 -->
+                                <option value="1">居住空間特色</option>
+                            </select>
+                        </div>
+                        <div class="index_division"></div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                            />
+                            <label
+                                class="form-check-label small"
+                                for="flexCheckChecked"
+                            >
+                                顯示目前無法預訂房間
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- footer -->
         <div class="row">
             <div class="col">
@@ -425,41 +397,6 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
-.index_side-bar {
-    align-items: center;
-    width: 60px;
-    border-right: 1px solid $info;
-    border-top: 1px solid $info;
-    border-bottom: 1px solid $info;
-    opacity: 1;
-    transition: opacity 0.5s;
-    flex-basis: 60px;
-    flex-shrink: 0;
-    .index_side-bar-content {
-        margin-top: 24px;
-        transition: opacity 0.3s;
-        opacity: 1;
-        .index_vertical-word {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-            span {
-                margin-bottom: 2px;
-                font-size: 10px;
-                color: $primary;
-                transform: rotate(90deg);
-            }
-        }
-        .index_vertical-en {
-            font-size: 10px;
-            color: $primary;
-            writing-mode: vertical-lr;
-        }
-    }
-    @include lg {
-        display: none;
-    }
-}
 .index_room-list {
     width: 100%;
     padding: 17px;

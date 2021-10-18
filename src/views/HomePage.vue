@@ -39,17 +39,7 @@
         <!-- home-content -->
         <div class="index_home-content">
             <!-- side-bar -->
-            <div class="index_side-bar index_side-bar-left">
-                <div class="index_side-bar-content index_fade-in-out">
-                    <div class="index_vertical-word">
-                        <span>房</span>
-                        <span>源</span>
-                        <span>搜</span>
-                        <span>尋</span>
-                    </div>
-                    <div class="index_vertical-en">Room search</div>
-                </div>
-            </div>
+            <SiderBar />
             <!-- room-content -->
             <div class="index_center w-100">
                 <!-- view-marker -->
@@ -230,6 +220,7 @@
 <script>
 import Footer from "../components/Footer.vue";
 import RoomCard from "../components/RoomCard.vue";
+import SiderBar from "../components/SiderBar.vue";
 export default {
     data() {
         return {
@@ -239,6 +230,7 @@ export default {
     components: {
         Footer,
         RoomCard,
+        SiderBar,
     },
 };
 </script>
@@ -458,7 +450,6 @@ export default {
         border-right: 0;
         border-left: 1px solid $info;
     }
-
     .index_side-bar-content {
         margin-top: 24px;
         transition: opacity 0.3s;
@@ -497,9 +488,6 @@ export default {
 }
 
 // anthoer
-.no-padding {
-    padding: 0;
-}
 .index_view-marker {
     width: 0;
     height: 0;
