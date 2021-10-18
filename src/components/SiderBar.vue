@@ -1,6 +1,6 @@
 <template>
-    <div class="index_side-bar index_left index_right">
-        <div class="index_side-bar-content">
+    <div class="index_side-bar index_side-bar-left">
+        <div class="index_side-bar-content index_fade-in-out">
             <div class="index_vertical-word">
                 <span>房</span>
                 <span>源</span>
@@ -24,16 +24,23 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
+// side-bar
 .index_side-bar {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 60px;
     border-right: 1px solid $info;
     border-top: 1px solid $info;
-    border-bottom: 1px solid $info;
     opacity: 1;
     transition: opacity 0.5s;
     flex-basis: 60px;
     flex-shrink: 0;
+    &:last-child {
+        border-right: 0;
+        border-left: 1px solid $info;
+    }
+
     .index_side-bar-content {
         margin-top: 24px;
         transition: opacity 0.3s;
@@ -57,6 +64,17 @@ export default {
     }
     @include lg {
         display: none;
+    }
+}
+.index_side-bar-left,
+.index_side-bar-right {
+    flex-basis: 60px;
+}
+.index_side-bar-left {
+    div {
+        &:first-child {
+            margin-top: 60px;
+        }
     }
 }
 </style>

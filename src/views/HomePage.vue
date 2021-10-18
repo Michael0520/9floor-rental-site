@@ -245,9 +245,7 @@ export default {
 <style lang="scss">
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
-.no-padding {
-    padding: 0;
-}
+
 .index_home {
     display: flex;
     flex-direction: column;
@@ -444,6 +442,7 @@ export default {
     transition: opacity 0.3s;
     opacity: 1;
 }
+// side-bar
 .index_side-bar {
     display: flex;
     flex-direction: column;
@@ -495,6 +494,11 @@ export default {
             margin-top: 60px;
         }
     }
+}
+
+// anthoer
+.no-padding {
+    padding: 0;
 }
 .index_view-marker {
     width: 0;
