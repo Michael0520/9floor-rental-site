@@ -340,12 +340,6 @@ export default {
     display: flex;
     width: 100%;
     max-width: 1280px;
-    .index_side-bar {
-        flex-basis: 60px;
-        .index_side-bar-content {
-            margin-top: 60px;
-        }
-    }
     .index_center {
         padding-top: 60px;
         // TODO:不曉得為何不能加上 width 100%
@@ -451,11 +445,12 @@ export default {
     opacity: 1;
 }
 .index_side-bar {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 60px;
     border-right: 1px solid $info;
     border-top: 1px solid $info;
-    border-bottom: 1px solid $info;
     opacity: 1;
     transition: opacity 0.5s;
     flex-basis: 60px;
@@ -464,10 +459,7 @@ export default {
         border-right: 0;
         border-left: 1px solid $info;
     }
-    .index_side-bar-left,
-    .index_side-bar-right {
-        flex-basis: 60px;
-    }
+
     .index_side-bar-content {
         margin-top: 24px;
         transition: opacity 0.3s;
@@ -491,6 +483,17 @@ export default {
     }
     @include lg {
         display: none;
+    }
+}
+.index_side-bar-left,
+.index_side-bar-right {
+    flex-basis: 60px;
+}
+.index_side-bar-left {
+    div {
+        &:first-child {
+            margin-top: 60px;
+        }
     }
 }
 .index_view-marker {
