@@ -13,7 +13,6 @@
             </div>
         </div>
         <!--  Room-content -->
-
         <div class="index_content" style="display: flex; width: 100%">
             <!-- sider-bar -->
             <SiderBar />
@@ -324,7 +323,6 @@
                 </div>
             </div>
         </div>
-
         <!-- footer -->
         <div class="row">
             <div class="col">

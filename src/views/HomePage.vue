@@ -1,218 +1,228 @@
 <template>
-    <!-- index_home -->
-    <div class="index_home">
-        <!-- special banner -->
-        <div
-            class="index_banner"
-            style="
-                background-image: url('https://9floor.co/backend/web/banner/20200408-7613a5c701c8d4a8f5f42d363c2a536b.png');
-            "
-        >
-            <div class="index_banner-content">
-                <p class="index_banner-subtitle">
-                    Live in a community <br />
-                    rather than a room.
-                </p>
-                <p class="index_banner-title vertical">
-                    房子是租來的，生活不是
-                </p>
-            </div>
-            <a class="index_button index_search index_accent" href="/zh-tw/room"
-                ><div>
-                    <span>開始搜尋</span>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="14"
-                        height="14"
-                        fill="currentColor"
-                        class="bi bi-chevron-right"
-                        viewBox="0 0 16 16"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                        />
-                    </svg>
+    <div class="container-fluid no-padding">
+        <!-- index_home -->
+        <div class="index_home">
+            <!-- special banner -->
+            <div
+                class="index_banner"
+                style="
+                    background-image: url('https://9floor.co/backend/web/banner/20200408-7613a5c701c8d4a8f5f42d363c2a536b.png');
+                "
+            >
+                <div class="index_banner-content">
+                    <p class="index_banner-subtitle">
+                        Live in a community <br />
+                        rather than a room.
+                    </p>
+                    <p class="index_banner-title vertical">
+                        房子是租來的，生活不是
+                    </p>
                 </div>
-            </a>
-        </div>
-        <!-- home-content -->
-        <div class="index_home-content">
-            <!-- side-bar -->
-            <SiderBar />
-            <!-- room-content -->
-            <div class="index_center w-100">
-                <!-- view-marker -->
-                <div class="index_view-marker"></div>
-                <!-- co-living-slider -->
-                <div class="index_co-living-slider index_co-living-section">
-                    <div class="container-fluid no-padding">
-                        <div class="row gx-0">
-                            <!-- <p class="vertical index_watermark">共居生活</p> -->
-                            <div class="col-lg-6">
-                                <div class="index_left">
-                                    <p class="vertical index_watermark">
-                                        共居生活
-                                    </p>
-                                    <div class="">
-                                        <div
-                                            class="
-                                                index_subTitle
-                                                index_fade-in-out
-                                                index_hide
-                                            "
-                                        >
-                                            社群生活
-                                        </div>
-                                        <div
-                                            class="
-                                                index_description
-                                                index_fade-in-out
-                                            "
-                                        >
-                                            擁有輕鬆溫暖的氛圍，同時備有咖啡館的工作生活機能。不只是物件的冰冷堆疊，我們在最愛的角落放上一盞落地燈、植入綠意、以及能與室友分享私房菜的大桌。簡約的設計風格，乘載平凡生活的更多樂趣。
-                                        </div>
-                                        <div class="index_buttons">
-                                            <a
+                <a
+                    class="index_button index_search index_accent"
+                    href="/zh-tw/room"
+                    ><div>
+                        <span>開始搜尋</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            fill="currentColor"
+                            class="bi bi-chevron-right"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- home-content -->
+            <div class="index_home-content">
+                <!-- side-bar -->
+                <SiderBar />
+                <!-- room-content -->
+                <div class="index_center w-100">
+                    <!-- view-marker -->
+                    <div class="index_view-marker"></div>
+                    <!-- co-living-slider -->
+                    <div class="index_co-living-slider index_co-living-section">
+                        <div class="container-fluid no-padding">
+                            <div class="row gx-0">
+                                <!-- <p class="vertical index_watermark">共居生活</p> -->
+                                <div class="col-lg-6">
+                                    <div class="index_left">
+                                        <p class="vertical index_watermark">
+                                            共居生活
+                                        </p>
+                                        <div class="">
+                                            <div
                                                 class="
-                                                    index_button index_primary
+                                                    index_subTitle
+                                                    index_fade-in-out
+                                                    index_hide
                                                 "
-                                                href="/zh-tw/room"
-                                                ><div>
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="14"
-                                                        height="14"
-                                                        fill="currentColor"
-                                                        class="bi bi-search"
-                                                        viewBox="0 0 16 16"
-                                                    >
-                                                        <path
-                                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                                                        /></svg
-                                                    >搜尋物件
-                                                </div></a
-                                            ><a
-                                                class="
-                                                    index_button index_primary
-                                                "
-                                                href="/zh-tw/coliving"
-                                                ><div>服務詳情</div></a
                                             >
-                                        </div>
-                                        <div class="index_step">
-                                            <div>04 / 04</div>
-                                            <div class="index_icon-buttons">
-                                                <button>
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="14"
-                                                        height="14"
-                                                        fill="currentColor"
-                                                        class="
-                                                            bi bi-chevron-left
-                                                        "
-                                                        viewBox="0 0 16 16"
-                                                    >
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                                                        />
-                                                    </svg></button
-                                                ><button>
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="14"
-                                                        height="14"
-                                                        fill="currentColor"
-                                                        class="
-                                                            bi bi-chevron-right
-                                                        "
-                                                        viewBox="0 0 16 16"
-                                                    >
-                                                        <path
-                                                            fill-rule="evenodd"
-                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                                        />
-                                                    </svg>
-                                                </button>
+                                                社群生活
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_description
+                                                    index_fade-in-out
+                                                "
+                                            >
+                                                擁有輕鬆溫暖的氛圍，同時備有咖啡館的工作生活機能。不只是物件的冰冷堆疊，我們在最愛的角落放上一盞落地燈、植入綠意、以及能與室友分享私房菜的大桌。簡約的設計風格，乘載平凡生活的更多樂趣。
+                                            </div>
+                                            <div class="index_buttons">
+                                                <a
+                                                    class="
+                                                        index_button
+                                                        index_primary
+                                                    "
+                                                    href="/zh-tw/room"
+                                                    ><div>
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="14"
+                                                            height="14"
+                                                            fill="currentColor"
+                                                            class="bi bi-search"
+                                                            viewBox="0 0 16 16"
+                                                        >
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                                            /></svg
+                                                        >搜尋物件
+                                                    </div></a
+                                                ><a
+                                                    class="
+                                                        index_button
+                                                        index_primary
+                                                    "
+                                                    href="/zh-tw/coliving"
+                                                    ><div>服務詳情</div></a
+                                                >
+                                            </div>
+                                            <div class="index_step">
+                                                <div>04 / 04</div>
+                                                <div class="index_icon-buttons">
+                                                    <button>
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="14"
+                                                            height="14"
+                                                            fill="currentColor"
+                                                            class="
+                                                                bi
+                                                                bi-chevron-left
+                                                            "
+                                                            viewBox="0 0 16 16"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                                                            />
+                                                        </svg></button
+                                                    ><button>
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="14"
+                                                            height="14"
+                                                            fill="currentColor"
+                                                            class="
+                                                                bi
+                                                                bi-chevron-right
+                                                            "
+                                                            viewBox="0 0 16 16"
+                                                        >
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                                            />
+                                                        </svg>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="index_right">
-                                    <div class="index_slider-images">
-                                        <img
-                                            class="index__fade-in-out___5r3iu"
-                                            src="https://9floor.co/backend/web/lifestyle/20190121-edb7e9b402ccaea7a0b1ecc0d405b534.jpg"
-                                            alt="slider"
-                                        />
+                                <div class="col-lg-6">
+                                    <div class="index_right">
+                                        <div class="index_slider-images">
+                                            <img
+                                                class="
+                                                    index__fade-in-out___5r3iu
+                                                "
+                                                src="https://9floor.co/backend/web/lifestyle/20190121-edb7e9b402ccaea7a0b1ecc0d405b534.jpg"
+                                                alt="slider"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- room-list-lg -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <RoomCard />
-                        </div>
-                        <div class="col-lg-6">
-                            <RoomCard />
-                        </div>
-                    </div>
-                </div>
-                <!-- room-list-small -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <RoomCard />
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <RoomCard />
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <RoomCard />
+                    <!-- room-list-lg -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <RoomCard />
+                            </div>
+                            <div class="col-lg-6">
+                                <RoomCard />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- more-room-section -->
-                <div class="index_more-room">
-                    <div>
-                        加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
-                    </div>
-                    <a class="index_button index_primary" href="/zh-tw/room"
-                        ><div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="14"
-                                height="14"
-                                fill="currentColor"
-                                class="bi bi-search"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                                /></svg
-                            >更多物件
+                    <!-- room-list-small -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <RoomCard />
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <RoomCard />
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <RoomCard />
+                            </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- more-room-section -->
+                    <div class="index_more-room">
+                        <div>
+                            加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
+                        </div>
+                        <a class="index_button index_primary" href="/zh-tw/room"
+                            ><div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="14"
+                                    height="14"
+                                    fill="currentColor"
+                                    class="bi bi-search"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                    /></svg
+                                >更多物件
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- side-bar -->
-            <div class="index_side-bar index_side-bar-right">
-                <div class="index_side-bar-content index_fade-in-out"></div>
+                <!-- side-bar -->
+                <div class="index_side-bar index_side-bar-right">
+                    <div class="index_side-bar-content index_fade-in-out"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Footer -->
-    <div class="row">
-        <div class="col">
-            <Footer />
+        <!-- Footer -->
+        <div class="row">
+            <div class="col">
+                <Footer />
+            </div>
         </div>
     </div>
 </template>

@@ -9,8 +9,8 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/roomDetailPage.vue",
-    name: "Room-detailPage",
+    path: "/roomDetailPage",
+    name: "RoomDetailPage",
     component: RoomDetailPage,
   },
   {

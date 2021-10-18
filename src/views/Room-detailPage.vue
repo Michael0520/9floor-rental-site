@@ -1,17 +1,285 @@
 <template>
-    <div class="container text-end">Room-detail-Page</div>
+    <div class="container-fluid no-padding">
+        <!-- NavBar -->
+        <div class="row">
+            <div class="col">
+                <header></header>
+            </div>
+        </div>
+        <div class="index-content index_show">
+            <div class="index_room">
+                <div class="index_room-detail-banner">
+                    <div class="index_slide-container">
+                        <div class="swipe" style="visibility: visible">
+                            <div
+                                class="swipe-item"
+                                style="width: 1727px; left: 0px"
+                            >
+                                <!-- TODO:swipe-item: transform style
+                                        transition-duration: 0ms;
+                                        transform: translate(1727px, 0px)
+                                        translateZ(0px); -->
+                                <div
+                                    style="
+                                        background-image: url('https://9floor.co/backend/web/roomPhoto/20200902-50a611e8ecd6f999ca037a57539c8465.png');
+                                    "
+                                ></div>
+                            </div>
+                        </div>
+                        <button class="index_swipe-left">
+                            <div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="55"
+                                    height="55"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-left"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                                    />
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="index_swipe-right">
+                            <div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="55"
+                                    height="55"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-right"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                    />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="index_banner-content">
+                        <div>
+                            <div class="index_vertical-title index_subTitle">
+                                <span>仁</span><span>愛</span>
+                            </div>
+                            <div class="index_vertical-title">
+                                <span>仁</span><span>愛</span><span> </span
+                                ><span>R</span><span>o</span><span>o</span
+                                ><span>m</span><span>A</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_buttons-wrap">
+                        <button
+                            class="index_button index_buttons index_inverse"
+                        >
+                            <div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-images"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"
+                                    />
+                                    <path
+                                        d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"
+                                    /></svg
+                                >所有照片
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="row">
+                <div class="col">
+                    <Footer />
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
+import Footer from "../components/Footer.vue";
 export default {
     data() {
         return {
             name: "RoomDetailPage",
         };
     },
+    components: {
+        Footer,
+    },
 };
 </script>
 
 <style lang="scss">
+@import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
+
+// show
+.index-content.index_show {
+    opacity: 1;
+}
+// room-content
+.index_room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index_room-detail-banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: $info;
+}
+.index_slide-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    button {
+        position: absolute;
+        padding: 0;
+        height: 55px;
+        width: 55px;
+        outline: none;
+        div {
+            svg {
+                font-size: 55px;
+                opacity: 0.7;
+            }
+        }
+    }
+    .index_swipe-left {
+        top: calc(50% - 27.5px);
+        left: 34px;
+    }
+    .index_swipe-right {
+        top: calc(50% - 27.5px);
+        right: 34px;
+    }
+}
+// swipe
+.swipe,
+.swipe-wrap,
+.swipe-wrap div {
+    overflow: hidden;
+    position: relative;
+}
+.swipe-wrap {
+    div {
+        float: left;
+        width: 100%;
+    }
+}
+.swipe-item {
+    display: flex;
+    justify-content: center;
+    div {
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: 50%;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.4;
+        }
+    }
+}
+svg {
+    color: #fff;
+}
+.index_banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 35px);
+    width: 70px;
+    height: calc(100vh - 65px);
+    z-index: 2;
+    div {
+        display: flex;
+        .index_subTitle {
+            margin-top: 5px;
+            margin-right: 14px;
+            span {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.56;
+                letter-spacing: 3.6px;
+            }
+        }
+    }
+}
+.index_vertical-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        margin-bottom: 2px;
+        font-family: source-han-serif-japanese, serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 27px;
+        line-height: 1.37;
+        letter-spacing: 6.1px;
+        color: #fff;
+    }
+}
+.index_buttons-wrap {
+    position: absolute;
+    bottom: 90px;
+    width: 100%;
+    max-width: 1280px;
+    .index_buttons {
+        z-index: 2;
+        margin-left: 94px;
+        svg {
+            margin-right: 6px;
+        }
+    }
+}
+.index_button.index_inverse {
+    border-color: #fff;
+    div {
+        color: #fff;
+    }
+    svg {
+        color: #fff;
+    }
+}
+.index_button {
+    display: flex;
+    justify-content: center;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.75;
+        letter-spacing: 3.4px;
+        color: #444647;
+        svg {
+            font-size: 16px;
+        }
+    }
+}
 </style>
