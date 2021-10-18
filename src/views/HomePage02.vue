@@ -39,7 +39,7 @@
         <!-- home-content -->
         <div class="index_home-content">
             <!-- side-bar -->
-            <div class="index_side-bar index_side-bar-left">
+            <div class="index_side-bar index_left">
                 <div class="index_side-bar-content index_fade-in-out">
                     <div class="index_vertical-word">
                         <span>房</span>
@@ -214,7 +214,7 @@
                 </div>
             </div>
             <!-- side-bar -->
-            <div class="index_side-bar index_side-bar-right">
+            <div class="index_side-bar index_right">
                 <div class="index_side-bar-content index_fade-in-out"></div>
             </div>
         </div>
@@ -248,6 +248,7 @@ export default {
 .no-padding {
     padding: 0;
 }
+
 .index_home {
     display: flex;
     flex-direction: column;
@@ -464,8 +465,8 @@ export default {
         border-right: 0;
         border-left: 1px solid $info;
     }
-    .index_side-bar-left,
-    .index_side-bar-right {
+    .index_left,
+    .index_right {
         flex-basis: 60px;
     }
     .index_side-bar-content {

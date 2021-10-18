@@ -1,5 +1,5 @@
 <template >
-    <div class="">
+    <div class="container-fluid">
         <!-- NavBar -->
         <div class="row">
             <div class="col-sm-12">
@@ -12,17 +12,18 @@
                 <Breadcrumb />
             </div>
         </div>
-
         <!--  Room-content -->
-        <div class="row index_content">
+        <div class="row gx-0">
             <!-- sider-bar -->
-            <SiderBar />
+            <div class="col-lg-1">
+                <SiderBar />
+            </div>
             <div
                 class="col-lg-8 col-md-12"
                 style="border-top: 1px solid #d2c8bd"
             >
-                <div class="row index_room-list">
-                    <div class="col-sm-12 col-md-6 index_sort">
+                <div class="index_room-list">
+                    <div class="index_sort">
                         <div>6 筆結果</div>
                         <div class="justify-content-end">
                             <div>排序方式</div>
@@ -40,35 +41,42 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
+                <!-- room-list -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <RoomCard />
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <RoomCard />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 index_room-filter">
-                <div class="row index_dropdown-group">
-                    <div class="col">
+            <!-- filter -->
+            <div class="col-lg-3">
+                <div class="index_room-filter">
+                    <div class="index_dropdown-group">
                         <p class="small">城市</p>
                         <select
                             class="
@@ -83,10 +91,10 @@
                             <option value="2">新北市</option>
                         </select>
                     </div>
-                </div>
-                <div class="row index_division"></div>
-                <div class="row index_dropdown-group">
-                    <div class="col">
+
+                    <div class="index_division"></div>
+
+                    <div class="index_dropdown-group">
                         <p class="small">房型</p>
                         <select
                             class="
@@ -104,9 +112,7 @@
                             <option value="5">獨立套房</option>
                         </select>
                     </div>
-                </div>
-                <div class="row index_dropdown-group">
-                    <div class="col">
+                    <div class="index_dropdown-group">
                         <p class="small index_clearButton">
                             預定入住日期
                             <span role="presentation" style="cursor: pointer">
@@ -139,9 +145,7 @@
                             <option value="1">入住日期</option>
                         </select>
                     </div>
-                </div>
-                <div class="row index_range-group">
-                    <div class="col">
+                    <div class="index_range-group">
                         <p class="small">價格/月</p>
                         <div class="rc-slider index_range">
                             <div class="rc-slider-rail"></div>
@@ -177,10 +181,8 @@
                             <div>NTD 42000</div>
                         </div>
                     </div>
-                </div>
-                <div class="row index_division"></div>
-                <div class="row index_dropdown-group">
-                    <div class="col">
+                    <div class="index_division"></div>
+                    <div class="index_dropdown-group">
                         <p class="small">顯示特定居住空間</p>
                         <select
                             class="
@@ -197,9 +199,7 @@
                             <option value="4">玖樓璞園</option>
                         </select>
                     </div>
-                </div>
-                <div class="row index_accordion index_advance">
-                    <div class="col">
+                    <div class="index_accordion index_advance">
                         <div class="index_head" role="presentation">
                             <span>進階搜尋</span>
                             <p class="small index_note"></p>
@@ -353,7 +353,6 @@
                 </div>
             </div>
         </div>
-
         <!-- footer -->
         <div class="row">
             <div class="col">
@@ -472,7 +471,6 @@ export default {
         display: flex;
         align-self: flex-start;
         justify-content: space-between;
-        margin: 17px;
         div {
             display: flex;
             align-items: center;

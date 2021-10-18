@@ -1,12 +1,13 @@
 <template>
-    <div id="nav">
-        <router-link to="/src/views/HomePage.vue">HomePage</router-link> |
+    <div></div>
+    <!-- <div id="nav"> -->
+    <!-- <router-link to="/src/views/HomePage.vue">HomePage</router-link> |
         <router-link to="/src/views/Room-detailPage.vue"
             >Room-DetailPage</router-link
         >
         |
-        <router-link to="/filter">FilterPage</router-link>
-    </div>
+        <router-link to="/filter">FilterPage</router-link> -->
+    <!-- </div> -->
 
     <router-view />
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-1 index_side-bar index_left index_right">
+    <div class="index_side-bar">
         <div class="index_side-bar-content">
             <div class="index_vertical-word">
                 <span>房</span>
