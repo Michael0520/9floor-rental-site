@@ -126,6 +126,9 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
+svg {
+    color: #fff;
+}
 // show
 .index-content.index_show {
     opacity: 1;
@@ -201,9 +204,7 @@ export default {
         }
     }
 }
-svg {
-    color: #fff;
-}
+// banner
 .index_banner-content {
     display: flex;
     justify-content: center;
@@ -276,7 +277,7 @@ svg {
         font-size: 12px;
         line-height: 1.75;
         letter-spacing: 3.4px;
-        color: #444647;
+        color: $primary;
         svg {
             font-size: 16px;
         }
