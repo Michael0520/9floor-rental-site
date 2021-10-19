@@ -11,11 +11,9 @@
                 <div class="index_room-detail-banner">
                     <div class="index_slide-container">
                         <div class="swipe" style="visibility: visible">
-                            <div
-                                class="swipe-item"
-                                style="width: 1727px; left: 0px"
-                            >
+                            <div class="swipe-item">
                                 <!-- TODO:swipe-item: transform style
+                                style="width: 1727px; left: 0px"
                                         transition-duration: 0ms;
                                         transform: translate(1727px, 0px)
                                         translateZ(0px); -->
@@ -97,6 +95,8 @@
                         </button>
                     </div>
                 </div>
+                <!-- Breadcrumb -->
+                <Breadcrumb />
             </div>
             <!-- Footer -->
             <div class="row">
@@ -110,6 +110,7 @@
 
 <script>
 import Footer from "../components/Footer.vue";
+import Breadcrumb from "../components/Breadcrumb.vue";
 export default {
     data() {
         return {
@@ -118,6 +119,7 @@ export default {
     },
     components: {
         Footer,
+        Breadcrumb,
     },
 };
 </script>
@@ -138,6 +140,20 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // breadcrumb
+    .index_breadcrumb {
+        position: absolute;
+        top: 100px;
+        .breadcrumb-item {
+            &::before {
+                color: #fff;
+            }
+        }
+        a,
+        svg {
+            color: #fff;
+        }
+    }
 }
 .index_room-detail-banner {
     display: flex;
