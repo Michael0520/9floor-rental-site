@@ -193,9 +193,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="index_side-bar index-left"></div>
+                    <!-- side-bar-left -->
+                    <SiderBar />
                     <div class="index_center"></div>
-                    <div class="index_side-bar index-right"></div>
+                    <!-- side-bar-right -->
+                    <div class="index_side-bar index_side-bar-right">
+                        <div
+                            class="index_side-bar-content index_fade-in-out"
+                        ></div>
+                    </div>
                 </div>
             </div>
             <!-- Footer -->
@@ -211,6 +217,7 @@
 <script>
 import Footer from "../components/Footer.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
+import SiderBar from "../components/SiderBar.vue";
 export default {
     data() {
         return {
@@ -220,6 +227,7 @@ export default {
     components: {
         Footer,
         Breadcrumb,
+        SiderBar,
     },
 };
 </script>
@@ -405,6 +413,7 @@ svg {
         }
     }
 }
+// accent-button style
 .index_button.index_accent {
     background-color: $lightOrange;
     border: 1px solid $danger;
