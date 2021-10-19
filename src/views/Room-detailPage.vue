@@ -198,9 +198,9 @@
                     <div class="index_center">
                         <div class="index_view-marker"></div>
                         <section class="index_room-info">
-                            <div class="container-fluid">
+                            <div class="container-fluid no-padding">
                                 <div class="row gx-0">
-                                    <div class="col-lg-6 col-md-12">
+                                    <div class="col-lg-6 col-sm-12">
                                         <h2>仁愛 RoomA</h2>
                                         <div class="index_apartment-name">
                                             仁愛
@@ -265,7 +265,7 @@
                                             >
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-12">
+                                    <div class="col-lg-6 col-sm-12">
                                         <div
                                             class="
                                                 container-fluid
@@ -562,6 +562,220 @@
                             </div>
                         </section>
                         <div class="index_view-marker"></div>
+                        <section
+                            class="index_apartment-info index_apartment-content"
+                        >
+                            <div class="container-fluid">
+                                <div class="row gx-0">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <h2>仁愛</h2>
+                                        <p class="index_address">
+                                            台北市 大安區
+                                        </p>
+                                        <p class="index_description">
+                                            位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。
+                                        </p>
+                                        <div class="index_feature">
+                                            <span class="index_badge">
+                                                <div class="index_text">
+                                                    適合開伙
+                                                </div>
+                                            </span>
+                                            <span class="index_badge">
+                                                <div class="index_text">
+                                                    共同工作空間
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="
+                                                index_detail-title
+                                                index_facility-title
+                                            "
+                                        >
+                                            居住空間設備
+                                        </div>
+                                        <div
+                                            class="
+                                                index_facility-icon
+                                                index_facility-list
+                                            "
+                                        >
+                                            <span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-dcf239b9b64076e4c273b5177630454e.png"
+                                                    alt="瓦斯爐"
+                                                />
+                                                <p class="small">
+                                                    瓦斯爐
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8070e6cdae1efb603a564f16315527b9.png"
+                                                    alt="基本餐具"
+                                                />
+                                                <p class="small">
+                                                    基本餐具
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190121-3fc7ad1b4e378cb954be7b06ada03afe.jpg"
+                                                    alt="洗衣機"
+                                                />
+                                                <p class="small">
+                                                    洗衣機
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-055410ea9b7695ac68526abe3b04f806.png"
+                                                    alt="洗碗機"
+                                                />
+                                                <p class="small">
+                                                    洗碗機
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8d4b1a037bf46cd375109e0efbb6c30f.png"
+                                                    alt="烤箱"
+                                                />
+                                                <p class="small">烤箱</p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-d780119673dcc9c653335652a0b2c9b8.png"
+                                                    alt="滅火器"
+                                                />
+                                                <p class="small">
+                                                    滅火器
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-3106088f32d9f0ca1fe599d7ec9a4e12.png"
+                                                    alt="煙霧偵測器"
+                                                />
+                                                <p class="small">
+                                                    煙霧偵測器
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-946261d4b79638f0eea7bc5e60bb832f.png"
+                                                    alt="戶外陽台"
+                                                />
+                                                <p class="small">
+                                                    戶外陽台
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8226c562a3429211d9f236cfa68c47e2.png"
+                                                    alt="工作空間"
+                                                />
+                                                <p class="small">
+                                                    工作空間
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-765a378c1d9ae10f8f484e83f7fb8eef.png"
+                                                    alt="無線網路"
+                                                />
+                                                <p class="small">
+                                                    無線網路
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-b971d7faf380f622356f5151934b1002.png"
+                                                    alt="冰箱"
+                                                />
+                                                <p class="small">冰箱</p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-a153b4ad702e6d6b34615663c711b063.png"
+                                                    alt="吹風機"
+                                                />
+                                                <p class="small">
+                                                    吹風機
+                                                </p></span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="index_images">
+                                            <img
+                                                src="https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png"
+                                                alt="slider"
+                                            />
+                                        </div>
+                                        <div
+                                            class="
+                                                index_accordion
+                                                undefined
+                                                index_visible index_disabled
+                                            "
+                                            style="height: 200px"
+                                        >
+                                            <div
+                                                class="index_head"
+                                                role="presentation"
+                                            >
+                                                <span>居住空間資訊</span>
+                                                <p class="small index_note"></p>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_apartment-info-content
+                                                "
+                                            >
+                                                <div>
+                                                    <p>陽台</p>
+                                                    <p>有</p>
+                                                </div>
+                                                <div>
+                                                    <p>廚房</p>
+                                                    <p>有</p>
+                                                </div>
+                                                <div>
+                                                    <p>公共衛浴</p>
+                                                    <p>1間</p>
+                                                </div>
+                                                <div>
+                                                    <p>房間</p>
+                                                    <p>4間</p>
+                                                </div>
+                                                <div>
+                                                    <p>總樓層</p>
+                                                    <p>5樓</p>
+                                                </div>
+                                                <div>
+                                                    <p>清潔打掃</p>
+                                                    <p>每週一次</p>
+                                                </div>
+                                                <div>
+                                                    <p>垃圾處理</p>
+                                                    <p>每週一次</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="index_map">
+                            <div class="index_apartment-map">
+                                <div class="container-fluid no-padding">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.9455972321834!2d121.54232041548022!3d25.001964483987372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9896ba0f70b%3A0x97299c5ec656164d!2z546W5qiTIDlmbG9vcg!5e0!3m2!1szh-TW!2stw!4v1634685579976!5m2!1szh-TW!2stw"
+                                                width="100%"
+                                                height="250"
+                                                style="border: 0"
+                                                allowfullscreen=""
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="index_support-and-direction"></section>
                     </div>
                     <!-- side-bar-right -->
                     <div class="index_side-bar index_side-bar-right">
@@ -606,6 +820,10 @@ export default {
 svg {
     color: #fff;
 }
+.small {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
 // show
 .index-content.index_show {
     opacity: 1;
@@ -639,6 +857,72 @@ svg {
             display: flex;
             flex-direction: column;
             width: 100%;
+            .index_apartment-content {
+                margin: 46px 34px 82px;
+            }
+        }
+    }
+}
+.index_apartment-info {
+    display: flex;
+    .index_address {
+        margin-top: 9px;
+    }
+    .index_description {
+        margin-top: 27px;
+        max-width: 370px;
+    }
+    .index_feature {
+        margin-top: 30px;
+        span {
+            margin-right: 17px;
+        }
+    }
+    .index_facility-title {
+        margin-top: 55px;
+    }
+}
+.index_badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 4px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: $secondary;
+    border: 1px solid #b7ac9f;
+    border-radius: 3px;
+    .index_text {
+        transform: scale(0.85);
+    }
+}
+// images
+.index_images {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 96px;
+    img {
+        height: 426px;
+    }
+}
+.index_apartment-info-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 17px;
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 162px;
+        width: 50%;
+        margin: 7px 0;
+        p {
+            &:first-child {
+                width: 66px;
+                margin-right: 16px;
+            }
         }
     }
 }
@@ -1058,6 +1342,18 @@ svg {
     border-radius: 3px;
     background-color: #fff;
     white-space: pre-wrap;
+}
+
+// Map
+.index_map {
+    height: 250px;
+    margin-bottom: 45px;
+}
+.index_apartment-map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 // RWD
 .index_mobile-show,
