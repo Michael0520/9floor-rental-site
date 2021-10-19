@@ -46,17 +46,27 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         text-decoration: none;
     }
 
-    h5,
+    h5,h2,
     p {
         padding: 0;
         margin: 0;
         font-weight: 300;
         font-style: normal;
         font-stretch: normal;
+        letter-spacing: 5px;
         color: #444647;
     }
     h5 {
         font-size: 15px;
         line-height: 1.35;
         letter-spacing: 2.5px;
+    }
+    h2{
+      font-size: 34px;
+      line-height: 1.35;
+    }
+    p{
+      font-size: 13px;
+      line-height: 2;
+      letter-spacing: 1px;
     }

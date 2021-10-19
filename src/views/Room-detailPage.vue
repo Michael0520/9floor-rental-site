@@ -195,7 +195,374 @@
                     </div>
                     <!-- side-bar-left -->
                     <SiderBar />
-                    <div class="index_center"></div>
+                    <div class="index_center">
+                        <div class="index_view-marker"></div>
+                        <section class="index_room-info">
+                            <div class="container-fluid">
+                                <div class="row gx-0">
+                                    <div class="col-lg-6 col-md-12">
+                                        <h2>仁愛 RoomA</h2>
+                                        <div class="index_apartment-name">
+                                            仁愛
+                                        </div>
+                                        <p>台北市 大安區 獨立套房</p>
+                                        <div
+                                            class="
+                                                index_detail-title
+                                                index_facility-title
+                                            "
+                                        >
+                                            房間設備
+                                        </div>
+                                        <div
+                                            class="
+                                                index_facility-icon
+                                                index_facility-list
+                                            "
+                                        >
+                                            <span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190123-30e60125a9818f0fafe541dc8a394a33.png"
+                                                    alt="保潔墊"
+                                                />
+                                                <p class="small">
+                                                    保潔墊
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190123-de2db155b79bf8a8006889182c5d316a.png"
+                                                    alt="冷氣"
+                                                />
+                                                <p class="small">冷氣</p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190129-f1921c9eb94308b9d5c25d12c7d14472.png"
+                                                    alt="單人床"
+                                                />
+                                                <p class="small">
+                                                    單人床
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190123-6ca2dc1322e836b0fd174d5f0400c39c.png"
+                                                    alt="垃圾桶"
+                                                />
+                                                <p class="small">
+                                                    垃圾桶
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190129-4ec39c6ca9954a2cf7818090e8024516.png"
+                                                    alt="浴廁"
+                                                />
+                                                <p class="small">浴廁</p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/roomTag/20190129-e603b72f2b003cb1d4b3fdd034496df2.png"
+                                                    alt="衣櫃"
+                                                />
+                                                <p class="small">衣櫃</p></span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div
+                                            class="
+                                                container-fluid
+                                                index_room-detail
+                                            "
+                                        >
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div
+                                                        class="
+                                                            index_accordion
+                                                            undefined
+                                                            index_visible
+                                                            index_disabled
+                                                        "
+                                                        style="height: 160px"
+                                                    >
+                                                        <div
+                                                            class="index_head"
+                                                            role="presentation"
+                                                        >
+                                                            <span
+                                                                >首期款項</span
+                                                            >
+                                                            <p
+                                                                class="
+                                                                    small
+                                                                    index_note
+                                                                "
+                                                            ></p>
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                index_one-column
+                                                            "
+                                                        >
+                                                            <div>
+                                                                <p>押金</p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        33000</span
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>
+                                                                    行政手續費
+                                                                </p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        1500</span
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>
+                                                                    退房清潔費
+                                                                </p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        1500</span
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            index_accordion
+                                                            undefined
+                                                            index_visible
+                                                            index_disabled
+                                                        "
+                                                        style="height: 160px"
+                                                    >
+                                                        <div
+                                                            class="index_head"
+                                                            role="presentation"
+                                                        >
+                                                            <span
+                                                                >每月小記</span
+                                                            >
+                                                            <p
+                                                                class="
+                                                                    small
+                                                                    index_note
+                                                                "
+                                                            ></p>
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                index_one-column
+                                                            "
+                                                        >
+                                                            <div>
+                                                                <p>月租金</p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        16500</span
+                                                                    >
+                                                                    /月
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>
+                                                                    能源費
+                                                                    <span
+                                                                        class="
+                                                                            index_icon-tooltip
+                                                                            index_tooltip
+                                                                        "
+                                                                        ><svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="16"
+                                                                            height="16"
+                                                                            fill="currentColor"
+                                                                            class="
+                                                                                bi
+                                                                                bi-exclamation-circle
+                                                                            "
+                                                                            viewBox="0 0 16 16"
+                                                                        >
+                                                                            <path
+                                                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                                                            />
+                                                                            <path
+                                                                                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                                                                            />
+                                                                        </svg>
+                                                                        <span
+                                                                            class="
+                                                                                index_tooltip-alert
+                                                                                index_tip
+                                                                                index_tip-hidden
+                                                                            "
+                                                                        >
+                                                                            能源費為入住會員共同分擔之居住空間使用費用，包含：水費、電費、天然氣費以及網路費等費用。
+                                                                        </span>
+                                                                    </span>
+                                                                </p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        2000</span
+                                                                    >
+                                                                    /月
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>
+                                                                    服務費
+                                                                    <span
+                                                                        class="
+                                                                            index_icon-tooltip
+                                                                            index_tooltip
+                                                                        "
+                                                                        ><svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="16"
+                                                                            height="16"
+                                                                            fill="currentColor"
+                                                                            class="
+                                                                                bi
+                                                                                bi-exclamation-circle
+                                                                            "
+                                                                            viewBox="0 0 16 16"
+                                                                        >
+                                                                            <path
+                                                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                                                            />
+                                                                            <path
+                                                                                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                                                                            />
+                                                                        </svg>
+                                                                        <span
+                                                                            class="
+                                                                                index_tooltip-alert
+                                                                                index_tip
+                                                                                index_tip-hidden
+                                                                            "
+                                                                        >
+                                                                            服務費為入住會員共同分擔之共享空間清潔管理費用及垃圾收取服務費。
+                                                                        </span>
+                                                                    </span>
+                                                                </p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        1500</span
+                                                                    >
+                                                                    /月
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            index_accordion
+                                                            undefined
+                                                            index_visible
+                                                            index_disabled
+                                                        "
+                                                        style="height: 80px"
+                                                    >
+                                                        <div
+                                                            class="index_head"
+                                                            role="presentation"
+                                                        >
+                                                            <span
+                                                                >短租方案</span
+                                                            >
+                                                            <p
+                                                                class="
+                                                                    small
+                                                                    index_note
+                                                                "
+                                                            ></p>
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                index_two-column
+                                                            "
+                                                        >
+                                                            <div>
+                                                                <p>短租3-5月</p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        33000</span
+                                                                    >
+                                                                </p>
+                                                            </div>
+                                                            <div>
+                                                                <p>短租1-2月</p>
+                                                                <p>
+                                                                    <span
+                                                                        >NTD
+                                                                        26400</span
+                                                                    >
+                                                                    /月
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="
+                                                            index_accordion
+                                                            undefined
+                                                            index_visible
+                                                            index_disabled
+                                                        "
+                                                        style="height: 120px"
+                                                    >
+                                                        <div
+                                                            class="index_head"
+                                                            role="presentation"
+                                                        >
+                                                            <span
+                                                                >房間資訊</span
+                                                            >
+                                                            <p
+                                                                class="
+                                                                    small
+                                                                    index_note
+                                                                "
+                                                            ></p>
+                                                        </div>
+                                                        <div
+                                                            class="
+                                                                index_one-column
+                                                            "
+                                                        >
+                                                            <div>
+                                                                <p>房型</p>
+                                                                <p>獨立房型</p>
+                                                            </div>
+                                                            <div>
+                                                                <p>面積</p>
+                                                                <p>
+                                                                    0坪 / 0 m²
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="index_view-marker"></div>
+                    </div>
                     <!-- side-bar-right -->
                     <div class="index_side-bar index_side-bar-right">
                         <div
@@ -267,6 +634,12 @@ svg {
         position: relative;
         width: 100%;
         max-width: 1280px;
+        // index_center
+        .index_center {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
     }
 }
 .index_room-detail-banner {
@@ -528,7 +901,164 @@ svg {
     font-weight: 300;
     vertical-align: bottom;
 }
-
+// room-info
+.index_room-info {
+    display: flex;
+    margin: 67px 33px 114px;
+    .index_apartment-name {
+        margin: 4px 0 16px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.35;
+        letter-spacing: 2.5px;
+        color: $success;
+    }
+    .index_facility-title {
+        margin-top: 64px;
+    }
+    .index_facility-icon-list {
+        margin-top: 17px;
+    }
+}
+.index_detail-title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    color: $secondary;
+}
+.index_facility-icon {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        width: 70px;
+        margin: 13px 13px 13px 0;
+        text-align: center;
+        img {
+            height: 31px;
+            width: 31px;
+            margin-bottom: 5px;
+        }
+    }
+}
+// room-detail
+.index_room-detail {
+    margin-top: 1px;
+    div {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+.index_accordion.index_visible {
+    overflow: visible;
+}
+.index_accordion.index_disabled {
+    .index_head {
+        cursor: auto;
+    }
+}
+.index_accordion {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    .index_head {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        height: 40px;
+        cursor: pointer;
+        background-color: #fdfdfd;
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 2;
+            letter-spacing: 0.5px;
+            color: $secondary;
+        }
+    }
+}
+.index_one-column {
+    padding: 0 17px;
+    div {
+        display: flex;
+        height: 40px;
+        padding: 7px 0;
+        p {
+            width: 50%;
+            .index_tooltip {
+                margin-left: 20px;
+                svg {
+                    padding-left: 1px;
+                    font-size: 16px;
+                    letter-spacing: 0.9px;
+                    text-align: center;
+                    color: $primary;
+                    &:hover + .index_tip-hidden {
+                        display: block;
+                    }
+                }
+                .index_tip {
+                    z-index: 5;
+                }
+                .index_tip-hidden {
+                    display: none;
+                }
+            }
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+}
+.index_two-column {
+    display: flex;
+    padding: 0 17px;
+    div {
+        display: flex;
+        width: 50%;
+        height: 4px;
+        padding: 7px 0;
+        p {
+            &:first-child {
+                margin-right: 13px;
+            }
+            &:last-child {
+                font-weight: 500;
+            }
+        }
+    }
+}
+.index_icon-tooltip {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    cursor: default;
+}
+.index_tooltip-alert {
+    display: block;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: calc(50% - 90px);
+    padding: 10px;
+    width: 180px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #b7ac9f;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border: 1px solid $info;
+    border-radius: 3px;
+    background-color: #fff;
+    white-space: pre-wrap;
+}
 // RWD
 .index_mobile-show,
 .index_tablet-show {
