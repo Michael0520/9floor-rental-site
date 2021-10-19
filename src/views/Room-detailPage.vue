@@ -97,6 +97,106 @@
                 </div>
                 <!-- Breadcrumb -->
                 <Breadcrumb />
+                <!-- room-detail-content -->
+                <div class="index_content">
+                    <div class="index_booking-bar">
+                        <div class="index_wrap index_booking-bar-banner">
+                            <div class="index_booking-bar-left">
+                                <div class="index_status">
+                                    <span
+                                        ><p class="small">招募中</p>
+                                        <p class="index_date"></p>
+                                    </span>
+                                    <span class="index_price index_tablet-show"
+                                        >NTD 16500
+                                        <span class="index_small"
+                                            >/月</span
+                                        ></span
+                                    >
+                                    <button
+                                        class="
+                                            index_button-icon
+                                            index_like
+                                            index_mobile-show
+                                        "
+                                    >
+                                        <i
+                                            class="
+                                                material-icons
+                                                index__icon___1quHO
+                                            "
+                                            >favorite</i
+                                        >
+                                    </button>
+                                </div>
+                                <a
+                                    class="index_apartment-name"
+                                    href="/zh-tw/apartment/1"
+                                    >仁愛</a
+                                >
+                                <div class="index_room-name">仁愛 RoomA</div>
+                            </div>
+                            <div class="index_booking-bar-right">
+                                <span class="index_price index_tablet-hide"
+                                    >NTD 16500<span class="index_small"
+                                        >/月</span
+                                    ></span
+                                ><button
+                                    class="
+                                        index_button-icon
+                                        index_like
+                                        index_mobile-hide
+                                    "
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        fill="currentColor"
+                                        class="bi bi-suit-heart-fill"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"
+                                        />
+                                    </svg></button
+                                ><button
+                                    class="
+                                        index_button
+                                        index_textButton
+                                        index_primary
+                                    "
+                                >
+                                    <div>預約看房</div></button
+                                ><button
+                                    class="
+                                        index_button
+                                        index_textButton
+                                        index_accent
+                                    "
+                                >
+                                    <div>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="14"
+                                            height="14"
+                                            fill="currentColor"
+                                            class="bi bi-search"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                            /></svg
+                                        >預訂入住
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_side-bar index-left"></div>
+                    <div class="index_center"></div>
+                    <div class="index_side-bar index-right"></div>
+                </div>
             </div>
             <!-- Footer -->
             <div class="row">
@@ -153,6 +253,12 @@ svg {
         svg {
             color: #fff;
         }
+    }
+    .index_content {
+        display: flex;
+        position: relative;
+        width: 100%;
+        max-width: 1280px;
     }
 }
 .index_room-detail-banner {
@@ -298,5 +404,125 @@ svg {
             font-size: 16px;
         }
     }
+}
+.index_button.index_accent {
+    background-color: $lightOrange;
+    border: 1px solid $danger;
+    div {
+        color: #fff;
+    }
+}
+// booking-bar
+.index_booking-bar {
+    position: absolute;
+    height: 65px;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    .index_wrap,
+    .index_booking-bar-banner {
+        margin-top: -65px;
+        transition: margin-top 0.3s ease-in-out;
+    }
+    .index_booking-bar-banner {
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
+        width: 100%;
+        padding: 0 60px;
+    }
+    .index_wrap {
+        .index_booking-bar-left {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            background-color: #fff;
+            .index_status {
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                height: 100%;
+                width: 150px;
+                padding-left: 20px;
+                background-color: $lightOrange;
+                span {
+                    .index_date {
+                        margin-top: -5px;
+                        font-weight: 700;
+                    }
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+            .index_apartment-name {
+                margin-left: 26px;
+                max-width: 150px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.35;
+                letter-spacing: 2.5px;
+                color: $success;
+            }
+            .index_room-name {
+                margin-left: 26px;
+                max-width: 200px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.35;
+                letter-spacing: 2.5px;
+                color: $primary;
+            }
+        }
+        .index_booking-bar-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            padding-right: 25px;
+            background: #fff;
+            .index_textButton {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.index_price {
+    height: 30px;
+    margin-right: auto;
+    padding: 0 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $success;
+    background-color: #fff7f4;
+    line-height: 30px;
+}
+.index_button-icon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $info;
+    background-color: #fff;
+    line-height: 30px;
+    outline: none;
+    transition: all 0.3s;
+    svg {
+        font-size: 16px;
+        color: $secondary;
+        transition: all 0.3s;
+    }
+}
+.index_small {
+    margin-left: 3px;
+    font-size: 12px;
+    font-weight: 300;
+    vertical-align: bottom;
+}
+
+// RWD
+.index_mobile-show,
+.index_tablet-show {
+    display: none;
 }
 </style>
