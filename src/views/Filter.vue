@@ -347,52 +347,53 @@ export default {
                 {
                     name: "仁愛",
                     status: "招募中",
-                    imgUrl: "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
-                    price: 16500,
+                    imgUrl:
+                        "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
+                    price: 16500
                 },
                 {
                     name: "仁愛",
                     status: "招募中",
-                    price: 16500,
+                    price: 16500
                 },
                 {
                     name: "仁愛",
                     status: "招募中",
-                    price: 16500,
+                    price: 16500
                 },
                 {
                     name: "仁愛",
                     status: "招募中",
-                    price: 16500,
+                    price: 16500
                 },
                 {
                     name: "仁愛",
                     status: "招募中",
-                    price: 16500,
+                    price: 16500
                 },
                 {
                     name: "仁愛",
                     status: "招募中",
-                    price: 16500,
-                },
-            ],
+                    price: 16500
+                }
+            ]
         };
     },
     methods: {
         filterRow(index) {
             return index % 2 === 0;
-        },
+        }
     },
     components: {
         NavBar,
         Breadcrumb,
         SiderBar,
         RoomCard,
-        Footer,
-    },
+        Footer
+    }
 };
 </script>
-<style scoped lang="scss">
+<style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 

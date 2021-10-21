@@ -956,19 +956,19 @@ import RoomCard from "../components/RoomCard.vue";
 export default {
     data() {
         return {
-            name: "RoomDetailPage",
+            name: "RoomDetailPage"
         };
     },
     components: {
         Footer,
         Breadcrumb,
         SiderBar,
-        RoomCard,
-    },
+        RoomCard
+    }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
@@ -993,9 +993,7 @@ svg {
         position: absolute;
         top: 100px;
         .breadcrumb-item {
-            &::before {
-                color: #fff;
-            }
+            color: #fff;
         }
         a,
         svg {
@@ -1020,7 +1018,6 @@ svg {
             }
             .index_roommate {
                 margin: 144px 17px 135px;
-
                 .index_roommate-title {
                     display: flex;
                     justify-content: center;

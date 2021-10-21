@@ -234,17 +234,17 @@ import SiderBar from "../components/SiderBar.vue";
 export default {
     data() {
         return {
-            name: "HomePage",
+            name: "HomePage"
         };
     },
     components: {
         Footer,
         RoomCard,
-        SiderBar,
-    },
+        SiderBar
+    }
 };
 </script>
-<style scoped lang="scss">
+<style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
