@@ -59,7 +59,7 @@
                             </div>
                         </button>
                     </div>
-                    <div class="index_banner-content">
+                    <div class="index_banner-detail-content">
                         <div>
                             <div class="index_vertical-title index_subTitle">
                                 <span>仁</span><span>愛</span>
@@ -1156,7 +1156,7 @@ svg {
     }
 }
 // banner
-.index_banner-content {
+.index_banner-detail-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1215,23 +1215,6 @@ svg {
     }
     svg {
         color: #fff;
-    }
-}
-.index_button {
-    display: flex;
-    justify-content: center;
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 12px;
-        line-height: 1.75;
-        letter-spacing: 3.4px;
-        color: $primary;
-        svg {
-            font-size: 16px;
-        }
     }
 }
 // accent-button style

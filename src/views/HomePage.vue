@@ -434,8 +434,13 @@ export default {
         }
         .index_more-room {
             margin-bottom: 53px;
+            color: $primary;
+
             div {
                 margin-bottom: 24px;
+            }
+            svg {
+                color: $primary;
             }
         }
     }
