@@ -1291,6 +1291,9 @@ svg {
     .index_booking-bar-banner {
         margin-top: -65px;
         transition: margin-top 0.3s ease-in-out;
+        @include sm {
+            margin-top: -130px;
+        }
     }
     .index_booking-bar-banner {
         display: flex;
