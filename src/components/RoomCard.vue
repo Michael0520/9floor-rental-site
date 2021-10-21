@@ -1,36 +1,33 @@
 <template>
     <div class="index_room-card">
-        <div class="container-fluid">
-            <div class="index_card-wrapper">
-                <a href="#">
-                    <div class="index_card-image img-fluid"></div>
-                </a>
-            </div>
+        <div class="index_card-wrapper">
+            <a href="#">
+                <div class="index_card-image img-fluid"></div>
+            </a>
+        </div>
+        <div class="index_title">
+            <a href="#" class="index_leftTitle">
+                <span>仁愛</span>
+            </a>
+            <a href="#" class="index_rightTitle">
+                <span>仁愛 ROOM A</span>
+            </a>
+        </div>
+        <div class="index_status">
+            <!-- text 樣式吃不到 -->
+            <div class="text-start">獨立套房</div>
+            <div class="text-end">招募中</div>
+        </div>
 
-            <div class="index_title">
-                <a href="#" class="index_leftTitle">
-                    <span>仁愛</span>
-                </a>
-                <a href="#" class="index_rightTitle">
-                    <span>仁愛 ROOM A</span>
-                </a>
-            </div>
-            <div class="index_status">
-                <!-- text 樣式吃不到 -->
-                <div class="text-start">獨立套房</div>
-                <div class="text-end">招募中</div>
-            </div>
-
-            <div class="index_detail">
+        <div class="index_detail">
+            <span>
                 <span>
-                    <span>
-                        NTD
-                        <span class="index_price">16500</span>
-                        / 月
-                    </span>
+                    NTD
+                    <span class="index_price">16500</span>
+                    / 月
                 </span>
-                <span></span>
-            </div>
+            </span>
+            <span></span>
         </div>
     </div>
 </template>

@@ -201,358 +201,303 @@
                             <div class="container-fluid no-padding">
                                 <div class="row gx-0">
                                     <div class="col-lg-6 col-sm-12">
-                                        <h2>仁愛 RoomA</h2>
-                                        <div class="index_apartment-name">
-                                            仁愛
-                                        </div>
-                                        <p>台北市 大安區 獨立套房</p>
-                                        <div
-                                            class="
-                                                index_detail-title
-                                                index_facility-title
-                                            "
-                                        >
-                                            房間設備
-                                        </div>
-                                        <div
-                                            class="
-                                                index_facility-icon
-                                                index_facility-list
-                                            "
-                                        >
-                                            <span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190123-30e60125a9818f0fafe541dc8a394a33.png"
-                                                    alt="保潔墊"
-                                                />
-                                                <p class="small">
-                                                    保潔墊
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190123-de2db155b79bf8a8006889182c5d316a.png"
-                                                    alt="冷氣"
-                                                />
-                                                <p class="small">冷氣</p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190129-f1921c9eb94308b9d5c25d12c7d14472.png"
-                                                    alt="單人床"
-                                                />
-                                                <p class="small">
-                                                    單人床
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190123-6ca2dc1322e836b0fd174d5f0400c39c.png"
-                                                    alt="垃圾桶"
-                                                />
-                                                <p class="small">
-                                                    垃圾桶
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190129-4ec39c6ca9954a2cf7818090e8024516.png"
-                                                    alt="浴廁"
-                                                />
-                                                <p class="small">浴廁</p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/roomTag/20190129-e603b72f2b003cb1d4b3fdd034496df2.png"
-                                                    alt="衣櫃"
-                                                />
-                                                <p class="small">衣櫃</p></span
+                                        <div class="index_room-info-left">
+                                            <h2>仁愛 RoomA</h2>
+                                            <div class="index_apartment-name">
+                                                仁愛
+                                            </div>
+                                            <p>台北市 大安區 獨立套房</p>
+                                            <div
+                                                class="
+                                                    index_detail-title
+                                                    index_facility-title
+                                                "
                                             >
+                                                房間設備
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_facility-icon
+                                                    index_facility-list
+                                                "
+                                            >
+                                                <span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190123-30e60125a9818f0fafe541dc8a394a33.png"
+                                                        alt="保潔墊"
+                                                    />
+                                                    <p class="small">
+                                                        保潔墊
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190123-de2db155b79bf8a8006889182c5d316a.png"
+                                                        alt="冷氣"
+                                                    />
+                                                    <p class="small">
+                                                        冷氣
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190129-f1921c9eb94308b9d5c25d12c7d14472.png"
+                                                        alt="單人床"
+                                                    />
+                                                    <p class="small">
+                                                        單人床
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190123-6ca2dc1322e836b0fd174d5f0400c39c.png"
+                                                        alt="垃圾桶"
+                                                    />
+                                                    <p class="small">
+                                                        垃圾桶
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190129-4ec39c6ca9954a2cf7818090e8024516.png"
+                                                        alt="浴廁"
+                                                    />
+                                                    <p class="small">
+                                                        浴廁
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/roomTag/20190129-e603b72f2b003cb1d4b3fdd034496df2.png"
+                                                        alt="衣櫃"
+                                                    />
+                                                    <p class="small">
+                                                        衣櫃
+                                                    </p></span
+                                                >
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-12">
-                                        <div
-                                            class="
-                                                container-fluid
-                                                index_room-detail
-                                            "
-                                        >
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div
-                                                        class="
-                                                            index_accordion
-                                                            undefined
-                                                            index_visible
-                                                            index_disabled
-                                                        "
-                                                        style="height: 160px"
-                                                    >
-                                                        <div
-                                                            class="index_head"
-                                                            role="presentation"
-                                                        >
+                                        <div class="index_room-detail">
+                                            <div
+                                                class="
+                                                    index_accordion
+                                                    undefined
+                                                    index_visible index_disabled
+                                                "
+                                                style="height: 160px"
+                                            >
+                                                <div
+                                                    class="index_head"
+                                                    role="presentation"
+                                                >
+                                                    <span>首期款項</span>
+                                                    <p
+                                                        class="small index_note"
+                                                    ></p>
+                                                </div>
+                                                <div class="index_one-column">
+                                                    <div>
+                                                        <p>押金</p>
+                                                        <p>
                                                             <span
-                                                                >首期款項</span
+                                                                >NTD 33000</span
                                                             >
-                                                            <p
-                                                                class="
-                                                                    small
-                                                                    index_note
-                                                                "
-                                                            ></p>
-                                                        </div>
-                                                        <div
-                                                            class="
-                                                                index_one-column
-                                                            "
-                                                        >
-                                                            <div>
-                                                                <p>押金</p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        33000</span
-                                                                    >
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p>
-                                                                    行政手續費
-                                                                </p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        1500</span
-                                                                    >
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p>
-                                                                    退房清潔費
-                                                                </p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        1500</span
-                                                                    >
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                        </p>
                                                     </div>
-                                                    <div
-                                                        class="
-                                                            index_accordion
-                                                            undefined
-                                                            index_visible
-                                                            index_disabled
-                                                        "
-                                                        style="height: 160px"
-                                                    >
-                                                        <div
-                                                            class="index_head"
-                                                            role="presentation"
-                                                        >
+                                                    <div>
+                                                        <p>行政手續費</p>
+                                                        <p>
                                                             <span
-                                                                >每月小記</span
+                                                                >NTD 1500</span
                                                             >
-                                                            <p
-                                                                class="
-                                                                    small
-                                                                    index_note
-                                                                "
-                                                            ></p>
-                                                        </div>
-                                                        <div
-                                                            class="
-                                                                index_one-column
-                                                            "
-                                                        >
-                                                            <div>
-                                                                <p>月租金</p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        16500</span
-                                                                    >
-                                                                    /月
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p>
-                                                                    能源費
-                                                                    <span
-                                                                        class="
-                                                                            index_icon-tooltip
-                                                                            index_tooltip
-                                                                        "
-                                                                        ><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="16"
-                                                                            height="16"
-                                                                            fill="currentColor"
-                                                                            class="
-                                                                                bi
-                                                                                bi-exclamation-circle
-                                                                            "
-                                                                            viewBox="0 0 16 16"
-                                                                        >
-                                                                            <path
-                                                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                                                                            />
-                                                                            <path
-                                                                                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
-                                                                            />
-                                                                        </svg>
-                                                                        <span
-                                                                            class="
-                                                                                index_tooltip-alert
-                                                                                index_tip
-                                                                                index_tip-hidden
-                                                                            "
-                                                                        >
-                                                                            能源費為入住會員共同分擔之居住空間使用費用，包含：水費、電費、天然氣費以及網路費等費用。
-                                                                        </span>
-                                                                    </span>
-                                                                </p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        2000</span
-                                                                    >
-                                                                    /月
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p>
-                                                                    服務費
-                                                                    <span
-                                                                        class="
-                                                                            index_icon-tooltip
-                                                                            index_tooltip
-                                                                        "
-                                                                        ><svg
-                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                            width="16"
-                                                                            height="16"
-                                                                            fill="currentColor"
-                                                                            class="
-                                                                                bi
-                                                                                bi-exclamation-circle
-                                                                            "
-                                                                            viewBox="0 0 16 16"
-                                                                        >
-                                                                            <path
-                                                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                                                                            />
-                                                                            <path
-                                                                                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
-                                                                            />
-                                                                        </svg>
-                                                                        <span
-                                                                            class="
-                                                                                index_tooltip-alert
-                                                                                index_tip
-                                                                                index_tip-hidden
-                                                                            "
-                                                                        >
-                                                                            服務費為入住會員共同分擔之共享空間清潔管理費用及垃圾收取服務費。
-                                                                        </span>
-                                                                    </span>
-                                                                </p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        1500</span
-                                                                    >
-                                                                    /月
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                        </p>
                                                     </div>
-                                                    <div
-                                                        class="
-                                                            index_accordion
-                                                            undefined
-                                                            index_visible
-                                                            index_disabled
-                                                        "
-                                                        style="height: 80px"
-                                                    >
-                                                        <div
-                                                            class="index_head"
-                                                            role="presentation"
-                                                        >
+                                                    <div>
+                                                        <p>退房清潔費</p>
+                                                        <p>
                                                             <span
-                                                                >短租方案</span
+                                                                >NTD 1500</span
                                                             >
-                                                            <p
-                                                                class="
-                                                                    small
-                                                                    index_note
-                                                                "
-                                                            ></p>
-                                                        </div>
-                                                        <div
-                                                            class="
-                                                                index_two-column
-                                                            "
-                                                        >
-                                                            <div>
-                                                                <p>短租3-5月</p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        33000</span
-                                                                    >
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p>短租1-2月</p>
-                                                                <p>
-                                                                    <span
-                                                                        >NTD
-                                                                        26400</span
-                                                                    >
-                                                                    /月
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                        </p>
                                                     </div>
-                                                    <div
-                                                        class="
-                                                            index_accordion
-                                                            undefined
-                                                            index_visible
-                                                            index_disabled
-                                                        "
-                                                        style="height: 120px"
-                                                    >
-                                                        <div
-                                                            class="index_head"
-                                                            role="presentation"
-                                                        >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_accordion
+                                                    undefined
+                                                    index_visible index_disabled
+                                                "
+                                                style="height: 160px"
+                                            >
+                                                <div
+                                                    class="index_head"
+                                                    role="presentation"
+                                                >
+                                                    <span>每月小記</span>
+                                                    <p
+                                                        class="small index_note"
+                                                    ></p>
+                                                </div>
+                                                <div class="index_one-column">
+                                                    <div>
+                                                        <p>月租金</p>
+                                                        <p>
                                                             <span
-                                                                >房間資訊</span
+                                                                >NTD 16500</span
                                                             >
-                                                            <p
+                                                            /月
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p>
+                                                            能源費
+                                                            <span
                                                                 class="
-                                                                    small
-                                                                    index_note
+                                                                    index_icon-tooltip
+                                                                    index_tooltip
                                                                 "
-                                                            ></p>
-                                                        </div>
-                                                        <div
-                                                            class="
-                                                                index_one-column
-                                                            "
-                                                        >
-                                                            <div>
-                                                                <p>房型</p>
-                                                                <p>獨立房型</p>
-                                                            </div>
-                                                            <div>
-                                                                <p>面積</p>
-                                                                <p>
-                                                                    0坪 / 0 m²
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                                ><svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="16"
+                                                                    height="16"
+                                                                    fill="currentColor"
+                                                                    class="
+                                                                        bi
+                                                                        bi-exclamation-circle
+                                                                    "
+                                                                    viewBox="0 0 16 16"
+                                                                >
+                                                                    <path
+                                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                                                    />
+                                                                    <path
+                                                                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                                                                    />
+                                                                </svg>
+                                                                <span
+                                                                    class="
+                                                                        index_tooltip-alert
+                                                                        index_tip
+                                                                        index_tip-hidden
+                                                                    "
+                                                                >
+                                                                    能源費為入住會員共同分擔之居住空間使用費用，包含：水費、電費、天然氣費以及網路費等費用。
+                                                                </span>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span
+                                                                >NTD 2000</span
+                                                            >
+                                                            /月
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p>
+                                                            服務費
+                                                            <span
+                                                                class="
+                                                                    index_icon-tooltip
+                                                                    index_tooltip
+                                                                "
+                                                                ><svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="16"
+                                                                    height="16"
+                                                                    fill="currentColor"
+                                                                    class="
+                                                                        bi
+                                                                        bi-exclamation-circle
+                                                                    "
+                                                                    viewBox="0 0 16 16"
+                                                                >
+                                                                    <path
+                                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                                                    />
+                                                                    <path
+                                                                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                                                                    />
+                                                                </svg>
+                                                                <span
+                                                                    class="
+                                                                        index_tooltip-alert
+                                                                        index_tip
+                                                                        index_tip-hidden
+                                                                    "
+                                                                >
+                                                                    服務費為入住會員共同分擔之共享空間清潔管理費用及垃圾收取服務費。
+                                                                </span>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            <span
+                                                                >NTD 1500</span
+                                                            >
+                                                            /月
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_accordion
+                                                    undefined
+                                                    index_visible index_disabled
+                                                "
+                                                style="height: 80px"
+                                            >
+                                                <div
+                                                    class="index_head"
+                                                    role="presentation"
+                                                >
+                                                    <span>短租方案</span>
+                                                    <p
+                                                        class="small index_note"
+                                                    ></p>
+                                                </div>
+                                                <div class="index_two-column">
+                                                    <div>
+                                                        <p>短租3-5月</p>
+                                                        <p>
+                                                            <span
+                                                                >NTD 33000</span
+                                                            >
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p>短租1-2月</p>
+                                                        <p>
+                                                            <span
+                                                                >NTD 26400</span
+                                                            >
+                                                            /月
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_accordion
+                                                    undefined
+                                                    index_visible index_disabled
+                                                "
+                                                style="height: 120px"
+                                            >
+                                                <div
+                                                    class="index_head"
+                                                    role="presentation"
+                                                >
+                                                    <span>房間資訊</span>
+                                                    <p
+                                                        class="small index_note"
+                                                    ></p>
+                                                </div>
+                                                <div class="index_one-column">
+                                                    <div>
+                                                        <p>房型</p>
+                                                        <p>獨立房型</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>面積</p>
+                                                        <p>0坪 / 0 m²</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -567,189 +512,229 @@
                         >
                             <div class="container-fluid">
                                 <div class="row gx-0">
-                                    <div class="col-lg-6 col-sm-12">
-                                        <h2>仁愛</h2>
-                                        <p class="index_address">
-                                            台北市 大安區
-                                        </p>
-                                        <p class="index_description">
-                                            位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。
-                                        </p>
-                                        <div class="index_feature">
-                                            <span class="index_badge">
-                                                <div class="index_text">
-                                                    適合開伙
-                                                </div>
-                                            </span>
-                                            <span class="index_badge">
-                                                <div class="index_text">
-                                                    共同工作空間
-                                                </div>
-                                            </span>
-                                        </div>
-                                        <div
-                                            class="
-                                                index_detail-title
-                                                index_facility-title
-                                            "
-                                        >
-                                            居住空間設備
-                                        </div>
-                                        <div
-                                            class="
-                                                index_facility-icon
-                                                index_facility-list
-                                            "
-                                        >
-                                            <span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-dcf239b9b64076e4c273b5177630454e.png"
-                                                    alt="瓦斯爐"
-                                                />
-                                                <p class="small">
-                                                    瓦斯爐
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8070e6cdae1efb603a564f16315527b9.png"
-                                                    alt="基本餐具"
-                                                />
-                                                <p class="small">
-                                                    基本餐具
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190121-3fc7ad1b4e378cb954be7b06ada03afe.jpg"
-                                                    alt="洗衣機"
-                                                />
-                                                <p class="small">
-                                                    洗衣機
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-055410ea9b7695ac68526abe3b04f806.png"
-                                                    alt="洗碗機"
-                                                />
-                                                <p class="small">
-                                                    洗碗機
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8d4b1a037bf46cd375109e0efbb6c30f.png"
-                                                    alt="烤箱"
-                                                />
-                                                <p class="small">烤箱</p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-d780119673dcc9c653335652a0b2c9b8.png"
-                                                    alt="滅火器"
-                                                />
-                                                <p class="small">
-                                                    滅火器
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-3106088f32d9f0ca1fe599d7ec9a4e12.png"
-                                                    alt="煙霧偵測器"
-                                                />
-                                                <p class="small">
-                                                    煙霧偵測器
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-946261d4b79638f0eea7bc5e60bb832f.png"
-                                                    alt="戶外陽台"
-                                                />
-                                                <p class="small">
-                                                    戶外陽台
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-8226c562a3429211d9f236cfa68c47e2.png"
-                                                    alt="工作空間"
-                                                />
-                                                <p class="small">
-                                                    工作空間
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-765a378c1d9ae10f8f484e83f7fb8eef.png"
-                                                    alt="無線網路"
-                                                />
-                                                <p class="small">
-                                                    無線網路
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-b971d7faf380f622356f5151934b1002.png"
-                                                    alt="冰箱"
-                                                />
-                                                <p class="small">冰箱</p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190129-a153b4ad702e6d6b34615663c711b063.png"
-                                                    alt="吹風機"
-                                                />
-                                                <p class="small">
-                                                    吹風機
-                                                </p></span
+                                    <div class="col-sm-12">
+                                        <div class="index_mobile-show-section">
+                                            <div
+                                                class="
+                                                    index_section-title
+                                                    index_title
+                                                "
                                             >
+                                                <div class="index_title">
+                                                    公寓資訊
+                                                </div>
+                                                <div class="index_sub-title">
+                                                    Apartment Info
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="index_mobile-show-image"
+                                                style="
+                                                    background-image: url('https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png');
+                                                "
+                                            ></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-12">
-                                        <div class="index_images">
-                                            <img
-                                                src="https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png"
-                                                alt="slider"
-                                            />
-                                        </div>
                                         <div
-                                            class="
-                                                index_accordion
-                                                undefined
-                                                index_visible index_disabled
-                                            "
-                                            style="height: 200px"
+                                            class="index_apartment-content-left"
                                         >
-                                            <div
-                                                class="index_head"
-                                                role="presentation"
-                                            >
-                                                <span>居住空間資訊</span>
-                                                <p class="small index_note"></p>
+                                            <h2>仁愛</h2>
+                                            <p class="index_address">
+                                                台北市 大安區
+                                            </p>
+                                            <p class="index_description">
+                                                位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。
+                                            </p>
+                                            <div class="index_feature">
+                                                <span class="index_badge">
+                                                    <div class="index_text">
+                                                        適合開伙
+                                                    </div>
+                                                </span>
+                                                <span class="index_badge">
+                                                    <div class="index_text">
+                                                        共同工作空間
+                                                    </div>
+                                                </span>
                                             </div>
                                             <div
                                                 class="
-                                                    index_apartment-info-content
+                                                    index_detail-title
+                                                    index_facility-title
                                                 "
                                             >
-                                                <div>
-                                                    <p>陽台</p>
-                                                    <p>有</p>
+                                                居住空間設備
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_facility-icon
+                                                    index_facility-list
+                                                "
+                                            >
+                                                <span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-dcf239b9b64076e4c273b5177630454e.png"
+                                                        alt="瓦斯爐"
+                                                    />
+                                                    <p class="small">
+                                                        瓦斯爐
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-8070e6cdae1efb603a564f16315527b9.png"
+                                                        alt="基本餐具"
+                                                    />
+                                                    <p class="small">
+                                                        基本餐具
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190121-3fc7ad1b4e378cb954be7b06ada03afe.jpg"
+                                                        alt="洗衣機"
+                                                    />
+                                                    <p class="small">
+                                                        洗衣機
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-055410ea9b7695ac68526abe3b04f806.png"
+                                                        alt="洗碗機"
+                                                    />
+                                                    <p class="small">
+                                                        洗碗機
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-8d4b1a037bf46cd375109e0efbb6c30f.png"
+                                                        alt="烤箱"
+                                                    />
+                                                    <p class="small">
+                                                        烤箱
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-d780119673dcc9c653335652a0b2c9b8.png"
+                                                        alt="滅火器"
+                                                    />
+                                                    <p class="small">
+                                                        滅火器
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-3106088f32d9f0ca1fe599d7ec9a4e12.png"
+                                                        alt="煙霧偵測器"
+                                                    />
+                                                    <p class="small">
+                                                        煙霧偵測器
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-946261d4b79638f0eea7bc5e60bb832f.png"
+                                                        alt="戶外陽台"
+                                                    />
+                                                    <p class="small">
+                                                        戶外陽台
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-8226c562a3429211d9f236cfa68c47e2.png"
+                                                        alt="工作空間"
+                                                    />
+                                                    <p class="small">
+                                                        工作空間
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-765a378c1d9ae10f8f484e83f7fb8eef.png"
+                                                        alt="無線網路"
+                                                    />
+                                                    <p class="small">
+                                                        無線網路
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190122-b971d7faf380f622356f5151934b1002.png"
+                                                        alt="冰箱"
+                                                    />
+                                                    <p class="small">
+                                                        冰箱
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190129-a153b4ad702e6d6b34615663c711b063.png"
+                                                        alt="吹風機"
+                                                    />
+                                                    <p class="small">
+                                                        吹風機
+                                                    </p></span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div
+                                            class="
+                                                index_apartment-content-right
+                                            "
+                                        >
+                                            <div class="index_images">
+                                                <img
+                                                    src="https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png"
+                                                    alt="slider"
+                                                />
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_accordion
+                                                    undefined
+                                                    index_visible
+                                                    index_disabled
+                                                    index_accordion-right
+                                                "
+                                            >
+                                                <div
+                                                    class="index_head"
+                                                    role="presentation"
+                                                >
+                                                    <span>居住空間資訊</span>
+                                                    <p
+                                                        class="small index_note"
+                                                    ></p>
                                                 </div>
-                                                <div>
-                                                    <p>廚房</p>
-                                                    <p>有</p>
-                                                </div>
-                                                <div>
-                                                    <p>公共衛浴</p>
-                                                    <p>1間</p>
-                                                </div>
-                                                <div>
-                                                    <p>房間</p>
-                                                    <p>4間</p>
-                                                </div>
-                                                <div>
-                                                    <p>總樓層</p>
-                                                    <p>5樓</p>
-                                                </div>
-                                                <div>
-                                                    <p>清潔打掃</p>
-                                                    <p>每週一次</p>
-                                                </div>
-                                                <div>
-                                                    <p>垃圾處理</p>
-                                                    <p>每週一次</p>
+                                                <div
+                                                    class="
+                                                        index_apartment-info-content
+                                                    "
+                                                >
+                                                    <div>
+                                                        <p>陽台</p>
+                                                        <p>有</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>廚房</p>
+                                                        <p>有</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>公共衛浴</p>
+                                                        <p>1間</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>房間</p>
+                                                        <p>4間</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>總樓層</p>
+                                                        <p>5樓</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>清潔打掃</p>
+                                                        <p>每週一次</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>垃圾處理</p>
+                                                        <p>每週一次</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -782,30 +767,36 @@
                                         <!-- TODO:需要再修正 row , col 巢狀 -->
                                         <div
                                             class="
-                                                index_detail-title
-                                                index-support-detail-title
+                                                index_support-and-direction-left
                                             "
                                         >
-                                            附近機能
-                                        </div>
-                                        <div class="index_facility-icon">
-                                            <span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-37fd5a979d329df5339de370bd4776b6.png"
-                                                    alt="便利商店"
-                                                />
-                                                <p class="small">
-                                                    便利商店
-                                                </p></span
-                                            ><span
-                                                ><img
-                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-0a9f70011fb9bee0ab0f8c2e14b37e8a.png"
-                                                    alt="咖啡廳"
-                                                />
-                                                <p class="small">
-                                                    咖啡廳
-                                                </p></span
+                                            <div
+                                                class="
+                                                    index_detail-title
+                                                    index-support-detail-title
+                                                "
                                             >
+                                                附近機能
+                                            </div>
+                                            <div class="index_facility-icon">
+                                                <span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190122-37fd5a979d329df5339de370bd4776b6.png"
+                                                        alt="便利商店"
+                                                    />
+                                                    <p class="small">
+                                                        便利商店
+                                                    </p></span
+                                                ><span
+                                                    ><img
+                                                        src="https://9floor.co/backend/web/apartmentTag/20190122-0a9f70011fb9bee0ab0f8c2e14b37e8a.png"
+                                                        alt="咖啡廳"
+                                                    />
+                                                    <p class="small">
+                                                        咖啡廳
+                                                    </p></span
+                                                >
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-12">
@@ -920,6 +911,18 @@
                                 </div>
                             </div>
                         </section>
+                        <div class="index_content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <RoomCard />
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <RoomCard />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a
                             href="/filter"
                             class="index_button index_more-button index_primary"
@@ -949,6 +952,7 @@
 import Footer from "../components/Footer.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 import SiderBar from "../components/SiderBar.vue";
+import RoomCard from "../components/RoomCard.vue";
 export default {
     data() {
         return {
@@ -959,6 +963,7 @@ export default {
         Footer,
         Breadcrumb,
         SiderBar,
+        RoomCard,
     },
 };
 </script>
@@ -1009,6 +1014,9 @@ svg {
             width: 100%;
             .index_apartment-content {
                 margin: 46px 34px 82px;
+                @include sm {
+                    margin: 0;
+                }
             }
             .index_roommate {
                 margin: 144px 17px 135px;
@@ -1021,12 +1029,14 @@ svg {
             }
             .index_roommate.index_no-roommate {
                 margin: 90px 17px 69px;
+                @include sm {
+                    margin: 90px 17px 51px;
+                }
             }
         }
     }
 }
-// rommate
-
+//apartment-info
 .index_apartment-info {
     display: flex;
     .index_address {
@@ -1046,6 +1056,41 @@ svg {
         margin-top: 55px;
     }
 }
+//apartment-info RWD
+.index_apartment-content-left,
+.index_apartment-content-right {
+    @include sm {
+        margin-bottom: 50px;
+    }
+}
+.index_apartment-content-right {
+    .index_images {
+        img {
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}
+.index_facility-icon {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        width: 70px;
+        margin: 13px 20px 13px 0;
+        text-align: center;
+        @include sm {
+            margin: 13px 6px;
+        }
+        img {
+            height: 31px;
+            width: 31px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+// badge
 .index_badge {
     display: inline-flex;
     align-items: center;
@@ -1076,6 +1121,9 @@ svg {
     display: flex;
     flex-wrap: wrap;
     padding: 0 17px;
+    @include sm {
+        padding: 0;
+    }
     div {
         display: flex;
         flex-wrap: wrap;
@@ -1087,6 +1135,13 @@ svg {
                 width: 66px;
                 margin-right: 16px;
             }
+        }
+    }
+}
+.index_apartment-content-left {
+    h2 {
+        @include sm {
+            font-size: 34px;
         }
     }
 }
@@ -1336,6 +1391,9 @@ svg {
 .index_room-info {
     display: flex;
     margin: 67px 33px 114px;
+    @include sm {
+        margin: 48px 0 48px;
+    }
     .index_apartment-name {
         margin: 4px 0 16px;
         font-size: 15px;
@@ -1358,20 +1416,7 @@ svg {
     letter-spacing: 0.5px;
     color: $secondary;
 }
-.index_facility-icon {
-    display: flex;
-    flex-wrap: wrap;
-    span {
-        width: 70px;
-        margin: 13px 20px 13px 0;
-        text-align: center;
-        img {
-            height: 31px;
-            width: 31px;
-            margin-bottom: 5px;
-        }
-    }
-}
+
 // room-detail
 .index_room-detail {
     margin-top: 1px;
@@ -1389,11 +1434,14 @@ svg {
         cursor: auto;
     }
 }
+// accordion
 .index_accordion {
     overflow: hidden;
     transition: height 0.3s ease-out;
     border-top: 1px solid $border;
     border-bottom: 1px solid $border;
+    @include sm {
+    }
     .index_head {
         display: flex;
         position: relative;
@@ -1494,7 +1542,7 @@ svg {
 // Map
 .index_map {
     height: 250px;
-    margin-bottom: 45px;
+    margin: 45px 0;
 }
 .index_apartment-map {
     position: relative;
@@ -1515,6 +1563,7 @@ svg {
         margin-bottom: 22px;
     }
 }
+
 .index_direction.index_item {
     display: flex;
     position: relative;
@@ -1527,6 +1576,15 @@ svg {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @include sm {
+        .index_item {
+            &:first-child {
+                width: 100%;
+                flex-shrink: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
     .index_item.index_line.index_yellow {
         align-items: initial;
         border-bottom: 3px solid $info;
@@ -1602,15 +1660,48 @@ svg {
 // more button
 .index_center {
     .index_more-button {
-        @media screen and (max-width: 576px) {
-            display: inline-flex;
-            align-self: center;
+        display: inline-flex;
+        align-self: center;
+        margin-bottom: 120px;
+        @include sm {
             margin-bottom: 50px;
         }
-        @media screen and (min-width: 576px) {
-            display: none;
+    }
+}
+
+//another
+.index_accordion-right {
+    height: 200px;
+    @include sm {
+        height: auto;
+    }
+}
+.index_room-info-left {
+    @include sm {
+        padding: 10px;
+        margin: 34px 0;
+        h2 {
+            font-size: 34px;
         }
     }
+}
+.index_support-and-direction-left {
+    @include sm {
+        margin-bottom: 50px;
+    }
+}
+// mobile-show-background
+.index_mobile-show-section {
+    @media screen and(min-width:576px) {
+        display: none;
+    }
+}
+.index_mobile-show-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: 50%;
+    margin-bottom: 45px;
 }
 
 // RWD

@@ -52,7 +52,7 @@
                         <div class="container-fluid no-padding">
                             <div class="row gx-0">
                                 <!-- <p class="vertical index_watermark">共居生活</p> -->
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <div class="index_left">
                                         <p class="vertical index_watermark">
                                             共居生活
