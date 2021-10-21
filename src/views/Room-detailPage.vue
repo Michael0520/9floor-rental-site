@@ -775,7 +775,157 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="index_support-and-direction"></section>
+                        <section class="index_support-and-direction">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <!-- TODO:需要再修正 row , col 巢狀 -->
+                                        <div
+                                            class="
+                                                index_detail-title
+                                                index-support-detail-title
+                                            "
+                                        >
+                                            附近機能
+                                        </div>
+                                        <div class="index_facility-icon">
+                                            <span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-37fd5a979d329df5339de370bd4776b6.png"
+                                                    alt="便利商店"
+                                                />
+                                                <p class="small">
+                                                    便利商店
+                                                </p></span
+                                            ><span
+                                                ><img
+                                                    src="https://9floor.co/backend/web/apartmentTag/20190122-0a9f70011fb9bee0ab0f8c2e14b37e8a.png"
+                                                    alt="咖啡廳"
+                                                />
+                                                <p class="small">
+                                                    咖啡廳
+                                                </p></span
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div
+                                            class="
+                                                index_detail-title
+                                                index_support-detail-title
+                                            "
+                                        >
+                                            交通資訊
+                                        </div>
+                                        <div class="index_direction">
+                                            <div class="index_item">
+                                                <i
+                                                    class="
+                                                        material-icons
+                                                        index_icon
+                                                        index_station-icon
+                                                    "
+                                                    style="font-size: 26px"
+                                                    >directions_railway</i
+                                                >
+                                                <div class="index_column">
+                                                    <p>忠孝新生站</p>
+                                                    <p class="small">
+                                                        <i
+                                                            class="
+                                                                material-icons
+                                                                index_icon
+                                                                index_walk-icon
+                                                            "
+                                                            style="
+                                                                font-size: 14px;
+                                                            "
+                                                            >directions_walk</i
+                                                        >8mins
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_item
+                                                    index_line
+                                                    index_yellow
+                                                "
+                                                style="
+                                                    border-color: rgb(
+                                                        245,
+                                                        182,
+                                                        28
+                                                    );
+                                                "
+                                            >
+                                                <p>O 中和新蘆</p>
+                                            </div>
+                                            <div
+                                                class="
+                                                    index_item
+                                                    index_line
+                                                    index_blue
+                                                "
+                                                style="
+                                                    border-color: rgb(
+                                                        5,
+                                                        109,
+                                                        194
+                                                    );
+                                                "
+                                            >
+                                                <p>BL 板橋南港</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="index_view-marker"></div>
+                        <!-- mobile show section - second-tilte -->
+                        <section class="index_roommate index_no-roommate">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div
+                                            class="
+                                                index_section-title
+                                                index_roommate-title
+                                            "
+                                        >
+                                            <div class="index_title">室友</div>
+                                            <div class="index_sub-title">
+                                                Roommate
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="index_view-marker"></div>
+                        <section class="index_recommendation">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="index_section-title">
+                                            <div class="index_title">
+                                                房源推薦
+                                            </div>
+                                            <div class="index_sub-title">
+                                                Recommendation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <a
+                            href="/filter"
+                            class="index_button index_more-button index_primary"
+                        >
+                            <div>更多</div>
+                        </a>
                     </div>
                     <!-- side-bar-right -->
                     <div class="index_side-bar index_side-bar-right">
@@ -860,9 +1010,23 @@ svg {
             .index_apartment-content {
                 margin: 46px 34px 82px;
             }
+            .index_roommate {
+                margin: 144px 17px 135px;
+
+                .index_roommate-title {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 35px;
+                }
+            }
+            .index_roommate.index_no-roommate {
+                margin: 90px 17px 69px;
+            }
         }
     }
 }
+// rommate
+
 .index_apartment-info {
     display: flex;
     .index_address {
@@ -1216,7 +1380,7 @@ svg {
     flex-wrap: wrap;
     span {
         width: 70px;
-        margin: 13px 13px 13px 0;
+        margin: 13px 20px 13px 0;
         text-align: center;
         img {
             height: 31px;
@@ -1355,6 +1519,117 @@ svg {
     width: 100%;
     overflow: hidden;
 }
+
+// support and direction
+.index_support-and-direction {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 45px 34px 0;
+    .index-support-detail-title {
+        margin-bottom: 7px;
+    }
+    .index_detail-title {
+        margin-bottom: 22px;
+    }
+}
+.index_direction.index_item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 40px;
+    height: 40px;
+}
+.index_direction {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .index_item.index_line.index_yellow {
+        align-items: initial;
+        border-bottom: 3px solid $info;
+        border-color: rgb(245, 182, 28);
+    }
+    .index_item.index_line.index_blue {
+        align-items: initial;
+        border-bottom: 3px solid $info;
+        border-color: rgb(5, 109, 194);
+    }
+    .index_item {
+        .index_station-icon {
+            padding: 5px;
+            color: $secondary;
+            font-size: 26px;
+        }
+    }
+    .index_column {
+        display: inline-block;
+        align-items: center;
+        p {
+            .index_walk-icon {
+                padding: 5px;
+                color: $secondary;
+                font-size: 26px;
+            }
+        }
+    }
+}
+.index_item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 40px;
+    height: 40px;
+}
+
+// mobile show
+// roomate
+.index_roommate {
+    @media screen and (min-width: 576px) {
+        display: none;
+    }
+}
+.index_section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+    .index_title {
+        height: 23px;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 5.6px;
+        color: $primary;
+    }
+    .index_sub-title {
+        height: 23px;
+        font-size: 10px;
+        line-height: 2.1;
+        letter-spacing: 1px;
+        color: $primary;
+    }
+}
+// recommendation
+.index_recommendation {
+    margin-bottom: 14px;
+    @media screen and (min-width: 576px) {
+        display: none;
+    }
+}
+// more button
+.index_center {
+    .index_more-button {
+        @media screen and (max-width: 576px) {
+            display: inline-flex;
+            align-self: center;
+            margin-bottom: 50px;
+        }
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+    }
+}
+
 // RWD
 .index_mobile-show,
 .index_tablet-show {

@@ -244,7 +244,7 @@ export default {
     },
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
