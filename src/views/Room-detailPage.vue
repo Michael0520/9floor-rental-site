@@ -100,7 +100,10 @@
                 <!-- room-detail-content -->
                 <div class="index_content">
                     <div class="index_booking-bar">
-                        <div class="index_wrap index_booking-bar-banner">
+                        <div
+                            class="index_wrap index_booking-bar-banner"
+                            :class="isTop ? 'index_fixed' : ''"
+                        >
                             <div class="index_booking-bar-left">
                                 <div class="index_status">
                                     <span
@@ -956,7 +959,9 @@ import RoomCard from "../components/RoomCard.vue";
 export default {
     data() {
         return {
-            name: "RoomDetailPage"
+            name: "RoomDetailPage",
+            scrollNum: 0,
+            isTop: false
         };
     },
     components: {
@@ -964,11 +969,44 @@ export default {
         Breadcrumb,
         SiderBar,
         RoomCard
+    },
+    methods: {
+        scrollEvent() {
+            window.addEventListener("scroll", () => {
+                let clientTop =
+                    document.documentElement.scrollTop ||
+                    document.body.scrollTop ||
+                    window.pageYOffset;
+                this.scrollNum = clientTop;
+                console.log(`目前頁面高度 ${clientTop}`);
+                if (clientTop >= 900) {
+                    this.isTop = true;
+                } else {
+                    this.isTop = false;
+                }
+            });
+        }
+    },
+    mounted() {
+        // if isTop = 0 , add transparent class , else remove
+        window.addEventListener("scroll", () => {
+            let clientTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = clientTop;
+            console.log(`目前頁面高度 ${clientTop}`);
+            if (clientTop >= 900) {
+                this.isTop = true;
+            } else {
+                this.isTop = false;
+            }
+        });
     }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
@@ -992,11 +1030,18 @@ svg {
     .index_breadcrumb {
         position: absolute;
         top: 100px;
+
         .breadcrumb-item {
-            color: #fff;
+            &:before {
+                color: #fff;
+            }
+            a,
+            li,
+            svg {
+                color: #fff;
+            }
         }
-        a,
-        svg {
+        .active {
             color: #fff;
         }
     }
@@ -1069,6 +1114,7 @@ svg {
         }
     }
 }
+// icon
 .index_facility-icon {
     display: flex;
     flex-wrap: wrap;
@@ -1086,7 +1132,6 @@ svg {
         }
     }
 }
-
 // badge
 .index_badge {
     display: inline-flex;
@@ -1284,13 +1329,11 @@ svg {
     width: 100%;
     left: 0;
     z-index: 10;
+
     .index_wrap,
     .index_booking-bar-banner {
         margin-top: -65px;
         transition: margin-top 0.3s ease-in-out;
-        @include sm {
-            margin-top: -130px;
-        }
     }
     .index_booking-bar-banner {
         display: flex;
@@ -1352,6 +1395,58 @@ svg {
             background: #fff;
             .index_textButton {
                 margin-left: 10px;
+            }
+        }
+    }
+    // wrap-fixed
+    .index_fixed {
+        // position: fixed;
+        // top: 0;
+        // margin-top: 0;
+        // width: 1280 px;
+        // left: calc(50% - 640 px);
+        // z-index: 10;
+    }
+}
+@media screen and(max-width:576px) {
+    .index_booking-bar {
+        width: 100%;
+        height: 130 px;
+        right: 0;
+        .index_wrap,
+        .index_booking-bar-banner {
+            margin-top: -130 px;
+        }
+        .index_booking-bar-banner {
+            flex-direction: column;
+            justify-content: initial;
+            width: 100%;
+            height: 130 px;
+            padding: 0;
+            .index_booking-bar-left {
+                flex-shrink: 0;
+                width: 100%;
+                height: 65 px;
+                .index_status {
+                    width: 100%;
+                    padding-right: 20 px;
+                }
+                .index_apartment-name,
+                .index_room-name {
+                    display: none;
+                }
+            }
+            .index_booking-bar-right {
+                width: 100%;
+                padding-left: 20 px;
+                padding-right: 20 px;
+                .index_mobile-hide {
+                    display: none;
+                }
+                .index_price {
+                    margin-right: inherit;
+                    margin-left: auto;
+                }
             }
         }
     }
