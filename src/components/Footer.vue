@@ -2,7 +2,7 @@
     <footer class="index_footer">
         <!-- top -->
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-lg-12">
                 <div class="index_footer-top">
                     <div class="row">
                         <div class="col-md-8">
@@ -185,7 +185,7 @@
         <!-- bottom -->
         <div class="index_footer-bottom">
             <div class="row align-items-center">
-                <div class="col-sm-12 col-md-6 index_footer-copyRight">
+                <div class="col-sm-12 col--6 index_footer-copyRight">
                     <span class=""
                         ><span role="img" aria-labelledby="copy-right">©</span
                         >玖樓 9floor 2019</span
@@ -206,9 +206,9 @@
 export default {
     data() {
         return {
-            name: "Footer",
+            name: "Footer"
         };
-    },
+    }
 };
 </script>
 
