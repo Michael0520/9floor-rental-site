@@ -1030,7 +1030,6 @@ svg {
     .index_breadcrumb {
         position: absolute;
         top: 100px;
-
         .breadcrumb-item {
             &:before {
                 color: #fff;
@@ -1043,6 +1042,9 @@ svg {
         }
         .active {
             color: #fff;
+        }
+        @media screen and (max-width: 576px) {
+            display: none;
         }
     }
     .index_content {
@@ -1302,6 +1304,15 @@ svg {
         margin-left: 94px;
         svg {
             margin-right: 6px;
+        }
+    }
+    // RWD
+    @media screen and(max-width:576px) {
+        display: flex;
+        justify-content: center;
+        bottom: 155 px;
+        .index_buttons {
+            margin-left: 0;
         }
     }
 }
