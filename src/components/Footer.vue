@@ -222,6 +222,7 @@ footer {
     .index_footer-top {
         padding: 40px 60px;
         max-width: 1280px;
+        margin: auto;
         .index_footer-sitmap {
             display: flex;
             @include md {
