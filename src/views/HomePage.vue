@@ -1,10 +1,5 @@
 <template>
     <div class="container-fluid no-padding">
-        <div class="" style="width:100%;height:300px;background-color:pink">
-            <div style="width:100%;height:320px;background-color:green;">
-                Test
-            </div>
-        </div>
         <NavBar />
         <!-- index_home -->
         <div class="index_home">

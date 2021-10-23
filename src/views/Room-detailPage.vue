@@ -112,10 +112,8 @@
                                     </span>
                                     <span class="index_price index_tablet-show"
                                         >NTD 16500
-                                        <span class="index_small"
-                                            >/月</span
-                                        ></span
-                                    >
+                                        <span class="index_small">/月</span>
+                                    </span>
                                     <button
                                         class="
                                             index_button-icon
@@ -1454,9 +1452,16 @@ svg {
                 .index_mobile-hide {
                     display: none;
                 }
+                .index_tablet-hide {
+                    display: none;
+                }
                 .index_price {
                     margin-right: inherit;
                     margin-left: auto;
+                }
+                .index_like {
+                    margin-right: inherit;
+                    margin-left: 10 px;
                 }
             }
         }

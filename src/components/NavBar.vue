@@ -1,4 +1,9 @@
 <template>
+    <div class="" style="width:100%;height:300px;background-color:pink">
+        <div style="width:100%;height:320px;background-color:green;">
+            Test
+        </div>
+    </div>
     <header class="index_header">
         <nav class="index_navigator-desktop index_transparent">
             <a href="/"
