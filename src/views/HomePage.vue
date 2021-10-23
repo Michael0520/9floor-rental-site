@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid no-padding">
         <NavBar />
+
         <!-- index_home -->
         <div class="index_home">
             <!-- special banner -->
@@ -219,12 +220,9 @@
                 </div>
             </div>
         </div>
+
         <!-- Footer -->
-        <div class="row">
-            <div class="col">
-                <Footer />
-            </div>
-        </div>
+        <Footer />
     </div>
 </template>
 

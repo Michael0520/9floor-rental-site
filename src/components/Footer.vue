@@ -185,13 +185,13 @@
         <!-- bottom -->
         <div class="index_footer-bottom">
             <div class="row align-items-center">
-                <div class="col-sm-12 col--6 index_footer-copyRight">
+                <div class="col-sm-12 col-lg-6 index_footer-copyRight">
                     <span class=""
                         ><span role="img" aria-labelledby="copy-right">©</span
                         >玖樓 9floor 2019</span
                     >
                 </div>
-                <div class="col-sm-12 col-md-6 index_footer-policy">
+                <div class="col-sm-12 col-lg-6 index_footer-policy">
                     <a href="/zh-tw/terms"><span>服務條款</span></a
                     ><a href="/zh-tw/service"><span>服務說明</span></a
                     ><a href="/zh-tw/privacy"><span>隱私權政策</span></a
