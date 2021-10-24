@@ -274,6 +274,9 @@ export default {
         background-color: #000;
         opacity: 0.3;
     }
+    @media screen and (max-width: 576px) {
+        padding-top: 50px;
+    }
     .index_banner-content {
         display: flex;
         position: relative;
@@ -292,6 +295,9 @@ export default {
             line-height: 1.6;
             letter-spacing: 1.3px;
             white-space: pre-line;
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
         }
         .index_banner-title {
             font-size: 27px;
