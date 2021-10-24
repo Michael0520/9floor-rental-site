@@ -1,9 +1,4 @@
 <template>
-    <div class="" style="width:100%;height:300px;background-color:pink">
-        <div style="width:100%;height:320px;background-color:green;">
-            Test
-        </div>
-    </div>
     <header class="index_header">
         <nav class="index_navigator-desktop index_transparent">
             <a href="/"
@@ -65,7 +60,7 @@
                     </g>
                 </svg>
             </a>
-            <ul>
+            <ul class="index_navigator-list">
                 <li class="index_dropdown index_transparent">
                     <div class="index_title">
                         入住玖樓<i class="material-icons"
@@ -73,8 +68,8 @@
                         >
                     </div>
                     <ul>
-                        <li><a href="/zh-tw/room">條件搜尋</a></li>
-                        <li><a href="/zh-tw/map">地圖搜尋</a></li>
+                        <li><a href="/#/filter">條件搜尋</a></li>
+                        <li><a href="/#/filter">地圖搜尋</a></li>
                         <li>
                             <a href="https://pure.9floor.co/" target="_blank"
                                 >玖樓璞園</a
@@ -118,16 +113,23 @@
                 <li class="index_transparent">
                     <div>
                         <button class="index_button index_inverse">
-                            <div>註冊</div>
+                            <div class="index_button-register">註冊</div>
                         </button>
                     </div>
                 </li>
             </ul>
+
+            <div>
+                <nav class="index_navigator-mobile index_transparent"></nav>
+            </div>
         </nav>
     </header>
 </template>
 
 <script>
+import "bootstrap/js/dist/popover";
+import "bootstrap/js/dist/dropdown";
+
 export default {
     data() {
         return {
@@ -139,15 +141,15 @@ export default {
 
 
 <style lang="scss" >
-// @import "~bootstrap/dist/css/bootstrap.css";
-// @import "../assets/custom.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../assets/custom.scss";
 
 .index_header {
     width: 100%;
     .index_navigator-desktop.index_transparent {
-        height: 114 px;
+        height: 114px;
         background-color: transparent;
-        padding: 0 42 px 0 54 px;
+        padding: 0 42px 0 54px;
         a {
             svg {
                 path,
@@ -166,38 +168,41 @@ export default {
         left: 0;
         width: 100%;
         transition: all 0.3s;
-        height: 72 px;
+        height: 72px;
         background-color: #fff;
-        padding: 0 60 px;
+        padding: 0 60px;
         z-index: 100;
-        ul {
+        .index_navigator-list {
             display: flex;
             align-items: center;
-            li.index_transparent {
+            > li.index_transparent {
                 height: 57px;
                 .index_title {
-                    height: 57 px;
-                    padding: 18 px 0 18 px 10 px;
+                    height: 57px;
+                    padding: 18px 0 18px 10px;
                     color: #fff;
                 }
             }
-            li {
+            > li {
                 position: relative;
                 width: auto;
-                height: 71 px;
-                margin-left: 25 px;
+                height: 71px;
+                margin-left: 25px;
                 cursor: pointer;
                 .index_title {
-                    height: 71 px;
+                    height: 71px;
                     font-size: 12px;
                     line-height: 1.75;
                     letter-spacing: 3.4px;
                     text-align: left;
                     color: #444647;
-                    padding: 25 px 0 25 px 10 px;
+                    padding: 25px 0 25px 10px;
                     i {
-                        margin-left: 3 px;
+                        margin-left: 3px;
                         font-size: 14px;
+                    }
+                    a {
+                        color: #fff;
                     }
                 }
                 div {
@@ -215,13 +220,14 @@ export default {
     ul {
         display: none;
         position: absolute;
-        width: 150 px;
+        width: 150px;
         min-width: 100%;
+
         li {
             a {
                 display: flex;
                 align-items: center;
-                height: 36 px;
+                height: 36px;
                 width: 100%;
                 cursor: pointer;
                 background-color: #fff;
@@ -229,8 +235,31 @@ export default {
                 line-height: 0.92;
                 letter-spacing: 1.6px;
                 color: #857c7c;
-                padding-left: 10 px;
+                padding-left: 10px;
             }
+        }
+    }
+}
+
+.index_dropdown {
+    &:hover {
+        ul {
+            display: block;
+        }
+    }
+}
+.index_button {
+    .index_button-register {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .index_header {
+        .index_navigator-desktop {
+            display: none;
         }
     }
 }
