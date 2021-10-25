@@ -165,28 +165,102 @@
                             </div>
                         </div>
                     </div>
-                    <!-- room-list-lg -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <RoomCard />
+                    <section class="index_co-living-mobile-section">
+                        <div class="index_mobile-section-title-content">
+                            <div class="index_mobile-section-title">
+                                共居生活
                             </div>
-                            <div class="col-lg-6">
-                                <RoomCard />
+                            <div class="index_mobile-section-sub-title">
+                                Co-living
                             </div>
                         </div>
-                    </div>
-                    <!-- room-list-small -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <RoomCard />
+                        <div class="index_mobile-section-buttons">
+                            <a class="index_button index_primary">
+                                <div>
+                                    <i class="material-icons index_icon"
+                                        >search</i
+                                    >搜尋物件
+                                </div>
+                            </a>
+                            <a class="index_button index_primary">
+                                <div>服務詳情</div>
+                            </a>
+                        </div>
+                        <div class="index_mobile-section-detail">
+                            <div class="index_mobile-section-detail-content">
+                                <div class="index_title">
+                                    <img
+                                        src="https://9floor.co/assets/co-living-%E5%93%81%E5%91%B3%E9%A2%A8%E6%A0%BC__beaf9deb3b7c308ba1eb641581573c44.jpg"
+                                        alt="common"
+                                    /><span>品味風格</span>
+                                </div>
+                                <div class="index_description">
+                                    擁有輕鬆溫暖的氛圍，同時備有咖啡館的工作生活機能。不只是物件的冰冷堆疊，我們在最愛的角落放上一盞落地燈、植入綠意、以及能與室友分享私房菜的大桌。簡約的設計風格，乘載平凡生活的更多樂趣。
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <RoomCard />
+                            <div class="index_mobile-section-detail-content">
+                                <div class="index_title">
+                                    <img
+                                        src="https://9floor.co/assets/co-living-%E6%97%A5%E5%B8%B8%E6%94%AF%E6%8F%B4__e635fbb05e6c8ab2d4b6a5c085772781.jpg"
+                                        alt="common"
+                                    /><span>便捷彈性</span>
+                                </div>
+                                <div class="index_description">
+                                    訂閱式的線上繳租，讓租房跟聽Spotify一樣簡單。一張帳單、線上刷卡，一次解決所有費用。不管是實習外派，還是留學交換，最短一個月的彈性租期、便利人性的入住流程，再也不用被合約綁住精彩的人生規畫。
+                                </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <RoomCard />
+                            <div class="index_mobile-section-detail-content">
+                                <div class="index_title">
+                                    <img
+                                        src="https://9floor.co/assets/co-living-%E4%BE%BF%E6%8D%B7%E5%BD%88%E6%80%A7__c44370b5c08d25cacc2a231a37a2db0a.jpg"
+                                        alt="common"
+                                    /><span>日常支援</span>
+                                </div>
+                                <div class="index_description">
+                                    每週公共區域清潔與垃圾清運服務，家事分工免煩惱，生活品質不打折。雲端系統即時通報，不論設備、還是生活，都貼心的幫你搞定一切。
+                                </div>
+                            </div>
+                            <div class="index_mobile-section-detail-content">
+                                <div class="index_title">
+                                    <img
+                                        src="https://9floor.co/assets/co-living-%E7%A4%BE%E7%BE%A4%E7%94%9F%E6%B4%BB__d9fc371b61d124f3e961592f66455291.jpg"
+                                        alt="common"
+                                    /><span>社群生活</span>
+                                </div>
+                                <div class="index_description">
+                                    一個人的視野有限，多元的社群卻是無界無邊。調酒師、小資族、自由工作者，無論你從哪裡來，都能在玖樓找到歸屬的落腳處。小聚、早午餐、泳池派對，開放自由的氛圍，跨界的文化交流，與室友一起認識城裡最棒的人事物。
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- room-list-lg -->
+                    <div class="index_room-card-list">
+                        <div class="index_section-title index_title">
+                            <div class="index_title">精選房源</div>
+                            <div class="index_sub-title">Housing Info</div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <RoomCard />
+                                </div>
+                                <div class="col-lg-6">
+                                    <RoomCard />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- room-list-small -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <RoomCard />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <RoomCard />
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                    <RoomCard />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -441,6 +515,9 @@ export default {
         }
         .index_co-living-section {
             margin-bottom: 90px;
+            @media screen and (max-width: 576px) {
+                display: none;
+            }
         }
         .index_more-room {
             margin-bottom: 53px;
@@ -532,6 +609,91 @@ export default {
         letter-spacing: 2.5px;
         text-align: center;
         color: $primary;
+    }
+}
+
+// mobile slider section
+.index_co-living-mobile-section {
+    margin-bottom: 11px;
+    padding: 0 10px;
+    @media screen and (min-width: 576px) {
+        display: none;
+    }
+    .index_mobile-section-title-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 18px;
+        .index_mobile-section-title {
+            height: 23px;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: 5.6px;
+            color: $primary;
+        }
+        .index_mobile-section-sub-title {
+            height: 23px;
+            font-size: 10px;
+            line-height: 2.1;
+            letter-spacing: 1px;
+            color: $primary;
+        }
+    }
+    .index_mobile-section-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+        a {
+            height: 30px;
+            &:first-child {
+                margin-right: 20px;
+            }
+            div {
+                display: flex;
+                justify-content: center;
+                margin-top: 0;
+                i {
+                    font-size: 16px;
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+    .index_mobile-section-detail {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        .index_mobile-section-detail-content {
+            width: auto;
+            margin-bottom: 20px;
+            .index_title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                img {
+                    width: 34px;
+                    height: 34px;
+                }
+                span {
+                    margin-left: 14px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.35;
+                    letter-spacing: 3px;
+                    color: $success;
+                }
+            }
+            .index_description {
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 2;
+                letter-spacing: 1px;
+                color: $primary;
+            }
+        }
     }
 }
 </style>

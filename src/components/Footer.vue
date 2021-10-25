@@ -122,7 +122,10 @@
                                     </svg>
                                 </div>
                                 <div class="index_footer-goTop">
-                                    <button class="btn btn-success">
+                                    <button
+                                        class="btn btn-success"
+                                        @click="goTop()"
+                                    >
                                         Go TOP
                                     </button>
                                 </div>
@@ -206,8 +209,24 @@
 export default {
     data() {
         return {
-            name: "Footer"
+            name: "Footer",
+            scrollNum: 0
         };
+    },
+    methods: {
+        goTop() {
+            document.documentElement.scrollTop = 0;
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", () => {
+            let clientTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = clientTop;
+            // console.log(`目前頁面高度 ${clientTop}`);
+        });
     }
 };
 </script>
