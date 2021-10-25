@@ -120,9 +120,20 @@
             </ul>
         </nav>
         <div class="index_navigator-section">
-            <nav class="index_navigator-mobile index_transparent">
-                <div class="index_menu-button" role="button" tabindex="0">
-                    <div class="index_hamburger index_reverse">
+            <nav
+                class="index_navigator-mobile index_transparent"
+                :class="{ index_open: isOpen }"
+            >
+                <div
+                    class="index_menu-button"
+                    role="button"
+                    tabindex="0"
+                    :class="{ index_open: isOpen }"
+                >
+                    <div
+                        class="index_hamburger index_reverse"
+                        @click="openmenu()"
+                    >
                         <div class="index_inner"></div>
                     </div>
                 </div>
@@ -181,21 +192,23 @@
                 </a>
                 <button>登入/註冊</button>
             </nav>
-            <div class="index_mobile-menu">
+            <div class="index_mobile-menu" :class="{ index_open: isOpen }">
                 <div class="index_blocks">
                     <div class="index_menu-block">
                         <div class="index_title">會員</div>
                         <div class="index_list">
-                            <button class="index_item">登入</button>
+                            <button class="index_list-item">登入</button>
                         </div>
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title">入住</div>
                         <div class="index_list">
-                            <a class="index_item" href="/zh-tw/room">條件搜尋</a
-                            ><a class="index_item" href="/zh-tw/map">地域搜尋</a
+                            <a class="index_list-item" href="/zh-tw/room"
+                                >條件搜尋</a
+                            ><a class="index_list-item" href="/zh-tw/map"
+                                >地域搜尋</a
                             ><a
-                                class="index_item"
+                                class="index_list-item"
                                 href="https://pure.9floor.co/"
                                 target="_blank"
                                 >玖樓璞園</a
@@ -205,10 +218,13 @@
                     <div class="index_menu-block">
                         <div class="index_title">玖樓</div>
                         <div class="index_list">
-                            <a class="index_item" href="/zh-tw/about">關於</a
-                            ><a class="index_item" href="/zh-tw/media">媒體</a
-                            ><a class="index_item" href="/zh-tw/team">團隊</a
-                            ><a class="index_item" href="/zh-tw/contact"
+                            <a class="index_list-item" href="/zh-tw/about"
+                                >關於</a
+                            ><a class="index_list-item" href="/zh-tw/media"
+                                >媒體</a
+                            ><a class="index_list-item" href="/zh-tw/team"
+                                >團隊</a
+                            ><a class="index_list-item" href="/zh-tw/contact"
                                 >聯繫</a
                             >
                         </div>
@@ -216,9 +232,9 @@
                     <div class="index_menu-block">
                         <div class="index_title">服務</div>
                         <div class="index_list">
-                            <a class="index_item" href="/zh-tw/space"
+                            <a class="index_list-item" href="/zh-tw/space"
                                 >空間管理</a
-                            ><a class="index_item" href="/zh-tw/coliving"
+                            ><a class="index_list-item" href="/zh-tw/coliving"
                                 >共居生活</a
                             >
                         </div>
@@ -236,16 +252,16 @@
                     <div class="index_menu-block">
                         <div class="index_title">協助</div>
                         <div class="index_list">
-                            <a class="index_item" href="/zh-tw/service"
+                            <a class="index_list-item" href="/zh-tw/service"
                                 >如何申請</a
                             >
                             <a
-                                class="index_item"
+                                class="index_list-item"
                                 href="https://medium.com/9floor-co-living"
                                 target="_blank"
                                 >常見問題</a
                             >
-                            <a class="index_item" href="/zh-tw/contact"
+                            <a class="index_list-item" href="/zh-tw/contact"
                                 >聯繫我們</a
                             >
                         </div>
@@ -253,13 +269,13 @@
                     <div class="index_menu-block">
                         <div class="index_title"></div>
                         <div class="index_list">
-                            <a class="index_item" href="/zh-tw/terms"
+                            <a class="index_list-item" href="/zh-tw/terms"
                                 >服務條款</a
                             >
-                            <a class="index_item" href="/zh-tw/privacy"
+                            <a class="index_list-item" href="/zh-tw/privacy"
                                 >隱私權政策</a
                             >
-                            <a class="index_item" href="/zh-tw/sitemap"
+                            <a class="index_list-item" href="/zh-tw/sitemap"
                                 >網站地圖</a
                             >
                         </div>
@@ -329,8 +345,14 @@ import "bootstrap/js/dist/dropdown";
 export default {
     data() {
         return {
-            name: "NavBar"
+            name: "NavBar",
+            isOpen: false
         };
+    },
+    methods: {
+        openmenu() {
+            this.isOpen = !this.isOpen;
+        }
     }
 };
 </script>
@@ -475,9 +497,9 @@ export default {
     width: 100%;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    height: 100px;
+    height: 50px;
     background-color: #fff;
-    padding: 0 40px;
+    padding: 0 15px;
     z-index: 100;
     * {
         flex: 1 0 0;
@@ -490,8 +512,14 @@ export default {
         text-align: right;
     }
     .index_menu-button {
+        &:focus {
+            outline: none;
+        }
         .index_hamburger.index_reverse {
             &::before {
+                background-color: #fff;
+            }
+            &::after {
                 background-color: #fff;
             }
             .index_inner {
@@ -504,6 +532,16 @@ export default {
             height: 20px;
             transition: transform 0.5s ease-in-out,
                 -webkit-transform 0.5s ease-in-out;
+            &::before {
+                top: -1px;
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background: $primary;
+                transform-origin: 100% 50%;
+                transition: all 0.5s ease-in-out;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -517,6 +555,13 @@ export default {
             .index_inner {
                 top: 9px;
                 transform-origin: 50% 50%;
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 2px;
+                background: $primary;
+                transform-origin: 100% 50%;
+                transition: all 0.5s ease-in-out;
             }
         }
     }
@@ -524,6 +569,7 @@ export default {
         text-align: center;
     }
 }
+// mobile-menu
 .index_mobile-menu {
     position: fixed;
     top: 0;
@@ -541,11 +587,113 @@ export default {
         margin-top: 50px;
         padding: 0 15px;
     }
+    .index_blocks {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 0.5s ease-in-out;
+    }
+    .index_bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 50px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 0.5s ease-in-out;
+    }
 }
+.index_menu-block {
+    padding: 13px 0;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #b7ac9f;
+    .index_title {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 2.5;
+    }
+    .index_list {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
+        .index_list-item {
+            display: inline-block;
+            width: 33.33%;
+            margin: 7px 0;
+            color: $primary;
+            text-align: left;
+            cursor: pointer;
+            min-height: 16px;
+        }
+    }
+}
+.index_social-media {
+    a {
+        display: inline-flex;
+        width: 14px;
+        height: 14px;
+        margin-left: 15px;
+        padding: 5px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        background-color: $success;
+        border-radius: 50%;
+        &:first-child {
+            margin-left: 0;
+        }
+        svg {
+            width: 100%;
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+// active styles
+.index_menu-button.index_open {
+    .index_hamburger.index_reverse {
+        &::before {
+            background-color: $primary;
+        }
+        &::after {
+            background-color: $primary;
+        }
+        .index_inner {
+            background-color: $primary;
+            transform: rotateY(-90deg);
+            transition: transform 375ms, background-color 0.75s ease-in-out,
+                -webkit-transform 375ms;
+        }
+    }
+    .index_hamburger {
+        transform: rotateY(-180deg);
+        &::before {
+            transform: translate3d(-4px, 1px, 0) rotate(-45deg);
+        }
+        &::after {
+            transform: translate3d(-4px, -1px, 0) rotate(45deg);
+        }
+    }
+}
+.index_meun-button {
+    &:active {
+        .index_hamburger {
+            transform: 50ms;
+        }
+    }
+}
+.index_mobile-menu.index_open {
+    opacity: 1;
+    z-index: 50;
+    .index_blocks,
+    .index_bottom {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 // not open style
 .index_navigator-mobile.index_transparent {
     &:not(.index_open) {
-        height: 100px;
+        height: 50px;
         background-color: transparent;
         button {
             color: #fff;
@@ -567,6 +715,10 @@ export default {
         }
     }
     .index_navigator-mobile {
+        padding: 0 15px;
+    }
+    .index_mobile-menu {
+        margin-top: 50px;
         padding: 0 15px;
     }
 }
