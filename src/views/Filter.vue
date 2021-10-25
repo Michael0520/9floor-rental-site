@@ -340,8 +340,25 @@
     <!--  Room-content -->
     <div class="index_content">
         <div class="index_page">
+            <!-- small-filter -->
+            <div class="index_small-filter">
+                <div>
+                    <button class="index_button">
+                        <div>地點</div></button
+                    ><button class="index_button">
+                        <div>價格</div>
+                    </button>
+                </div>
+                <div>
+                    <button class="index_button">
+                        <div>進階搜尋</div>
+                    </button>
+                </div>
+            </div>
             <!-- Breadcrumb -->
-            <Breadcrumb />
+            <div class="index_breadcrume-section">
+                <Breadcrumb />
+            </div>
             <!-- sider-bar -->
             <div class="index_room-section" style="width:100%;display:flex">
                 <SiderBar />
@@ -1339,6 +1356,42 @@ export default {
                 width: 0;
                 height: 0;
                 opacity: 0;
+            }
+        }
+    }
+}
+
+// mobile
+.index_breadcrume-section {
+    @media screen and(max-width:576px) {
+        display: none;
+    }
+}
+// small-filter
+
+.index_page {
+    .index_small-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: 50px;
+        border-top: 1px solid $info;
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+        div {
+            &:first-child {
+                display: flex;
+                button {
+                    margin-right: 10px;
+                }
+            }
+            button {
+                padding: 0 8px;
+                div {
+                    letter-spacing: 0.8px;
+                }
             }
         }
     }
