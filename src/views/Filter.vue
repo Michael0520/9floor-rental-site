@@ -886,13 +886,13 @@ export default {
         }
         .index_hamburger.index_reverse {
             &::before {
-                background-color: #fff;
+                background-color: $primary;
             }
             &::after {
-                background-color: #fff;
+                background-color: $primary;
             }
             .index_inner {
-                background-color: #fff;
+                background-color: $primary;
             }
         }
         .index_hamburger {
