@@ -161,7 +161,8 @@
                     :class="{ index_open: isOpen }"
                 >
                     <div
-                        class="index_hamburger index_reverse"
+                        class="index_hamburger "
+                        :class="{ index_reverse: backgroundWhite }"
                         @click="openmenu()"
                     >
                         <div class="index_inner"></div>

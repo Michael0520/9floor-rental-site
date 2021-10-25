@@ -1,4 +1,4 @@
-<template>
+<template >
     <NavBar />
     <div class="index_content">
         <!-- index_home -->

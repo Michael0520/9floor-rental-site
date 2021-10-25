@@ -20,6 +20,7 @@
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     a {
         text-decoration: none;
     }
@@ -27,4 +28,20 @@
         color: #42b983;
     }
 }
+// html {
+//     overflow: -moz-hidden-unscrollable;
+//     height: 100%;
+// }
+
+// body::-webkit-scrollbar {
+//     display: none;
+// }
+
+// body {
+//     -ms-overflow-style: none;
+//     height: 100%;
+//     width: calc(100vw + 18px);
+//     overflow: auto;
+//     margin: 0 auto;
+// }
 </style>
