@@ -1,6 +1,9 @@
 <template>
     <header class="index_header">
-        <nav class="index_navigator-desktop index_transparent">
+        <nav
+            class="index_navigator-desktop"
+            :class="{ index_transparent: backgroundWhite }"
+        >
             <a href="/"
                 ><svg
                     width="72px"
@@ -61,7 +64,10 @@
                 </svg>
             </a>
             <ul class="index_navigator-list">
-                <li class="index_dropdown index_transparent">
+                <li
+                    class="index_dropdown "
+                    :class="backgroundWhite ? 'index_transparent' : ''"
+                >
                     <div class="index_title">
                         入住玖樓<i class="material-icons"
                             >keyboard_arrow_down</i
@@ -77,7 +83,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="index_dropdown index_transparent">
+                <li
+                    class="index_dropdown "
+                    :class="backgroundWhite ? 'index_transparent' : ''"
+                >
                     <div class="index_title">
                         玖樓<i class="material-icons">keyboard_arrow_down</i>
                     </div>
@@ -88,7 +97,10 @@
                         <li><a href="/zh-tw/contact">聯繫</a></li>
                     </ul>
                 </li>
-                <li class="index_dropdown index_transparent">
+                <li
+                    class="index_dropdown "
+                    :class="{ index_transparent: backgroundWhite }"
+                >
                     <div class="index_title">
                         服務<i class="material-icons">keyboard_arrow_down</i>
                     </div>
@@ -97,7 +109,10 @@
                         <li><a href="/zh-tw/coliving">共居生活</a></li>
                     </ul>
                 </li>
-                <li class="index_dropdown index_transparent">
+                <li
+                    class="index_dropdown "
+                    :class="{ index_transparent: backgroundWhite }"
+                >
                     <div class="index_title">
                         <a
                             target="_blank"
@@ -107,12 +122,24 @@
                         >
                     </div>
                 </li>
-                <li class="index_transparent">
+                <li
+                    class="index_register"
+                    :class="{ index_transparent: backgroundWhite }"
+                >
                     <button class="index_title">登入</button>
                 </li>
-                <li class="index_transparent">
+                <li
+                    class="index_register"
+                    :class="{ index_transparent: backgroundWhite }"
+                >
                     <div>
-                        <button class="index_button index_inverse">
+                        <button
+                            class="index_button  "
+                            :class="{
+                                index_transparent: backgroundWhite,
+                                index_inverse: backgroundWhite
+                            }"
+                        >
                             <div class="index_button-register">註冊</div>
                         </button>
                     </div>
@@ -121,8 +148,11 @@
         </nav>
         <div class="index_navigator-section">
             <nav
-                class="index_navigator-mobile index_transparent"
-                :class="{ index_open: isOpen }"
+                class="index_navigator-mobile "
+                :class="{
+                    index_open: isOpen,
+                    index_transparent: backgroundWhite
+                }"
             >
                 <div
                     class="index_menu-button"
@@ -192,7 +222,13 @@
                 </a>
                 <button>登入/註冊</button>
             </nav>
-            <div class="index_mobile-menu" :class="{ index_open: isOpen }">
+            <div
+                class="index_mobile-menu "
+                :class="{
+                    index_open: isOpen,
+                    index_transparent: backgroundWhite
+                }"
+            >
                 <div class="index_blocks">
                     <div class="index_menu-block">
                         <div class="index_title">會員</div>
@@ -339,20 +375,34 @@
 </template>
 
 <script>
-import "bootstrap/js/dist/popover";
-import "bootstrap/js/dist/dropdown";
-
 export default {
     data() {
         return {
             name: "NavBar",
-            isOpen: false
+            isOpen: false,
+            scrollNum: 0,
+            backgroundWhite: false
         };
     },
     methods: {
         openmenu() {
             this.isOpen = !this.isOpen;
         }
+    },
+    mounted() {
+        window.addEventListener("scroll", () => {
+            let top =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = top;
+            console.log(top);
+            if (top >= 1) {
+                this.backgroundWhite = false;
+            } else {
+                this.backgroundWhite = true;
+            }
+        });
     }
 };
 </script>
@@ -394,20 +444,18 @@ export default {
         .index_navigator-list {
             display: flex;
             align-items: center;
-            > li.index_transparent {
+            li.index_transparent {
                 height: 57px;
                 .index_title {
                     height: 57px;
                     padding: 18px 0 18px 10px;
                     color: #fff;
+                    a {
+                        color: #fff;
+                    }
                 }
             }
-            > li {
-                position: relative;
-                width: auto;
-                height: 71px;
-                margin-left: 25px;
-                cursor: pointer;
+            li {
                 .index_title {
                     height: 71px;
                     font-size: 12px;
@@ -421,7 +469,13 @@ export default {
                         font-size: 14px;
                     }
                     a {
-                        color: #fff;
+                        color: #444647;
+                    }
+                    &:hover {
+                        color: $lightOrange;
+                        a {
+                            color: $lightOrange;
+                        }
                     }
                 }
                 div {
@@ -435,13 +489,20 @@ export default {
         }
     }
 }
+.index_dropdown,
+.index_register {
+    position: relative;
+    width: auto;
+    height: 71px;
+    margin-left: 25px;
+    cursor: pointer;
+}
 .index_dropdown {
     ul {
         display: none;
         position: absolute;
         width: 150px;
         min-width: 100%;
-
         li {
             a {
                 display: flex;
@@ -455,6 +516,9 @@ export default {
                 letter-spacing: 1.6px;
                 color: #857c7c;
                 padding-left: 10px;
+                &:hover {
+                    background-color: rgb(237, 208, 190);
+                }
             }
         }
     }

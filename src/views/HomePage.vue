@@ -1,6 +1,5 @@
 <template>
     <NavBar />
-
     <div class="index_content">
         <!-- index_home -->
         <div class="index_home">
