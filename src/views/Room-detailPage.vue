@@ -3,7 +3,7 @@
         <!-- NavBar -->
         <div class="row">
             <div class="col">
-                <header></header>
+                <NavBar />
             </div>
         </div>
         <div class="index-content index_show">
@@ -954,6 +954,8 @@ import Footer from "../components/Footer.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 import SiderBar from "../components/SiderBar.vue";
 import RoomCard from "../components/RoomCard.vue";
+import NavBar from "../components/NavBar.vue";
+
 export default {
     data() {
         return {
@@ -966,7 +968,8 @@ export default {
         Footer,
         Breadcrumb,
         SiderBar,
-        RoomCard
+        RoomCard,
+        NavBar
     },
     methods: {
         scrollEvent() {
