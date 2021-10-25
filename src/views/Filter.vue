@@ -385,7 +385,7 @@
                     </div>
 
                     <!-- room-list -->
-                    <div class="container-fluid">
+                    <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <RoomCard />
@@ -395,7 +395,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
+                    <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <RoomCard />
@@ -405,7 +405,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
+                    <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <RoomCard />
