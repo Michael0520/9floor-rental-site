@@ -397,10 +397,10 @@ export default {
                 window.pageYOffset;
             this.scrollNum = top;
             console.log(top);
-            if (top >= 1) {
-                this.backgroundWhite = false;
-            } else {
+            if (top == 0) {
                 this.backgroundWhite = true;
+            } else {
+                this.backgroundWhite = false;
             }
         });
     }
