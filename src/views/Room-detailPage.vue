@@ -124,7 +124,7 @@
                                         <i
                                             class="
                                                 material-icons
-                                                index__icon___1quHO
+                                                index_icon
                                             "
                                             >favorite</i
                                         >
@@ -1412,46 +1412,60 @@ svg {
     }
     // wrap-fixed
     .index_fixed {
-        // position: fixed;
-        // top: 0;
-        // margin-top: 0;
-        // width: 1280 px;
-        // left: calc(50% - 640 px);
-        // z-index: 10;
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        width: 1280px;
+        left: calc(50% - 640px);
+        z-index: 10;
     }
 }
 @media screen and(max-width:576px) {
     .index_booking-bar {
         width: 100%;
-        height: 130 px;
+        height: 130px;
         right: 0;
         .index_wrap,
         .index_booking-bar-banner {
-            margin-top: -130 px;
+            margin-top: -130px;
         }
         .index_booking-bar-banner {
             flex-direction: column;
             justify-content: initial;
             width: 100%;
-            height: 130 px;
+            height: 130px;
             padding: 0;
             .index_booking-bar-left {
                 flex-shrink: 0;
                 width: 100%;
-                height: 65 px;
+                height: 65px;
                 .index_status {
                     width: 100%;
-                    padding-right: 20 px;
+                    padding-right: 20px;
                 }
                 .index_apartment-name,
                 .index_room-name {
                     display: none;
                 }
+                .index_tablet-show {
+                    display: inline-block;
+                }
+                .index_price {
+                    margin-right: inherit;
+                    margin-left: auto;
+                }
+                .index_like {
+                    margin-right: inherit;
+                    margin-left: 10px;
+                }
+                .index_mobile-show {
+                    display: inline-block;
+                }
             }
             .index_booking-bar-right {
                 width: 100%;
-                padding-left: 20 px;
-                padding-right: 20 px;
+                padding-left: 20px;
+                padding-right: 20px;
                 .index_mobile-hide {
                     display: none;
                 }
@@ -1464,7 +1478,7 @@ svg {
                 }
                 .index_like {
                     margin-right: inherit;
-                    margin-left: 10 px;
+                    margin-left: 10px;
                 }
             }
         }
@@ -1494,6 +1508,15 @@ svg {
         color: $secondary;
         transition: all 0.3s;
     }
+    i {
+        font-size: 16px;
+        transition: all 0.3s;
+        color: $secondary;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .index_small {
     margin-left: 3px;
@@ -1507,6 +1530,7 @@ svg {
     margin: 67px 33px 114px;
     @include sm {
         margin: 48px 0 48px;
+        flex-direction: column;
     }
     .index_apartment-name {
         margin: 4px 0 16px;

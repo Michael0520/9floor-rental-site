@@ -1,5 +1,5 @@
 <template>
-    <footer class="index_footer">
+    <footer class="index_footer w-100">
         <!-- top -->
         <div class="row">
             <div class="col-sm-12 col-lg-12">

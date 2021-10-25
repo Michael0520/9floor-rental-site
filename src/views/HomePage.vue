@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid no-padding">
-        <NavBar />
+    <NavBar />
 
+    <div class="index_content">
         <!-- index_home -->
         <div class="index_home">
             <!-- special banner -->
@@ -248,6 +248,10 @@ export default {
 <style  lang="scss" >
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
+.index_content {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
 
 .index_home {
     display: flex;
