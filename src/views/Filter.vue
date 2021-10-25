@@ -388,10 +388,7 @@
                     <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
+                                <RoomCard price= />
                             </div>
                         </div>
                     </div>
@@ -742,7 +739,8 @@ export default {
         SiderBar,
         RoomCard,
         Footer
-    }
+    },
+    mounted() {}
 };
 </script>
 <style  lang="scss" scoped>

@@ -37,6 +37,7 @@ export default {
     data() {
         return {};
     },
+    props: ["name", "price"]
 };
 </script>
 
