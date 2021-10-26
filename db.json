@@ -17,42 +17,41 @@
                 "垃圾桶",
                 "冷氣"
             ],
-            "room-detail": [{
-                "首期款項": {
-                    "押金": "NTD 27000",
-                    "行政手續費": "NTD 1500",
-                    "退房清潔費": "NTD 1500"
-                },
-                "每月小記": {
-                    "月租金": "NTD 13500",
-                    "能源費": "NTD 0",
-                    "服務費": "NTD 0"
-                },
-                "短租方案": {
-                    "短租3-5月": "NTD 17600",
-                    "短租1-2月": "NTD 21600"
-                },
-                "房間資訊": {
-                    "房型": "雅房",
-                    "面積": "4 坪 / 13.22 m²"
-                },
-                "居住空間資訊": {
-                    "廚房": true,
-                    "公共衛浴": "30間",
-                    "面積": "700坪",
-                    "房間": "0間",
-                    "總樓層": "5樓",
-                    "是否有電梯": true,
-                    "清潔打掃": true,
-                    "垃圾處理": "24hr大樓垃圾集中處理"
-                },
-                "附近機能": ["公園"],
-                "交通資訊": {
-                    "捷運線": "G 松山新店",
-                    "捷運站": "萬隆站",
-                    "走路時間": "0mins"
-                }
-            }]
+            "initialPayment": {
+                "deposit": "NTD 27000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "monthlyRent": "NTD 13500",
+                "energyFee": "NTD 0",
+                "serviceFee": "NTD 0"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 17600",
+                "shortTermRentalOneToTwo": "NTD 21600"
+            },
+            "housingInformation": {
+                "roomType": "雅房",
+                "area": "4 坪 / 13.22 m²"
+            },
+            "housingSpaceInformation": {
+                "kitchen": true,
+                "publicBathroom": "30間",
+                "buildingArea": "700坪",
+                "buildRoomsNumber": "0間",
+                "totalFloor": "5樓",
+                "elevator": true,
+                "cleanUp": "每週一次",
+                "garbageDisposal": "24hr大樓垃圾集中處理"
+            },
+            "nearbyFunction": ["公園"],
+            "trafficInformation": {
+                "MRTline": "G 松山新店",
+                "MRTstation": "萬隆站",
+                "walkingTime": "0mins"
+            }
+
         },
         {
             "id": 2,
@@ -76,42 +75,41 @@
                 "電扇",
                 "椅子"
             ],
-            "room-detail": [{
-                "首期款項": {
-                    "押金": "NTD 43600",
-                    "行政手續費": "NTD 1500",
-                    "退房清潔費": "NTD 1500"
-                },
-                "每月小記": {
-                    "月租金": "NTD 21800",
-                    "能源費": "NTD 1500",
-                    "服務費": "NTD 1500"
-                },
-                "短租方案": {
-                    "短租3-5月": "NTD 28300",
-                    "短租1-2月": "NTD 34900"
-                },
-                "房間資訊": {
-                    "房型": "獨立套房",
-                    "面積": "6 坪 / 19.83 m²"
-                },
-                "居住空間資訊": {
-                    "廚房": true,
-                    "公共衛浴": "3間",
-                    "面積": "400坪",
-                    "房間": "30間",
-                    "總樓層": "6樓",
-                    "是否有電梯": true,
-                    "清潔打掃": "每週一次",
-                    "垃圾處理": "24hr大樓垃圾集中處理"
-                },
-                "附近機能": ["便利商店", "超市", "公園", "咖啡廳", "健身房", "速食店", "夜市", "餐廳"],
-                "交通資訊": {
-                    "捷運線": "BL 板橋南港",
-                    "捷運站": "西門站",
-                    "走路時間": "7mins"
-                }
-            }]
+            "initialPayment": {
+                "deposit": "NTD 43600",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "monthlyRent": "NTD 21800",
+                "energyFee": "NTD 1500",
+                "serviceFee": "NTD 1500"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 28300",
+                "shortTermRentalOneToTwo": "NTD 34900"
+            },
+            "housingInformation": {
+                "roomType": "獨立套房",
+                "area": "6 坪 / 19.83 m²"
+            },
+            "housingSpaceInformation": {
+                "kitchen": true,
+                "publicBathroom": "3間",
+                "buildingArea": "400坪",
+                "buildRoomsNumber": "30間",
+                "totalFloor": "6樓",
+                "elevator": true,
+                "cleanUp": "每週一次",
+                "garbageDisposal": "24hr大樓垃圾集中處理"
+            },
+            "nearbyFunction": ["便利商店", "超市", "公園", "咖啡廳", "健身房", "速食店", "夜市", "餐廳"],
+            "trafficInformation": {
+                "MRTline": "BL 板橋南港",
+                "MRTstation": "西門站",
+                "walkingTime": "7mins"
+            }
+
         }
     ],
     "comments": [{
