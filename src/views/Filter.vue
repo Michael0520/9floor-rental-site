@@ -689,7 +689,6 @@ export default {
             name: "FilterPage",
             transparent: false,
             isOpen: false,
-            roomList: [],
             rooms: []
         };
     },
@@ -711,7 +710,9 @@ export default {
         this.axios
             .get("http://localhost:3000/rooms")
             .then(result => {
-                console.log(result.data);
+                // console.log(result.data);
+                this.rooms = result.data;
+                console.log(this.rooms);
             })
             .catch(err => {
                 console.warn(err);
