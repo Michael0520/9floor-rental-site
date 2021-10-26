@@ -2,7 +2,10 @@
     <div class="index_room-card">
         <div class="index_card-wrapper">
             <a href="#">
-                <div class="index_card-image img-fluid"></div>
+                <div
+                    class="index_card-image img-fluid"
+                    :style="backgroundStyles(image)"
+                ></div>
             </a>
         </div>
         <div class="index_title">
@@ -47,7 +50,15 @@ export default {
     data() {
         return {};
     },
-    props: ["name", "secondName", "roomStyle", "status", "price"]
+    methods: {
+        backgroundStyles(image) {
+            return {
+                // any other styles you might need to add on as an example
+                "background-image": `url(${image})`
+            };
+        }
+    },
+    props: ["name", "secondName", "roomStyle", "status", "price", "image"]
 };
 </script>
 
@@ -61,7 +72,6 @@ export default {
         width: 100%;
         .index_card-image {
             width: 100%;
-            background-image: url("../assets/20200902-50a611e8ecd6f999ca037a57539c8465.png");
             background-size: cover;
             background-position: center center;
             &:after {

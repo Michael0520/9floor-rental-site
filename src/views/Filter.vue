@@ -398,29 +398,8 @@
                                     :secondName="room.secondName"
                                     :roomStyle="room.roomStyle"
                                     :status="room.status"
+                                    :image="room.imgUrl"
                                 />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div v-for="item in rooms" :key="item.id"></div>
-                    <div class="container-fluid no-padding">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid no-padding">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
                             </div>
                         </div>
                     </div>
