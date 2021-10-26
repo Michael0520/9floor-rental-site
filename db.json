@@ -19,7 +19,7 @@
                 "垃圾桶",
                 "冷氣"
             ],
-            "livingSpaceEquipment":[],
+            "livingSpaceEquipment": [],
             "initialPayment": {
                 "deposit": "NTD 27000",
                 "administrativeFee": "NTD 1500",
@@ -79,6 +79,7 @@
                 "電扇",
                 "椅子"
             ],
+            "livingSpaceEquipment": [],
             "initialPayment": {
                 "deposit": "NTD 43600",
                 "administrativeFee": "NTD 1500",
@@ -134,6 +135,7 @@
                 "垃圾桶",
                 "冷氣"
             ],
+            "livingSpaceEquipment": [],
             "initialPayment": {
                 "deposit": "NTD 25000",
                 "administrativeFee": "NTD 1500",
@@ -185,6 +187,9 @@
                 "垃圾桶",
                 "浴廁",
                 "衣櫃"
+            ],
+            "livingSpaceEquipment": [
+                "瓦斯爐", "基本餐具", "洗衣機", "洗碗機", "烤箱", "滅火器", "煙霧偵測器", "戶外陽台", "工作空間", "無線網路", "冰箱", "吹風機"
             ],
             "initialPayment": {
                 "deposit": "NTD 33000",
@@ -243,6 +248,9 @@
                 "冰箱",
                 "吹風機"
             ],
+            "livingSpaceEquipment": [
+                "瓦斯爐", "基本餐具", "洗衣機", "洗碗機", "烤箱", "滅火器", "煙霧偵測器", "戶外陽台", "工作空間", "無線網路", "冰箱", "吹風機"
+            ],
             "initialPayment": {
                 "deposit": "NTD 27000",
                 "administrativeFee": "NTD 1500",
@@ -293,6 +301,9 @@
                 "衣櫃",
                 "雙人床"
             ],
+            "livingSpaceEquipment": [
+                "瓦斯爐", "基本餐具", "洗衣機", "洗碗機", "烤箱", "滅火器", "煙霧偵測器", "戶外陽台", "工作空間", "無線網路", "冰箱", "吹風機"
+            ],
             "initialPayment": {
                 "deposit": "NTD 33000",
                 "administrativeFee": "NTD 1500",
@@ -324,6 +335,60 @@
                 "MRTline": ["BL 板橋南港", "O 中和新蘆"],
                 "MRTstation": "忠孝新生",
                 "walkingTime": "8mins"
+            }
+
+        },
+        {
+            "id": 7,
+            "name": "辛亥-2F",
+            "secondName": "辛亥 RoomC",
+            "roomStyle": "雅房",
+            "monthlyRent": " 11000",
+            "status": "招募中",
+            "description": "科技大樓捷運站走路八分鐘，位於臺大後門正對面的辛亥玖樓，60米綠園道。有兩間獨立房與一間宿舍雙人房，以及藝廊風格的開放式廚房與客廳，喝個小酒、彈個吉他，或來場多人swing dance！",
+            "location": ["台北市", "大安區"],
+            "facility": [
+                "保潔墊",
+                "冷氣",
+                "單人床",
+                "垃圾桶",
+                "書桌",
+                "椅子",
+                "檯燈",
+                "窗簾"
+            ],
+            "livingSpaceEquipment": [],
+            "initialPayment": {
+                "deposit": "NTD 22000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 1300",
+                "serviceFee": "NTD 1300"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 14300",
+                "shortTermRentalOneToTwo": "NTD 17600"
+            },
+            "housingInformation": {
+                "roomType": "雅房",
+                "area": "0 坪 / 0 m²"
+            },
+            "housingSpaceInformation": {
+                "balcony": true,
+                "kitchen": true,
+                "publicBathroom": "1間",
+                "buildRoomsNumber": "3間",
+                "totalFloor": "7樓",
+                "cleanUp": "每兩週一次",
+                "garbageDisposal": "每週兩次"
+            },
+            "nearbyFunction": [],
+            "trafficInformation": {
+                "MRTline": ["BR 文山內湖"],
+                "MRTstation": "科技大樓站",
+                "walkingTime": "12mins"
             }
 
         }
