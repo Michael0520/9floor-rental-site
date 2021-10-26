@@ -4,11 +4,11 @@
             "name": "玖樓璞園",
             "secondName": "PURE Coliving 雙人雅房",
             "roomStyle": "雅房",
-            "monthlyRent": "NTD 13500",
-            "status":"招募中",
+            "monthlyRent": " 13500",
+            "status": "招募中",
             "location": ["台北市", "文山區"],
             "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
-            "facility": [
+            "roomFacility": [
                 "書桌",
                 "椅子",
                 "雙人床",
@@ -19,6 +19,7 @@
                 "垃圾桶",
                 "冷氣"
             ],
+            "livingSpaceEquipment":[],
             "initialPayment": {
                 "deposit": "NTD 27000",
                 "administrativeFee": "NTD 1500",
@@ -59,8 +60,8 @@
             "name": "玖樓宅度假 -漫步旅店",
             "secondName": "浴缸雙人房",
             "roomStyle": "獨立套房",
-            "monthlyRent": "NTD 21800",
-            "status":"招募中",
+            "monthlyRent": " 21800",
+            "status": "招募中",
             "description": "9floor STAYCATION series 是玖樓與台北各優質與特色旅店的獨家專案。",
             "location": ["台北市", "萬華區"],
             "facility": [
@@ -110,6 +111,219 @@
                 "MRTline": "BL 板橋南港",
                 "MRTstation": "西門站",
                 "walkingTime": "7mins"
+            }
+
+        },
+        {
+            "id": 3,
+            "name": "玖樓璞園",
+            "secondName": "PURE Coliving 單人雅房 ",
+            "roomStyle": "雅房",
+            "monthlyRent": " 12500",
+            "status": "招募中",
+            "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
+            "location": ["台北市", "文山區"],
+            "facility": [
+                "書桌",
+                "椅子",
+                "單人床",
+                "保潔墊",
+                "置物櫃",
+                "開放式衣架",
+                "窗簾",
+                "垃圾桶",
+                "冷氣"
+            ],
+            "initialPayment": {
+                "deposit": "NTD 25000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 0",
+                "serviceFee": "NTD 0"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 16300",
+                "shortTermRentalOneToTwo": "NTD 20000"
+            },
+            "housingInformation": {
+                "roomType": "雅房",
+                "area": "0 坪 / 0 m²"
+            },
+            "housingSpaceInformation": {
+                "kitchen": true,
+                "publicBathroom": "30間",
+                "buildingArea": "700坪",
+                "buildRoomsNumber": "0間",
+                "totalFloor": "5樓",
+                "elevator": true,
+                "cleanUp": "",
+                "garbageDisposal": "24hr大樓垃圾集中處理"
+            },
+            "nearbyFunction": ["公園"],
+            "trafficInformation": {
+                "MRTline": "G 松山新店",
+                "MRTstation": "萬隆站",
+                "walkingTime": "0mins"
+            }
+
+        },
+        {
+            "id": 4,
+            "name": "仁愛",
+            "secondName": "仁愛 RoomA",
+            "roomStyle": "獨立套房",
+            "monthlyRent": " 16500",
+            "status": "招募中",
+            "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
+            "location": ["台北市", "大安區"],
+            "facility": [
+                "保潔墊",
+                "冷氣",
+                "單人床",
+                "垃圾桶",
+                "浴廁",
+                "衣櫃"
+            ],
+            "initialPayment": {
+                "deposit": "NTD 33000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 2000",
+                "serviceFee": "NTD 2000"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 21500",
+                "shortTermRentalOneToTwo": "NTD 26400"
+            },
+            "housingInformation": {
+                "roomType": "獨立套房",
+                "area": "0 坪 / 0 m²"
+            },
+            "housingSpaceInformation": {
+                "balcony": true,
+                "kitchen": true,
+                "publicBathroom": "1間",
+                "buildRoomsNumber": "4間",
+                "totalFloor": "5樓",
+                "cleanUp": "每週一次",
+                "garbageDisposal": "每週一次"
+            },
+            "nearbyFunction": ["便利商店", "咖啡廳"],
+            "trafficInformation": {
+                "MRTline": ["BL 板橋南港", "O 中和新蘆"],
+                "MRTstation": "忠孝新生",
+                "walkingTime": "8mins"
+            }
+
+        },
+        {
+            "id": 5,
+            "name": "仁愛",
+            "secondName": "仁愛 RoomB",
+            "roomStyle": "雅房",
+            "monthlyRent": " 13500",
+            "status": "招募中",
+            "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
+            "location": ["台北市", "大安區"],
+            "facility": [
+                "瓦斯爐",
+                "基本餐具",
+                "洗衣機",
+                "洗碗機",
+                "烤箱",
+                "滅火器",
+                "煙霧偵測器",
+                "戶外陽台",
+                "工作空間",
+                "無線網路",
+                "冰箱",
+                "吹風機"
+            ],
+            "initialPayment": {
+                "deposit": "NTD 27000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 2000",
+                "serviceFee": "NTD 2000"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 17600",
+                "shortTermRentalOneToTwo": "NTD 21600"
+            },
+            "housingInformation": {
+                "roomType": "雅房",
+                "area": "0 坪 / 0 m²"
+            },
+            "housingSpaceInformation": {
+                "balcony": true,
+                "kitchen": true,
+                "publicBathroom": "1間",
+                "buildRoomsNumber": "4間",
+                "totalFloor": "5樓",
+                "cleanUp": "每週一次",
+                "garbageDisposal": "每週一次"
+            },
+            "nearbyFunction": ["便利商店", "咖啡廳"],
+            "trafficInformation": {
+                "MRTline": ["BL 板橋南港", "O 中和新蘆"],
+                "MRTstation": "忠孝新生",
+                "walkingTime": "8mins"
+            }
+
+        },
+        {
+            "id": 6,
+            "name": "仁愛",
+            "secondName": "仁愛 RoomC",
+            "roomStyle": "雅房",
+            "monthlyRent": " 16500",
+            "status": "招募中",
+            "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
+            "location": ["台北市", "大安區"],
+            "facility": [
+                "保潔墊",
+                "冷氣",
+                "垃圾桶",
+                "衣櫃",
+                "雙人床"
+            ],
+            "initialPayment": {
+                "deposit": "NTD 33000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 2000",
+                "serviceFee": "NTD 2000"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 21500",
+                "shortTermRentalOneToTwo": "NTD 26400"
+            },
+            "housingInformation": {
+                "roomType": "雅房",
+                "area": "0 坪 / 0 m²"
+            },
+            "housingSpaceInformation": {
+                "balcony": true,
+                "kitchen": true,
+                "publicBathroom": "1間",
+                "buildRoomsNumber": "4間",
+                "totalFloor": "5樓",
+                "cleanUp": "每週一次",
+                "garbageDisposal": "每週一次"
+            },
+            "nearbyFunction": ["便利商店", "咖啡廳"],
+            "trafficInformation": {
+                "MRTline": ["BL 板橋南港", "O 中和新蘆"],
+                "MRTstation": "忠孝新生",
+                "walkingTime": "8mins"
             }
 
         }
