@@ -387,11 +387,23 @@
                     <!-- room-list -->
                     <div class="container-fluid no-padding">
                         <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard />
+                            <div
+                                class="col-sm-12 col-md-6 col-lg-6"
+                                v-for="room in rooms"
+                                :key="room.id"
+                            >
+                                <RoomCard
+                                    :price="room.monthlyRent"
+                                    :name="room.name"
+                                    :secondName="room.secondName"
+                                    :roomStyle="room.roomStyle"
+                                    :status="room.status"
+                                />
                             </div>
                         </div>
                     </div>
+
+                    <div v-for="item in rooms" :key="item.id"></div>
                     <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -712,7 +724,6 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.rooms = result.data;
-                console.log(this.rooms);
             })
             .catch(err => {
                 console.warn(err);
