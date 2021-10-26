@@ -397,7 +397,7 @@ export default {
                 document.body.scrollTop ||
                 window.pageYOffset;
             this.scrollNum = top;
-            console.log(top);
+            // console.log(top);
             if (top == 0) {
                 this.backgroundWhite = true;
             } else {
