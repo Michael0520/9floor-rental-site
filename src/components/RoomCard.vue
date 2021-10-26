@@ -7,23 +7,33 @@
         </div>
         <div class="index_title">
             <a href="#" class="index_leftTitle">
-                <span>仁愛</span>
+                <span>
+                    {{ name }}
+                </span>
             </a>
             <a href="#" class="index_rightTitle">
-                <span>仁愛 ROOM A</span>
+                <span>
+                    {{ secondName }}
+                </span>
             </a>
         </div>
         <div class="index_status">
             <!-- text 樣式吃不到 -->
-            <div class="text-start">獨立套房</div>
-            <div class="text-end">招募中</div>
+            <span>
+                {{ roomStyle }}
+            </span>
+            <span>
+                {{ status }}
+            </span>
         </div>
 
         <div class="index_detail">
             <span>
                 <span>
                     NTD
-                    <span class="index_price">16500</span>
+                    <span class="index_price">
+                        {{ price }}
+                    </span>
                     / 月
                 </span>
             </span>
@@ -37,7 +47,7 @@ export default {
     data() {
         return {};
     },
-    props: ["name", "price"]
+    props: ["name", "secondName", "roomStyle", "status", "price"]
 };
 </script>
 
@@ -80,8 +90,9 @@ export default {
         }
     }
     .index_status {
+        display: flex;
+        justify-content: space-between;
         height: 26px;
-
         font-size: 13px;
         font-weight: 300;
         line-height: 2;
