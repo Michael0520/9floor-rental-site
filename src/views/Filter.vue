@@ -388,7 +388,7 @@
                     <div class="container-fluid no-padding">
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <RoomCard price= />
+                                <RoomCard />
                             </div>
                         </div>
                     </div>
@@ -689,47 +689,14 @@ export default {
             name: "FilterPage",
             transparent: false,
             isOpen: false,
-            roomList: [
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    imgUrl:
-                        "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
-                    price: 16500
-                },
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    price: 16500
-                },
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    price: 16500
-                },
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    price: 16500
-                },
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    price: 16500
-                },
-                {
-                    name: "仁愛",
-                    status: "招募中",
-                    price: 16500
-                }
-            ]
+            roomList: [],
+            rooms: []
         };
     },
     methods: {
         filterRow(index) {
             return index % 2 === 0;
         },
-
         openmenu() {
             this.isOpen = !this.isOpen;
         }
@@ -740,7 +707,16 @@ export default {
         RoomCard,
         Footer
     },
-    mounted() {}
+    mounted() {
+        this.axios
+            .get("http://localhost:3000/rooms")
+            .then(result => {
+                console.log(result.data);
+            })
+            .catch(err => {
+                console.warn(err);
+            });
+    }
 };
 </script>
 <style  lang="scss" scoped>
