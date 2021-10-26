@@ -5,6 +5,7 @@
             "secondName": "PURE Coliving 雙人雅房",
             "roomStyle": "雅房",
             "monthlyRent": "NTD 13500",
+            "status":"招募中",
             "location": ["台北市", "文山區"],
             "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
             "facility": [
@@ -59,6 +60,7 @@
             "secondName": "浴缸雙人房",
             "roomStyle": "獨立套房",
             "monthlyRent": "NTD 21800",
+            "status":"招募中",
             "description": "9floor STAYCATION series 是玖樓與台北各優質與特色旅店的獨家專案。",
             "location": ["台北市", "萬華區"],
             "facility": [
