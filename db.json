@@ -4,6 +4,7 @@
             "name": "玖樓璞園",
             "secondName": "PURE Coliving 雙人雅房",
             "roomStyle": "雅房",
+            "monthlyRent": "NTD 13500",
             "location": ["台北市", "文山區"],
             "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
             "facility": [
@@ -23,7 +24,6 @@
                 "checkOutCleaningFee": "NTD 1500"
             },
             "monthlyFee": {
-                "monthlyRent": "NTD 13500",
                 "energyFee": "NTD 0",
                 "serviceFee": "NTD 0"
             },
@@ -58,6 +58,7 @@
             "name": "玖樓宅度假 -漫步旅店",
             "secondName": "浴缸雙人房",
             "roomStyle": "獨立套房",
+            "monthlyRent": "NTD 21800",
             "description": "9floor STAYCATION series 是玖樓與台北各優質與特色旅店的獨家專案。",
             "location": ["台北市", "萬華區"],
             "facility": [
@@ -81,7 +82,6 @@
                 "checkOutCleaningFee": "NTD 1500"
             },
             "monthlyFee": {
-                "monthlyRent": "NTD 21800",
                 "energyFee": "NTD 1500",
                 "serviceFee": "NTD 1500"
             },
