@@ -903,11 +903,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <div class="row">
-            <div class="col">
-                <Footer />
-            </div>
-        </div>
+        <Footer />
     </div>
 </template>
 
