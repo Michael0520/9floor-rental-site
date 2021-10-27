@@ -346,16 +346,24 @@
                     <button
                         class="index_button"
                         data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop"
+                        data-bs-target="#booking-bar-location"
                     >
                         <div>地點</div>
                     </button>
-                    <button class="index_button">
+                    <button
+                        class="index_button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#booking-bar-price"
+                    >
                         <div>價格</div>
                     </button>
                 </div>
                 <div>
-                    <button class="index_button">
+                    <button
+                        class="index_button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#booking-bar-more"
+                    >
                         <div>進階搜尋</div>
                     </button>
                 </div>
@@ -684,7 +692,52 @@
         <!-- Modal -->
         <div
             class="modal fade"
-            id="staticBackdrop"
+            id="booking-bar-price"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog  modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5></h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            style="margin:10px 10px 24px;"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3
+                            style="
+                                        padding:0 17px;margin-bottom:14px;
+                                        font-size:13px;font-weight:500;letter-spacing:.6px
+                                        "
+                        >
+                            價格/月
+                        </h3>
+                        <label for="customRange3" class="form-label"></label>
+                        <input
+                            type="range"
+                            class="form-range"
+                            min="0"
+                            max="5"
+                            step="0.5"
+                            id="customRange3"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="booking-bar-location"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
@@ -714,7 +767,7 @@
                         >
                             地點
                         </h3>
-                        <div class="index_group">
+                        <div class="index_alert-group">
                             <p class="small">地區</p>
                             <div class="index_dropdown-basic w-100">
                                 <select
@@ -731,7 +784,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="index_group">
+                        <div class="index_alert-group">
                             <p class="small">城市</p>
                             <div class="index_dropdown-basic w-100">
                                 <select
@@ -753,10 +806,7 @@
                             class="accordion  accordion-flush "
                             id="accordionExample"
                         >
-                            <div
-                                class="accordion-item"
-                                style="background-color:#fdfdfd"
-                            >
+                            <div class="accordion-item">
                                 <span class="accordion-header" id="headingOne">
                                     <button
                                         class="accordion-button "
@@ -779,47 +829,16 @@
                                 </span>
                                 <div
                                     id="collapseOne"
-                                    class="accordion-collapse collapse "
+                                    class="accordion-collapse collapsing "
                                     aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample"
                                 >
                                     <div class="accordion-body">
                                         <div
-                                            class="index_group"
+                                            class="index_alert-group"
                                             style="padding:0"
                                         >
-                                            <p class="small">城市</p>
-                                            <div
-                                                class="index_dropdown-basic w-100"
-                                            >
-                                                <select
-                                                    class="form-select form-select-sm"
-                                                    aria-label="Default select example"
-                                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                                >
-                                                    <option selected
-                                                        >請選擇捷運站</option
-                                                    >
-                                                    <option value="1"
-                                                        >One</option
-                                                    >
-                                                    <option value="2"
-                                                        >Two</option
-                                                    >
-                                                    <option value="3"
-                                                        >Three</option
-                                                    >
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="index_group"
-                                            style="padding:0"
-                                        >
-                                            <p class="small">城市</p>
+                                            <p class="small">捷運線</p>
                                             <div
                                                 class="index_dropdown-basic w-100"
                                             >
@@ -846,12 +865,297 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div
+                                            class="index_alert-group"
+                                            style="padding:0"
+                                        >
+                                            <p class="small">捷運站</p>
+                                            <div
+                                                class="index_dropdown-basic w-100"
+                                            >
+                                                <select
+                                                    class="form-select form-select-sm"
+                                                    aria-label="Default select example"
+                                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                                >
+                                                    <option selected
+                                                        >請選擇捷運站</option
+                                                    >
+                                                    <option value="1"
+                                                        >One</option
+                                                    >
+                                                    <option value="2"
+                                                        >Two</option
+                                                    >
+                                                    <option value="3"
+                                                        >Three</option
+                                                    >
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="booking-bar-more"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog  modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5></h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            style="margin:10px 10px 24px;"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="index_alert-group">
+                            <p
+                                class="small"
+                                style="
+                                       margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                房型
+                            </p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected>請選擇房型</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="index_alert-group">
+                            <p
+                                class="small"
+                                style="margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                預訂入住日期
+                            </p>
+                            <!-- TODO:要使用 bootstrap Data input -->
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected>請選擇預訂入住日期</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div
+                            class="index_division"
+                            style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
+                        ></div>
+                        <div class="index_alert-group">
+                            <p
+                                class="small"
+                                style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                顯示特定居住空間
+                            </p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected
+                                        >請選擇顯示特定居住空間</option
+                                    >
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="index_alert-group">
+                            <p
+                                class="small"
+                                style="
+                                        margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                房間坪數
+                            </p>
+                            <label
+                                for="customRange3"
+                                class="form-label"
+                            ></label>
+                            <input
+                                type="range"
+                                class="form-range"
+                                min="0"
+                                max="5"
+                                step="0.5"
+                                id="customRange3"
+                            />
+                        </div>
+                        <div class="index_alert-selector-group">
+                            <p
+                                class="small"
+                                style="
+                                        padding:0 17px;margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                第二人居住
+                            </p>
+                            <div class="index_alert-selector">
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    style=""
+                                    >全部</label
+                                >
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    >可以</label
+                                >
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    >不可以</label
+                                >
+                            </div>
+                        </div>
+                        <div class="index_alert-selector-group">
+                            <p
+                                class="small"
+                                style="
+                                        padding:0 17px;margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                養寵物
+                            </p>
+                            <div class="index_alert-selector">
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    style=""
+                                    >全部</label
+                                >
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    >可以</label
+                                >
+                                <input
+                                    type="checkbox"
+                                    class="btn-check"
+                                    id="btn-check-outlined"
+                                    autocomplete="off"
+                                />
+                                <label
+                                    class="btn btn-outline-primary"
+                                    for="btn-check-outlined"
+                                    >不可以</label
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="index_division"
+                            style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
+                        ></div>
+                        <div class="index_alert-group">
+                            <p
+                                class="small"
+                                style="
+                                        margin-bottom:7px;
+                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        "
+                            >
+                                顯示特定居住特色
+                            </p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected
+                                        >請選擇顯示特定居住特色</option
+                                    >
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1567,16 +1871,37 @@ export default {
 }
 
 // filter-bar-alert
-.index_group {
-    display: flex;
-    justify-content: space-between;
+.index_alert-group {
+    width: 100%;
     align-items: center;
     margin-bottom: 24px;
     padding: 0 17px;
     p {
         flex-basis: 100px;
         flex-shrink: 0;
-        width: 100px;
+        width: 100%;
+    }
+}
+
+.index_alert-selector {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    padding: 0 17px;
+    label {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #b7ac9f;
+        margin-right: -1px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.75;
+        letter-spacing: 3.4px;
+        color: $primary;
+        cursor: pointer;
+        z-index: 0;
     }
 }
 </style>
