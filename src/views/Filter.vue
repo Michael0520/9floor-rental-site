@@ -414,25 +414,36 @@
                         >
                             <option selected>全國</option>
                             <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">台北市</option>
-                            <option value="2">新北市</option>
+                            <option
+                                v-for="(option, keys) in roomOptions"
+                                :value="option"
+                                :key="keys"
+                                >{{ keys + 1 }}.{{ option.loaction }}</option
+                            >
                         </select>
                     </div>
                     <div class="index_division"></div>
                     <div class="index_dropdown-group">
                         <p class="small">房型</p>
-                        <select
-                            class="form-select form-select-sm index_dropdown-basic"
-                            aria-label=".form-select-sm example"
+                        <ul
+                            class="list-group"
+                            style="color:#444647  font-size:12px"
                         >
-                            <option selected>請選擇房型</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">男生宿舍房</option>
-                            <option value="2">女生宿舍房</option>
-                            <option value="3">混合宿舍房</option>
-                            <option value="4">雅房</option>
-                            <option value="5">獨立套房</option>
-                        </select>
+                            <li
+                                class="list-group-item"
+                                style="color:#444647; font-size:12px"
+                                v-for="(option, keys) in roomOptions"
+                                :key="keys"
+                            >
+                                <input
+                                    class="form-check-input me-1"
+                                    type="checkbox"
+                                    value=""
+                                    aria-label="..."
+                                />
+                                {{ option.roomStyle.name }}
+                            </li>
+                        </ul>
                     </div>
                     <div class="index_dropdown-group">
                         <p class="small index_clearButton">
@@ -680,7 +691,8 @@ export default {
             name: "FilterPage",
             transparent: false,
             isOpen: false,
-            rooms: []
+            rooms: [],
+            roomOptions: []
         };
     },
     methods: {
@@ -703,6 +715,17 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.rooms = result.data;
+            })
+            .catch(err => {
+                console.warn(err);
+            });
+
+        this.axios
+            .get("http://localhost:3000/roomOptions")
+            .then(result => {
+                // console.log(result.data);
+                this.roomOptions = result.data;
+                console.log(this.roomOptions);
             })
             .catch(err => {
                 console.warn(err);
