@@ -50,8 +50,8 @@
                     <div class="index_view-marker"></div>
                     <!-- co-living-slider -->
                     <div class="index_co-living-slider index_co-living-section">
-                        <div class="container-fluid no-padding">
-                            <div class="row gx-0">
+                        <div class="container-fluid ">
+                            <div class="row ">
                                 <!-- <p class="vertical index_watermark">共居生活</p> -->
                                 <div class="col-lg-6 col-sm-12">
                                     <div class="index_left">
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <div class="index_right">
                                         <div class="index_slider-images">
                                             <img
@@ -241,10 +241,10 @@
                         </div>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <RoomCard />
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <RoomCard />
                                 </div>
                             </div>
@@ -252,13 +252,13 @@
                         <!-- room-list-small -->
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="col-sm-12  col-lg-4">
                                     <RoomCard />
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="col-sm-12  col-lg-4">
                                     <RoomCard />
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="col-sm-12  col-lg-4">
                                     <RoomCard />
                                 </div>
                             </div>

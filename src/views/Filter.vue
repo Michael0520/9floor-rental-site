@@ -385,8 +385,8 @@
                     </div>
 
                     <!-- room-list -->
-                    <div class="container-fluid no-padding">
-                        <div class="row">
+                    <div class="container-fluid ">
+                        <div class="row g-0">
                             <div
                                 class="col-sm-12 col-md-6 col-lg-6"
                                 v-for="room in rooms"
