@@ -343,9 +343,14 @@
             <!-- small-filter -->
             <div class="index_small-filter">
                 <div>
+                    <button
+                        class="index_button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                    >
+                        <div>地點</div>
+                    </button>
                     <button class="index_button">
-                        <div>地點</div></button
-                    ><button class="index_button">
                         <div>價格</div>
                     </button>
                 </div>
@@ -355,6 +360,7 @@
                     </button>
                 </div>
             </div>
+
             <!-- Breadcrumb -->
             <div class="index_breadcrume-section">
                 <Breadcrumb />
@@ -675,6 +681,181 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog  modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5></h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            style="margin:10px 10px 24px;"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3
+                            style="
+                                        padding:0 17px;margin-bottom:14px;
+                                        font-size:13px;font-weight:500;letter-spacing:.6px
+                                        "
+                        >
+                            地點
+                        </h3>
+                        <div class="index_group">
+                            <p class="small">地區</p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected>請選擇地區</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="index_group">
+                            <p class="small">城市</p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected>請選擇城市</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div
+                            class="accordion  accordion-flush "
+                            id="accordionExample"
+                        >
+                            <div
+                                class="accordion-item"
+                                style="background-color:#fdfdfd"
+                            >
+                                <span class="accordion-header" id="headingOne">
+                                    <button
+                                        class="accordion-button "
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                        style="font-size:12px;
+                                            font-weight:500;
+                                            line-height:2;
+                                            letter-spacing:.5px;
+                                            color:#857c7c;
+                                            height:40px;
+                                            border-top:1px solid #ece2d5;
+                                            border-bottom:1px solid #ece2d5"
+                                    >
+                                        捷運站
+                                    </button>
+                                </span>
+                                <div
+                                    id="collapseOne"
+                                    class="accordion-collapse collapse "
+                                    aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample"
+                                >
+                                    <div class="accordion-body">
+                                        <div
+                                            class="index_group"
+                                            style="padding:0"
+                                        >
+                                            <p class="small">城市</p>
+                                            <div
+                                                class="index_dropdown-basic w-100"
+                                            >
+                                                <select
+                                                    class="form-select form-select-sm"
+                                                    aria-label="Default select example"
+                                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                                >
+                                                    <option selected
+                                                        >請選擇捷運站</option
+                                                    >
+                                                    <option value="1"
+                                                        >One</option
+                                                    >
+                                                    <option value="2"
+                                                        >Two</option
+                                                    >
+                                                    <option value="3"
+                                                        >Three</option
+                                                    >
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="index_group"
+                                            style="padding:0"
+                                        >
+                                            <p class="small">城市</p>
+                                            <div
+                                                class="index_dropdown-basic w-100"
+                                            >
+                                                <select
+                                                    class="form-select form-select-sm"
+                                                    aria-label="Default select example"
+                                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                                >
+                                                    <option selected
+                                                        >請選擇捷運線</option
+                                                    >
+                                                    <option value="1"
+                                                        >One</option
+                                                    >
+                                                    <option value="2"
+                                                        >Two</option
+                                                    >
+                                                    <option value="3"
+                                                        >Three</option
+                                                    >
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- footer -->
         <Footer />
     </div>
@@ -710,6 +891,7 @@ export default {
         Footer
     },
     mounted() {
+        // catch roomsData
         this.axios
             .get("http://localhost:3000/rooms")
             .then(result => {
@@ -719,7 +901,7 @@ export default {
             .catch(err => {
                 console.warn(err);
             });
-
+        // catch roomOptions
         this.axios
             .get("http://localhost:3000/roomOptions")
             .then(result => {
@@ -1356,7 +1538,6 @@ export default {
     }
 }
 // small-filter
-
 .index_page {
     .index_small-filter {
         display: flex;
@@ -1382,6 +1563,20 @@ export default {
                 }
             }
         }
+    }
+}
+
+// filter-bar-alert
+.index_group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 17px;
+    p {
+        flex-basis: 100px;
+        flex-shrink: 0;
+        width: 100px;
     }
 }
 </style>

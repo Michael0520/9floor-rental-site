@@ -304,6 +304,7 @@ import Footer from "../components/Footer.vue";
 import RoomCard from "../components/RoomCard.vue";
 import SiderBar from "../components/SiderBar.vue";
 import NavBar from "../components/NavBar.vue";
+
 export default {
     data() {
         return {
