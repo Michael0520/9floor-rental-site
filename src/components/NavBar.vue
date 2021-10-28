@@ -566,7 +566,7 @@ export default {
     background-color: #fff;
     padding: 0 15px;
     z-index: 100;
-    * {
+    > * {
         flex: 1 0 0;
     }
     button {
@@ -595,10 +595,10 @@ export default {
             position: relative;
             width: 25px;
             height: 20px;
-            transition: transform 0.5s ease-in-out,
-                -webkit-transform 0.5s ease-in-out;
-            &::before {
-                top: -1px;
+            transition: transform 0.5s ease-in-out;
+            &::before,
+            &::after,
+            .index_inner {
                 content: "";
                 position: absolute;
                 width: 25px;
@@ -607,26 +607,15 @@ export default {
                 transform-origin: 100% 50%;
                 transition: all 0.5s ease-in-out;
             }
+            &::before {
+                top: -1px;
+            }
             &::after {
-                content: "";
-                position: absolute;
-                width: 25px;
-                height: 2px;
-                background: $primary;
-                transform-origin: 100% 50%;
-                transition: all 0.5s ease-in-out;
                 top: 19px;
             }
             .index_inner {
                 top: 9px;
                 transform-origin: 50% 50%;
-                content: "";
-                position: absolute;
-                width: 25px;
-                height: 2px;
-                background: $primary;
-                transform-origin: 100% 50%;
-                transition: all 0.5s ease-in-out;
             }
         }
     }
@@ -714,6 +703,19 @@ export default {
 }
 // active styles
 .index_menu-button.index_open {
+    .index_hamburger {
+        transform: rotateY(-180deg);
+        &::before {
+            transform: translate3d(-4px, 1px, 0) rotate(-45deg);
+        }
+        &::after {
+            transform: translate3d(-4px, -1px, 0) rotate(45deg);
+        }
+        .index_inner {
+            transform: rotateY(-90deg);
+            transition: transform 375ms, background-color 0.75s ease-in-out;
+        }
+    }
     .index_hamburger.index_reverse {
         &::before {
             background-color: $primary;
@@ -728,23 +730,8 @@ export default {
                 -webkit-transform 375ms;
         }
     }
-    .index_hamburger {
-        transform: rotateY(-180deg);
-        &::before {
-            transform: translate3d(-4px, 1px, 0) rotate(-45deg);
-        }
-        &::after {
-            transform: translate3d(-4px, -1px, 0) rotate(45deg);
-        }
-    }
 }
-.index_meun-button {
-    &:active {
-        .index_hamburger {
-            transform: 50ms;
-        }
-    }
-}
+
 .index_mobile-menu.index_open {
     opacity: 1;
     z-index: 50;
