@@ -95,7 +95,7 @@
                 <div class="index_booking-bar">
                     <div
                         class="index_wrap index_booking-bar-banner"
-                        :class="isTop ? 'index_fixed' : ''"
+                        :class="isTop ? 'index_fixed-booking-bar' : ''"
                     >
                         <div class="index_booking-bar-left">
                             <div class="index_status">
@@ -1368,10 +1368,16 @@ svg {
             }
         }
     }
+    .index_wrap.index_fixed-booking-bar {
+        @media screen and (max-width: 1280px) {
+            width: 100%;
+            left: 0;
+        }
+    }
     // wrap-fixed
-    .index_fixed {
+    .index_fixed-booking-bar {
         position: fixed;
-        top: 0;
+        top: 71px;
         margin-top: 0;
         width: 1280px;
         left: calc(50% - 640px);
