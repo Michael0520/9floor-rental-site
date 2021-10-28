@@ -1373,6 +1373,9 @@ svg {
             width: 100%;
             left: 0;
         }
+        @media screen and (max-width: 576px) {
+            top: 48px;
+        }
     }
     // wrap-fixed
     .index_fixed-booking-bar {
@@ -1389,9 +1392,8 @@ svg {
         width: 100%;
         height: 130px;
         right: 0;
-        .index_wrap,
-        .index_booking-bar-banner {
-            margin-top: -130px;
+        .index_wrap.index_booking-bar-banner {
+            // margin-top: -130px;
         }
         .index_booking-bar-banner {
             flex-direction: column;
