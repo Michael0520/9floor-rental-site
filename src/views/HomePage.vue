@@ -288,7 +288,10 @@
                     </div>
                 </div>
                 <!-- side-bar -->
-                <div class="index_side-bar index_side-bar-right">
+                <div
+                    class="index_side-bar index_side-bar-right"
+                    :class="isTop ? 'index_fixed-side-bar' : ''"
+                >
                     <div class="index_side-bar-content index_fade-in-out"></div>
                 </div>
             </div>
@@ -308,8 +311,25 @@ import NavBar from "../components/NavBar.vue";
 export default {
     data() {
         return {
-            name: "HomePage"
+            name: "HomePage",
+            isTop: false
         };
+    },
+    mounted() {
+        // if isTop = 0 , add fixed class , else remove
+        window.addEventListener("scroll", () => {
+            let clientTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = clientTop;
+            console.log(`目前頁面高度 ${clientTop}`);
+            if (clientTop >= 900) {
+                this.isTop = true;
+            } else {
+                this.isTop = false;
+            }
+        });
     },
     components: {
         Footer,

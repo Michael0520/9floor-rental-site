@@ -897,7 +897,10 @@
                     </a>
                 </div>
                 <!-- side-bar-right -->
-                <div class="index_side-bar index_side-bar-right">
+                <div
+                    class="index_side-bar index_side-bar-right"
+                    :class="isTop ? 'index_fixed-side-bar' : ''"
+                >
                     <div class="index_side-bar-content index_fade-in-out"></div>
                 </div>
             </div>
