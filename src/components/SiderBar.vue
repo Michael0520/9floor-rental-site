@@ -1,6 +1,9 @@
 <template>
-    <div class="index_side-bar index_side-bar-left">
-        <div class="index_side-bar-content index_fade-in-out">
+    <div
+        class="index_side-bar index_side-bar-left"
+        :class="isTop ? 'index_fixed-side-bar' : ''"
+    >
+        <div class="index_side-bar-content index_fade-in-out ">
             <div class="index_vertical-word">
                 <span>房</span>
                 <span>源</span>
@@ -15,8 +18,26 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            isTop: false
+        };
     },
+    mounted() {
+        // if isTop = 0 , add fixed class , else remove
+        window.addEventListener("scroll", () => {
+            let clientTop =
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOffset;
+            this.scrollNum = clientTop;
+            console.log(`目前頁面高度 ${clientTop}`);
+            if (clientTop >= 900) {
+                this.isTop = true;
+            } else {
+                this.isTop = false;
+            }
+        });
+    }
 };
 </script>
 
@@ -75,6 +96,13 @@ export default {
         &:first-child {
             margin-top: 60px;
         }
+    }
+}
+// fixed
+.index_side-bar.index_fixed-side-bar {
+    .index_side-bar-content {
+        position: fixed;
+        top: 72px;
     }
 }
 </style>
