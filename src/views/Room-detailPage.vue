@@ -123,10 +123,11 @@
                                     >
                                 </button>
                             </div>
-                            <a
+                            <!-- TODO:router-link to page number -->
+                            <router-link
                                 class="index_apartment-name"
-                                href="/zh-tw/apartment/1"
-                                >仁愛</a
+                                to="/apartment/1"
+                                >仁愛</router-link
                             >
                             <div class="index_room-name">仁愛 RoomA</div>
                         </div>
