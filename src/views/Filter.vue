@@ -373,8 +373,8 @@
             <div class="index_breadcrume-section">
                 <Breadcrumb />
             </div>
-            <!-- sider-bar -->
             <div class="index_room-section" style="width:100%;display:flex">
+                <!-- sider-bar -->
                 <SiderBar />
                 <div
                     class="index_room-list"
@@ -397,7 +397,6 @@
                             </select>
                         </div>
                     </div>
-
                     <!-- room-list -->
                     <div class="container-fluid ">
                         <div class="row g-0">
@@ -429,11 +428,13 @@
                             <option selected>全國</option>
                             <!-- TODO:value 可以來改為動態更新 -->
                             <option
-                                v-for="(option, keys) in roomOptions"
-                                :value="option"
+                                v-for="(option, keys) in locations"
+                                :value="option.name"
                                 :key="keys"
-                                >{{ keys + 1 }}.{{ option.loaction }}</option
                             >
+                                {{ keys + 1 }}.
+                                {{ option.name }}
+                            </option>
                         </select>
                     </div>
                     <div class="index_division"></div>
@@ -455,7 +456,7 @@
                                     value=""
                                     aria-label="..."
                                 />
-                                {{ option.roomStyle.name }}
+                                <!-- {{ option.roomStyle[keys].name }} -->
                             </li>
                         </ul>
                     </div>
@@ -1177,7 +1178,9 @@ export default {
             transparent: false,
             isOpen: false,
             rooms: [],
-            roomOptions: []
+            roomOptions: [],
+            locations: [],
+            roomStyles: []
         };
     },
     methods: {
@@ -1212,6 +1215,8 @@ export default {
                 // console.log(result.data);
                 this.roomOptions = result.data;
                 console.log(this.roomOptions);
+                this.locations = result.data[0].location;
+                console.log(this.locations);
             })
             .catch(err => {
                 console.warn(err);
