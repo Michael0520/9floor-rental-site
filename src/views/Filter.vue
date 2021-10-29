@@ -419,6 +419,7 @@
                 </div>
                 <!-- filter -->
                 <div class="index_room-filter">
+                    <!-- location -->
                     <div class="index_dropdown-group">
                         <p class="small">城市</p>
                         <select
@@ -438,6 +439,7 @@
                         </select>
                     </div>
                     <div class="index_division"></div>
+                    <!-- roomStyle -->
                     <div class="index_dropdown-group">
                         <p class="small">房型</p>
                         <ul
@@ -447,7 +449,8 @@
                             <li
                                 class="list-group-item"
                                 style="color:#444647; font-size:12px"
-                                v-for="(option, keys) in roomOptions"
+                                v-for="(option, keys) in roomStyles"
+                                :value="option.name"
                                 :key="keys"
                             >
                                 <input
@@ -456,7 +459,7 @@
                                     value=""
                                     aria-label="..."
                                 />
-                                <!-- {{ option.roomStyle[keys].name }} -->
+                                {{ option.name }}
                             </li>
                         </ul>
                     </div>
@@ -536,10 +539,13 @@
                         >
                             <option selected>顯示特定居住空間</option>
                             <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">全部</option>
-                            <option value="2">仁愛</option>
-                            <option value="3">辛亥-2F</option>
-                            <option value="4">玖樓璞園</option>
+                            <option
+                                v-for="(option, keys) in specificLivingSpaces"
+                                :key="keys"
+                                :value="option.name"
+                            >
+                                {{ option.name }}
+                            </option>
                         </select>
                     </div>
                     <div class="index_accordion index_advance">
@@ -655,6 +661,7 @@
                                     >
                                 </div>
                             </div>
+                            <!-- specificLivingFeatures -->
                             <div class="index_dropdown-group">
                                 <p class="small">居住空間特色</p>
                                 <select
@@ -665,11 +672,18 @@
                                     aria-label=".form-select-sm example"
                                 >
                                     <option selected>請選擇居住空間特色</option>
-                                    <!-- TODO:value 可以來改為動態更新 -->
-                                    <option value="1">居住空間特色</option>
+                                    <option
+                                        v-for="(option,
+                                        keys) in specificLivingFeatures"
+                                        :key="keys"
+                                        :value="option.name"
+                                    >
+                                        {{ option.name }}
+                                    </option>
                                 </select>
                             </div>
                             <div class="index_division"></div>
+                            <!-- render 無法預定的房間 list -->
                             <div class="form-check">
                                 <input
                                     class="form-check-input"
@@ -1180,7 +1194,9 @@ export default {
             rooms: [],
             roomOptions: [],
             locations: [],
-            roomStyles: []
+            roomStyles: [],
+            specificLivingSpaces: [],
+            specificLivingFeatures: []
         };
     },
     methods: {
@@ -1214,9 +1230,10 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.roomOptions = result.data;
-                console.log(this.roomOptions);
-                this.locations = result.data[0].location;
-                console.log(this.locations);
+                this.locations = this.roomOptions.location;
+                this.roomStyles = this.roomOptions.roomStyle;
+                this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
+                this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
             })
             .catch(err => {
                 console.warn(err);
