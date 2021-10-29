@@ -24,7 +24,7 @@
                 <router-link to="/">入住</router-link>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                <router-link to="/filter">房源搜尋</router-link>
+                <router-link to="filter">房源搜尋</router-link>
             </li>
         </ol>
     </nav>

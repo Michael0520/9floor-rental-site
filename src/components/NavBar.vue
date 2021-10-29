@@ -77,17 +77,17 @@
                     </div>
                     <ul>
                         <li>
-                            <router-link to="/filter">
+                            <router-link to="filter">
                                 條件搜尋
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/filter">
+                            <router-link to="filter">
                                 地圖搜尋
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/filter">
+                            <router-link to="filter">
                                 玖樓璞園
                             </router-link>
                         </li>
@@ -124,12 +124,12 @@
                     </div>
                     <ul>
                         <li>
-                            <router-link to="/filter">
+                            <router-link to="filter">
                                 空間管理
                             </router-link>
                         </li>
                         <li>
-                            <router-link to="/filter">
+                            <router-link to="filter">
                                 共同生活
                             </router-link>
                         </li>
@@ -268,11 +268,11 @@
                     <div class="index_menu-block">
                         <div class="index_title">入住</div>
                         <div class="index_list">
-                            <router-link to="/filter" class="index_list-item"
+                            <router-link to="filter" class="index_list-item"
                                 >條件搜尋</router-link
                             >
 
-                            <router-link to="/filter" class="index_list-item"
+                            <router-link to="filter" class="index_list-item"
                                 >地域搜尋</router-link
                             >
 

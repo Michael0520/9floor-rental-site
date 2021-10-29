@@ -890,12 +890,12 @@
                             </div>
                         </div>
                     </div>
-                    <a
-                        href="/filter"
+                    <router-link
+                        to="filter"
                         class="index_button index_more-button index_primary"
                     >
                         <div>更多</div>
-                    </a>
+                    </router-link>
                 </div>
                 <!-- side-bar-right -->
                 <div

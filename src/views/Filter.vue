@@ -2,7 +2,7 @@
     <!-- NavBar -->
     <header class="index_header">
         <nav class="index_navigator-desktop ">
-            <a href="/"
+            <router-link to="/"
                 ><svg
                     width="72px"
                     height="29px"
@@ -60,7 +60,7 @@
                         </g>
                     </g>
                 </svg>
-            </a>
+            </router-link>
             <ul class="index_navigator-list">
                 <li class="index_dropdown ">
                     <div class="index_title">
@@ -69,11 +69,14 @@
                         >
                     </div>
                     <ul>
-                        <li><a href="/#/filter">條件搜尋</a></li>
-                        <li><a href="/#/filter">地圖搜尋</a></li>
+                        <li><router-link to="filter">條件搜尋</router-link></li>
+                        <li><router-link to="filter">地圖搜尋</router-link></li>
                         <li>
-                            <a href="https://pure.9floor.co/" target="_blank"
-                                >玖樓璞園</a
+                            <router-link
+                                to="https://pure.9floor.co/"
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                                >玖樓璞園</router-link
                             >
                         </li>
                     </ul>

@@ -20,7 +20,7 @@
                     </p>
                 </div>
                 <router-link
-                    to="/filter"
+                    to="filter"
                     class="index_button index_search index_accent"
                 >
                     <div>
