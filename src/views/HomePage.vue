@@ -19,26 +19,26 @@
                         房子是租來的，生活不是
                     </p>
                 </div>
-                <a
-                    class="index_button index_search index_accent"
-                    href="/zh-tw/room"
-                    ><div>
-                        <span>開始搜尋</span>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="14"
-                            height="14"
-                            fill="currentColor"
-                            class="bi bi-chevron-right"
-                            viewBox="0 0 16 16"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                            />
-                        </svg>
-                    </div>
-                </a>
+                <router-link to="/filter">
+                    <a class="index_button index_search index_accent"
+                        ><div>
+                            <span>開始搜尋</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-chevron-right"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                />
+                            </svg>
+                        </div>
+                    </a>
+                </router-link>
             </div>
             <!-- home-content -->
             <div class="index_home-content">
