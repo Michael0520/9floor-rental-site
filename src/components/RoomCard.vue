@@ -1,24 +1,24 @@
 <template>
     <div class="index_room-card">
         <div class="index_card-wrapper">
-            <a href="#">
+            <router-link to="#">
                 <div
                     class="index_card-image img-fluid"
                     :style="backgroundStyles(image)"
                 ></div>
-            </a>
+            </router-link>
         </div>
         <div class="index_title">
-            <a href="#" class="index_leftTitle">
+            <router-link to="#" class="index_leftTitle">
                 <span>
                     {{ name }}
                 </span>
-            </a>
-            <a href="#" class="index_rightTitle">
+            </router-link>
+            <router-link to="#" class="index_rightTitle">
                 <span>
                     {{ secondName }}
                 </span>
-            </a>
+            </router-link>
         </div>
         <div class="index_status">
             <!-- text 樣式吃不到 -->
