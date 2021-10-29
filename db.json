@@ -422,8 +422,9 @@
             }
         }
     ],
-    "roomOptions": [{
-        "location": [{
+    "roomOptions": {
+        "location": [
+            {
                 "id": "010",
                 "name": "台北市"
             },
@@ -552,7 +553,7 @@
                 "name": "浴缸"
             }
         ]
-    }],
+    },
     "comments": [{
         "id": 1,
         "body": "some comment",
