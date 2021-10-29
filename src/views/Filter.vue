@@ -783,6 +783,27 @@
                             地點
                         </h3>
                         <div class="index_alert-group">
+                            <p class="small">城市</p>
+                            <div class="index_dropdown-basic w-100">
+                                <select
+                                    class="form-select form-select-sm"
+                                    aria-label="Default select example"
+                                    style="width:100%;min-height:30px;
+                                        border:1px solid #d2c8bd;
+                                        outline:none;
+                                        transition:border .2s ease-out"
+                                >
+                                    <option selected>請選擇城市</option>
+                                    <option
+                                        v-for="(option, keys) in locations"
+                                        :key="keys"
+                                    >
+                                        {{ option.name }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="index_alert-group">
                             <p class="small">地區</p>
                             <div class="index_dropdown-basic w-100">
                                 <select
@@ -795,25 +816,6 @@
                                 >
                                     <option selected>請選擇地區</option>
                                     <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="index_alert-group">
-                            <p class="small">城市</p>
-                            <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                >
-                                    <option selected>請選擇城市</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
                                 </select>
                             </div>
                         </div>
@@ -868,15 +870,13 @@
                                                     <option selected
                                                         >請選擇捷運線</option
                                                     >
-                                                    <option value="1"
-                                                        >One</option
+                                                    <option
+                                                        v-for="(option,
+                                                        keys) in MRTs"
+                                                        :key="keys"
                                                     >
-                                                    <option value="2"
-                                                        >Two</option
-                                                    >
-                                                    <option value="3"
-                                                        >Three</option
-                                                    >
+                                                        {{ option.line }}
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -899,15 +899,13 @@
                                                     <option selected
                                                         >請選擇捷運站</option
                                                     >
-                                                    <option value="1"
-                                                        >One</option
+                                                    <option
+                                                        v-for="(option,
+                                                        keys) in MRTs"
+                                                        :key="keys"
                                                     >
-                                                    <option value="2"
-                                                        >Two</option
-                                                    >
-                                                    <option value="3"
-                                                        >Three</option
-                                                    >
+                                                        {{ option.name }}
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -946,10 +944,7 @@
                         <div class="index_alert-group">
                             <p
                                 class="small"
-                                style="
-                                       margin-bottom:7px;
-                                        font-size:13px;font-weight:300;letter-spacing:.6px
-                                        "
+                                style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px"
                             >
                                 房型
                             </p>
@@ -963,8 +958,12 @@
                                         transition:border .2s ease-out"
                                 >
                                     <option selected>請選擇房型</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
+                                    <option
+                                        v-for="(option, keys) in roomStyles"
+                                        :key="keys"
+                                    >
+                                        {{ option.name }}
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -1017,8 +1016,13 @@
                                     <option selected
                                         >請選擇顯示特定居住空間</option
                                     >
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
+                                    <option
+                                        v-for="(option,
+                                        keys) in specificLivingSpaces"
+                                        :key="keys"
+                                    >
+                                        {{ option.name }}
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -1165,8 +1169,13 @@
                                     <option selected
                                         >請選擇顯示特定居住特色</option
                                     >
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
+                                    <option
+                                        v-for="(option,
+                                        keys) in specificLivingFeatures"
+                                        :key="keys"
+                                    >
+                                        {{ option.name }}
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -1196,7 +1205,8 @@ export default {
             locations: [],
             roomStyles: [],
             specificLivingSpaces: [],
-            specificLivingFeatures: []
+            specificLivingFeatures: [],
+            MRTs: []
         };
     },
     methods: {
@@ -1234,6 +1244,7 @@ export default {
                 this.roomStyles = this.roomOptions.roomStyle;
                 this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
                 this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
+                this.MRTs = this.roomOptions.MRT;
             })
             .catch(err => {
                 console.warn(err);
