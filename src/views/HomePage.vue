@@ -19,25 +19,26 @@
                         房子是租來的，生活不是
                     </p>
                 </div>
-                <router-link to="/filter">
-                    <a class="index_button index_search index_accent"
-                        ><div>
-                            <span>開始搜尋</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="14"
-                                height="14"
-                                fill="currentColor"
-                                class="bi bi-chevron-right"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                                />
-                            </svg>
-                        </div>
-                    </a>
+                <router-link
+                    to="/filter"
+                    class="index_button index_search index_accent"
+                >
+                    <div>
+                        <span>開始搜尋</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            fill="currentColor"
+                            class="bi bi-chevron-right"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </div>
                 </router-link>
             </div>
             <!-- home-content -->
@@ -77,13 +78,14 @@
                                                 擁有輕鬆溫暖的氛圍，同時備有咖啡館的工作生活機能。不只是物件的冰冷堆疊，我們在最愛的角落放上一盞落地燈、植入綠意、以及能與室友分享私房菜的大桌。簡約的設計風格，乘載平凡生活的更多樂趣。
                                             </div>
                                             <div class="index_buttons">
-                                                <a
+                                                <router-link
                                                     class="
                                                         index_button
                                                         index_primary
                                                     "
-                                                    href="/zh-tw/room"
-                                                    ><div>
+                                                    to="/zh-tw/room"
+                                                >
+                                                    <div>
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
                                                             width="14"
@@ -96,15 +98,16 @@
                                                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
                                                             /></svg
                                                         >搜尋物件
-                                                    </div></a
-                                                ><a
+                                                    </div>
+                                                </router-link>
+                                                <router-link
                                                     class="
                                                         index_button
                                                         index_primary
                                                     "
-                                                    href="/zh-tw/coliving"
-                                                    ><div>服務詳情</div></a
-                                                >
+                                                    to="/coliving"
+                                                    ><div>服務詳情</div>
+                                                </router-link>
                                             </div>
                                             <div class="index_step">
                                                 <div>04 / 04</div>
@@ -154,7 +157,7 @@
                                         <div class="index_slider-images">
                                             <img
                                                 class="
-                                                    index__fade-in-out___5r3iu
+                                                    index_fade-in-out
                                                 "
                                                 src="https://9floor.co/backend/web/lifestyle/20190121-edb7e9b402ccaea7a0b1ecc0d405b534.jpg"
                                                 alt="slider"
@@ -269,7 +272,9 @@
                         <div>
                             加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
                         </div>
-                        <a class="index_button index_primary" href="/zh-tw/room"
+                        <router-link
+                            class="index_button index_primary"
+                            to="/room"
                             ><div>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +289,7 @@
                                     /></svg
                                 >更多物件
                             </div>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <!-- side-bar -->
