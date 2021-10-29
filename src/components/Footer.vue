@@ -11,50 +11,62 @@
                                     <div class="col-md-4">
                                         <div class="index_footer-column">
                                             <h5>入住玖樓</h5>
-                                            <a href="#">條件搜尋</a>
-                                            <a href="#">地圖搜尋</a>
-                                            <a
-                                                href="#"
+                                            <router-link to="filter"
+                                                >條件搜尋</router-link
+                                            >
+                                            <router-link to="/map"
+                                                >地圖搜尋</router-link
+                                            >
+                                            <router-link
+                                                to="https://pure.9floor.co/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 class=""
-                                                >玖樓璞園</a
+                                                >玖樓璞園</router-link
                                             >
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="index_footer-column">
                                             <h5>玖樓</h5>
-                                            <a href="/zh-tw/about">關於玖樓</a>
-                                            <a href="/zh-tw/team">團隊夥伴</a>
-                                            <a href="/zh-tw/space">空間管理</a>
-                                            <a href="/zh-tw/coliving"
-                                                >共同生活</a
+                                            <router-link to="/about"
+                                                >關於玖樓</router-link
                                             >
-                                            <a
-                                                href="https://medium.com/9floor-co-living/tagged/9fnews"
+                                            <router-link to="/team"
+                                                >團隊夥伴</router-link
+                                            >
+                                            <router-link to="/space"
+                                                >空間管理</router-link
+                                            >
+                                            <router-link to="/coliving"
+                                                >共同生活</router-link
+                                            >
+                                            <router-link
+                                                to="https://medium.com/9floor-co-living/tagged/9fnews"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                >最新消息</a
+                                                >最新消息</router-link
                                             >
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="index_footer-column">
                                             <h5>協助</h5>
-                                            <a href="/zh-tw/service"
-                                                >如何申請</a
+                                            <router-link to="/service"
+                                                >如何申請</router-link
                                             >
-                                            <a
-                                                href="https://medium.com/9floor-co-living"
+                                            <router-link
+                                                to="https://medium.com/9floor-co-living"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                >常見問題</a
+                                                >常見問題</router-link
                                             >
-                                            <a href="/zh-tw/contact"
-                                                >聯繫我們</a
+                                            <router-link to="/contact"
+                                                >聯繫我們</router-link
                                             >
-                                            <a href="/zh-tw/media">媒體專區</a>
+                                            <router-link to="/media"
+                                                >媒體專區</router-link
+                                            >
                                         </div>
                                     </div>
                                 </div>
@@ -130,9 +142,9 @@
                                     </button>
                                 </div>
                                 <div class="index_social-media">
-                                    <a
+                                    <router-link
                                         target="_blank"
-                                        href="https://www.instagram.com/9floor.co/"
+                                        to="https://www.instagram.com/9floor.co/"
                                         rel="noopener noreferrer"
                                         ><svg
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -146,10 +158,10 @@
                                                     fill="#000000"
                                                 ></path>
                                             </g></svg
-                                    ></a>
-                                    <a
+                                    ></router-link>
+                                    <router-link
                                         target="_blank"
-                                        href="https://www.facebook.com/9floor.co/"
+                                        to="https://www.facebook.com/9floor.co/"
                                         rel="noopener noreferrer"
                                         ><svg
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -163,10 +175,10 @@
                                                     fill="#000000"
                                                 ></path>
                                             </g></svg
-                                    ></a>
-                                    <a
+                                    ></router-link>
+                                    <router-link
                                         target="_blank"
-                                        href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
+                                        to="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
                                         rel="noopener noreferrer"
                                         ><svg
                                             viewBox="0 0 24 24"
@@ -176,7 +188,7 @@
                                                 d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.057,16.406c-0.188,0-0.282-0.094-0.47-0.188 c-1.411-0.847-3.198-1.317-5.079-1.317c-1.035,0-2.163,0.188-3.104,0.376c-0.188,0-0.376,0.094-0.47,0.094 c-0.376,0-0.658-0.282-0.658-0.658c0-0.376,0.188-0.658,0.564-0.658c1.223-0.282,2.446-0.47,3.763-0.47 c2.163,0,4.139,0.564,5.832,1.505c0.188,0.188,0.376,0.282,0.376,0.658C16.621,16.218,16.339,16.406,16.057,16.406z M17.091,13.773 c-0.188,0-0.376-0.094-0.564-0.188c-1.599-1.035-3.857-1.599-6.302-1.599c-1.223,0-2.352,0.188-3.198,0.376 c-0.188,0.094-0.282,0.094-0.47,0.094c-0.47,0-0.753-0.376-0.753-0.753c0-0.47,0.188-0.658,0.658-0.847 c1.129-0.282,2.258-0.564,3.857-0.564c2.634,0,5.079,0.658,7.149,1.881c0.282,0.188,0.47,0.47,0.47,0.753 C17.844,13.396,17.562,13.773,17.091,13.773z M18.314,10.762c-0.188,0-0.282-0.094-0.564-0.188 c-1.881-1.035-4.609-1.693-7.243-1.693c-1.317,0-2.728,0.188-3.951,0.47c-0.188,0-0.282,0.094-0.564,0.094 C5.428,9.54,5.051,9.069,5.051,8.505c0-0.564,0.282-0.847,0.658-0.941C7.215,7.188,8.814,7,10.507,7 c2.916,0,5.926,0.658,8.278,1.881c0.282,0.188,0.564,0.47,0.564,0.941C19.255,10.386,18.878,10.762,18.314,10.762z"
                                                 fill="#000000"
                                             ></path></svg
-                                    ></a>
+                                    ></router-link>
                                 </div>
                             </div>
                         </div>
@@ -195,10 +207,14 @@
                     >
                 </div>
                 <div class="col-sm-12 col-lg-6 index_footer-policy">
-                    <a href="/zh-tw/terms"><span>服務條款</span></a
-                    ><a href="/zh-tw/service"><span>服務說明</span></a
-                    ><a href="/zh-tw/privacy"><span>隱私權政策</span></a
-                    ><a href="/zh-tw/sitemap"><span>網站地圖</span></a>
+                    <router-link to="/terms"><span>服務條款</span></router-link>
+                    <router-link to="/service"
+                        ><span>服務說明</span></router-link
+                    ><router-link to="/privacy"
+                        ><span>隱私權政策</span></router-link
+                    ><router-link to="/sitemap"
+                        ><span>網站地圖</span></router-link
+                    >
                 </div>
             </div>
         </div>
