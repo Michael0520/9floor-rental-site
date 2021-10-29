@@ -24,9 +24,6 @@
     a {
         text-decoration: none;
     }
-    a.router-link-exact-active {
-        color: #42b983;
-    }
 }
 // html {
 //     overflow: -moz-hidden-unscrollable;
