@@ -7,7 +7,10 @@
             "monthlyRent": " 13500",
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
             "status": "招募中",
-            "location": ["台北市", "文山區"],
+            "location": [{
+                "city":"台北市",
+                "site":"文山區"
+            }],
             "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
             "roomFacility": [
                 "書桌",
@@ -64,7 +67,10 @@
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20200902-42ad2a4d01809a0fd6fd033412ef41e2.png",
             "status": "招募中",
             "description": "9floor STAYCATION series 是玖樓與台北各優質與特色旅店的獨家專案。",
-            "location": ["台北市", "萬華區"],
+            "location": [{
+                "city":"台北市",
+                "site":"萬華區"
+            }],
             "facility": [
                 "雙人床",
                 "保潔墊",
@@ -133,7 +139,10 @@
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20210423-600c9c66739fa456b63eaf810e068428.png",
             "status": "招募中",
             "description": "一個更符合當代需求的居住模式。 彈性租期⼀個月起，輕鬆嘗試⽣活的多種可能。 ＊＊＊今年度最長簽約至2021年12月16日",
-            "location": ["台北市", "文山區"],
+            "location": [{
+                "city":"台北市",
+                "site":"文山區"
+            }],
             "facility": [
                 "書桌",
                 "椅子",
@@ -189,7 +198,10 @@
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20200902-50a611e8ecd6f999ca037a57539c8465.png",
             "status": "招募中",
             "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
-            "location": ["台北市", "大安區"],
+            "location": [{
+                "city":"台北市",
+                "site":"大安區"
+            }],
             "facility": ["保潔墊", "冷氣", "單人床", "垃圾桶", "浴廁", "衣櫃"],
             "livingSpaceEquipment": [
                 "瓦斯爐",
@@ -247,7 +259,10 @@
             "status": "招募中",
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20200902-4cef0d09364b6eb6e7e37c067e22b25e.png",
             "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
-            "location": ["台北市", "大安區"],
+            "location": [{
+                "city":"台北市",
+                "site":"大安區"
+            }],
             "facility": [
                 "瓦斯爐",
                 "基本餐具",
@@ -318,7 +333,10 @@
             "status": "招募中",
             "imgUrl": "https://9floor.co/backend/web/roomPhoto/20210910-dab1e9172fe244cb04dba6af9434cdb2.png",
             "description": "位於仁愛路與新生南路交界處，三條捷運線（紅、藍、橘）都在步行範圍內，5分鐘就到忠孝新生站。除了地段極佳外，有別於投資客廉價地對待空間，這更是一棟被細心呵護、改建的老公寓。從燈飾、地磚，甚至到台灣檜木的百葉窗，都可見到屋主太太對於自己老家的品味與用心。",
-            "location": ["台北市", "大安區"],
+            "location": [{
+                "city":"台北市",
+                "site":"大安區"
+            }],
             "facility": ["保潔墊", "冷氣", "垃圾桶", "衣櫃", "雙人床"],
             "livingSpaceEquipment": [
                 "瓦斯爐",
@@ -376,7 +394,10 @@
             "status": "招募中",
             "imgUrl": "https://9floor.co/backend/web/apartmentPhoto/20200902-fd7ccc96dde82ed6bcdbac8918fe98b9.png",
             "description": "科技大樓捷運站走路八分鐘，位於臺大後門正對面的辛亥玖樓，60米綠園道。有兩間獨立房與一間宿舍雙人房，以及藝廊風格的開放式廚房與客廳，喝個小酒、彈個吉他，或來場多人swing dance！",
-            "location": ["台北市", "大安區"],
+            "location": [{
+                "city":"台北市",
+                "site":"大安區"
+            }],
             "facility": [
                 "保潔墊",
                 "冷氣",
