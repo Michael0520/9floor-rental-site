@@ -61,10 +61,11 @@ body{
             line-height: 1.35;
             letter-spacing: 2.5px;
         }
-        h3{
-            font-size: 20px;
-            letter-spacing: 5px;
-        }
+        
+    }
+    h3{
+        font-size: 20px;
+        letter-spacing: 5px;
     }
     .btn{
         border-radius: 0;
@@ -79,6 +80,8 @@ body{
         outline: none;
         transition: all 0.3s;
         div{
+            display: flex;
+            justify-content: center;
             align-items: center;
             text-align: center;
             font-size: 12px;
