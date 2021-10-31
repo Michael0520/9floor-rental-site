@@ -21,8 +21,7 @@
                 <SiderBar />
                 <div class="index_center">
                     <div
-                        class="index_section-title index_sectionTitle"
-                        style="display:none"
+                        class="index_section-title index_sectionTitle mobile-show"
                     >
                         <div class="index_title">共居生活</div>
                         <div class="index_sub-title">Co-living</div>
@@ -126,9 +125,27 @@ import Breadcrumb from "../components/Breadcrumb.vue";
 export default {
     data() {
         return {
-            name: "HomePage",
+            name: "AboutPage",
+            scrollNum: 0,
             isTop: false
         };
+    },
+    methods: {
+        scrollEvent() {
+            window.addEventListener("scroll", () => {
+                let clientTop =
+                    document.documentElement.scrollTop ||
+                    document.body.scrollTop ||
+                    window.pageYOffset;
+                this.scrollNum = clientTop;
+                console.log(`目前頁面高度 ${clientTop}`);
+                if (clientTop >= 900) {
+                    this.isTop = true;
+                } else {
+                    this.isTop = false;
+                }
+            });
+        }
     },
     mounted() {
         // if isTop = 0 , add fixed class , else remove
@@ -274,6 +291,7 @@ export default {
             .index_sectionTitle {
                 text-align: center;
                 margin: 28px 0 19px;
+                display: none;
             }
         }
     }
@@ -341,6 +359,9 @@ export default {
     }
     .index_more-room.mobile-hidden {
         display: none;
+    }
+    .index_section-title.mobile-show {
+        display: block;
     }
 }
 </style>
