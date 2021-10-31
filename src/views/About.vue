@@ -1,5 +1,5 @@
 <template>
-    <NavBar />
+    <WhiteNavBar />
     <div class="index_content">
         <div class="index_aboutSection">
             <Breadcrumb />
@@ -119,7 +119,7 @@
 <script>
 import Footer from "../components/Footer.vue";
 import SiderBar from "../components/SiderBar.vue";
-import NavBar from "../components/NavBar.vue";
+import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 
 export default {
@@ -164,7 +164,7 @@ export default {
         });
     },
     components: {
-        NavBar,
+        WhiteNavBar,
         Breadcrumb,
         SiderBar,
         Footer
