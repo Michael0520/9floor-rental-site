@@ -27,7 +27,11 @@
                 <div class="index_photo" :style="backgroundStyles(image)"></div>
                 <div class="index_info">
                     <p>
-                        {{ cardDescription }}
+                        <span>
+                            {{ cardDescription }}
+                            <router-link to="/user/community" class="underline">
+                            </router-link>
+                        </span>
                     </p>
                 </div>
             </div>
