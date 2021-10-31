@@ -3,20 +3,13 @@
     <div class="index_content">
         <div class="index_aboutSection">
             <Breadcrumb />
-            <div class="index_imgbox">
-                <div class="index_imgboxInner">
-                    <div
-                        class="index_image"
-                        style='background-image: url("https://9floor.co/assets/about-hero__06d0e04ed24912eb1ecded6dbc310901.jpg");'
-                    ></div>
-                    <div class="index_watermark">
-                        <div class="index_vertical-title">
-                            <span>關</span><span>於</span><span>玖</span
-                            ><span>樓</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img-box
+                :image="bannerTitle.imgUrl"
+                :title1="bannerTitle.title1"
+                :title2="bannerTitle.title2"
+                :title3="bannerTitle.title3"
+                :title4="bannerTitle.title4"
+            />
             <div class="index_aboutSection-content">
                 <SiderBar />
                 <div class="index_center">
@@ -122,13 +115,22 @@ import SiderBar from "../components/SiderBar.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 import rightSiderBar from "../components/rightSiderBar.vue";
+import ImgBox from "../components/ImgBox.vue";
 
 export default {
     data() {
         return {
             name: "AboutPage",
             scrollNum: 0,
-            isTop: false
+            isTop: false,
+            bannerTitle: {
+                imgUrl:
+                    "https://9floor.co/assets/about-hero__06d0e04ed24912eb1ecded6dbc310901.jpg",
+                title1: "關",
+                title2: "於",
+                title3: "玖",
+                title4: "樓"
+            }
         };
     },
     methods: {
@@ -169,7 +171,8 @@ export default {
         Breadcrumb,
         SiderBar,
         rightSiderBar,
-        Footer
+        Footer,
+        ImgBox
     }
 };
 </script>
