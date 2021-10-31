@@ -69,6 +69,9 @@
                                 v-for="(room, index) in rooms"
                                 :key="index"
                             >
+                                <!-- TODO: v-for 的 rooms 要改為 computed
+                            的 typeMenu ，但發生錯誤，說卡片元件會取得不到資料
+                             -->
                                 <RoomCard
                                     :price="room.monthlyRent"
                                     :name="room.name"
