@@ -269,7 +269,7 @@
                     </div>
                     <!-- more-room-section -->
                     <div class="index_more-room">
-                        <div>
+                        <div class="index_more-room-content">
                             加入我們，分享彼此的世界，如約翰藍儂曾《想像》的那樣。
                         </div>
                         <router-link
@@ -548,12 +548,18 @@ export default {
         .index_more-room {
             margin-bottom: 53px;
             color: $primary;
-
-            div {
-                margin-bottom: 24px;
-            }
             svg {
                 color: $primary;
+            }
+            .index_more-room-content {
+                max-width: 344px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.35;
+                letter-spacing: 2.5px;
+                text-align: center;
+                color: $primary;
+                margin-bottom: 24px;
             }
         }
     }
