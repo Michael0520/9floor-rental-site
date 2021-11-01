@@ -100,6 +100,7 @@
                                 v-for="(option, keys) in locations"
                                 :key="keys"
                                 :value="option.name"
+                                @click="typeMenu"
                             >
                                 {{ keys + 1 }}.
                                 {{ option.name }}
@@ -886,11 +887,10 @@ export default {
         },
         openmenu() {
             this.isOpen = !this.isOpen;
-        }
-    },
-    computed: {
-        // filter options
+        },
         typeMenu() {
+            // filter options
+            // 1.
             if (this.selectedLocation === "全國") {
                 return this.rooms;
             } else {
@@ -898,8 +898,16 @@ export default {
                     return item.location.city === this.selectedLocation;
                 });
             }
+            // 2.
+            // let optionLocations = this.selectedLocation;
+            // if (optionLocations) {
+            //     return this.rooms.filter(item => {
+            //         return item.location.city === optionLocations;
+            //     });
+            // }
         }
     },
+    computed: {},
     components: {
         Breadcrumb,
         SiderBar,
