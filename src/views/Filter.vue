@@ -93,6 +93,7 @@
                             class="form-select form-select-sm index_dropdown-basic"
                             aria-label=".form-select-sm example"
                             v-model="selectedLocation"
+                            @change="typeMenu"
                         >
                             <option selected>全國</option>
                             <!-- TODO:value 可以來改為動態更新 -->
@@ -100,7 +101,6 @@
                                 v-for="(option, keys) in locations"
                                 :key="keys"
                                 :value="option.name"
-                                @click="typeMenu"
                             >
                                 {{ keys + 1 }}.
                                 {{ option.name }}
@@ -871,6 +871,7 @@ export default {
             transparent: false,
             isOpen: false,
             rooms: [],
+            fullrooms: [],
             roomOptions: [],
             locations: [],
             roomStyles: [],
@@ -890,21 +891,33 @@ export default {
         },
         typeMenu() {
             // filter options
-            // 1.
+            let res;
             if (this.selectedLocation === "全國") {
+                console.log("this.selected", this.selectedLocation);
+                console.log(this.rooms);
+                // return this.fullrooms;
                 return this.rooms;
             } else {
-                return this.rooms.filter(item => {
-                    return item.location.city === this.selectedLocation;
-                });
+                res = this.fullrooms.filter(
+                    item => item.location === this.selectedLocation
+                    // item => console.log(item)
+                );
+                this.rooms = res;
+                console.log(res);
             }
-            // 2.
-            // let optionLocations = this.selectedLocation;
-            // if (optionLocations) {
-            //     return this.rooms.filter(item => {
-            //         return item.location.city === optionLocations;
-            //     });
-            // }
+        },
+        change() {
+            let res;
+            if (this.selectedLocation === "全國") {
+                console.log("this.selected", this.selectedLocation);
+                return this.rooms;
+            } else {
+                res = this.rooms.filter(
+                    item => item.location === this.selectedLocation
+                    // item => console.log(item)
+                );
+            }
+            this.rooms = res;
         }
     },
     computed: {},
@@ -922,7 +935,8 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.rooms = result.data;
-                console.log(this.rooms);
+                this.fullrooms = result.data;
+                // console.log(this.rooms);
             })
             .catch(err => {
                 console.warn(err);
