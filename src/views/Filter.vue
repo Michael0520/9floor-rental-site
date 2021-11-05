@@ -127,8 +127,11 @@
                                     type="checkbox"
                                     value=""
                                     aria-label="..."
+                                    @click="typeMenu"
                                 />
-                                {{ option.name }}
+                                <label for="">
+                                    {{ option.name }}
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -904,6 +907,18 @@ export default {
                 );
                 this.temp = [...res];
             }
+
+            // if (this.roomStyles === "") {
+            //     this.temp = [...this.rooms];
+            // } else {
+            //     res = this.rooms.filter(
+            //         item => item.roomStyle === this.roomStyles
+            //     );
+            //     this.temp = [...res];
+            // }
+
+            // res = this.rooms.filter(item => item.roomStyle === this.roomStyles);
+            // this.temp = [...res];
         }
     },
     computed: {},
