@@ -66,7 +66,7 @@
                         <div class="row g-0">
                             <div
                                 class="col-sm-12 col-md-6 col-lg-6"
-                                v-for="(room, index) in rooms"
+                                v-for="(room, index) in temp"
                                 :key="index"
                             >
                                 <!-- TODO: v-for 的 rooms 要改為 computed
@@ -95,7 +95,7 @@
                             v-model="selectedLocation"
                             @change="typeMenu"
                         >
-                            <option selected>全國</option>
+                            <option selected value="全國">全國</option>
                             <!-- TODO:value 可以來改為動態更新 -->
                             <option
                                 v-for="(option, keys) in locations"
@@ -871,7 +871,7 @@ export default {
             transparent: false,
             isOpen: false,
             rooms: [],
-            fullrooms: [],
+            temp: [],
             roomOptions: [],
             locations: [],
             roomStyles: [],
@@ -893,17 +893,16 @@ export default {
             // filter options
             let res;
             if (this.selectedLocation === "全國") {
-                console.log("this.selected", this.selectedLocation);
-                console.log(this.rooms);
+                // console.log("this.selected", this.selectedLocation);
+                // console.log(this.rooms);
                 // return this.fullrooms;
-                return this.rooms;
+                this.temp = [...this.rooms];
             } else {
-                res = this.fullrooms.filter(
+                res = this.rooms.filter(
                     item => item.location === this.selectedLocation
                     // item => console.log(item)
                 );
-                this.rooms = res;
-                console.log(res);
+                this.temp = [...res];
             }
         },
         change() {
@@ -935,7 +934,7 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.rooms = result.data;
-                this.fullrooms = result.data;
+                // this.fullrooms = result.data;
                 // console.log(this.rooms);
             })
             .catch(err => {
