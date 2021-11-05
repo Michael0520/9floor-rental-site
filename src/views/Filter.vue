@@ -910,6 +910,17 @@ export default {
             // filter options
             let res = this.rooms;
             // console.log(this.selectedLocation);
+            res = this.filterByRoomLocation(res);
+            res = this.filterByRoomTypes(res);
+            this.temp = [...res];
+        },
+        checkRoomType() {
+            // console.log("Evnet 觸發");
+            // console.log(this.rooms);
+            // console.log(this.selectedRoomStyles);
+            this.typeMenu();
+        },
+        filterByRoomLocation(res) {
             if (this.selectedLocation === "全國") {
                 // ...arg 傳參考避免出錯
             } else {
@@ -919,15 +930,7 @@ export default {
                 );
                 // console.log(res);
             }
-
-            res = this.filterByRoomTypes(res);
-            this.temp = [...res];
-        },
-        checkRoomType() {
-            // console.log("Evnet 觸發");
-            // console.log(this.rooms);
-            // console.log(this.selectedRoomStyles);
-            this.typeMenu();
+            return res;
         },
         filterByRoomTypes(res) {
             if (this.selectedRoomStyles.length === 0) {

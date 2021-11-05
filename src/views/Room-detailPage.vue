@@ -5,6 +5,7 @@
         <div class="index_room">
             <div class="index_room-detail-banner">
                 <div class="index_slide-container">
+                    <!-- TODO:swipe -->
                     <div class="swipe" style="visibility: visible">
                         <div class="swipe-item">
                             <!-- TODO:swipe-item: transform style
@@ -54,6 +55,7 @@
                         </div>
                     </button>
                 </div>
+                <!-- TODO:banner-title -->
                 <div class="index_banner-detail-content">
                     <div>
                         <div class="index_vertical-title index_subTitle">
@@ -103,6 +105,7 @@
                                     ><p class="small">招募中</p>
                                     <p class="index_date"></p>
                                 </span>
+                                <!-- TODO:房間租金 -->
                                 <span class="index_price index_tablet-show"
                                     >NTD 16500
                                     <span class="index_small">/月</span>
@@ -123,15 +126,17 @@
                                     >
                                 </button>
                             </div>
-                            <!-- TODO:router-link to page number -->
+                            <!-- TODO:router-link to 區域詳細資訊頁面-->
                             <router-link
                                 class="index_apartment-name"
                                 to="/apartment/1"
                                 >仁愛</router-link
                             >
+                            <!-- TODO:房間 title -->
                             <div class="index_room-name">仁愛 RoomA</div>
                         </div>
                         <div class="index_booking-bar-right">
+                            <!-- TODO:房屋租金 -->
                             <span class="index_price index_tablet-hide"
                                 >NTD 16500<span class="index_small"
                                     >/月</span
@@ -197,7 +202,9 @@
                             <div class="row gx-0">
                                 <div class="col-lg-6 col-sm-12">
                                     <div class="index_room-info-left">
+                                        <!-- TODO:房屋標題 -->
                                         <h2>仁愛 RoomA</h2>
+                                        <!-- TODO:房屋區域 -->
                                         <div class="index_apartment-name">
                                             仁愛
                                         </div>
