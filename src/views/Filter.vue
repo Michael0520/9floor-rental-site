@@ -920,6 +920,16 @@ export default {
                 // console.log(res);
             }
 
+            res = this.filterByRoomTypes(res);
+            this.temp = [...res];
+        },
+        checkRoomType() {
+            // console.log("Evnet 觸發");
+            // console.log(this.rooms);
+            // console.log(this.selectedRoomStyles);
+            this.typeMenu();
+        },
+        filterByRoomTypes(res) {
             if (this.selectedRoomStyles.length === 0) {
                 // console.log("this.selected", this.selectedLocation);
                 // console.log(this.rooms);
@@ -936,33 +946,14 @@ export default {
                     item.roomStyle === this.selectedRoomStyles;
                     // console.log("item 房型", item.roomStyle);
 
-                    let a = this.selectedRoomStyles.includes(item.roomStyle);
+                    return this.selectedRoomStyles.includes(item.roomStyle);
                     // console.log(a);
-                    return a;
                     // console.log("item", item);
                     // console.log("選取到的資料", this.selectedRoomStyles);
                     // console.log("item 房型", item.roomStyle);
                 });
             }
-            this.temp = [...res];
-
-            // if (this.roomStyles === "") {
-            //     this.temp = [...this.rooms];
-            // } else {
-            //     res = this.rooms.filter(
-            //         item => item.roomStyle === this.roomStyles
-            //     );
-            //     this.temp = [...res];
-            // }
-
-            // res = this.rooms.filter(item => item.roomStyle === this.roomStyles);
-            // this.temp = [...res];
-        },
-        checkRoomType() {
-            // console.log("Evnet 觸發");
-            // console.log(this.rooms);
-            // console.log(this.selectedRoomStyles);
-            this.typeMenu();
+            return res;
         }
     },
     computed: {},
