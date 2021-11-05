@@ -895,7 +895,7 @@ export default {
             if (this.selectedLocation === "全國") {
                 // console.log("this.selected", this.selectedLocation);
                 // console.log(this.rooms);
-                // return this.fullrooms;
+                // ...arg 傳參考避免出錯
                 this.temp = [...this.rooms];
             } else {
                 res = this.rooms.filter(
@@ -904,19 +904,6 @@ export default {
                 );
                 this.temp = [...res];
             }
-        },
-        change() {
-            let res;
-            if (this.selectedLocation === "全國") {
-                console.log("this.selected", this.selectedLocation);
-                return this.rooms;
-            } else {
-                res = this.rooms.filter(
-                    item => item.location === this.selectedLocation
-                    // item => console.log(item)
-                );
-            }
-            this.rooms = res;
         }
     },
     computed: {},
@@ -934,7 +921,7 @@ export default {
             .then(result => {
                 // console.log(result.data);
                 this.rooms = result.data;
-                // this.fullrooms = result.data;
+                this.temp = this.rooms;
                 // console.log(this.rooms);
             })
             .catch(err => {
