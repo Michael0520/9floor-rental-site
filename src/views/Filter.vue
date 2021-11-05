@@ -895,7 +895,7 @@ export default {
             specificLivingFeatures: [],
             MRTs: [],
             // select array
-            selectedLocation: "",
+            selectedLocation: "全國",
             selectedRoomStyles: []
         };
     },
@@ -909,6 +909,7 @@ export default {
         typeMenu() {
             // filter options
             let res = this.rooms;
+            // console.log(this.selectedLocation);
             if (this.selectedLocation === "全國") {
                 // ...arg 傳參考避免出錯
             } else {
@@ -916,20 +917,33 @@ export default {
                     item => item.location === this.selectedLocation
                     // item => console.log(item)
                 );
+                // console.log(res);
             }
-            // if (this.selectedRoomStyles.length === 0) {
-            //     // console.log("this.selected", this.selectedLocation);
-            //     // console.log(this.rooms);
-            //     // ...arg 傳參考避免出錯
-            //     console.log("全部沒有勾");
-            // } else {
-            //     console.log("有一個勾");
-            //     // console.log(this.roomStyles);
-            //     res = res.filter(item => {
-            //         item.roomStyle === this.selectedRoomStyles;
-            //         console.log(item);
-            //     });
-            // }
+
+            if (this.selectedRoomStyles.length === 0) {
+                // console.log("this.selected", this.selectedLocation);
+                // console.log(this.rooms);
+                // ...arg 傳參考避免出錯
+                console.log("全部沒有勾");
+            } else {
+                console.log("有一個勾");
+
+                // console.log(this.roomStyles);
+                // console.log("res", res);
+                // console.log("select", this.selectedRoomStyles);
+                // console.log("item 本身", res);
+                res = res.filter(item => {
+                    item.roomStyle === this.selectedRoomStyles;
+                    // console.log("item 房型", item.roomStyle);
+
+                    let a = this.selectedRoomStyles.includes(item.roomStyle);
+                    // console.log(a);
+                    return a;
+                    // console.log("item", item);
+                    // console.log("選取到的資料", this.selectedRoomStyles);
+                    // console.log("item 房型", item.roomStyle);
+                });
+            }
             this.temp = [...res];
 
             // if (this.roomStyles === "") {
