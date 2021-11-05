@@ -115,7 +115,7 @@
                             class="list-group"
                             style="color:#444647  font-size:12px"
                         >
-                            <li
+                            <!-- <li
                                 class="list-group-item"
                                 style="color:#444647; font-size:12px"
                                 v-for="(option, keys) in roomStyles"
@@ -125,13 +125,26 @@
                                 <input
                                     class="form-check-input me-1"
                                     type="checkbox"
-                                    value=""
                                     aria-label="..."
-                                    @click="typeMenu"
+                                    :value="option.name"
+                                    @click="checkRoomType"
+                                    v-model="selectedRoomStyles"
                                 />
                                 <label for="">
                                     {{ option.name }}
                                 </label>
+                            </li> -->
+                            <li
+                                class="list-group-item"
+                                style="color:#444647; font-size:12px"
+                            >
+                                <input
+                                    type="checkbox"
+                                    value="獨立套房"
+                                    v-model="selectedRoomStyles"
+                                    @change="checkRoomType"
+                                />
+                                <label for="獨立套房">獨立套房</label>
                             </li>
                         </ul>
                     </div>
@@ -882,7 +895,8 @@ export default {
             specificLivingFeatures: [],
             MRTs: [],
             // select array
-            selectedLocation: ""
+            selectedLocation: "",
+            selectedRoomStyles: []
         };
     },
     methods: {
@@ -894,19 +908,29 @@ export default {
         },
         typeMenu() {
             // filter options
-            let res;
+            let res = this.rooms;
             if (this.selectedLocation === "全國") {
-                // console.log("this.selected", this.selectedLocation);
-                // console.log(this.rooms);
                 // ...arg 傳參考避免出錯
-                this.temp = [...this.rooms];
             } else {
-                res = this.rooms.filter(
+                res = res.filter(
                     item => item.location === this.selectedLocation
                     // item => console.log(item)
                 );
-                this.temp = [...res];
             }
+            // if (this.selectedRoomStyles.length === 0) {
+            //     // console.log("this.selected", this.selectedLocation);
+            //     // console.log(this.rooms);
+            //     // ...arg 傳參考避免出錯
+            //     console.log("全部沒有勾");
+            // } else {
+            //     console.log("有一個勾");
+            //     // console.log(this.roomStyles);
+            //     res = res.filter(item => {
+            //         item.roomStyle === this.selectedRoomStyles;
+            //         console.log(item);
+            //     });
+            // }
+            this.temp = [...res];
 
             // if (this.roomStyles === "") {
             //     this.temp = [...this.rooms];
@@ -919,6 +943,12 @@ export default {
 
             // res = this.rooms.filter(item => item.roomStyle === this.roomStyles);
             // this.temp = [...res];
+        },
+        checkRoomType() {
+            // console.log("Evnet 觸發");
+            // console.log(this.rooms);
+            // console.log(this.selectedRoomStyles);
+            this.typeMenu();
         }
     },
     computed: {},
