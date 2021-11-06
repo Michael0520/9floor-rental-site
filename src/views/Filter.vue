@@ -152,6 +152,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- roomDate -->
                     <div class="index_dropdown-group">
                         <p class="small index_clearButton">
                             預定入住日期
@@ -183,6 +184,7 @@
                             <option value="1">入住日期</option>
                         </select>
                     </div>
+                    <!-- price-slider-bar -->
                     <div class="index_range-group">
                         <p class="small">價格/月</p>
                         <div class="rc-slider index_range">
@@ -299,27 +301,38 @@
                             >
                                 <p class="small">第二人入住</p>
                                 <div class="index_selector">
-                                    <label class="" for="double--1"
-                                        ><input
+                                    <label class="" for="double--1">
+                                        <input
                                             type="radio"
                                             id="double--1"
                                             name="double"
-                                            value="-1"
-                                        />全部</label
-                                    ><label class="" for="double-1"
-                                        ><input
+                                            :value="0"
+                                            v-model="selectedDoubleOccupancy"
+                                            @change="typeMenu"
+                                        />
+                                        全部
+                                    </label>
+                                    <label class="" for="double-1">
+                                        <input
                                             type="radio"
                                             id="double-1"
                                             name="double"
-                                            value="1"
-                                        />可以</label
-                                    ><label class="" for="double-0"
-                                        ><input
+                                            :value="1"
+                                            v-model="selectedDoubleOccupancy"
+                                            @change="typeMenu"
+                                        />
+                                        可以
+                                    </label>
+                                    <label class="" for="double-0">
+                                        <input
                                             type="radio"
                                             id="double-0"
                                             name="double"
-                                            value="0"
-                                        />不可以</label
+                                            :value="2"
+                                            v-model="selectedDoubleOccupancy"
+                                            @change="typeMenu"
+                                        />
+                                        不可以</label
                                     >
                                 </div>
                             </div>
@@ -903,7 +916,8 @@ export default {
             // select array
             selectedLocation: "全國",
             selectedRoomStyles: [],
-            selectedRoomSpaces: "顯示特定居住空間"
+            selectedRoomSpaces: "顯示特定居住空間",
+            selectedDoubleOccupancy: 0
         };
     },
     methods: {
@@ -920,13 +934,14 @@ export default {
             res = this.filterByRoomLocation(res);
             res = this.filterByRoomTypes(res);
             res = this.filterByRoomSpace(res);
+            res = this.filterByRoomDoubleOccupancy(res);
             this.temp = [...res];
         },
         checkRoomType() {
-            // console.log("Evnet 觸發");
+            console.log("Evnet 觸發");
             // console.log(this.rooms);
             // console.log(this.selectedRoomStyles);
-            this.typeMenu();
+            // this.typeMenu();
         },
         filterByRoomLocation(res) {
             if (this.selectedLocation === "全國") {
@@ -942,38 +957,44 @@ export default {
         },
         filterByRoomTypes(res) {
             if (this.selectedRoomStyles.length === 0) {
-                // console.log("this.selected", this.selectedLocation);
-                // console.log(this.rooms);
-                // ...arg 傳參考避免出錯
-                console.log("全部沒有勾");
+                //
+                // console.log("長度", this.selectedRoomStyles.length);
             } else {
-                console.log("有一個勾");
-
-                // console.log(this.roomStyles);
-                // console.log("res", res);
-                // console.log("select", this.selectedRoomStyles);
-                // console.log("item 本身", res);
+                // console.log("有一個勾");
                 res = res.filter(item => {
                     item.roomStyle === this.selectedRoomStyles;
-                    // console.log("item 房型", item.roomStyle);
-
                     return this.selectedRoomStyles.includes(item.roomStyle);
-                    // console.log(a);
-                    // console.log("item", item);
-                    // console.log("選取到的資料", this.selectedRoomStyles);
-                    // console.log("item 房型", item.roomStyle);
                 });
             }
             return res;
         },
         filterByRoomSpace(res) {
-            if (this.selectedRoomSpaces === "全部") {
-                // ...arg 傳參考避免出錯
-                // console.log("全部房間");
+            if (this.selectedRoomSpaces === "顯示特定居住空間") {
+                //
+            } else if (this.selectedRoomSpaces === "全部") {
+                //
             } else {
-                console.log(res);
-                res = res.filter(item => item.name === this.selectedRoomSpaces);
+                res = res.filter(item => {
+                    return item.name === this.selectedRoomSpaces;
+                });
+            }
+            return res;
+        },
+        filterByRoomDoubleOccupancy(res) {
+            if (this.selectedDoubleOccupancy === 0) {
+                // ...arg 傳參考避免出錯
+                // console.log("全部", this.selectedDoubleOccupancy);
+            } else if (this.selectedDoubleOccupancy === 1) {
+                res = res.filter(item => {
+                    // console.log("可以", this.selectedDoubleOccupancy);
+                    return item.doubleOccupancy === true;
+                });
                 // console.log(res);
+            } else {
+                res = res.filter(item => {
+                    console.log("可以", this.selectedDoubleOccupancy);
+                    return item.doubleOccupancy === false;
+                });
             }
             return res;
         }
