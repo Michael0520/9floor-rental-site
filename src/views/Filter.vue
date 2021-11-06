@@ -144,7 +144,7 @@
                                     type="checkbox"
                                     :value="item.name"
                                     v-model="selectedRoomStyles"
-                                    @change="checkRoomType"
+                                    @change="typeMenu"
                                 />
                                 <label for="獨立套房">
                                     {{ item.name }}
@@ -225,8 +225,10 @@
                         <select
                             class="form-select form-select-sm index_dropdown-basic"
                             aria-label=".form-select-sm example"
+                            v-model="selectedRoomSpaces"
+                            @change="typeMenu"
                         >
-                            <option selected>顯示特定居住空間</option>
+                            <option selected disabled>顯示特定居住空間</option>
                             <!-- TODO:value 可以來改為動態更新 -->
                             <option
                                 v-for="(option, keys) in specificLivingSpaces"
@@ -900,7 +902,8 @@ export default {
             MRTs: [],
             // select array
             selectedLocation: "全國",
-            selectedRoomStyles: []
+            selectedRoomStyles: [],
+            selectedRoomSpaces: "顯示特定居住空間"
         };
     },
     methods: {
@@ -916,6 +919,7 @@ export default {
             // console.log(this.selectedLocation);
             res = this.filterByRoomLocation(res);
             res = this.filterByRoomTypes(res);
+            res = this.filterByRoomSpace(res);
             this.temp = [...res];
         },
         checkRoomType() {
@@ -959,6 +963,17 @@ export default {
                     // console.log("選取到的資料", this.selectedRoomStyles);
                     // console.log("item 房型", item.roomStyle);
                 });
+            }
+            return res;
+        },
+        filterByRoomSpace(res) {
+            if (this.selectedRoomSpaces === "全部") {
+                // ...arg 傳參考避免出錯
+                // console.log("全部房間");
+            } else {
+                console.log(res);
+                res = res.filter(item => item.name === this.selectedRoomSpaces);
+                // console.log(res);
             }
             return res;
         }
