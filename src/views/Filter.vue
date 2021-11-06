@@ -241,6 +241,16 @@
                             </option>
                         </select>
                     </div>
+                    <div>
+                        <Multiselect
+                            v-model="value"
+                            mode="tags"
+                            placeholder="Select your characters"
+                            :options="specificLivingFeatures"
+                            :searchable="true"
+                            :createTag="true"
+                        />
+                    </div>
                     <div class="index_accordion index_advance">
                         <div class="index_head" role="presentation">
                             <span>進階搜尋</span>
@@ -373,7 +383,7 @@
                             </div>
                             <!-- specificLivingFeatures -->
                             <div class="index_dropdown-group">
-                                <p class="small">居住空間特色</p>
+                                <!-- <p class="small">居住空間特色</p>
                                 <select
                                     class="
                                     form-select form-select-sm
@@ -394,7 +404,7 @@
                                     >
                                         {{ option.name }}
                                     </option>
-                                </select>
+                                </select> -->
                             </div>
                             <div class="index_division"></div>
                             <!-- render 無法預定的房間 list -->
@@ -909,6 +919,7 @@ import SiderBar from "../components/SiderBar.vue";
 import RoomCard from "../components/RoomCard.vue";
 import Footer from "../components/Footer.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
+import Multiselect from "@vueform/multiselect";
 
 export default {
     data() {
@@ -930,7 +941,9 @@ export default {
             selectedRoomSpaces: "顯示特定居住空間",
             selectedRoomFeatures: "請選擇居住空間特色",
             selectedDoubleOccupancy: 0,
-            selectedRaisePet: 0
+            selectedRaisePet: 0,
+            value: [],
+            options: ["Batman", "Robin", "Joker"]
         };
     },
     methods: {
@@ -1049,7 +1062,8 @@ export default {
         SiderBar,
         RoomCard,
         Footer,
-        WhiteNavBar
+        WhiteNavBar,
+        Multiselect
     },
     mounted() {
         // catch roomsData
@@ -1082,6 +1096,8 @@ export default {
     }
 };
 </script>
+
+<style src="@vueform/multiselect/themes/default.css"></style>
 <style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
