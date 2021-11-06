@@ -137,14 +137,18 @@
                             <li
                                 class="list-group-item"
                                 style="color:#444647; font-size:12px"
+                                v-for="(item, index) in roomStyles"
+                                :key="index"
                             >
                                 <input
                                     type="checkbox"
-                                    value="獨立套房"
+                                    :value="item.name"
                                     v-model="selectedRoomStyles"
                                     @change="checkRoomType"
                                 />
-                                <label for="獨立套房">獨立套房</label>
+                                <label for="獨立套房">
+                                    {{ item.name }}
+                                </label>
                             </li>
                         </ul>
                     </div>
