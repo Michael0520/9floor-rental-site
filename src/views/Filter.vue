@@ -346,21 +346,27 @@
                                             type="radio"
                                             id="double--1"
                                             name="double"
-                                            value="-1"
+                                            :value="0"
+                                            v-model="selectedRaisePet"
+                                            @change="typeMenu"
                                         />全部</label
                                     ><label class="" for="double-1"
                                         ><input
                                             type="radio"
                                             id="double-1"
                                             name="double"
-                                            value="1"
+                                            :value="1"
+                                            v-model="selectedRaisePet"
+                                            @change="typeMenu"
                                         />可以</label
                                     ><label class="" for="double-0"
                                         ><input
                                             type="radio"
                                             id="double-0"
                                             name="double"
-                                            value="0"
+                                            :value="0"
+                                            v-model="selectedRaisePet"
+                                            @change="typeMenu"
                                         />不可以</label
                                     >
                                 </div>
@@ -374,8 +380,12 @@
                                     index_dropdown-basic
                                 "
                                     aria-label=".form-select-sm example"
+                                    v-model="selectedRoomFeatures"
+                                    @change="typeMenu"
                                 >
-                                    <option selected>請選擇居住空間特色</option>
+                                    <option selected disabled
+                                        >請選擇居住空間特色</option
+                                    >
                                     <option
                                         v-for="(option,
                                         keys) in specificLivingFeatures"
@@ -892,6 +902,7 @@
         <Footer />
     </div>
 </template>
+
 <script>
 import Breadcrumb from "../components/Breadcrumb.vue";
 import SiderBar from "../components/SiderBar.vue";
@@ -917,7 +928,9 @@ export default {
             selectedLocation: "全國",
             selectedRoomStyles: [],
             selectedRoomSpaces: "顯示特定居住空間",
-            selectedDoubleOccupancy: 0
+            selectedRoomFeatures: "請選擇居住空間特色",
+            selectedDoubleOccupancy: 0,
+            selectedRaisePet: 0
         };
     },
     methods: {
@@ -931,10 +944,12 @@ export default {
             // filter options
             let res = this.rooms;
             // console.log(this.selectedLocation);
-            res = this.filterByRoomLocation(res);
-            res = this.filterByRoomTypes(res);
-            res = this.filterByRoomSpace(res);
-            res = this.filterByRoomDoubleOccupancy(res);
+            // res = this.filterByRoomLocation(res);
+            // res = this.filterByRoomTypes(res);
+            // res = this.filterByRoomSpace(res);
+            // res = this.filterByRoomDoubleOccupancy(res);
+            // res = this.filterByRoomRaisePet(res);
+            // res = this.filterByRoomFeatures(res);
             this.temp = [...res];
         },
         checkRoomType() {
@@ -997,9 +1012,38 @@ export default {
                 });
             }
             return res;
+        },
+        filterByRoomRaisePet(res) {
+            if (this.selectedRaisePet === 0) {
+                // ...arg 傳參考避免出錯
+                // console.log("全部", this.selectedDoubleOccupancy);
+            } else if (this.selectedRaisePet === 1) {
+                res = res.filter(item => {
+                    // console.log("可以", this.selectedDoubleOccupancy);
+                    return item.raisePet === true;
+                });
+                // console.log(res);
+            } else {
+                res = res.filter(item => {
+                    console.log("可以", this.selectedRaisePet);
+                    return item.raisePet === false;
+                });
+            }
+            return res;
+        },
+        filterByRoomFeatures(res) {
+            if (this.selectedRoomFeatures === "請選擇居住空間特色") {
+                //
+            } else {
+                res = res.filter(item => {
+                    return (
+                        item.livingSpaceEquipment === this.selectedRoomFeatures
+                    );
+                });
+            }
+            return res;
         }
     },
-    computed: {},
     components: {
         Breadcrumb,
         SiderBar,
