@@ -754,7 +754,7 @@
                                 預訂入住日期
                             </p>
                             <!-- TODO:要使用 bootstrap Data input -->
-                            <div class="index_dropdown-basic w-100">
+                            <!-- <div class="index_dropdown-basic w-100">
                                 <select
                                     class="form-select form-select-sm"
                                     aria-label="Default select example"
@@ -767,7 +767,8 @@
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
                                 </select>
-                            </div>
+                            </div> -->
+                            <datepicker v-model="picked" @change="picked" />
                         </div>
                         <div
                             class="index_division"
@@ -975,6 +976,7 @@ import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Multiselect from "@vueform/multiselect";
 // import Slider from "@vueform/slider";
 import Slider from "@vueform/slider";
+import Datepicker from "vue3-datepicker";
 
 export default {
     data() {
@@ -1007,10 +1009,11 @@ export default {
             format: {
                 prefix: "$",
                 decimals: 0
-            }
+            },
             // format(value) {
             //     return `${this.value[(value * 4000, value * 4000)]}`;
             // }
+            picked: []
         };
     },
     methods: {
@@ -1134,7 +1137,8 @@ export default {
         Footer,
         WhiteNavBar,
         Multiselect,
-        Slider
+        Slider,
+        Datepicker
     },
     mounted() {
         // catch roomsData
