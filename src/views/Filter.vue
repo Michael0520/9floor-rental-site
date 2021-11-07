@@ -219,10 +219,17 @@
 
                     <div class="index_range-group">
                         <p class="small pb-2">價格/月</p>
-                        <Slider class="" v-model="value" />
+                        <Slider
+                            class="slider-primary"
+                            v-model="value"
+                            :format="format"
+                            :step="step"
+                            :min="min"
+                            :max="max"
+                        />
                         <div class="index_unit pt-2">
-                            <div :value="value">NTD 4000</div>
-                            <div :value="value">NTD 42000</div>
+                            <!-- <div v-model="value">NTD 4000</div> -->
+                            <!-- <div v-model="value">NTD 42000</div> -->
                         </div>
                     </div>
 
@@ -379,7 +386,7 @@
                             </div>
                             <!-- specificLivingFeatures -->
                             <div class="index_dropdown-group">
-                                <!-- <p class="small">居住空間特色</p>
+                                <!-- 
                                 <select
                                     class="
                                     form-select form-select-sm
@@ -410,6 +417,47 @@
                                     :createTag="true"
                                     @tag="typeMenu"
                                 /> -->
+                                <!-- TODO:遇到問題，關於第一次選取資料不會存取 -->
+                                <p class="small">居住空間特色</p>
+                                <Multiselect
+                                    v-model="selectedRoomFeatures"
+                                    mode="tags"
+                                    placeholder="顯示特定居住特色"
+                                    trackBy="name"
+                                    label="name"
+                                    :closeOnSelect="false"
+                                    :options="specificLivingFeatures"
+                                    :createTag="true"
+                                    @change="typeMenu"
+                                >
+                                    <template
+                                        v-slot:tag="{
+                                            option,
+                                            handleTagRemove,
+                                            disabled
+                                        }"
+                                    >
+                                        <div class="multiselect-tag is-user">
+                                            <img :src="option.image" />
+                                            {{ option.name }}
+                                            <span
+                                                v-if="!disabled"
+                                                class="multiselect-tag-remove"
+                                                @mousedown.prevent="
+                                                    handleTagRemove(
+                                                        option,
+                                                        $event
+                                                    )
+                                                "
+                                            >
+                                                <span
+                                                    class="multiselect-tag-remove-icon"
+                                                >
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </template>
+                                </Multiselect>
                             </div>
                             <div class="index_division"></div>
                             <!-- render 無法預定的房間 list -->
@@ -924,7 +972,8 @@ import SiderBar from "../components/SiderBar.vue";
 import RoomCard from "../components/RoomCard.vue";
 import Footer from "../components/Footer.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
-// import Multiselect from "@vueform/multiselect";
+import Multiselect from "@vueform/multiselect";
+// import Slider from "@vueform/slider";
 import Slider from "@vueform/slider";
 
 export default {
@@ -951,10 +1000,17 @@ export default {
             // value: [],
             // options: ["Batman", "Robin", "Joker"],
             value: [4000, 42000],
+            min: 4000,
+            max: 42000,
             merge: 10,
-            format(value) {
-                return `$${value}`;
+            step: 5000,
+            format: {
+                prefix: "$",
+                decimals: 0
             }
+            // format(value) {
+            //     return `${this.value[(value * 4000, value * 4000)]}`;
+            // }
         };
     },
     methods: {
@@ -979,7 +1035,7 @@ export default {
         checkRoomType() {
             console.log("Evnet 觸發");
             // console.log(this.rooms);
-            // console.log(this.selectedRoomStyles);
+            console.log(this.selectedRoomFeatures);
             // this.typeMenu();
         },
         filterByRoomLocation(res) {
@@ -1061,8 +1117,8 @@ export default {
                 console.log("空的", this.selectedRoomFeatures);
             } else {
                 res = res.filter(item => {
-                    console.log("至少有一個");
-                    item.livingSpaceEquipment === this.selectedRoomFeatures;
+                    console.log("至少有一個", this.selectedRoomFeatures);
+                    // item.livingSpaceEquipment === this.selectedRoomFeatures;
                     return this.selectedRoomFeatures.includes(
                         item.livingSpaceEquipment
                     );
@@ -1077,7 +1133,7 @@ export default {
         RoomCard,
         Footer,
         WhiteNavBar,
-        // Multiselect
+        Multiselect,
         Slider
     },
     mounted() {
@@ -1113,7 +1169,36 @@ export default {
 </script>
 
 <style src="@vueform/multiselect/themes/default.css"></style>
-<style src="@vueform/slider/themes/default.css"></style>
+<style src="@vueform/slider/themes/default.css">
+:root {
+    --slider-tooltip-bg: #945443;
+}
+.multiselect-tag.is-user {
+    padding: 5px 8px;
+    border-radius: 22px;
+    background: #945443;
+    margin: 3px 3px 8px;
+}
+
+.multiselect-tag.is-user img {
+    width: 18px;
+    border-radius: 50%;
+    height: 18px;
+    margin-right: 8px;
+    border: 2px solid #ffffffbf;
+}
+
+.multiselect-tag.is-user i:before {
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.user-image {
+    margin: 0 6px 0 0;
+    border-radius: 50%;
+    height: 22px;
+}
+</style>
 
 <style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
