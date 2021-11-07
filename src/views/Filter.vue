@@ -185,8 +185,7 @@
                         </select>
                     </div>
                     <!-- price-slider-bar -->
-                    <div class="index_range-group">
-                        <p class="small">價格/月</p>
+                    <!-- <div class="index_range-group">
                         <div class="rc-slider index_range">
                             <div class="rc-slider-rail"></div>
                             <div
@@ -216,11 +215,17 @@
                             ></div>
                             <div class="rc-slider-mark"></div>
                         </div>
-                        <div class="index_unit">
-                            <div>NTD 4000</div>
-                            <div>NTD 42000</div>
+                    </div> -->
+
+                    <div class="index_range-group">
+                        <p class="small pb-2">價格/月</p>
+                        <Slider class="" v-model="value" />
+                        <div class="index_unit pt-2">
+                            <div :value="value">NTD 4000</div>
+                            <div :value="value">NTD 42000</div>
                         </div>
                     </div>
+
                     <div class="index_division"></div>
                     <div class="index_dropdown-group">
                         <p class="small">顯示特定居住空間</p>
@@ -920,6 +925,7 @@ import RoomCard from "../components/RoomCard.vue";
 import Footer from "../components/Footer.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
 // import Multiselect from "@vueform/multiselect";
+import Slider from "@vueform/slider";
 
 export default {
     data() {
@@ -941,9 +947,14 @@ export default {
             selectedRoomSpaces: "顯示特定居住空間",
             selectedRoomFeatures: [],
             selectedDoubleOccupancy: 0,
-            selectedRaisePet: 0
+            selectedRaisePet: 0,
             // value: [],
-            // options: ["Batman", "Robin", "Joker"]
+            // options: ["Batman", "Robin", "Joker"],
+            value: [4000, 42000],
+            merge: 10,
+            format(value) {
+                return `$${value}`;
+            }
         };
     },
     methods: {
@@ -1065,8 +1076,9 @@ export default {
         SiderBar,
         RoomCard,
         Footer,
-        WhiteNavBar
+        WhiteNavBar,
         // Multiselect
+        Slider
     },
     mounted() {
         // catch roomsData
@@ -1101,6 +1113,8 @@ export default {
 </script>
 
 <style src="@vueform/multiselect/themes/default.css"></style>
+<style src="@vueform/slider/themes/default.css"></style>
+
 <style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
