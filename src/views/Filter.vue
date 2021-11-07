@@ -241,16 +241,7 @@
                             </option>
                         </select>
                     </div>
-                    <div>
-                        <Multiselect
-                            v-model="value"
-                            mode="tags"
-                            placeholder="Select your characters"
-                            :options="specificLivingFeatures"
-                            :searchable="true"
-                            :createTag="true"
-                        />
-                    </div>
+
                     <div class="index_accordion index_advance">
                         <div class="index_head" role="presentation">
                             <span>進階搜尋</span>
@@ -405,6 +396,15 @@
                                         {{ option.name }}
                                     </option>
                                 </select> -->
+                                <!-- <Multiselect
+                                    v-model="selectedRoomFeatures"
+                                    mode="tags"
+                                    placeholder="顯示特定居住特色"
+                                    :value="selectedRoomFeatures"
+                                    :options="specificLivingFeatures"
+                                    :createTag="true"
+                                    @tag="typeMenu"
+                                /> -->
                             </div>
                             <div class="index_division"></div>
                             <!-- render 無法預定的房間 list -->
@@ -919,7 +919,7 @@ import SiderBar from "../components/SiderBar.vue";
 import RoomCard from "../components/RoomCard.vue";
 import Footer from "../components/Footer.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
-import Multiselect from "@vueform/multiselect";
+// import Multiselect from "@vueform/multiselect";
 
 export default {
     data() {
@@ -939,11 +939,11 @@ export default {
             selectedLocation: "全國",
             selectedRoomStyles: [],
             selectedRoomSpaces: "顯示特定居住空間",
-            selectedRoomFeatures: "請選擇居住空間特色",
+            selectedRoomFeatures: [],
             selectedDoubleOccupancy: 0,
-            selectedRaisePet: 0,
-            value: [],
-            options: ["Batman", "Robin", "Joker"]
+            selectedRaisePet: 0
+            // value: [],
+            // options: ["Batman", "Robin", "Joker"]
         };
     },
     methods: {
@@ -962,7 +962,7 @@ export default {
             // res = this.filterByRoomSpace(res);
             // res = this.filterByRoomDoubleOccupancy(res);
             // res = this.filterByRoomRaisePet(res);
-            // res = this.filterByRoomFeatures(res);
+            res = this.filterByRoomFeature(res);
             this.temp = [...res];
         },
         checkRoomType() {
@@ -1044,13 +1044,16 @@ export default {
             }
             return res;
         },
-        filterByRoomFeatures(res) {
-            if (this.selectedRoomFeatures === "請選擇居住空間特色") {
+        filterByRoomFeature(res) {
+            if (this.selectedRoomFeatures.length === 0) {
                 //
+                console.log("空的", this.selectedRoomFeatures);
             } else {
                 res = res.filter(item => {
-                    return (
-                        item.livingSpaceEquipment === this.selectedRoomFeatures
+                    console.log("至少有一個");
+                    item.livingSpaceEquipment === this.selectedRoomFeatures;
+                    return this.selectedRoomFeatures.includes(
+                        item.livingSpaceEquipment
                     );
                 });
             }
@@ -1062,8 +1065,8 @@ export default {
         SiderBar,
         RoomCard,
         Footer,
-        WhiteNavBar,
-        Multiselect
+        WhiteNavBar
+        // Multiselect
     },
     mounted() {
         // catch roomsData
