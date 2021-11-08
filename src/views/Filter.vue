@@ -175,14 +175,8 @@
                                 清除
                             </span>
                         </p>
-                        <select
-                            class="form-select form-select-sm index_dropdown-basic"
-                            aria-label=".form-select-sm example"
-                        >
-                            <option selected>請選擇入住日期</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
-                            <option value="1">入住日期</option>
-                        </select>
+                        <Calendar />
+                        <DatePicker v-model="date" />
                     </div>
                     <!-- price-slider-bar -->
                     <!-- <div class="index_range-group">
@@ -768,7 +762,10 @@
                                     <option value="2">Two</option>
                                 </select>
                             </div> -->
-                            <datepicker v-model="picked" @change="picked" />
+                        </div>
+                        <div>
+                            <Calendar />
+                            <DatePicker v-model="date" />
                         </div>
                         <div
                             class="index_division"
@@ -976,7 +973,7 @@ import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Multiselect from "@vueform/multiselect";
 // import Slider from "@vueform/slider";
 import Slider from "@vueform/slider";
-import Datepicker from "vue3-datepicker";
+import { Calendar, DatePicker } from "v-calendar";
 
 export default {
     data() {
@@ -1013,9 +1010,20 @@ export default {
             // format(value) {
             //     return `${this.value[(value * 4000, value * 4000)]}`;
             // }
-            picked: []
+            date: new Date()
         };
     },
+    //     computed: {
+    //     dates() {
+    //       return this.days.map(day => day.date);
+    //     },
+    //     attributes() {
+    //       return this.dates.map(date => ({
+    //         highlight: true,
+    //         dates: date,
+    //       }));
+    //     },
+    //   },
     methods: {
         filterRow(index) {
             return index % 2 === 0;
@@ -1027,11 +1035,11 @@ export default {
             // filter options
             let res = this.rooms;
             // console.log(this.selectedLocation);
-            // res = this.filterByRoomLocation(res);
-            // res = this.filterByRoomTypes(res);
-            // res = this.filterByRoomSpace(res);
-            // res = this.filterByRoomDoubleOccupancy(res);
-            // res = this.filterByRoomRaisePet(res);
+            res = this.filterByRoomLocation(res);
+            res = this.filterByRoomTypes(res);
+            res = this.filterByRoomSpace(res);
+            res = this.filterByRoomDoubleOccupancy(res);
+            res = this.filterByRoomRaisePet(res);
             res = this.filterByRoomFeature(res);
             this.temp = [...res];
         },
@@ -1129,6 +1137,17 @@ export default {
             }
             return res;
         }
+        //     onDayClick(day){
+        //         const idx = this.days.findIndex(d => d.id === day.id);
+        //   if (idx >= 0) {
+        //     this.days.splice(idx, 1);
+        //   } else {
+        //     this.days.push({
+        //       id: day.id,
+        //       date: day.date,
+        //     });
+        //   }
+        //     }
     },
     components: {
         Breadcrumb,
@@ -1138,7 +1157,8 @@ export default {
         WhiteNavBar,
         Multiselect,
         Slider,
-        Datepicker
+        Calendar,
+        DatePicker
     },
     mounted() {
         // catch roomsData
