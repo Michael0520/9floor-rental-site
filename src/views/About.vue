@@ -141,7 +141,7 @@ export default {
                     document.body.scrollTop ||
                     window.pageYOffset;
                 this.scrollNum = clientTop;
-                console.log(`目前頁面高度 ${clientTop}`);
+                // console.log(`目前頁面高度 ${clientTop}`);
                 if (clientTop >= 900) {
                     this.isTop = true;
                 } else {
@@ -158,7 +158,7 @@ export default {
                 document.body.scrollTop ||
                 window.pageYOffset;
             this.scrollNum = clientTop;
-            console.log(`目前頁面高度 ${clientTop}`);
+            // console.log(`目前頁面高度 ${clientTop}`);
             if (clientTop >= 900) {
                 this.isTop = true;
             } else {
