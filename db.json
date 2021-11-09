@@ -37,10 +37,7 @@
                 "shortTermRentalThreeToFive": "NTD 17600",
                 "shortTermRentalOneToTwo": "NTD 21600"
             },
-            "housingInformation": {
-                "roomType": "雅房",
-                "area": "4 坪 / 13.22 m²"
-            },
+            "housingInformation": 4,
             "housingSpaceInformation": {
                 "kitchen": true,
                 "publicBathroom": "30間",
@@ -101,10 +98,7 @@
                 "shortTermRentalThreeToFive": "NTD 28300",
                 "shortTermRentalOneToTwo": "NTD 34900"
             },
-            "housingInformation": {
-                "roomType": "獨立套房",
-                "area": "6 坪 / 19.83 m²"
-            },
+            "housingInformation": 6,
             "housingSpaceInformation": {
                 "kitchen": true,
                 "publicBathroom": "3間",
@@ -168,10 +162,7 @@
                 "shortTermRentalThreeToFive": "NTD 16300",
                 "shortTermRentalOneToTwo": "NTD 20000"
             },
-            "housingInformation": {
-                "roomType": "雅房",
-                "area": "0 坪 / 0 m²"
-            },
+            "housingInformation": 4,
             "housingSpaceInformation": {
                 "kitchen": true,
                 "publicBathroom": "30間",
@@ -238,10 +229,7 @@
                 "shortTermRentalThreeToFive": "NTD 21500",
                 "shortTermRentalOneToTwo": "NTD 26400"
             },
-            "housingInformation": {
-                "roomType": "獨立套房",
-                "area": "0 坪 / 0 m²"
-            },
+            "housingInformation": 10,
             "housingSpaceInformation": {
                 "balcony": true,
                 "kitchen": true,
@@ -317,10 +305,7 @@
                 "shortTermRentalThreeToFive": "NTD 17600",
                 "shortTermRentalOneToTwo": "NTD 21600"
             },
-            "housingInformation": {
-                "roomType": "雅房",
-                "area": "0 坪 / 0 m²"
-            },
+            "housingInformation": 5,
             "housingSpaceInformation": {
                 "balcony": true,
                 "kitchen": true,
@@ -389,10 +374,7 @@
                 "shortTermRentalThreeToFive": "NTD 21500",
                 "shortTermRentalOneToTwo": "NTD 26400"
             },
-            "housingInformation": {
-                "roomType": "雅房",
-                "area": "0 坪 / 0 m²"
-            },
+            "housingInformation": 5,
             "housingSpaceInformation": {
                 "balcony": true,
                 "kitchen": true,
@@ -451,10 +433,7 @@
                 "shortTermRentalThreeToFive": "NTD 14300",
                 "shortTermRentalOneToTwo": "NTD 17600"
             },
-            "housingInformation": {
-                "roomType": "雅房",
-                "area": "0 坪 / 0 m²"
-            },
+            "housingInformation": 4,
             "housingSpaceInformation": {
                 "balcony": true,
                 "kitchen": true,
