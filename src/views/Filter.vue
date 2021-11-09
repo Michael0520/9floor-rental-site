@@ -269,39 +269,33 @@
                         </div>
                         <div class="index_accordion-content">
                             <div class="index_range-group">
-                                <p class="small">價格/月</p>
-                                <div class="rc-slider index_range">
-                                    <div class="rc-slider-rail"></div>
-                                    <div
-                                        class="rc-slider-track rc-slider-track-1"
-                                        style="left: 0%; width: 100%"
-                                    ></div>
-                                    <div class="rc-slider-step"></div>
-                                    <div
-                                        role="slider"
-                                        tabindex="0"
-                                        aria-valuemin="4000"
-                                        aria-valuemax="42000"
-                                        aria-valuenow="4000"
-                                        aria-disabled="false"
-                                        class="rc-slider-handle rc-slider-handle-1"
-                                        style="left: 0%"
-                                    ></div>
-                                    <div
-                                        role="slider"
-                                        tabindex="0"
-                                        aria-valuemin="4000"
-                                        aria-valuemax="42000"
-                                        aria-valuenow="42000"
-                                        aria-disabled="false"
-                                        class="rc-slider-handle rc-slider-handle-2"
-                                        style="left: 100%"
-                                    ></div>
-                                    <div class="rc-slider-mark"></div>
-                                </div>
-                                <div class="index_unit">
-                                    <div>NTD 4000</div>
-                                    <div>NTD 42000</div>
+                                <p class="small pb-2">房間坪數</p>
+                                <Slider
+                                    class="slider-primary"
+                                    v-model="locationRange"
+                                    :format="locationFormat"
+                                    :step="locationStep"
+                                    :min="locationMin"
+                                    :max="locationMax"
+                                    @change="checkEventBinding"
+                                />
+                                <div class="index_unit pt-2">
+                                    <div>
+                                        {{ locationRange[0] }} 坪數 /{{
+                                            (locationRange[0] * 3.3058).toFixed(
+                                                2
+                                            )
+                                        }}
+                                        m²
+                                    </div>
+                                    <div>
+                                        {{ locationRange[1] }} 坪數 /{{
+                                            (locationRange[1] * 3.3058).toFixed(
+                                                2
+                                            )
+                                        }}
+                                        m²
+                                    </div>
                                 </div>
                             </div>
                             <div
@@ -381,38 +375,6 @@
                             </div>
                             <!-- specificLivingFeatures -->
                             <div class="index_dropdown-group">
-                                <!-- 
-                                <select
-                                    class="
-                                    form-select form-select-sm
-                                    index_dropdown-basic
-                                "
-                                    aria-label=".form-select-sm example"
-                                    v-model="selectedRoomFeatures"
-                                    @change="typeMenu"
-                                >
-                                    <option selected disabled
-                                        >請選擇居住空間特色</option
-                                    >
-                                    <option
-                                        v-for="(option,
-                                        keys) in specificLivingFeatures"
-                                        :key="keys"
-                                        :value="option.name"
-                                    >
-                                        {{ option.name }}
-                                    </option>
-                                </select> -->
-                                <!-- <Multiselect
-                                    v-model="selectedRoomFeatures"
-                                    mode="tags"
-                                    placeholder="顯示特定居住特色"
-                                    :value="selectedRoomFeatures"
-                                    :options="specificLivingFeatures"
-                                    :createTag="true"
-                                    @tag="typeMenu"
-                                /> -->
-                                <!-- TODO:遇到問題，關於第一次選取資料不會存取 -->
                                 <p class="small">居住空間特色</p>
                                 <Multiselect
                                     v-model="selectedRoomFeatures"
@@ -1010,6 +972,19 @@ export default {
                 prefix: "$",
                 decimals: 0
             },
+            locationRange: [0, 30],
+            locationMin: 0,
+            locationMax: 30,
+            locationMerge: 3,
+            locationStep: 1,
+            locationFormat: {
+                prefix: "",
+                decimals: 0
+            },
+            locationRangeFixed(min) {
+                (min * 3.305).toFixed(3);
+            },
+
             // date input
             date: new Date()
         };
@@ -1043,6 +1018,7 @@ export default {
             res = this.filterByRoomRaisePet(res);
             res = this.filterByRoomFeature(res);
             res = this.filterByRoomPrice(res);
+            res = this.filterByRoomFloor(res);
             this.temp = [...res];
         },
         checkEventBinding() {
@@ -1102,7 +1078,7 @@ export default {
                 // console.log(res);
             } else {
                 res = res.filter(item => {
-                    console.log("可以", this.selectedDoubleOccupancy);
+                    // console.log("可以", this.selectedDoubleOccupancy);
                     return item.doubleOccupancy === false;
                 });
             }
@@ -1120,7 +1096,7 @@ export default {
                 // console.log(res);
             } else {
                 res = res.filter(item => {
-                    console.log("可以", this.selectedRaisePet);
+                    // console.log("可以", this.selectedRaisePet);
                     return item.raisePet === false;
                 });
             }
@@ -1129,12 +1105,12 @@ export default {
         filterByRoomFeature(res) {
             if (this.selectedRoomFeatures.length === 0) {
                 //
-                console.log("空的", this.selectedRoomFeatures);
+                // console.log("空的", this.selectedRoomFeatures);
             } else {
                 res = res.filter(item => {
                     let flag = false;
                     item.livingSpaceEquipment.forEach(livingSpaceEquipment => {
-                        console.log("至少一個", item.livingSpaceEquipment);
+                        // console.log("至少一個", item.livingSpaceEquipment);
                         if (
                             this.selectedRoomFeatures.includes(
                                 livingSpaceEquipment
@@ -1149,32 +1125,38 @@ export default {
             return res;
         },
         filterByRoomPrice(res) {
-            let min = this.priceRange[0];
-            let max = this.priceRange[1];
+            let priceMin = this.priceRange[0];
+            let priceMax = this.priceRange[1];
             // console.log("最低價格", min);
             // console.log("最高價格", max);
             if (this.priceRange.length === 2) {
                 res = res.filter(item => {
                     // console.log(item.monthlyRent);
-                    return item.monthlyRent >= min && item.monthlyRent <= max;
+                    return (
+                        item.monthlyRent >= priceMin &&
+                        item.monthlyRent <= priceMax
+                    );
                     // let a = item.monthlyRent >= min && item.monthlyRent <= max;
                     // return console.log(a);
                 });
             }
             return res;
-            // if (
-            //     res.filter(item => {
-            //         console.log(item.monthlyRent);
-            //         item.monthlyRent >= this.priceRange[0] &&
-            //             item.monthlyRent <= this.priceRange[1];
-            //     })
-            // ) {
-            //     console.log("Event 觸發到判斷式");
-            //     return res;
-            // }
-        }
+        },
+        filterByRoomFloor(res) {
+            let locationMin = this.locationRange[0];
+            let locationMax = this.locationRange[1];
 
-        // 房間價格大於 min , 小於 filter
+            if (this.locationRange.length === 2) {
+                res = res.filter(item => {
+                    // console.log(item.monthlyRent);
+                    return (
+                        item.housingInformation >= locationMin &&
+                        item.housingInformation <= locationMax
+                    );
+                });
+            }
+            return res;
+        }
 
         //     onDayClick(day){
         //         const idx = this.days.findIndex(d => d.id === day.id);
