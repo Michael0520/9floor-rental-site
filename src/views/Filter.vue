@@ -1142,16 +1142,22 @@ export default {
             return res;
         },
         filterByRoomPrice(res) {
-            if (
-                res.filter(item => {
-                    console.log(item.monthlyRent);
-                    item.monthlyRent >= this.priceRange[0] &&
-                        item.monthlyRent <= this.priceRange[1];
-                })
-            ) {
-                console.log("Event 觸發到判斷式");
-                return res;
-            }
+            let min = this.priceRange[0];
+            let max = this.priceRange[1];
+            console.log("最低價格", min);
+            console.log("最高價格", max);
+
+            return res;
+            // if (
+            //     res.filter(item => {
+            //         console.log(item.monthlyRent);
+            //         item.monthlyRent >= this.priceRange[0] &&
+            //             item.monthlyRent <= this.priceRange[1];
+            //     })
+            // ) {
+            //     console.log("Event 觸發到判斷式");
+            //     return res;
+            // }
         }
 
         // 房間價格大於 min , 小於 filter
