@@ -1132,11 +1132,18 @@ export default {
                 console.log("空的", this.selectedRoomFeatures);
             } else {
                 res = res.filter(item => {
-                    console.log("至少有一個", this.selectedRoomFeatures);
-                    // item.livingSpaceEquipment === this.selectedRoomFeatures;
-                    return this.selectedRoomFeatures.includes(
-                        item.livingSpaceEquipment
-                    );
+                    let flag = false;
+                    item.livingSpaceEquipment.forEach(livingSpaceEquipment => {
+                        console.log("至少一個", item.livingSpaceEquipment);
+                        if (
+                            this.selectedRoomFeatures.includes(
+                                livingSpaceEquipment
+                            )
+                        ) {
+                            flag = true;
+                        }
+                    });
+                    return flag;
                 });
             }
             return res;
