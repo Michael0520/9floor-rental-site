@@ -262,84 +262,131 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- selectedDoubleOccupancy -->
                                     <div
                                         class="index_selector-group index_select-group"
                                     >
                                         <p class="small">第二人入住</p>
-                                        <div class="index_selector">
-                                            <label class="" for="double--1">
-                                                <input
-                                                    type="radio"
-                                                    id="double--1"
-                                                    name="double"
-                                                    :value="0"
-                                                    v-model="
-                                                        selectedDoubleOccupancy
-                                                    "
-                                                    @change="typeMenu"
-                                                />
-                                                全部
-                                            </label>
-                                            <label class="" for="double-1">
-                                                <input
-                                                    type="radio"
-                                                    id="double-1"
-                                                    name="double"
-                                                    :value="1"
-                                                    v-model="
-                                                        selectedDoubleOccupancy
-                                                    "
-                                                    @change="typeMenu"
-                                                />
-                                                可以
-                                            </label>
-                                            <label class="" for="double-0">
-                                                <input
-                                                    type="radio"
-                                                    id="double-0"
-                                                    name="double"
-                                                    :value="2"
-                                                    v-model="
-                                                        selectedDoubleOccupancy
-                                                    "
-                                                    @change="typeMenu"
-                                                />
-                                                不可以</label
+                                        <div
+                                            class="btn-group index_selector "
+                                            role="group"
+                                            aria-label="Basic radio toggle button group"
+                                            style="display:flex;"
+                                        >
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio1"
+                                                autocomplete="off"
+                                                checked
+                                                :value="0"
+                                                v-model="
+                                                    selectedDoubleOccupancy
+                                                "
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio1"
+                                                >全部</label
+                                            >
+
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio2"
+                                                autocomplete="off"
+                                                :value="1"
+                                                v-model="
+                                                    selectedDoubleOccupancy
+                                                "
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio2"
+                                                >可以</label
+                                            >
+
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio3"
+                                                autocomplete="off"
+                                                :value="2"
+                                                v-model="
+                                                    selectedDoubleOccupancy
+                                                "
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio3"
+                                                >不可以</label
                                             >
                                         </div>
                                     </div>
+                                    <!-- selectedRaisePet -->
                                     <div
                                         class="index_selector-group index_select-group"
                                     >
                                         <p class="small">養寵物</p>
-                                        <div class="index_selector">
-                                            <label class="" for="double--1"
-                                                ><input
-                                                    type="radio"
-                                                    id="double--1"
-                                                    name="double"
-                                                    :value="0"
-                                                    v-model="selectedRaisePet"
-                                                    @change="typeMenu"
-                                                />全部</label
-                                            ><label class="" for="double-1"
-                                                ><input
-                                                    type="radio"
-                                                    id="double-1"
-                                                    name="double"
-                                                    :value="1"
-                                                    v-model="selectedRaisePet"
-                                                    @change="typeMenu"
-                                                />可以</label
-                                            ><label class="" for="double-0"
-                                                ><input
-                                                    type="radio"
-                                                    id="double-0"
-                                                    name="double"
-                                                    :value="0"
-                                                    v-model="selectedRaisePet"
-                                                    @change="typeMenu"
-                                                />不可以</label
+                                        <div
+                                            class="btn-group index_selector"
+                                            role="group"
+                                            aria-label="Basic radio toggle button group"
+                                            style="display:flex;"
+                                        >
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio4"
+                                                autocomplete="off"
+                                                checked
+                                                :value="0"
+                                                v-model="selectedRaisePet"
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio4"
+                                                >全部</label
+                                            >
+
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio5"
+                                                autocomplete="off"
+                                                :value="1"
+                                                v-model="selectedRaisePet"
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio5"
+                                                >可以</label
+                                            >
+
+                                            <input
+                                                type="radio"
+                                                class="btn-check"
+                                                name="btnradio"
+                                                id="btnradio6"
+                                                autocomplete="off"
+                                                :value="2"
+                                                v-model="selectedRaisePet"
+                                                @change="typeMenu"
+                                            />
+                                            <label
+                                                class="btn btn-outline-success"
+                                                for="btnradio6"
+                                                >不可以</label
                                             >
                                         </div>
                                     </div>
@@ -919,6 +966,7 @@ export default {
             name: "FilterPage",
             transparent: false,
             isOpen: false,
+            isChecked: false,
             rooms: [],
             temp: [],
             roomOptions: [],
@@ -975,6 +1023,9 @@ export default {
         },
         openmenu() {
             this.isOpen = !this.isOpen;
+        },
+        clickLabel() {
+            this.isChecked = !this.isChecked;
         },
         typeMenu() {
             // filter options
@@ -1504,7 +1555,6 @@ export default {
         width: 100%;
     }
 }
-
 .index_alert-selector {
     display: flex;
     width: 100%;
@@ -1525,5 +1575,12 @@ export default {
         cursor: pointer;
         z-index: 0;
     }
+}
+
+// label checked style
+.index_checked {
+    background-color: #fff7f4;
+    border: 1px solid $success;
+    z-index: 1;
 }
 </style>
