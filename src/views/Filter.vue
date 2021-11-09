@@ -45,7 +45,7 @@
                     style="border-top:1px solid #d2c8bd"
                 >
                     <div class="index_sort">
-                        <div>6 筆結果</div>
+                        <div>{{ this.temp.length }} 筆結果</div>
                         <div class="justify-content-end">
                             <div>排序方式</div>
                             <select
@@ -175,8 +175,8 @@
                                 清除
                             </span>
                         </p>
-                        <Calendar />
-                        <DatePicker v-model="date" />
+                        <!-- <Calendar /> -->
+                        <!-- <DatePicker v-model="date" /> -->
                     </div>
                     <!-- price-slider-bar -->
                     <!-- <div class="index_range-group">
@@ -215,15 +215,16 @@
                         <p class="small pb-2">價格/月</p>
                         <Slider
                             class="slider-primary"
-                            v-model="value"
+                            v-model="priceRange"
                             :format="format"
                             :step="step"
                             :min="min"
                             :max="max"
+                            @change="typeMenu"
                         />
                         <div class="index_unit pt-2">
-                            <!-- <div v-model="value">NTD 4000</div> -->
-                            <!-- <div v-model="value">NTD 42000</div> -->
+                            <div>NTD {{ priceRange[0] }}</div>
+                            <div>NTD {{ priceRange[1] }}</div>
                         </div>
                     </div>
 
@@ -422,7 +423,9 @@
                                     :closeOnSelect="false"
                                     :options="specificLivingFeatures"
                                     :createTag="true"
-                                    @change="typeMenu"
+                                    @select="typeMenu"
+                                    @close="typeMenu"
+                                    @deselect="typeMenu"
                                 >
                                     <template
                                         v-slot:tag="{
@@ -764,8 +767,8 @@
                             </div> -->
                         </div>
                         <div>
-                            <Calendar />
-                            <DatePicker v-model="date" />
+                            <!-- <Calendar /> -->
+                            <!-- <DatePicker v-model="date" /> -->
                         </div>
                         <div
                             class="index_division"
@@ -973,7 +976,7 @@ import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Multiselect from "@vueform/multiselect";
 // import Slider from "@vueform/slider";
 import Slider from "@vueform/slider";
-import { Calendar, DatePicker } from "v-calendar";
+// import { Calendar, DatePicker } from "v-calendar";
 
 export default {
     data() {
@@ -998,7 +1001,7 @@ export default {
             selectedRaisePet: 0,
             // value: [],
             // options: ["Batman", "Robin", "Joker"],
-            value: [4000, 42000],
+            priceRange: [4000, 42000],
             min: 4000,
             max: 42000,
             merge: 10,
@@ -1007,9 +1010,7 @@ export default {
                 prefix: "$",
                 decimals: 0
             },
-            // format(value) {
-            //     return `${this.value[(value * 4000, value * 4000)]}`;
-            // }
+            // date input
             date: new Date()
         };
     },
@@ -1041,13 +1042,16 @@ export default {
             res = this.filterByRoomDoubleOccupancy(res);
             res = this.filterByRoomRaisePet(res);
             res = this.filterByRoomFeature(res);
+            res = this.filterByRoomPrice(res);
             this.temp = [...res];
         },
-        checkRoomType() {
+        checkEventBinding() {
             console.log("Evnet 觸發");
             // console.log(this.rooms);
-            console.log(this.selectedRoomFeatures);
-            // this.typeMenu();
+            // console.log(this.selectedRoomFeatures);
+            console.log("價格間距", this.priceRange);
+
+            this.typeMenu();
         },
         filterByRoomLocation(res) {
             if (this.selectedLocation === "全國") {
@@ -1136,7 +1140,22 @@ export default {
                 });
             }
             return res;
+        },
+        filterByRoomPrice(res) {
+            if (
+                res.filter(item => {
+                    console.log(item.monthlyRent);
+                    item.monthlyRent >= this.priceRange[0] &&
+                        item.monthlyRent <= this.priceRange[1];
+                })
+            ) {
+                console.log("Event 觸發到判斷式");
+                return res;
+            }
         }
+
+        // 房間價格大於 min , 小於 filter
+
         //     onDayClick(day){
         //         const idx = this.days.findIndex(d => d.id === day.id);
         //   if (idx >= 0) {
@@ -1156,9 +1175,9 @@ export default {
         Footer,
         WhiteNavBar,
         Multiselect,
-        Slider,
-        Calendar,
-        DatePicker
+        Slider
+        // Calendar,
+        // DatePicker
     },
     mounted() {
         // catch roomsData
