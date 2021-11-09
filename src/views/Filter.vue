@@ -1144,9 +1144,16 @@ export default {
         filterByRoomPrice(res) {
             let min = this.priceRange[0];
             let max = this.priceRange[1];
-            console.log("最低價格", min);
-            console.log("最高價格", max);
-
+            // console.log("最低價格", min);
+            // console.log("最高價格", max);
+            if (this.priceRange.length === 2) {
+                res = res.filter(item => {
+                    // console.log(item.monthlyRent);
+                    return item.monthlyRent >= min && item.monthlyRent <= max;
+                    // let a = item.monthlyRent >= min && item.monthlyRent <= max;
+                    // return console.log(a);
+                });
+            }
             return res;
             // if (
             //     res.filter(item => {
