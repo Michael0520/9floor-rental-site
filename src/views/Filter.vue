@@ -109,49 +109,32 @@
                     </div>
                     <div class="index_division"></div>
                     <!-- roomStyle -->
-                    <div class="index_dropdown-group">
+                    <div class="index_dropdown-group ">
                         <p class="small">房型</p>
                         <ul
                             class="list-group"
                             style="color:#444647  font-size:12px"
                         >
-                            <!-- <li
-                                class="list-group-item"
-                                style="color:#444647; font-size:12px"
-                                v-for="(option, keys) in roomStyles"
-                                :value="option.name"
-                                :key="keys"
-                            >
-                                <input
-                                    class="form-check-input me-1"
-                                    type="checkbox"
-                                    aria-label="..."
-                                    :value="option.name"
-                                    @click="checkRoomType"
-                                    v-model="selectedRoomStyles"
-                                />
-                                <label for="">
-                                    {{ option.name }}
-                                </label>
-                            </li> -->
                             <li
                                 class="list-group-item"
-                                style="color:#444647; font-size:12px"
+                                style="color:#444647; font-size:12px;display:flex;justicy-content:center;align-items:center"
                                 v-for="(item, index) in roomStyles"
                                 :key="index"
                             >
                                 <input
+                                    class="form-check-input"
                                     type="checkbox"
                                     :value="item.name"
                                     v-model="selectedRoomStyles"
                                     @change="typeMenu"
                                 />
-                                <label for="獨立套房">
+                                <label for="獨立套房" style="padding-left:1rem">
                                     {{ item.name }}
                                 </label>
                             </li>
                         </ul>
                     </div>
+
                     <!-- roomDate -->
                     <div class="index_dropdown-group">
                         <p class="small index_clearButton">
@@ -184,39 +167,6 @@
                         <!-- @update:modelValue="setDate" -->
                         <!-- :modelValue="getDate" -->
                     </div>
-                    <!-- price-slider-bar -->
-                    <!-- <div class="index_range-group">
-                        <div class="rc-slider index_range">
-                            <div class="rc-slider-rail"></div>
-                            <div
-                                class="rc-slider-track rc-slider-track-1"
-                                style="left: 0%; width: 100%"
-                            ></div>
-                            <div class="rc-slider-step"></div>
-                            <div
-                                role="slider"
-                                tabindex="0"
-                                aria-valuemin="4000"
-                                aria-valuemax="42000"
-                                aria-valuenow="4000"
-                                aria-disabled="false"
-                                class="rc-slider-handle rc-slider-handle-1"
-                                style="left: 0%"
-                            ></div>
-                            <div
-                                role="slider"
-                                tabindex="0"
-                                aria-valuemin="4000"
-                                aria-valuemax="42000"
-                                aria-valuenow="42000"
-                                aria-disabled="false"
-                                class="rc-slider-handle rc-slider-handle-2"
-                                style="left: 100%"
-                            ></div>
-                            <div class="rc-slider-mark"></div>
-                        </div>
-                    </div> -->
-
                     <div class="index_range-group">
                         <p class="small pb-2">價格/月</p>
                         <Slider
@@ -233,7 +183,7 @@
                             <div>NTD {{ priceRange[1] }}</div>
                         </div>
                     </div>
-
+                    <!-- specificLivingSpaces -->
                     <div class="index_division"></div>
                     <div class="index_dropdown-group">
                         <p class="small">顯示特定居住空間</p>
@@ -254,192 +204,210 @@
                             </option>
                         </select>
                     </div>
-
-                    <div class="index_accordion index_advance">
-                        <div class="index_head" role="presentation">
-                            <span>進階搜尋</span>
-                            <p class="small index_note"></p>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="$primary"
-                                class="bi bi-chevron-down"
-                                viewBox="0 0 16 16"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                                />
-                            </svg>
-                        </div>
-                        <div class="index_accordion-content">
-                            <div class="index_range-group">
-                                <p class="small pb-2">房間坪數</p>
-                                <Slider
-                                    class="slider-primary"
-                                    v-model="locationRange"
-                                    :format="locationFormat"
-                                    :step="locationStep"
-                                    :min="locationMin"
-                                    :max="locationMax"
-                                    @change="checkEventBinding"
-                                />
-                                <div class="index_unit pt-2">
-                                    <div>
-                                        {{ locationRange[0] }} 坪數 /{{
-                                            (locationRange[0] * 3.3058).toFixed(
-                                                2
-                                            )
-                                        }}
-                                        m²
-                                    </div>
-                                    <div>
-                                        {{ locationRange[1] }} 坪數 /{{
-                                            (locationRange[1] * 3.3058).toFixed(
-                                                2
-                                            )
-                                        }}
-                                        m²
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="index_selector-group index_select-group"
-                            >
-                                <p class="small">第二人入住</p>
-                                <div class="index_selector">
-                                    <label class="" for="double--1">
-                                        <input
-                                            type="radio"
-                                            id="double--1"
-                                            name="double"
-                                            :value="0"
-                                            v-model="selectedDoubleOccupancy"
-                                            @change="typeMenu"
-                                        />
-                                        全部
-                                    </label>
-                                    <label class="" for="double-1">
-                                        <input
-                                            type="radio"
-                                            id="double-1"
-                                            name="double"
-                                            :value="1"
-                                            v-model="selectedDoubleOccupancy"
-                                            @change="typeMenu"
-                                        />
-                                        可以
-                                    </label>
-                                    <label class="" for="double-0">
-                                        <input
-                                            type="radio"
-                                            id="double-0"
-                                            name="double"
-                                            :value="2"
-                                            v-model="selectedDoubleOccupancy"
-                                            @change="typeMenu"
-                                        />
-                                        不可以</label
-                                    >
-                                </div>
-                            </div>
-                            <div
-                                class="index_selector-group index_select-group"
-                            >
-                                <p class="small">養寵物</p>
-                                <div class="index_selector">
-                                    <label class="" for="double--1"
-                                        ><input
-                                            type="radio"
-                                            id="double--1"
-                                            name="double"
-                                            :value="0"
-                                            v-model="selectedRaisePet"
-                                            @change="typeMenu"
-                                        />全部</label
-                                    ><label class="" for="double-1"
-                                        ><input
-                                            type="radio"
-                                            id="double-1"
-                                            name="double"
-                                            :value="1"
-                                            v-model="selectedRaisePet"
-                                            @change="typeMenu"
-                                        />可以</label
-                                    ><label class="" for="double-0"
-                                        ><input
-                                            type="radio"
-                                            id="double-0"
-                                            name="double"
-                                            :value="0"
-                                            v-model="selectedRaisePet"
-                                            @change="typeMenu"
-                                        />不可以</label
-                                    >
-                                </div>
-                            </div>
-                            <!-- specificLivingFeatures -->
-                            <div class="index_dropdown-group">
-                                <p class="small">居住空間特色</p>
-                                <Multiselect
-                                    v-model="selectedRoomFeatures"
-                                    mode="tags"
-                                    placeholder="顯示特定居住特色"
-                                    trackBy="name"
-                                    label="name"
-                                    :closeOnSelect="false"
-                                    :options="specificLivingFeatures"
-                                    :createTag="true"
-                                    @select="typeMenu"
-                                    @close="typeMenu"
-                                    @deselect="typeMenu"
+                    <!-- 進階搜尋 -->
+                    <div
+                        class="accordion accordion-flush"
+                        id="accordionExample"
+                    >
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button
+                                    class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                    style="font-size:12px;letter-spacing:0.5px"
                                 >
-                                    <template
-                                        v-slot:tag="{
-                                            option,
-                                            handleTagRemove,
-                                            disabled
-                                        }"
-                                    >
-                                        <div class="multiselect-tag is-user">
-                                            <img :src="option.image" />
-                                            {{ option.name }}
-                                            <span
-                                                v-if="!disabled"
-                                                class="multiselect-tag-remove"
-                                                @mousedown.prevent="
-                                                    handleTagRemove(
-                                                        option,
-                                                        $event
-                                                    )
-                                                "
-                                            >
-                                                <span
-                                                    class="multiselect-tag-remove-icon"
-                                                >
-                                                </span>
-                                            </span>
+                                    進階搜尋
+                                </button>
+                            </h2>
+                            <div
+                                id="collapseOne"
+                                class="accordion-collapse collapse show"
+                                aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample"
+                            >
+                                <div class="accordion-body py-10 px-0">
+                                    <div class="index_range-group">
+                                        <p class="small pb-2">房間坪數</p>
+                                        <Slider
+                                            class="slider-primary"
+                                            v-model="locationRange"
+                                            :format="locationFormat"
+                                            :step="locationStep"
+                                            :min="locationMin"
+                                            :max="locationMax"
+                                            @change="checkEventBinding"
+                                        />
+                                        <div class="index_unit pt-2">
+                                            <div>
+                                                {{ locationRange[0] }} 坪數 /{{
+                                                    (
+                                                        locationRange[0] *
+                                                        3.3058
+                                                    ).toFixed(2)
+                                                }}
+                                                m²
+                                            </div>
+                                            <div>
+                                                {{ locationRange[1] }} 坪數 /{{
+                                                    (
+                                                        locationRange[1] *
+                                                        3.3058
+                                                    ).toFixed(2)
+                                                }}
+                                                m²
+                                            </div>
                                         </div>
-                                    </template>
-                                </Multiselect>
-                            </div>
-                            <div class="index_division"></div>
-                            <!-- render 無法預定的房間 list -->
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="flexCheckChecked"
-                                    checked
-                                />
-                                <label
-                                    class="form-check-label small"
-                                    for="flexCheckChecked"
-                                >
-                                    顯示目前無法預訂房間
-                                </label>
+                                    </div>
+                                    <div
+                                        class="index_selector-group index_select-group"
+                                    >
+                                        <p class="small">第二人入住</p>
+                                        <div class="index_selector">
+                                            <label class="" for="double--1">
+                                                <input
+                                                    type="radio"
+                                                    id="double--1"
+                                                    name="double"
+                                                    :value="0"
+                                                    v-model="
+                                                        selectedDoubleOccupancy
+                                                    "
+                                                    @change="typeMenu"
+                                                />
+                                                全部
+                                            </label>
+                                            <label class="" for="double-1">
+                                                <input
+                                                    type="radio"
+                                                    id="double-1"
+                                                    name="double"
+                                                    :value="1"
+                                                    v-model="
+                                                        selectedDoubleOccupancy
+                                                    "
+                                                    @change="typeMenu"
+                                                />
+                                                可以
+                                            </label>
+                                            <label class="" for="double-0">
+                                                <input
+                                                    type="radio"
+                                                    id="double-0"
+                                                    name="double"
+                                                    :value="2"
+                                                    v-model="
+                                                        selectedDoubleOccupancy
+                                                    "
+                                                    @change="typeMenu"
+                                                />
+                                                不可以</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="index_selector-group index_select-group"
+                                    >
+                                        <p class="small">養寵物</p>
+                                        <div class="index_selector">
+                                            <label class="" for="double--1"
+                                                ><input
+                                                    type="radio"
+                                                    id="double--1"
+                                                    name="double"
+                                                    :value="0"
+                                                    v-model="selectedRaisePet"
+                                                    @change="typeMenu"
+                                                />全部</label
+                                            ><label class="" for="double-1"
+                                                ><input
+                                                    type="radio"
+                                                    id="double-1"
+                                                    name="double"
+                                                    :value="1"
+                                                    v-model="selectedRaisePet"
+                                                    @change="typeMenu"
+                                                />可以</label
+                                            ><label class="" for="double-0"
+                                                ><input
+                                                    type="radio"
+                                                    id="double-0"
+                                                    name="double"
+                                                    :value="0"
+                                                    v-model="selectedRaisePet"
+                                                    @change="typeMenu"
+                                                />不可以</label
+                                            >
+                                        </div>
+                                    </div>
+                                    <!-- specificLivingFeatures -->
+                                    <div class="index_dropdown-group">
+                                        <p class="small">居住空間特色</p>
+                                        <Multiselect
+                                            v-model="selectedRoomFeatures"
+                                            mode="tags"
+                                            placeholder="顯示特定居住特色"
+                                            trackBy="name"
+                                            label="name"
+                                            :closeOnSelect="false"
+                                            :options="specificLivingFeatures"
+                                            :createTag="true"
+                                            @select="typeMenu"
+                                            @close="typeMenu"
+                                            @deselect="typeMenu"
+                                        >
+                                            <template
+                                                v-slot:tag="{
+                                                    option,
+                                                    handleTagRemove,
+                                                    disabled
+                                                }"
+                                            >
+                                                <div
+                                                    class="multiselect-tag is-user"
+                                                >
+                                                    <img :src="option.image" />
+                                                    {{ option.name }}
+                                                    <span
+                                                        v-if="!disabled"
+                                                        class="multiselect-tag-remove"
+                                                        @mousedown.prevent="
+                                                            handleTagRemove(
+                                                                option,
+                                                                $event
+                                                            )
+                                                        "
+                                                    >
+                                                        <span
+                                                            class="multiselect-tag-remove-icon"
+                                                        >
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </template>
+                                        </Multiselect>
+                                    </div>
+                                    <div class="index_division"></div>
+                                    <!-- render 無法預定的房間 list -->
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value=""
+                                            id="flexCheckChecked"
+                                            checked
+                                        />
+                                        <label
+                                            class="form-check-label small"
+                                            for="flexCheckChecked"
+                                        >
+                                            顯示目前無法預訂房間
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
