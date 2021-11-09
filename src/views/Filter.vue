@@ -175,8 +175,14 @@
                                 清除
                             </span>
                         </p>
-                        <!-- <Calendar /> -->
-                        <!-- <DatePicker v-model="date" /> -->
+                        <Datepicker
+                            v-model="selectMonth"
+                            monthPicker
+                            autoApply
+                            placeholder="請選擇預訂日期"
+                        ></Datepicker>
+                        <!-- @update:modelValue="setDate" -->
+                        <!-- :modelValue="getDate" -->
                     </div>
                     <!-- price-slider-bar -->
                     <!-- <div class="index_range-group">
@@ -729,8 +735,7 @@
                             </div> -->
                         </div>
                         <div>
-                            <!-- <Calendar /> -->
-                            <!-- <DatePicker v-model="date" /> -->
+                            <!-- <Datepicker v-model="date"></Datepicker> -->
                         </div>
                         <div
                             class="index_division"
@@ -936,9 +941,9 @@ import RoomCard from "../components/RoomCard.vue";
 import Footer from "../components/Footer.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Multiselect from "@vueform/multiselect";
-// import Slider from "@vueform/slider";
 import Slider from "@vueform/slider";
-// import { Calendar, DatePicker } from "v-calendar";
+import Datepicker from "vue3-date-time-picker";
+import "vue3-date-time-picker/dist/main.css";
 
 export default {
     data() {
@@ -986,20 +991,16 @@ export default {
             },
 
             // date input
-            date: new Date()
+            selectMonth: {
+                month: new Date().getMonth() + 1,
+                year: new Date().getFullYear()
+            }
+            // getDate: "",
+            // setDate: value => {
+            //     this.selectMonth.value = value;
+            // }
         };
     },
-    //     computed: {
-    //     dates() {
-    //       return this.days.map(day => day.date);
-    //     },
-    //     attributes() {
-    //       return this.dates.map(date => ({
-    //         highlight: true,
-    //         dates: date,
-    //       }));
-    //     },
-    //   },
     methods: {
         filterRow(index) {
             return index % 2 === 0;
@@ -1157,18 +1158,6 @@ export default {
             }
             return res;
         }
-
-        //     onDayClick(day){
-        //         const idx = this.days.findIndex(d => d.id === day.id);
-        //   if (idx >= 0) {
-        //     this.days.splice(idx, 1);
-        //   } else {
-        //     this.days.push({
-        //       id: day.id,
-        //       date: day.date,
-        //     });
-        //   }
-        //     }
     },
     components: {
         Breadcrumb,
@@ -1177,9 +1166,8 @@ export default {
         Footer,
         WhiteNavBar,
         Multiselect,
-        Slider
-        // Calendar,
-        // DatePicker
+        Slider,
+        Datepicker
     },
     mounted() {
         // catch roomsData
