@@ -134,29 +134,10 @@
                             </li>
                         </ul>
                     </div>
-
                     <!-- roomDate -->
                     <div class="index_dropdown-group">
                         <p class="small index_clearButton">
                             預定入住日期
-                            <span role="presentation" style="cursor: pointer">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="14"
-                                    height="14"
-                                    fill="$secondary"
-                                    class="bi bi-x-circle"
-                                    viewBox="0 0 16 16"
-                                >
-                                    <path
-                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                                    />
-                                    <path
-                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                                    />
-                                </svg>
-                                清除
-                            </span>
                         </p>
                         <Datepicker
                             v-model="selectMonth"
@@ -1222,9 +1203,6 @@ export default {
 
 <style src="@vueform/multiselect/themes/default.css"></style>
 <style src="@vueform/slider/themes/default.css">
-:root {
-    --slider-tooltip-bg: #945443;
-}
 .multiselect-tag.is-user {
     padding: 5px 8px;
     border-radius: 22px;
@@ -1575,12 +1553,5 @@ export default {
         cursor: pointer;
         z-index: 0;
     }
-}
-
-// label checked style
-.index_checked {
-    background-color: #fff7f4;
-    border: 1px solid $success;
-    z-index: 1;
 }
 </style>
