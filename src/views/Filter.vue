@@ -793,15 +793,15 @@
                             style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
                         ></div>
                         <div class="index_alert-group">
-                            <p
+                            <!-- <p
                                 class="small"
                                 style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px
                                         "
                             >
                                 顯示特定居住空間
-                            </p>
+                            </p> -->
                             <div class="index_dropdown-basic w-100">
-                                <select
+                                <!-- <select
                                     class="form-select form-select-sm index_dropdown-basic"
                                     aria-label=".form-select-sm example"
                                     v-model="selectedRoomSpaces"
@@ -818,7 +818,31 @@
                                     >
                                         {{ option.name }}
                                     </option>
-                                </select>
+                                </select> -->
+                                <div class="form-floating">
+                                    <select
+                                        class="form-select"
+                                        id="floatingSelect"
+                                        aria-label="Floating label select example"
+                                        v-model="selectedRoomSpaces"
+                                        @change="typeMenu"
+                                    >
+                                        <option selected disabled
+                                            >顯示特定居住空間</option
+                                        >
+                                        <option
+                                            v-for="(option,
+                                            keys) in specificLivingSpaces"
+                                            :key="keys"
+                                            :value="option.name"
+                                        >
+                                            {{ option.name }}
+                                        </option>
+                                    </select>
+                                    <label for="floatingSelect"
+                                        >選擇特定居住空間</label
+                                    >
+                                </div>
                             </div>
                         </div>
                         <div class="index_alert-group">
@@ -831,18 +855,31 @@
                             >
                                 房間坪數
                             </p>
-                            <label
-                                for="customRange3"
-                                class="form-label"
-                            ></label>
-                            <input
-                                type="range"
-                                class="form-range"
-                                min="0"
-                                max="5"
-                                step="0.5"
-                                id="customRange3"
+                            <Slider
+                                class="slider-primary"
+                                v-model="locationRange"
+                                :format="locationFormat"
+                                :step="locationStep"
+                                :min="locationMin"
+                                :max="locationMax"
+                                @change="checkEventBinding"
                             />
+                            <div
+                                class="index_unit pt-2 d-flex justify-content-between"
+                            >
+                                <div>
+                                    {{ locationRange[0] }} 坪數 /{{
+                                        (locationRange[0] * 3.3058).toFixed(2)
+                                    }}
+                                    m²
+                                </div>
+                                <div>
+                                    {{ locationRange[1] }} 坪數 /{{
+                                        (locationRange[1] * 3.3058).toFixed(2)
+                                    }}
+                                    m²
+                                </div>
+                            </div>
                         </div>
                         <div class="index_alert-selector-group">
                             <p
