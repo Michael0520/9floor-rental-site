@@ -485,15 +485,6 @@
                         >
                             價格/月
                         </h3>
-                        <!-- <label for="customRange3" class="form-label"></label>
-                        <input
-                            type="range"
-                            class="form-range"
-                            min="0"
-                            max="5"
-                            step="0.5"
-                            id="customRange3"
-                        /> -->
                         <Slider
                             class="slider-primary"
                             v-model="priceRange"
@@ -602,6 +593,7 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- 捷運資訊 -->
                         <div
                             class="accordion  accordion-flush "
                             id="accordionExample"
@@ -634,6 +626,7 @@
                                     data-bs-parent="#accordionExample"
                                 >
                                     <div class="accordion-body">
+                                        <!-- 捷運線 -->
                                         <div
                                             class="index_alert-group"
                                             style="padding:0"
@@ -663,6 +656,7 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <!-- 捷運站 -->
                                         <div
                                             class="index_alert-group"
                                             style="padding:0"
@@ -714,7 +708,6 @@
             >
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5></h5>
                         <button
                             type="button"
                             class="btn-close"
@@ -770,7 +763,7 @@
                             style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
                         ></div>
                         <!-- 居住空間 -->
-                        <div class="index_alert-group">
+                        <div class="index_alert-group pt-1">
                             <div class="index_dropdown-basic w-100">
                                 <div class="form-floating">
                                     <select
@@ -801,10 +794,9 @@
                         <!-- 坪數 Slider -->
                         <div class="index_alert-group">
                             <p
-                                class="small"
+                                class="small pb-5"
                                 style="
-                                        margin-bottom:7px;
-                                        font-size:13px;font-weight:300;letter-spacing:.6px
+                                        font-size:13px;font-weight:300;letter-spacing:.6px;
                                         "
                             >
                                 房間坪數
@@ -819,16 +811,17 @@
                                 @change="checkEventBinding"
                             />
                             <div
-                                class="index_unit pt-2 d-flex justify-content-between"
+                                class="index_unit pt-2 d-flex justify-content-between "
+                                style="font-size:12px;"
                             >
                                 <div>
-                                    {{ locationRange[0] }} 坪數 /{{
+                                    {{ locationRange[0] }} 坪 /{{
                                         (locationRange[0] * 3.3058).toFixed(2)
                                     }}
                                     m²
                                 </div>
                                 <div>
-                                    {{ locationRange[1] }} 坪數 /{{
+                                    {{ locationRange[1] }} 坪 /{{
                                         (locationRange[1] * 3.3058).toFixed(2)
                                     }}
                                     m²
