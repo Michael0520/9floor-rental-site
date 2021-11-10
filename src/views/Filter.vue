@@ -229,7 +229,7 @@
                                             :step="locationStep"
                                             :min="locationMin"
                                             :max="locationMax"
-                                            @change="checkEventBinding"
+                                            @change="typeMenu"
                                         />
                                         <div class="index_unit pt-2">
                                             <div>
