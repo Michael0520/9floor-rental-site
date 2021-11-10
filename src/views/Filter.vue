@@ -1150,10 +1150,10 @@ export default {
         },
         filterSearch(res) {
             if (this.cacheSearch === "") {
-                console.log("關鍵字0", this.cacheSearch);
+                // console.log("關鍵字0", this.cacheSearch);
             } else {
                 res = res.filter(item => {
-                    console.log(item);
+                    // console.log(item);
                     return (
                         item.name.match(this.cacheSearch) ||
                         item.secondName.match(this.cacheSearch)
