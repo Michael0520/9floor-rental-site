@@ -1208,10 +1208,16 @@ export default {
 <style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
-
+// date styles
+::v-global(.dp__overlay_cell_active) {
+    background-color: #945443;
+}
 // multiselect styles
 ::v-deep .multiselect-tag {
     background-color: #945443;
+}
+::v-deep .multiselect-placeholder {
+    font-size: 12px;
 }
 ::v-deep .multiselect.is-active {
     box-shadow: #945443 0px 10px 25px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
