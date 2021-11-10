@@ -1214,7 +1214,8 @@ export default {
 }
 // multiselect styles
 ::v-deep .multiselect-tag {
-    background-color: #945443;
+    // background-color: #945443;
+    background-color: #c77155;
 }
 ::v-deep .multiselect-placeholder {
     font-size: 12px;
@@ -1222,16 +1223,22 @@ export default {
 ::v-deep .multiselect.is-active {
     box-shadow: #945443 0px 10px 25px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+::v-deep .slider-handle:focus {
+    box-shadow: #945443 0px 5px 12px 0px, rgba(0, 0, 0, 0.03) 0px 0px 0px 1px;
+}
 // slider styles
 ::v-deep .slider-target {
     margin: 0 12px;
 }
 ::v-deep .slider-connect {
     background-color: #945443;
+    // background-color: #c77155;
 }
 ::v-deep .slider-tooltip {
-    background-color: #945443;
-    border: 1px solid #945443;
+    // background-color: #945443;
+    // border: 1px solid #945443;
+    background-color: #c77155;
+    border: 1px solid #c77155;
     font-size: 12px;
 }
 
