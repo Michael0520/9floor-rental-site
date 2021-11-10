@@ -1210,7 +1210,7 @@ export default {
 @import "../assets/custom.scss";
 // date styles
 ::v-global(.dp__overlay_cell_active) {
-    background-color: #945443;
+    background-color: #c77155;
 }
 // multiselect styles
 ::v-deep .multiselect-tag {
@@ -1232,11 +1232,8 @@ export default {
 }
 ::v-deep .slider-connect {
     background-color: #945443;
-    // background-color: #c77155;
 }
 ::v-deep .slider-tooltip {
-    // background-color: #945443;
-    // border: 1px solid #945443;
     background-color: #c77155;
     border: 1px solid #c77155;
     font-size: 12px;
