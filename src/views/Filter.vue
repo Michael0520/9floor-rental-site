@@ -158,6 +158,7 @@
                         <!-- @update:modelValue="setDate" -->
                         <!-- :modelValue="getDate" -->
                     </div>
+                    <!-- monthlyRent -->
                     <div class="index_range-group">
                         <p class="small pb-5">價格/月</p>
                         <Slider
@@ -453,7 +454,7 @@
         </div>
         <!-- Modal -->
         <div
-            class="modal fade"
+            class="modal fade modal-sm"
             id="booking-bar-price"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
@@ -702,6 +703,7 @@
             tabindex="-1"
             aria-labelledby="staticBackdropLabel"
             aria-hidden="true"
+            style="font-size:12px;"
         >
             <div
                 class="modal-dialog  modal-dialog-centered modal-dialog-scrollable"
@@ -833,7 +835,7 @@
                             <p
                                 class="small"
                                 style="
-                                        padding:0 17px;margin-bottom:7px;
+                                        margin-bottom:7px;
                                         font-size:13px;font-weight:300;letter-spacing:.6px
                                         "
                             >
@@ -900,7 +902,7 @@
                             <p
                                 class="small"
                                 style="
-                                        padding:0 17px;margin-bottom:7px;
+                                        margin-bottom:7px;
                                         font-size:13px;font-weight:300;letter-spacing:.6px
                                         "
                             >
@@ -968,15 +970,6 @@
                         ></div>
                         <!-- 居住特色 -->
                         <div class="index_alert-group">
-                            <p
-                                class="small"
-                                style="
-                                        margin-bottom:7px;
-                                        font-size:13px;font-weight:300;letter-spacing:.6px
-                                        "
-                            >
-                                顯示特定居住特色
-                            </p>
                             <div class="index_dropdown-basic w-100">
                                 <Multiselect
                                     v-model="selectedRoomFeatures"
@@ -1020,6 +1013,26 @@
                                     </template>
                                 </Multiselect>
                             </div>
+                        </div>
+                        <div class="index_division"></div>
+                        <!-- render 無法預定的房間 list -->
+                        <div
+                            class="form-check w-100 align-middle"
+                            style="font-size:12px; margin:0 17px;"
+                        >
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="flexCheckChecked"
+                                checked
+                            />
+                            <label
+                                class="form-check-label small"
+                                for="flexCheckChecked"
+                            >
+                                顯示目前無法預訂房間
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -1712,8 +1725,8 @@ export default {
 .index_alert-group {
     width: 100%;
     align-items: center;
-    margin-bottom: 24px;
-    padding: 0 17px;
+    margin-bottom: 12px;
+    padding: 0;
     p {
         flex-basis: 100px;
         flex-shrink: 0;
@@ -1724,7 +1737,7 @@ export default {
     display: flex;
     width: 100%;
     height: 30px;
-    padding: 0 17px;
+    padding: 0px;
     label {
         display: flex;
         width: 100%;
