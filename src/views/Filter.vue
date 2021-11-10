@@ -86,6 +86,16 @@
                 </div>
                 <!-- filter -->
                 <div class="index_room-filter">
+                    <!-- search-text -->
+                    <div class="form-floating index_dropdown-group">
+                        <textarea
+                            class="form-control"
+                            placeholder="Leave a comment here"
+                            id="floatingTextarea"
+                            v-model="cacheSearch"
+                        ></textarea>
+                        <label for="floatingTextarea">請輸入關鍵字</label>
+                    </div>
                     <!-- location -->
                     <div class="index_dropdown-group">
                         <p class="small">城市</p>
@@ -991,11 +1001,9 @@ export default {
             selectMonth: {
                 month: new Date().getMonth() + 1,
                 year: new Date().getFullYear()
-            }
-            // getDate: "",
-            // setDate: value => {
-            //     this.selectMonth.value = value;
-            // }
+            },
+            // input search
+            cacheSearch: ""
         };
     },
     methods: {
@@ -1558,5 +1566,12 @@ export default {
         cursor: pointer;
         z-index: 0;
     }
+}
+
+.form-control {
+    color: #857c7c;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem #ebae9a;
 }
 </style>
