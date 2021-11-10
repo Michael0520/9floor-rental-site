@@ -608,7 +608,7 @@
                                         data-bs-target="#collapseOne"
                                         aria-expanded="true"
                                         aria-controls="collapseOne"
-                                        style="font-size:12px;
+                                        style="
                                             font-weight:500;
                                             line-height:2;
                                             letter-spacing:.5px;
