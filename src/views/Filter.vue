@@ -640,6 +640,9 @@
                                                         class="form-select"
                                                         id="floatingSelect"
                                                         aria-label="Floating label select example"
+                                                        v-model="
+                                                            selectedMRTsLine
+                                                        "
                                                     >
                                                         <option
                                                             selected
@@ -648,10 +651,10 @@
                                                         >
                                                         <option
                                                             v-for="(option,
-                                                            keys) in MRTs"
+                                                            keys) in MRTsLine"
                                                             :key="keys"
                                                         >
-                                                            {{ option.line }}
+                                                            {{ option }}
                                                         </option>
                                                     </select>
                                                     <label for="floatingSelect"
@@ -681,10 +684,10 @@
                                                         >
                                                         <option
                                                             v-for="(option,
-                                                            keys) in MRTs"
+                                                            keys) in MRTsStation"
                                                             :key="keys"
                                                         >
-                                                            {{ option.name }}
+                                                            {{ option }}
                                                         </option>
                                                     </select>
                                                     <label for="floatingSelect"
@@ -1075,7 +1078,8 @@ export default {
             roomStyles: [],
             specificLivingSpaces: [],
             specificLivingFeatures: [],
-            MRTs: [],
+            MRTsLine: [],
+            MRTsStation: [],
             sites: [],
             // select array
             selectedLocation: "全國",
@@ -1088,7 +1092,8 @@ export default {
             selectedMobileLocation: "全國",
             selectedMobileSite: "全地區",
             selectedMobileRoomStyle: "請選擇房型",
-
+            selectedMRTsLine: "請選擇捷運線",
+            selectedMRTsStation: "請選擇捷運站",
             // price Slider
             priceRange: [4000, 42000],
             min: 4000,
@@ -1392,7 +1397,26 @@ export default {
                 this.roomStyles = this.roomOptions.roomStyle;
                 this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
                 this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
-                this.MRTs = this.roomOptions.MRT;
+                // this.MRTsLine = this.roomOptions.MRT.line;
+                // this.MRTsStation = this.roomOptions.MRT.name;
+
+                this.MRTsLine = this.roomOptions.MRT.map(
+                    (item, index, array) => {
+                        console.log(item, index, array);
+                        console.log(item.line);
+                        return item.line;
+                    }
+                );
+                console.log("捷運線們", this.MRTsLine);
+                this.MRTsStation = this.roomOptions.MRT.map(
+                    (item, index, array) => {
+                        console.log(item, index, array);
+                        console.log(item.line);
+                        return item.name;
+                    }
+                );
+                console.log("捷運站們", this.MRTsStation);
+
                 this.sites = this.roomOptions.site;
             })
             .catch(err => {
