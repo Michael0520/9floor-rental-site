@@ -149,7 +149,7 @@
                         <!-- :modelValue="getDate" -->
                     </div>
                     <div class="index_range-group">
-                        <p class="small pb-2">價格/月</p>
+                        <p class="small pb-5">價格/月</p>
                         <Slider
                             class="slider-primary"
                             v-model="priceRange"
@@ -212,7 +212,7 @@
                             >
                                 <div class="accordion-body py-10 px-0">
                                     <div class="index_range-group">
-                                        <p class="small pb-2">房間坪數</p>
+                                        <p class="small pb-5">房間坪數</p>
                                         <Slider
                                             class="slider-primary"
                                             v-model="locationRange"
@@ -1209,12 +1209,26 @@ export default {
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
+// multiselect styles
 ::v-deep .multiselect-tag {
     background-color: #945443;
 }
 ::v-deep .multiselect.is-active {
     box-shadow: #945443 0px 10px 25px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+// slider styles
+::v-deep .slider-target {
+    margin: 0 12px;
+}
+::v-deep .slider-connect {
+    background-color: #945443;
+}
+::v-deep .slider-tooltip {
+    background-color: #945443;
+    border: 1px solid #945443;
+    font-size: 12px;
+}
+
 .index_content {
     opacity: 1;
     transition: opacity 0.3s;
