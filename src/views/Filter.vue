@@ -1028,25 +1028,47 @@
                                 顯示特定居住特色
                             </p>
                             <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
+                                <Multiselect
+                                    v-model="selectedRoomFeatures"
+                                    mode="tags"
+                                    placeholder="顯示特定居住特色"
+                                    trackBy="name"
+                                    label="name"
+                                    :closeOnSelect="false"
+                                    :options="specificLivingFeatures"
+                                    :createTag="true"
+                                    @select="typeMenu"
+                                    @close="typeMenu"
+                                    @deselect="typeMenu"
                                 >
-                                    <option selected
-                                        >請選擇顯示特定居住特色</option
+                                    <template
+                                        v-slot:tag="{
+                                            option,
+                                            handleTagRemove,
+                                            disabled
+                                        }"
                                     >
-                                    <option
-                                        v-for="(option,
-                                        keys) in specificLivingFeatures"
-                                        :key="keys"
-                                    >
-                                        {{ option.name }}
-                                    </option>
-                                </select>
+                                        <div class="multiselect-tag is-user">
+                                            <img :src="option.image" />
+                                            {{ option.name }}
+                                            <span
+                                                v-if="!disabled"
+                                                class="multiselect-tag-remove"
+                                                @mousedown.prevent="
+                                                    handleTagRemove(
+                                                        option,
+                                                        $event
+                                                    )
+                                                "
+                                            >
+                                                <span
+                                                    class="multiselect-tag-remove-icon"
+                                                >
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </template>
+                                </Multiselect>
                             </div>
                         </div>
                     </div>
