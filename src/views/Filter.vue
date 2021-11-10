@@ -90,6 +90,7 @@
                             placeholder="Leave a comment here"
                             id="floatingTextarea"
                             v-model="cacheSearch"
+                            @input="typeMenu"
                         ></textarea>
                         <label for="floatingTextarea">請輸入關鍵字</label>
                     </div>
@@ -1007,13 +1008,15 @@ export default {
             res = this.filterByRoomFeature(res);
             res = this.filterByRoomPrice(res);
             res = this.filterByRoomFloor(res);
+            res = this.filterSearch(res);
             this.temp = [...res];
         },
         checkEventBinding() {
             console.log("Evnet 觸發");
             // console.log(this.rooms);
             // console.log(this.selectedRoomFeatures);
-            console.log("價格間距", this.priceRange);
+            // console.log("價格間距", this.priceRange);
+            // console.log("關鍵字", this.cacheSearch);
 
             this.typeMenu();
         },
@@ -1140,6 +1143,20 @@ export default {
                     return (
                         item.housingInformation >= locationMin &&
                         item.housingInformation <= locationMax
+                    );
+                });
+            }
+            return res;
+        },
+        filterSearch(res) {
+            if (this.cacheSearch === "") {
+                console.log("關鍵字0", this.cacheSearch);
+            } else {
+                res = res.filter(item => {
+                    console.log(item);
+                    return (
+                        item.name.match(this.cacheSearch) ||
+                        item.secondName.match(this.cacheSearch)
                     );
                 });
             }
