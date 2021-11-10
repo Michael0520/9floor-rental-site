@@ -1203,37 +1203,18 @@ export default {
 
 <style src="@vueform/multiselect/themes/default.css"></style>
 <style src="@vueform/slider/themes/default.css">
-.multiselect-tag.is-user {
-    padding: 5px 8px;
-    border-radius: 22px;
-    background: #945443;
-    margin: 3px 3px 8px;
-}
-
-.multiselect-tag.is-user img {
-    width: 18px;
-    border-radius: 50%;
-    height: 18px;
-    margin-right: 8px;
-    border: 2px solid #ffffffbf;
-}
-
-.multiselect-tag.is-user i:before {
-    color: #ffffff;
-    border-radius: 50%;
-}
-
-.user-image {
-    margin: 0 6px 0 0;
-    border-radius: 50%;
-    height: 22px;
-}
 </style>
 
 <style  lang="scss" scoped>
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
+::v-deep .multiselect-tag {
+    background-color: #945443;
+}
+::v-deep .multiselect.is-active {
+    box-shadow: #945443 0px 10px 25px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
 .index_content {
     opacity: 1;
     transition: opacity 0.3s;
