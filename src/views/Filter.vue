@@ -54,8 +54,10 @@
                                     index_dropdown-basic
                                 "
                                 aria-label=".form-select-sm example"
+                                @change="checkEventBinding"
+                                v-model="cacheSort"
                             >
-                                <option selected>最新</option>
+                                <option selected value="0">最新</option>
                                 <option value="1">最高價格</option>
                                 <option value="2">最低價格</option>
                             </select>
@@ -983,7 +985,8 @@ export default {
                 year: new Date().getFullYear()
             },
             // input search
-            cacheSearch: ""
+            cacheSearch: "",
+            cacheSort: "0"
         };
     },
     methods: {
@@ -1009,6 +1012,7 @@ export default {
             res = this.filterByRoomPrice(res);
             res = this.filterByRoomFloor(res);
             res = this.filterSearch(res);
+            res = this.filterRoomsSort(res);
             this.temp = [...res];
         },
         checkEventBinding() {
@@ -1158,6 +1162,22 @@ export default {
                         item.name.match(this.cacheSearch) ||
                         item.secondName.match(this.cacheSearch)
                     );
+                });
+            }
+            return res;
+        },
+        filterRoomsSort(res) {
+            if (this.cacheSort === "0") {
+                // console.log("最新", 0);
+            } else if (this.cacheSort === "2") {
+                res = res.sort((a, b) => {
+                    // console.log("最低價格", 1);
+                    return a.monthlyRent - b.monthlyRent;
+                });
+            } else {
+                res = res.sort((a, b) => {
+                    // console.log("最高價格", 2);
+                    return b.monthlyRent - a.monthlyRent;
                 });
             }
             return res;
