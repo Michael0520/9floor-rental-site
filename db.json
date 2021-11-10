@@ -458,6 +458,62 @@
                 "MRTstation": "科技大樓站",
                 "walkingTime": "12mins"
             }
+        },
+        {
+            "id": 8,
+            "name": "三重清新美宅",
+            "secondName": "私有公寓",
+            "roomStyle": "套房",
+            "monthlyRent": "21000",
+            "status": "招募中",
+            "doubleOccupancy": false,
+            "raisePet": false,
+            "imgUrl": "https://a0.muscache.com/im/pictures/b0f9b7ca-4078-4833-a1d8-5d0da5a1479e.jpg?im_w=1200",
+            "description": "近熱鬧的西門町(購物樂),台北車站,京站時尚廣場(搭一站捷運),淡水,101,永康街(芒果冰),士林夜市,華山文創園區(文青風),霞海城隍廟(可以求姻緣喔!),總統府,中正紀念堂,龍山寺,寧夏夜市(在地美食)......捷運四通八達。",
+            "location": "新北市",
+            "site": "三重區",
+            "facility": [
+                "保潔墊",
+                "冷氣",
+                "單人床",
+                "垃圾桶",
+                "書桌",
+                "椅子",
+                "檯燈",
+                "窗簾"
+            ],
+            "livingSpaceEquipment": [],
+            "initialPayment": {
+                "deposit": "NTD 22000",
+                "administrativeFee": "NTD 1500",
+                "checkOutCleaningFee": "NTD 1500"
+            },
+            "monthlyFee": {
+                "energyFee": "NTD 1300",
+                "serviceFee": "NTD 1300"
+            },
+            "shortTermRentalPlan": {
+                "shortTermRentalThreeToFive": "NTD 14300",
+                "shortTermRentalOneToTwo": "NTD 17600"
+            },
+            "housingInformation": 4,
+            "housingSpaceInformation": {
+                "balcony": true,
+                "kitchen": true,
+                "publicBathroom": "1間",
+                "buildRoomsNumber": "3間",
+                "totalFloor": "7樓",
+                "cleanUp": "每兩週一次",
+                "garbageDisposal": "每週兩次"
+            },
+            "nearbyFunction": [],
+            "trafficInformation": {
+                "MRTline": [
+                    "BR 文山內湖"
+                ],
+                "MRTstation": "科技大樓站",
+                "walkingTime": "12mins"
+            }
         }
     ],
     "roomOptions": {
@@ -474,7 +530,8 @@
         "site": [
             "大安區",
             "文山區",
-            "萬華區"
+            "萬華區",
+            "三重區"
         ],
         "MRT": [
             {
