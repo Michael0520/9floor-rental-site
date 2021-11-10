@@ -626,35 +626,38 @@
                                     aria-labelledby="headingOne"
                                     data-bs-parent="#accordionExample"
                                 >
-                                    <div class="accordion-body">
+                                    <div class="accordion-body py-10 px-0">
                                         <!-- 捷運線 -->
                                         <div
                                             class="index_alert-group"
                                             style="padding:0"
                                         >
-                                            <p class="small">捷運線</p>
                                             <div
                                                 class="index_dropdown-basic w-100"
                                             >
-                                                <select
-                                                    class="form-select form-select-sm"
-                                                    aria-label="Default select example"
-                                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                                >
-                                                    <option selected
-                                                        >請選擇捷運線</option
+                                                <div class="form-floating">
+                                                    <select
+                                                        class="form-select"
+                                                        id="floatingSelect"
+                                                        aria-label="Floating label select example"
                                                     >
-                                                    <option
-                                                        v-for="(option,
-                                                        keys) in MRTs"
-                                                        :key="keys"
+                                                        <option
+                                                            selected
+                                                            disabled
+                                                            >請選擇捷運線</option
+                                                        >
+                                                        <option
+                                                            v-for="(option,
+                                                            keys) in MRTs"
+                                                            :key="keys"
+                                                        >
+                                                            {{ option.line }}
+                                                        </option>
+                                                    </select>
+                                                    <label for="floatingSelect"
+                                                        >捷運線</label
                                                     >
-                                                        {{ option.line }}
-                                                    </option>
-                                                </select>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- 捷運站 -->
@@ -662,29 +665,32 @@
                                             class="index_alert-group"
                                             style="padding:0"
                                         >
-                                            <p class="small">捷運站</p>
                                             <div
                                                 class="index_dropdown-basic w-100"
                                             >
-                                                <select
-                                                    class="form-select form-select-sm"
-                                                    aria-label="Default select example"
-                                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                                >
-                                                    <option selected
-                                                        >請選擇捷運站</option
+                                                <div class="form-floating">
+                                                    <select
+                                                        class="form-select"
+                                                        id="floatingSelect"
+                                                        aria-label="Floating label select example"
                                                     >
-                                                    <option
-                                                        v-for="(option,
-                                                        keys) in MRTs"
-                                                        :key="keys"
+                                                        <option
+                                                            selected
+                                                            disabled
+                                                            >請選擇捷運站</option
+                                                        >
+                                                        <option
+                                                            v-for="(option,
+                                                            keys) in MRTs"
+                                                            :key="keys"
+                                                        >
+                                                            {{ option.name }}
+                                                        </option>
+                                                    </select>
+                                                    <label for="floatingSelect"
+                                                        >捷運站</label
                                                     >
-                                                        {{ option.name }}
-                                                    </option>
-                                                </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
