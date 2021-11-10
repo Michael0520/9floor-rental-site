@@ -780,6 +780,12 @@
                             >
                                 預訂入住日期
                             </p>
+                            <Datepicker
+                                v-model="selectMonth"
+                                monthPicker
+                                autoApply
+                                placeholder="請選擇預訂日期"
+                            ></Datepicker>
                         </div>
                         <div></div>
                         <div
