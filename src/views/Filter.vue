@@ -477,14 +477,15 @@
                     </div>
                     <div class="modal-body">
                         <h3
+                            class=""
                             style="
-                                        padding:0 17px;margin-bottom:14px;
+                                        padding:0px 17px;padding-bottom:50px;
                                         font-size:13px;font-weight:500;letter-spacing:.6px
                                         "
                         >
                             價格/月
                         </h3>
-                        <label for="customRange3" class="form-label"></label>
+                        <!-- <label for="customRange3" class="form-label"></label>
                         <input
                             type="range"
                             class="form-range"
@@ -492,7 +493,22 @@
                             max="5"
                             step="0.5"
                             id="customRange3"
+                        /> -->
+                        <Slider
+                            class="slider-primary"
+                            v-model="priceRange"
+                            :format="format"
+                            :step="step"
+                            :min="min"
+                            :max="max"
+                            @change="typeMenu"
                         />
+                        <div
+                            class="index_unit pt-2 d-flex justify-content-between"
+                        >
+                            <div>NTD {{ priceRange[0] }}</div>
+                            <div>NTD {{ priceRange[1] }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -538,12 +554,19 @@
                                     style="width:100%;min-height:30px;
                                         border:1px solid #d2c8bd;
                                         outline:none;
-                                        transition:border .2s ease-out"
+                                        transition:border .2s ease-out;
+                                        "
+                                    v-model="selectedMobileLocation"
+                                    @change="typeMoblieMenu"
                                 >
-                                    <option selected>請選擇城市</option>
+                                    <!-- <option selected disabled
+                                        >請選擇城市</option
+                                    > -->
+                                    <option value="全國">全國</option>
                                     <option
                                         v-for="(option, keys) in locations"
                                         :key="keys"
+                                        :value="option.name"
                                     >
                                         {{ option.name }}
                                     </option>
@@ -560,9 +583,22 @@
                                         border:1px solid #d2c8bd;
                                         outline:none;
                                         transition:border .2s ease-out"
+                                    v-model="selectedMobileSite"
+                                    @change="typeMoblieMenu"
                                 >
-                                    <option selected>請選擇地區</option>
-                                    <option value="1">One</option>
+                                    <!-- <option selected disabled
+                                        >請選擇地區</option
+                                    > -->
+                                    <option selected value="全地區"
+                                        >全地區</option
+                                    >
+                                    <option
+                                        v-for="(option, keys) in sites"
+                                        :key="keys"
+                                        :value="option"
+                                    >
+                                        {{ option }}
+                                    </option>
                                 </select>
                             </div>
                         </div>
@@ -689,13 +725,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="index_alert-group">
-                            <p
+                            <!-- <p
                                 class="small"
                                 style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px"
                             >
                                 房型
-                            </p>
-                            <div class="index_dropdown-basic w-100">
+                            </p> -->
+                            <!-- <div class="index_dropdown-basic w-100">
                                 <select
                                     class="form-select form-select-sm"
                                     aria-label="Default select example"
@@ -712,6 +748,27 @@
                                         {{ option.name }}
                                     </option>
                                 </select>
+                            </div> -->
+                            <div class="form-floating">
+                                <select
+                                    class="form-select"
+                                    id="floatingSelect"
+                                    aria-label="Floating label select example"
+                                    v-model="selectedMobileRoomStyle"
+                                    @change="typeMoblieMenu"
+                                >
+                                    <option selected disabled
+                                        >請選擇房型</option
+                                    >
+                                    <option
+                                        v-for="(option, keys) in roomStyles"
+                                        :key="keys"
+                                        :value="option.name"
+                                    >
+                                        {{ option.name }}
+                                    </option>
+                                </select>
+                                <label for="floatingSelect">房型種類</label>
                             </div>
                         </div>
                         <div class="index_alert-group">
@@ -739,20 +796,19 @@
                             </p>
                             <div class="index_dropdown-basic w-100">
                                 <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
+                                    class="form-select form-select-sm index_dropdown-basic"
+                                    aria-label=".form-select-sm example"
+                                    v-model="selectedRoomSpaces"
+                                    @change="typeMenu"
                                 >
-                                    <option selected
-                                        >請選擇顯示特定居住空間</option
+                                    <option selected disabled
+                                        >顯示特定居住空間</option
                                     >
                                     <option
                                         v-for="(option,
                                         keys) in specificLivingSpaces"
                                         :key="keys"
+                                        :value="option.name"
                                     >
                                         {{ option.name }}
                                     </option>
@@ -948,6 +1004,7 @@ export default {
             specificLivingSpaces: [],
             specificLivingFeatures: [],
             MRTs: [],
+            sites: [],
             // select array
             selectedLocation: "全國",
             selectedRoomStyles: [],
@@ -955,8 +1012,12 @@ export default {
             selectedRoomFeatures: [],
             selectedDoubleOccupancy: 0,
             selectedRaisePet: 0,
-            // value: [],
-            // options: ["Batman", "Robin", "Joker"],
+            // mobile selected
+            selectedMobileLocation: "全國",
+            selectedMobileSite: "全地區",
+            selectedMobileRoomStyle: "請選擇房型",
+
+            // price Slider
             priceRange: [4000, 42000],
             min: 4000,
             max: 42000,
@@ -998,6 +1059,13 @@ export default {
         },
         clickLabel() {
             this.isChecked = !this.isChecked;
+        },
+        typeMoblieMenu() {
+            let mobileRes = this.rooms;
+            mobileRes = this.filterRoomsMoblieLocation(mobileRes);
+            mobileRes = this.filterRoomsMoblieSite(mobileRes);
+            mobileRes = this.filterRoomsMobileRoomStyle(mobileRes);
+            this.temp = [...mobileRes];
         },
         typeMenu() {
             // filter options
@@ -1181,6 +1249,42 @@ export default {
                 });
             }
             return res;
+        },
+        // mobile menu
+        filterRoomsMoblieLocation(mobileRes) {
+            if (this.selectedMobileLocation === "全國") {
+                // ...arg 傳參考避免出錯
+                console.log(this.selectedMobileLocation);
+            } else {
+                mobileRes = mobileRes.filter(item => {
+                    console.log(this.selectedMobileLocation);
+                    return item.location === this.selectedMobileLocation;
+                });
+            }
+
+            return mobileRes;
+        },
+        filterRoomsMoblieSite(mobileRes) {
+            if (this.selectedMobileSite === "全地區") {
+                //
+            } else {
+                mobileRes = mobileRes.filter(item => {
+                    // console.log(item.site);
+                    return item.site === this.selectedMobileSite;
+                });
+            }
+
+            return mobileRes;
+        },
+        filterRoomsMobileRoomStyle(mobileRes) {
+            if (this.selectedMobileRoomStyle === "請選擇房型") {
+                console.log("請選擇房型", this.selectedMobileRoomStyle);
+            } else {
+                mobileRes = mobileRes.filter(item => {
+                    return item.roomStyle === this.selectedMobileRoomStyle;
+                });
+            }
+            return mobileRes;
         }
     },
     components: {
@@ -1217,6 +1321,7 @@ export default {
                 this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
                 this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
                 this.MRTs = this.roomOptions.MRT;
+                this.sites = this.roomOptions.site;
             })
             .catch(err => {
                 console.warn(err);
