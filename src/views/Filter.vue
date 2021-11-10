@@ -69,9 +69,6 @@
                                 v-for="(room, index) in temp"
                                 :key="index"
                             >
-                                <!-- TODO: v-for 的 rooms 要改為 computed
-                            的 typeMenu ，但發生錯誤，說卡片元件會取得不到資料
-                            -->
                                 <RoomCard
                                     :price="room.monthlyRent"
                                     :name="room.name"
@@ -185,7 +182,6 @@
                             @change="typeMenu"
                         >
                             <option selected disabled>顯示特定居住空間</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
                             <option
                                 v-for="(option, keys) in specificLivingSpaces"
                                 :key="keys"
@@ -724,25 +720,8 @@
                             >
                                 預訂入住日期
                             </p>
-                            <!-- TODO:要使用 bootstrap Data input -->
-                            <!-- <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                >
-                                    <option selected>請選擇預訂入住日期</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                </select>
-                            </div> -->
                         </div>
-                        <div>
-                            <!-- <Datepicker v-model="date"></Datepicker> -->
-                        </div>
+                        <div></div>
                         <div
                             class="index_division"
                             style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
