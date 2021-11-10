@@ -724,31 +724,8 @@
                         ></button>
                     </div>
                     <div class="modal-body">
+                        <!-- 選擇房型 -->
                         <div class="index_alert-group">
-                            <!-- <p
-                                class="small"
-                                style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px"
-                            >
-                                房型
-                            </p> -->
-                            <!-- <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                >
-                                    <option selected>請選擇房型</option>
-                                    <option
-                                        v-for="(option, keys) in roomStyles"
-                                        :key="keys"
-                                    >
-                                        {{ option.name }}
-                                    </option>
-                                </select>
-                            </div> -->
                             <div class="form-floating">
                                 <select
                                     class="form-select"
@@ -771,6 +748,7 @@
                                 <label for="floatingSelect">房型種類</label>
                             </div>
                         </div>
+                        <!-- 預訂日期 -->
                         <div class="index_alert-group">
                             <p
                                 class="small"
@@ -787,38 +765,13 @@
                                 placeholder="請選擇預訂日期"
                             ></Datepicker>
                         </div>
-                        <div></div>
                         <div
                             class="index_division"
                             style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
                         ></div>
+                        <!-- 居住空間 -->
                         <div class="index_alert-group">
-                            <!-- <p
-                                class="small"
-                                style="margin-bottom:7px;font-size:13px;font-weight:300;letter-spacing:.6px
-                                        "
-                            >
-                                顯示特定居住空間
-                            </p> -->
                             <div class="index_dropdown-basic w-100">
-                                <!-- <select
-                                    class="form-select form-select-sm index_dropdown-basic"
-                                    aria-label=".form-select-sm example"
-                                    v-model="selectedRoomSpaces"
-                                    @change="typeMenu"
-                                >
-                                    <option selected disabled
-                                        >顯示特定居住空間</option
-                                    >
-                                    <option
-                                        v-for="(option,
-                                        keys) in specificLivingSpaces"
-                                        :key="keys"
-                                        :value="option.name"
-                                    >
-                                        {{ option.name }}
-                                    </option>
-                                </select> -->
                                 <div class="form-floating">
                                     <select
                                         class="form-select"
@@ -845,6 +798,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 坪數 Slider -->
                         <div class="index_alert-group">
                             <p
                                 class="small"
@@ -881,6 +835,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 第二人入住 -->
                         <div class="index_alert-selector-group">
                             <p
                                 class="small"
@@ -947,6 +902,7 @@
                                 >
                             </div>
                         </div>
+                        <!-- 養寵物 -->
                         <div class="index_alert-selector-group">
                             <p
                                 class="small"
@@ -1017,6 +973,7 @@
                             class="index_division"
                             style="height:1px;background-color:#d2c8bd;margin:26px 0 12px;"
                         ></div>
+                        <!-- 居住特色 -->
                         <div class="index_alert-group">
                             <p
                                 class="small"
