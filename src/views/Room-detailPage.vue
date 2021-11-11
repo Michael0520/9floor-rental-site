@@ -57,12 +57,15 @@
                 <div class="index_banner-detail-content">
                     <div>
                         <div class="index_vertical-title index_subTitle">
-                            <span>仁</span><span>愛</span>
+                            <!-- <span>仁</span><span>愛</span> -->
+                            <span>{{ roomsTitle }}</span>
                         </div>
                         <div class="index_vertical-title">
-                            <span>仁</span><span>愛</span><span> </span
-                            ><span>R</span><span>o</span><span>o</span
-                            ><span>m</span><span>A</span>
+                            <span
+                                v-for="(item, index) in roomsSecondTitle"
+                                :key="index"
+                                >{{ item }}</span
+                            >
                         </div>
                     </div>
                 </div>
@@ -931,7 +934,9 @@ export default {
             isTop: false,
             //
             roomsInfo: {},
-            roomsImgUrl: ""
+            roomsImgUrl: "",
+            roomsTitle: "",
+            roomsSecondTitle: []
         };
     },
     components: {
@@ -979,10 +984,15 @@ export default {
                 "background-image": `url(${image})`
             };
         }
+        // forEachSecondTitle(name){
+
+        // }
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
         this.roomsImgUrl = this.roomsInfo.imgUrl;
+        this.roomsTitle = this.roomsInfo.name;
+        this.roomsSecondTitle = this.roomsInfo.secondName;
     },
 
     mounted() {
