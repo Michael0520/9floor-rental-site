@@ -203,12 +203,15 @@
                                 <div class="col-lg-6 col-sm-12">
                                     <div class="index_room-info-left">
                                         <!-- TODO:房屋標題 -->
-                                        <h2>仁愛 RoomA</h2>
+                                        <h2>{{ roomsSecondTitle }}</h2>
                                         <!-- TODO:房屋區域 -->
                                         <div class="index_apartment-name">
-                                            仁愛
+                                            {{ roomsTitle }}
                                         </div>
-                                        <p>台北市 大安區 獨立套房</p>
+                                        <p>
+                                            {{ roomsLocation }} {{ roomsSite }}
+                                            {{ roomsRoomStyle }}
+                                        </p>
                                         <div
                                             class="
                                                     index_detail-title
@@ -296,19 +299,31 @@
                                                 <div>
                                                     <p>押金</p>
                                                     <p>
-                                                        <span>NTD 33000</span>
+                                                        <span>
+                                                            {{
+                                                                roomsDeposit
+                                                            }}</span
+                                                        >
                                                     </p>
                                                 </div>
                                                 <div>
                                                     <p>行政手續費</p>
                                                     <p>
-                                                        <span>NTD 1500</span>
+                                                        <span>
+                                                            {{
+                                                                roomsAdministrativeFee
+                                                            }}
+                                                        </span>
                                                     </p>
                                                 </div>
                                                 <div>
                                                     <p>退房清潔費</p>
                                                     <p>
-                                                        <span>NTD 1500</span>
+                                                        <span>
+                                                            {{
+                                                                roomsCheckOutCleaningFee
+                                                            }}
+                                                        </span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -332,7 +347,12 @@
                                                 <div>
                                                     <p>月租金</p>
                                                     <p>
-                                                        <span>NTD 16500</span>
+                                                        <span
+                                                            >NTD
+                                                            {{
+                                                                roomsPrice
+                                                            }}</span
+                                                        >
                                                         /月
                                                     </p>
                                                 </div>
@@ -374,7 +394,9 @@
                                                         </span>
                                                     </p>
                                                     <p>
-                                                        <span>NTD 2000</span>
+                                                        <span>
+                                                            {{ roomsEnergyFee }}
+                                                        </span>
                                                         /月
                                                     </p>
                                                 </div>
@@ -416,7 +438,9 @@
                                                         </span>
                                                     </p>
                                                     <p>
-                                                        <span>NTD 1500</span>
+                                                        <span>{{
+                                                            roomsServiceFee
+                                                        }}</span>
                                                         /月
                                                     </p>
                                                 </div>
@@ -441,13 +465,21 @@
                                                 <div>
                                                     <p>短租3-5月</p>
                                                     <p>
-                                                        <span>NTD 33000</span>
+                                                        <span>
+                                                            {{
+                                                                roomsShortTermRentalThreeToFive
+                                                            }}
+                                                        </span>
                                                     </p>
                                                 </div>
                                                 <div>
                                                     <p>短租1-2月</p>
                                                     <p>
-                                                        <span>NTD 26400</span>
+                                                        <span>
+                                                            {{
+                                                                roomsShortTermRentalOneToTwo
+                                                            }}</span
+                                                        >
                                                         /月
                                                     </p>
                                                 </div>
@@ -471,11 +503,11 @@
                                             <div class="index_one-column">
                                                 <div>
                                                     <p>房型</p>
-                                                    <p>獨立房型</p>
+                                                    <p>{{ roomsRoomStyle }}</p>
                                                 </div>
                                                 <div>
                                                     <p>面積</p>
-                                                    <p>0坪 / 0 m²</p>
+                                                    <p>{{ roomsArea }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -937,7 +969,22 @@ export default {
             roomsTitle: "",
             roomsSecondTitle: [],
             roomsStatus: "",
-            roomsPrice: Number
+            roomsPrice: Number,
+            roomsLocation: "",
+            roomsSite: "",
+            roomsRoomStyle: "",
+            // 首款期項
+            roomsDeposit: "",
+            roomsAdministrativeFee: "",
+            roomsCheckOutCleaningFee: "",
+            // 每月小記
+            roomsEnergyFee: "",
+            roomsServiceFee: "",
+            // 短租方案
+            roomsShortTermRentalThreeToFive: "",
+            roomsShortTermRentalOneToTwo: "",
+            // 面積
+            roomsArea: ""
         };
     },
     components: {
@@ -993,6 +1040,21 @@ export default {
         this.roomsSecondTitle = this.roomsInfo.secondName;
         this.roomsStatus = this.roomsInfo.status;
         this.roomsPrice = this.roomsInfo.monthlyRent;
+        this.roomsLocation = this.roomsInfo.location;
+        this.roomsSite = this.roomsInfo.site;
+        this.roomsRoomStyle = this.roomsInfo.roomStyle;
+        // 首期款項
+        this.roomsDeposit = this.roomsInfo.initialPayment.deposit;
+        this.roomsAdministrativeFee = this.roomsInfo.initialPayment.administrativeFee;
+        this.roomsCheckOutCleaningFee = this.roomsInfo.initialPayment.checkOutCleaningFee;
+        // 每月小記
+        this.roomsEnergyFee = this.roomsInfo.monthlyFee.energyFee;
+        this.roomsServiceFee = this.roomsInfo.monthlyFee.serviceFee;
+        // 短租方案
+        this.roomsShortTermRentalThreeToFive = this.roomsInfo.shortTermRentalPlan.shortTermRentalThreeToFive;
+        this.roomsShortTermRentalOneToTwo = this.roomsInfo.shortTermRentalPlan.shortTermRentalOneToTwo;
+        // 面積
+        this.roomsArea = this.roomsInfo.area;
     },
 
     mounted() {
