@@ -930,7 +930,11 @@ export default {
         return {
             name: "RoomDetailPage",
             scrollNum: 0,
-            isTop: false
+            isTop: false,
+            //
+            userInfo: {},
+            post: null,
+            error: null
         };
     },
     components: {
@@ -939,6 +943,11 @@ export default {
         SiderBar,
         RoomCard,
         NavBar
+    },
+    computed: {
+        roomId() {
+            return this.$route.params.id;
+        }
     },
     methods: {
         scrollEvent() {
@@ -955,8 +964,24 @@ export default {
                     this.isTop = false;
                 }
             });
+        },
+        getPost(id) {
+            this.axios
+                .get("http://localhost:3000/rooms/" + id)
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(err => {
+                    console.warn(err);
+                });
         }
     },
+    async created() {
+        this.userInfo = await this.getPost(this.$route.params.id);
+    },
+    // created() {
+    //     this.userInfo = this.getPost(this.$route.params.id);
+    // },
     mounted() {
         // if isTop = 0 , add transparent class , else remove
         window.addEventListener("scroll", () => {
