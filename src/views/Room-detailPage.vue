@@ -14,9 +14,7 @@
                                         transform: translate(1727px, 0px)
                                         translateZ(0px); -->
                             <div
-                                style="
-                                        background-image: url('https://9floor.co/backend/web/roomPhoto/20200902-50a611e8ecd6f999ca037a57539c8465.png');
-                                    "
+                                :style="backgroundStyles(this.roomsImgUrl)"
                             ></div>
                         </div>
                     </div>
@@ -932,7 +930,8 @@ export default {
             scrollNum: 0,
             isTop: false,
             //
-            roomsInfo: {}
+            roomsInfo: {},
+            roomsImgUrl: ""
         };
     },
     components: {
@@ -973,10 +972,17 @@ export default {
                 .catch(err => {
                     console.warn(err);
                 });
+        },
+        backgroundStyles(image) {
+            return {
+                // any other styles you might need to add on as an example
+                "background-image": `url(${image})`
+            };
         }
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
+        this.roomsImgUrl = this.roomsInfo.imgUrl;
     },
 
     mounted() {
@@ -994,8 +1000,6 @@ export default {
                 this.isTop = false;
             }
         });
-
-        // axios
     }
 };
 </script>
