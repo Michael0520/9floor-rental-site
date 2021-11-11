@@ -539,9 +539,11 @@
                                         </div>
                                         <div
                                             class="index_mobile-show-image"
-                                            style="
-                                                    background-image: url('https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png');
-                                                "
+                                            :style="
+                                                backgroundStyles(
+                                                    this.roomsSecondImgUrl
+                                                )
+                                            "
                                         ></div>
                                     </div>
                                 </div>
@@ -688,7 +690,7 @@
                                     >
                                         <div class="index_images">
                                             <img
-                                                src="https://9floor.co/backend/web/apartmentPhoto/20200902-7b16efcca81fa7b3e80ffb6ed0265e5a.png"
+                                                :src="roomsSecondImgUrl"
                                                 alt="slider"
                                             />
                                         </div>
@@ -826,7 +828,7 @@
                                                 >directions_railway</i
                                             >
                                             <div class="index_column">
-                                                <p>忠孝新生站</p>
+                                                <p>{{ roomsMRTsStation }}</p>
                                                 <p class="small">
                                                     <i
                                                         class="
@@ -838,7 +840,8 @@
                                                                 font-size: 14px;
                                                             "
                                                         >directions_walk</i
-                                                    >8mins
+                                                    >
+                                                    {{ roomsWalkingTime }}
                                                 </p>
                                             </div>
                                         </div>
@@ -966,6 +969,7 @@ export default {
             //
             roomsInfo: {},
             roomsImgUrl: "",
+            roomsSecondImgUrl: "",
             roomsTitle: "",
             roomsSecondTitle: [],
             roomsStatus: "",
@@ -984,7 +988,11 @@ export default {
             roomsShortTermRentalThreeToFive: "",
             roomsShortTermRentalOneToTwo: "",
             // 面積
-            roomsArea: ""
+            roomsArea: "",
+            // 捷運站
+            roomsMRTsLine: [],
+            roomsMRTsStation: "",
+            roomsWalkingTime: ""
         };
     },
     components: {
@@ -1035,7 +1043,10 @@ export default {
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
+        // image
         this.roomsImgUrl = this.roomsInfo.imgUrl;
+        this.roomsSecondImgUrl = this.roomsInfo.secondImgUrl;
+        //
         this.roomsTitle = this.roomsInfo.name;
         this.roomsSecondTitle = this.roomsInfo.secondName;
         this.roomsStatus = this.roomsInfo.status;
@@ -1055,6 +1066,10 @@ export default {
         this.roomsShortTermRentalOneToTwo = this.roomsInfo.shortTermRentalPlan.shortTermRentalOneToTwo;
         // 面積
         this.roomsArea = this.roomsInfo.area;
+        // 捷運站
+        this.roomsMRTsLine = this.roomsInfo.trafficInformation.MRTline;
+        this.roomsMRTsStation = this.roomsInfo.trafficInformation.MRTstation;
+        this.roomsWalkingTime = this.roomsInfo.trafficInformation.walkingTime;
     },
 
     mounted() {
