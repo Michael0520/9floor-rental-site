@@ -963,11 +963,12 @@ export default {
                 }
             });
         },
-        getRooms(id) {
-            this.axios
+        async getRooms(id) {
+            return await this.axios
                 .get("http://localhost:3000/rooms/" + id)
                 .then(result => {
                     console.log(result);
+                    return result.data;
                 })
                 .catch(err => {
                     console.warn(err);
