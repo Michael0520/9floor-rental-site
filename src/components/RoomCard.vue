@@ -1,7 +1,7 @@
 <template>
     <div class="index_room-card">
         <div class="index_card-wrapper">
-            <router-link to="#">
+            <router-link :to="`/rooms/${id}`">
                 <div
                     class="index_card-image img-fluid"
                     :style="backgroundStyles(image)"
@@ -58,7 +58,7 @@ export default {
             };
         }
     },
-    props: ["name", "secondName", "roomStyle", "status", "price", "image"]
+    props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
 };
 </script>
 

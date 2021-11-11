@@ -78,6 +78,7 @@
                                     :roomStyle="room.roomStyle"
                                     :status="room.status"
                                     :image="room.imgUrl"
+                                    :id="room.id"
                                 />
                             </div>
                         </div>
@@ -643,6 +644,7 @@
                                                         v-model="
                                                             selectedMRTsLine
                                                         "
+                                                        @change="typeMoblieMenu"
                                                     >
                                                         <option
                                                             selected
@@ -1142,6 +1144,7 @@ export default {
             mobileRes = this.filterRoomsMoblieLocation(mobileRes);
             mobileRes = this.filterRoomsMoblieSite(mobileRes);
             mobileRes = this.filterRoomsMobileRoomStyle(mobileRes);
+            mobileRes = this.filterRoomsMobileMRTsLine(mobileRes);
             this.temp = [...mobileRes];
         },
         typeMenu() {
@@ -1331,7 +1334,7 @@ export default {
         filterRoomsMoblieLocation(mobileRes) {
             if (this.selectedMobileLocation === "全國") {
                 // ...arg 傳參考避免出錯
-                console.log(this.selectedMobileLocation);
+                // console.log(this.selectedMobileLocation);
             } else {
                 mobileRes = mobileRes.filter(item => {
                     console.log(this.selectedMobileLocation);
@@ -1355,10 +1358,24 @@ export default {
         },
         filterRoomsMobileRoomStyle(mobileRes) {
             if (this.selectedMobileRoomStyle === "請選擇房型") {
-                console.log("請選擇房型", this.selectedMobileRoomStyle);
+                // console.log("請選擇房型", this.selectedMobileRoomStyle);
             } else {
                 mobileRes = mobileRes.filter(item => {
                     return item.roomStyle === this.selectedMobileRoomStyle;
+                });
+            }
+            return mobileRes;
+        },
+        filterRoomsMobileMRTsLine(mobileRes) {
+            if (this.selectedMRTsLine === "請選擇捷運線") {
+                // console.log("請選擇房型", this.selectedMRTsLine);
+            } else {
+                mobileRes = mobileRes.filter(item => {
+                    console.log("捷運線名稱", item.trafficInformation.MRTline);
+                    return (
+                        item.trafficInformation.MRTline ===
+                        this.selectedMRTsLine
+                    );
                 });
             }
             return mobileRes;
@@ -1397,25 +1414,18 @@ export default {
                 this.roomStyles = this.roomOptions.roomStyle;
                 this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
                 this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
-                // this.MRTsLine = this.roomOptions.MRT.line;
-                // this.MRTsStation = this.roomOptions.MRT.name;
-
-                this.MRTsLine = this.roomOptions.MRT.map(
-                    (item, index, array) => {
-                        console.log(item, index, array);
-                        console.log(item.line);
-                        return item.line;
-                    }
-                );
-                console.log("捷運線們", this.MRTsLine);
-                this.MRTsStation = this.roomOptions.MRT.map(
-                    (item, index, array) => {
-                        console.log(item, index, array);
-                        console.log(item.line);
-                        return item.name;
-                    }
-                );
-                console.log("捷運站們", this.MRTsStation);
+                this.MRTsLine = this.roomOptions.MRT.map(item => {
+                    // console.log(item, index, array);
+                    // console.log(item.line);
+                    return item.line;
+                });
+                // console.log("捷運線們", this.MRTsLine);
+                this.MRTsStation = this.roomOptions.MRT.map(item => {
+                    // console.log(item, index, array);
+                    // console.log(item.line);
+                    return item.name;
+                });
+                // console.log("捷運站們", this.MRTsStation);
 
                 this.sites = this.roomOptions.site;
             })
