@@ -103,12 +103,12 @@
                         <div class="index_booking-bar-left">
                             <div class="index_status">
                                 <span
-                                    ><p class="small">招募中</p>
+                                    ><p class="small">{{ roomsStatus }}</p>
                                     <p class="index_date"></p>
                                 </span>
                                 <!-- TODO:房間租金 -->
                                 <span class="index_price index_tablet-show"
-                                    >NTD 16500
+                                    >NTD {{ roomsPrice }}
                                     <span class="index_small">/月</span>
                                 </span>
                                 <button
@@ -128,20 +128,19 @@
                                 </button>
                             </div>
                             <!-- TODO:router-link to 區域詳細資訊頁面-->
-                            <router-link
-                                class="index_apartment-name"
-                                to="/apartment/1"
-                                >仁愛</router-link
-                            >
+                            <router-link class="index_apartment-name" to="#">
+                                {{ roomsTitle }}
+                            </router-link>
                             <!-- TODO:房間 title -->
-                            <div class="index_room-name">仁愛 RoomA</div>
+                            <div class="index_room-name">
+                                {{ roomsSecondTitle }}
+                            </div>
                         </div>
                         <div class="index_booking-bar-right">
                             <!-- TODO:房屋租金 -->
                             <span class="index_price index_tablet-hide"
-                                >NTD 16500<span class="index_small"
-                                    >/月</span
-                                ></span
+                                >NTD {{ roomsPrice }}
+                                <span class="index_small">/月</span></span
                             ><button
                                 class="
                                         index_button-icon
@@ -936,7 +935,9 @@ export default {
             roomsInfo: {},
             roomsImgUrl: "",
             roomsTitle: "",
-            roomsSecondTitle: []
+            roomsSecondTitle: [],
+            roomsStatus: "",
+            roomsPrice: Number
         };
     },
     components: {
@@ -984,15 +985,14 @@ export default {
                 "background-image": `url(${image})`
             };
         }
-        // forEachSecondTitle(name){
-
-        // }
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
         this.roomsImgUrl = this.roomsInfo.imgUrl;
         this.roomsTitle = this.roomsInfo.name;
         this.roomsSecondTitle = this.roomsInfo.secondName;
+        this.roomsStatus = this.roomsInfo.status;
+        this.roomsPrice = this.roomsInfo.monthlyRent;
     },
 
     mounted() {
