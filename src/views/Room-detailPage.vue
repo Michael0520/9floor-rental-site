@@ -932,9 +932,7 @@ export default {
             scrollNum: 0,
             isTop: false,
             //
-            userInfo: {},
-            post: null,
-            error: null
+            roomsInfo: {}
         };
     },
     components: {
@@ -965,7 +963,7 @@ export default {
                 }
             });
         },
-        getPost(id) {
+        getRooms(id) {
             this.axios
                 .get("http://localhost:3000/rooms/" + id)
                 .then(result => {
@@ -977,11 +975,9 @@ export default {
         }
     },
     async created() {
-        this.userInfo = await this.getPost(this.$route.params.id);
+        this.roomsInfo = await this.getRooms(this.$route.params.id);
     },
-    // created() {
-    //     this.userInfo = this.getPost(this.$route.params.id);
-    // },
+
     mounted() {
         // if isTop = 0 , add transparent class , else remove
         window.addEventListener("scroll", () => {
