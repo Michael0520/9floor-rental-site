@@ -574,7 +574,6 @@
                             </select>
                             <label for="floatingSelect">地區</label>
                         </div>
-
                         <!-- 捷運資訊 -->
                         <div
                             class="accordion  accordion-flush "
@@ -633,7 +632,7 @@
                                                         >
                                                         <option
                                                             v-for="(option,
-                                                            keys) in MRTsLine"
+                                                            keys) in renderMRTsLine"
                                                             :key="keys"
                                                         >
                                                             {{ option }}
@@ -658,15 +657,19 @@
                                                         class="form-select"
                                                         id="floatingSelect"
                                                         aria-label="Floating label select example"
+                                                        v-model="
+                                                            selectedMRTsStation
+                                                        "
                                                     >
                                                         <option
                                                             selected
                                                             disabled
+                                                            value="請選擇捷運站"
                                                             >請選擇捷運站</option
                                                         >
                                                         <option
                                                             v-for="(option,
-                                                            keys) in MRTsStation"
+                                                            keys) in renderMRTsStation"
                                                             :key="keys"
                                                         >
                                                             {{ option }}
@@ -1106,7 +1109,11 @@ export default {
             },
             // input search
             cacheSearch: "",
-            cacheSort: "0"
+            cacheSort: "0",
+            // Mobile filter to MRTs
+            renderMRTs: [],
+            renderMRTsLine: [],
+            renderMRTsStation: []
         };
     },
     methods: {
@@ -1144,7 +1151,7 @@ export default {
             this.temp = [...res];
         },
         checkEventBinding() {
-            console.log("Evnet 觸發");
+            // console.log("Evnet 觸發");
             // console.log(this.rooms);
             // console.log(this.selectedRoomFeatures);
             // console.log("價格間距", this.priceRange);
@@ -1279,7 +1286,6 @@ export default {
         filterByRoomFloor(res) {
             let locationMin = this.locationRange[0];
             let locationMax = this.locationRange[1];
-
             if (this.locationRange.length === 2) {
                 res = res.filter(item => {
                     // console.log(item.monthlyRent);
@@ -1361,16 +1367,32 @@ export default {
         },
         filterRoomsMobileMRTsLine(mobileRes) {
             if (this.selectedMRTsLine === "請選擇捷運線") {
-                // console.log("請選擇房型", this.selectedMRTsLine);
+                console.log("請選擇捷運線", this.selectedMRTsLine);
             } else {
+                console.log("捷運", this.selectedMRTsStation);
+                if (this.selectedMRTsLine === "BL 板南線") {
+                    return (this.renderMRTsStation = this.renderMRTsStation[0].station);
+                } else if (this.selectedMRTsLine === "O 中和蘆洲線") {
+                    return (this.renderMRTsStation = this.renderMRTsStation[1].station);
+                } else if (this.selectedMRTsLine === "Y 環狀線") {
+                    return (this.renderMRTsStation = this.renderMRTsStation[2].station);
+                } else if (this.selectedMRTsLine === "G 松山新店") {
+                    return (this.renderMRTsStation = this.renderMRTsStation[3].station);
+                } else if (this.selectedMRTsLine === "R 淡水信義線") {
+                    return (this.renderMRTsStation = this.renderMRTsStation[4].station);
+                } else {
+                    this.renderMRTsStation = this.renderMRTsStation[5].station;
+                }
+
                 mobileRes = mobileRes.filter(item => {
                     // console.log("捷運線名稱", item.trafficInformation.MRTline);
-                    return (
-                        item.trafficInformation.MRTline ===
-                        this.selectedMRTsLine
+                    item.trafficInformation.MRTline === this.selectedMRTsLine;
+                    return this.selectedMRTsLine.includes(
+                        item.trafficInformation.MRTline
                     );
                 });
             }
+
             return mobileRes;
         }
     },
@@ -1421,6 +1443,29 @@ export default {
                 // console.log("捷運站們", this.MRTsStation);
 
                 this.sites = this.roomOptions.site;
+            })
+            .catch(err => {
+                console.warn(err);
+            });
+
+        this.axios
+            .get("http://localhost:3000/location")
+            .then(result => {
+                this.renderMRTs = result.data;
+                // console.log(this.renderMRTs[0].MRTs);
+                // this.renderMRTsLine = this.renderMRTs[0].MRTs.;
+                this.renderMRTsLine = this.renderMRTs[0].MRTs.map(item => {
+                    // console.log(item.name);
+                    // console.log(this.renderMRTsStation);
+                    return item.name;
+                });
+                this.renderMRTsStation = this.renderMRTs[0].MRTs.filter(
+                    item => {
+                        // console.log(item.name);
+                        console.log(item.station);
+                        return item.station;
+                    }
+                );
             })
             .catch(err => {
                 console.warn(err);
