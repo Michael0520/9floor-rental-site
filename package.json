@@ -14,6 +14,7 @@
     "axios": "^0.23.0",
     "bootstrap": "^5.1.3",
     "core-js": "^3.6.5",
+    "loaders.css": "^0.1.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
     "vue": "^3.0.0",
