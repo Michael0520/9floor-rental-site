@@ -530,72 +530,51 @@
                         ></button>
                     </div>
                     <div class="modal-body">
-                        <h3
-                            style="
-                                        padding:0 17px;margin-bottom:14px;
-                                        font-size:13px;font-weight:500;letter-spacing:.6px
-                                        "
-                        >
-                            地點
-                        </h3>
-                        <div class="index_alert-group">
-                            <p class="small">城市</p>
-                            <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out;
-                                        "
-                                    v-model="selectedMobileLocation"
-                                    @change="typeMoblieMenu"
+                        <div class="form-floating my-2">
+                            <select
+                                class="form-select"
+                                id="floatingSelect"
+                                aria-label="Floating label select example"
+                                v-model="selectedMobileLocation"
+                                @change="typeMoblieMenu"
+                            >
+                                <option selected disabled value="請選擇城市"
+                                    >請選擇城市</option
                                 >
-                                    <!-- <option selected disabled
-                                        >請選擇城市</option
-                                    > -->
-                                    <option value="全國">全國</option>
-                                    <option
-                                        v-for="(option, keys) in locations"
-                                        :key="keys"
-                                        :value="option.name"
-                                    >
-                                        {{ option.name }}
-                                    </option>
-                                </select>
-                            </div>
+                                <option value="全國">全國</option>
+                                <option
+                                    v-for="(option, keys) in locations"
+                                    :key="keys"
+                                    :value="option.name"
+                                >
+                                    {{ option.name }}
+                                </option>
+                            </select>
+                            <label for="floatingSelect">城市</label>
                         </div>
-                        <div class="index_alert-group">
-                            <p class="small">地區</p>
-                            <div class="index_dropdown-basic w-100">
-                                <div class="form-floating">
-                                    <select
-                                        class="form-select"
-                                        id="floatingSelect"
-                                        aria-label="Floating label select example"
-                                        v-model="selectedMobileSite"
-                                        @change="typeMoblieMenu"
-                                    >
-                                        <option
-                                            selected
-                                            disabled
-                                            value="請選擇地區"
-                                            >請選擇地區</option
-                                        >
-                                        <option value="全地區">全地區</option>
-                                        <option
-                                            v-for="(option, keys) in sites"
-                                            :key="keys"
-                                            :value="option"
-                                        >
-                                            {{ option }}
-                                        </option>
-                                    </select>
-                                    <label for="floatingSelect">地區</label>
-                                </div>
-                            </div>
+                        <div class="form-floating my-2">
+                            <select
+                                class="form-select"
+                                id="floatingSelect"
+                                aria-label="Floating label select example"
+                                v-model="selectedMobileSite"
+                                @change="typeMoblieMenu"
+                            >
+                                <option selected disabled value="請選擇地區"
+                                    >請選擇地區</option
+                                >
+                                <option value="全地區">全地區</option>
+                                <option
+                                    v-for="(option, keys) in sites"
+                                    :key="keys"
+                                    :value="option"
+                                >
+                                    {{ option }}
+                                </option>
+                            </select>
+                            <label for="floatingSelect">地區</label>
                         </div>
+
                         <!-- 捷運資訊 -->
                         <div
                             class="accordion  accordion-flush "
@@ -1092,8 +1071,8 @@ export default {
             selectedDoubleOccupancy: 0,
             selectedRaisePet: 0,
             // mobile selected
-            selectedMobileLocation: "全國",
-            selectedMobileSite: "全地區",
+            selectedMobileLocation: "請選擇城市",
+            selectedMobileSite: "請選擇地區",
             selectedMobileRoomStyle: "請選擇房型",
             selectedMRTsLine: "請選擇捷運線",
             selectedMRTsStation: "請選擇捷運站",
@@ -1174,14 +1153,25 @@ export default {
             this.typeMenu();
         },
         filterByRoomLocation(res) {
-            if (this.selectedLocation === "全國") {
-                // ...arg 傳參考避免出錯
+            // if (this.selectedLocation === "全國") {
+            //     // ...arg 傳參考避免出錯
+            // } else {
+            //     res = res.filter(
+            //         item => item.location === this.selectedLocation
+            //         // item => console.log(item)
+            //     );
+            //     // console.log(res);
+            // }
+
+            if (this.selectedLocation === "請選擇城市") {
+                //
+            } else if (this.selectedLocation === "全國") {
+                //
             } else {
                 res = res.filter(
                     item => item.location === this.selectedLocation
                     // item => console.log(item)
                 );
-                // console.log(res);
             }
             return res;
         },
