@@ -569,30 +569,31 @@
                         <div class="index_alert-group">
                             <p class="small">地區</p>
                             <div class="index_dropdown-basic w-100">
-                                <select
-                                    class="form-select form-select-sm"
-                                    aria-label="Default select example"
-                                    style="width:100%;min-height:30px;
-                                        border:1px solid #d2c8bd;
-                                        outline:none;
-                                        transition:border .2s ease-out"
-                                    v-model="selectedMobileSite"
-                                    @change="typeMoblieMenu"
-                                >
-                                    <!-- <option selected disabled
-                                        >請選擇地區</option
-                                    > -->
-                                    <option selected value="全地區"
-                                        >全地區</option
+                                <div class="form-floating">
+                                    <select
+                                        class="form-select"
+                                        id="floatingSelect"
+                                        aria-label="Floating label select example"
+                                        v-model="selectedMobileSite"
+                                        @change="typeMoblieMenu"
                                     >
-                                    <option
-                                        v-for="(option, keys) in sites"
-                                        :key="keys"
-                                        :value="option"
-                                    >
-                                        {{ option }}
-                                    </option>
-                                </select>
+                                        <option
+                                            selected
+                                            disabled
+                                            value="請選擇地區"
+                                            >請選擇地區</option
+                                        >
+                                        <option value="全地區">全地區</option>
+                                        <option
+                                            v-for="(option, keys) in sites"
+                                            :key="keys"
+                                            :value="option"
+                                        >
+                                            {{ option }}
+                                        </option>
+                                    </select>
+                                    <label for="floatingSelect">地區</label>
+                                </div>
                             </div>
                         </div>
                         <!-- 捷運資訊 -->
@@ -1345,7 +1346,9 @@ export default {
             return mobileRes;
         },
         filterRoomsMoblieSite(mobileRes) {
-            if (this.selectedMobileSite === "全地區") {
+            if (this.selectedMobileSite === "請選擇地區") {
+                //
+            } else if (this.selectedMobileSite === "全地區") {
                 //
             } else {
                 mobileRes = mobileRes.filter(item => {
