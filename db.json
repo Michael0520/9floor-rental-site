@@ -618,6 +618,84 @@
             "工作空間",
             "戶外陽台",
             "微波爐"
+        ],
+        "facility": [
+            {
+                "name": "瓦斯爐",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-dcf239b9b64076e4c273b5177630454e.png"
+            },
+            {
+                "name": "電磁爐",
+                "imgUrl": "https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-stove-kitchen-kiranshastry-lineal-kiranshastry.png"
+            },
+            {
+                "name": "電鍋",
+                "imgUrl": "https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-pot-appliances-kiranshastry-lineal-kiranshastry.png"
+            },
+            {
+                "name": "基本餐具",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-8070e6cdae1efb603a564f16315527b9.png"
+            },
+            {
+                "name": "洗衣機",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190121-3fc7ad1b4e378cb954be7b06ada03afe.jpg"
+            },
+            {
+                "name": "烘衣機",
+                "imgUrl": "https://img.icons8.com/ios/50/000000/tumble-dryer.png"
+            },
+            {
+                "name": "洗碗機",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-055410ea9b7695ac68526abe3b04f806.png"
+            },
+            {
+                "name": "烤箱",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-8d4b1a037bf46cd375109e0efbb6c30f.png"
+            },
+            {
+                "name": "滅火器",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-d780119673dcc9c653335652a0b2c9b8.png"
+            },
+            {
+                "name": "煙霧偵測器",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-3106088f32d9f0ca1fe599d7ec9a4e12.png"
+            },
+            {
+                "name": "熱水壺",
+                "imgUrl": "https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-kettle-kitchen-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
+            },
+            {
+                "name": "浴缸",
+                "imgUrl": "https://img.icons8.com/dotty/80/000000/shower-and-tub.png"
+            },
+            {
+                "name": "投影機",
+                "imgUrl": "https://img.icons8.com/external-itim2101-lineal-itim2101/64/000000/external-projector-school-stationery-itim2101-lineal-itim2101.png"
+            },
+            {
+                "name": "吹風機",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-a153b4ad702e6d6b34615663c711b063.png"
+            },
+            {
+                "name": "冰箱",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190122-b971d7faf380f622356f5151934b1002.png"
+            },
+            {
+                "name": "無線網路",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-765a378c1d9ae10f8f484e83f7fb8eef.png"
+            },
+            {
+                "name": "工作空間",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-8226c562a3429211d9f236cfa68c47e2.png"
+            },
+            {
+                "name": "戶外陽台",
+                "imgUrl": "https://9floor.co/backend/web/apartmentTag/20190129-946261d4b79638f0eea7bc5e60bb832f.png"
+            },
+            {
+                "name": "微波爐",
+                "imgUrl": "https://img.icons8.com/ios/50/000000/microwave.png"
+            }
         ]
     },
     "location": [
