@@ -1328,7 +1328,7 @@ export default {
                 // console.log(this.selectedMobileLocation);
             } else {
                 mobileRes = mobileRes.filter(item => {
-                    console.log(this.selectedMobileLocation);
+                    // console.log(this.selectedMobileLocation);
                     return item.location === this.selectedMobileLocation;
                 });
             }
@@ -1364,7 +1364,7 @@ export default {
                 // console.log("請選擇房型", this.selectedMRTsLine);
             } else {
                 mobileRes = mobileRes.filter(item => {
-                    console.log("捷運線名稱", item.trafficInformation.MRTline);
+                    // console.log("捷運線名稱", item.trafficInformation.MRTline);
                     return (
                         item.trafficInformation.MRTline ===
                         this.selectedMRTsLine
