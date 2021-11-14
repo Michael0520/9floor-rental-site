@@ -108,7 +108,7 @@
                                 </span>
                                 <!-- TODO:房間租金 -->
                                 <span class="index_price index_tablet-show"
-                                    >NTD {{ roomsPrice }}
+                                    >NTD {{ formatPrice(roomsPrice) }}
                                     <span class="index_small">/月</span>
                                 </span>
                                 <button
@@ -139,7 +139,7 @@
                         <div class="index_booking-bar-right">
                             <!-- TODO:房屋租金 -->
                             <span class="index_price index_tablet-hide"
-                                >NTD {{ roomsPrice }}
+                                >NTD {{ formatPrice(roomsPrice) }}
                                 <span class="index_small">/月</span></span
                             ><button
                                 class="
@@ -1039,6 +1039,14 @@ export default {
                 // any other styles you might need to add on as an example
                 "background-image": `url(${image})`
             };
+        },
+        formatPrice(price) {
+            let res = price
+                .toFixed(2)
+                .replace(/\d(?=(\d{3})+\.)/g, "$&,")
+                .replace(/\.\d*/, "");
+            return res;
+            // 12,345.67
         }
     },
     async created() {
