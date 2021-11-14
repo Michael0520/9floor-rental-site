@@ -623,7 +623,7 @@
                                                         v-model="
                                                             selectedMRTsLine
                                                         "
-                                                        @change="typeMoblieMenu"
+                                                        @change="changeMRTsLine"
                                                     >
                                                         <option
                                                             selected
@@ -632,10 +632,15 @@
                                                         >
                                                         <option
                                                             v-for="(option,
-                                                            keys) in renderMRTsLine"
+                                                            keys) in Object.keys(
+                                                                mrtCode
+                                                            )"
                                                             :key="keys"
+                                                            :value="option"
                                                         >
-                                                            {{ option }}
+                                                            {{
+                                                                mrtCode[option]
+                                                            }}
                                                         </option>
                                                     </select>
                                                     <label for="floatingSelect"
@@ -660,6 +665,9 @@
                                                         v-model="
                                                             selectedMRTsStation
                                                         "
+                                                        @change="
+                                                            changeMRTsStation
+                                                        "
                                                     >
                                                         <option
                                                             selected
@@ -671,6 +679,7 @@
                                                             v-for="(option,
                                                             keys) in renderMRTsStation"
                                                             :key="keys"
+                                                            :value="option"
                                                         >
                                                             {{ option }}
                                                         </option>
@@ -1113,7 +1122,10 @@ export default {
             // Mobile filter to MRTs
             renderMRTs: [],
             renderMRTsLine: [],
-            renderMRTsStation: []
+            renderMRTsStation: [],
+            //
+            mrtCode: {},
+            mrtStation: {}
         };
     },
     methods: {
@@ -1151,25 +1163,22 @@ export default {
             this.temp = [...res];
         },
         checkEventBinding() {
-            // console.log("Evnet 觸發");
+            console.log("Evnet 觸發");
             // console.log(this.rooms);
             // console.log(this.selectedRoomFeatures);
             // console.log("價格間距", this.priceRange);
             // console.log("關鍵字", this.cacheSearch);
 
-            this.typeMenu();
+            // this.typeMenu();
+        },
+        changeMRTsLine() {
+            console.log("MRTs Event 觸發");
+            this.renderMRTsStation = this.mrtStation[this.selectedMRTsLine];
+        },
+        changeMRTsStation() {
+            console.log("MRTs Station 觸發", this.selectedMRTsStation);
         },
         filterByRoomLocation(res) {
-            // if (this.selectedLocation === "全國") {
-            //     // ...arg 傳參考避免出錯
-            // } else {
-            //     res = res.filter(
-            //         item => item.location === this.selectedLocation
-            //         // item => console.log(item)
-            //     );
-            //     // console.log(res);
-            // }
-
             if (this.selectedLocation === "請選擇城市") {
                 //
             } else if (this.selectedLocation === "全國") {
@@ -1370,20 +1379,6 @@ export default {
                 console.log("請選擇捷運線", this.selectedMRTsLine);
             } else {
                 console.log("捷運", this.selectedMRTsStation);
-                if (this.selectedMRTsLine === "BL 板南線") {
-                    return (this.renderMRTsStation = this.renderMRTsStation[0].station);
-                } else if (this.selectedMRTsLine === "O 中和蘆洲線") {
-                    return (this.renderMRTsStation = this.renderMRTsStation[1].station);
-                } else if (this.selectedMRTsLine === "Y 環狀線") {
-                    return (this.renderMRTsStation = this.renderMRTsStation[2].station);
-                } else if (this.selectedMRTsLine === "G 松山新店") {
-                    return (this.renderMRTsStation = this.renderMRTsStation[3].station);
-                } else if (this.selectedMRTsLine === "R 淡水信義線") {
-                    return (this.renderMRTsStation = this.renderMRTsStation[4].station);
-                } else {
-                    this.renderMRTsStation = this.renderMRTsStation[5].station;
-                }
-
                 mobileRes = mobileRes.filter(item => {
                     // console.log("捷運線名稱", item.trafficInformation.MRTline);
                     item.trafficInformation.MRTline === this.selectedMRTsLine;
@@ -1455,21 +1450,12 @@ export default {
         this.axios
             .get("http://localhost:3000/location")
             .then(result => {
-                this.renderMRTs = result.data;
-                // console.log(this.renderMRTs[0].MRTs);
-                // this.renderMRTsLine = this.renderMRTs[0].MRTs.;
-                this.renderMRTsLine = this.renderMRTs[0].MRTs.map(item => {
-                    // console.log(item.name);
-                    // console.log(this.renderMRTsStation);
-                    return item.name;
-                });
-                this.renderMRTsStation = this.renderMRTs[0].MRTs.filter(
-                    item => {
-                        // console.log(item.name);
-                        console.log(item.station);
-                        return item.station;
-                    }
-                );
+                let data = result.data[0];
+                this.mrtCode = data.MRTCodes;
+                this.mrtStation = data.MRTStaions;
+
+                console.log("mrtCode", this.mrtCode);
+                console.log("mrtStation", this.mrtStation);
             })
             .catch(err => {
                 console.warn(err);
