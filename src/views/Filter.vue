@@ -1394,6 +1394,10 @@ export default {
             }
 
             return mobileRes;
+        },
+        formatPrice(price) {
+            price.replace(/\d(?=(\d{3})+\.)/g, "$&,").replace(/\.\d*/, "");
+            return price; // 12,345.67
         }
     },
     components: {
