@@ -1024,10 +1024,24 @@ export default {
             });
         },
         async getRooms(id) {
+            // lodaer
+            let loader = this.$loading.show({
+                // Optional parameters
+                container: this.fullPage ? null : this.$refs.formContainer,
+                canCancel: true,
+                onCancel: this.onCancel
+            });
+
             return await this.axios
                 .get("http://localhost:3000/rooms/" + id)
                 .then(result => {
-                    console.log(result);
+                    // console.log(result);
+                    // hide loader
+
+                    setTimeout(() => {
+                        loader.hide(); // simulate AJAX
+                    }, 1000);
+
                     return result.data;
                 })
                 .catch(err => {
@@ -1051,6 +1065,7 @@ export default {
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
+
         // image
         this.roomsImgUrl = this.roomsInfo.imgUrl;
         this.roomsSecondImgUrl = this.roomsInfo.secondImgUrl;
