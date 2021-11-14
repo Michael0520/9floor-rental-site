@@ -1,6 +1,8 @@
 <template >
     <!-- NavBar -->
     <WhiteNavBar />
+    <!-- loader -->
+
     <!--  Room-content -->
     <div class="index_content">
         <div class="index_page">
@@ -1171,13 +1173,6 @@ export default {
 
             // this.typeMenu();
         },
-        changeMRTsLine() {
-            console.log("MRTs Event 觸發");
-            this.renderMRTsStation = this.mrtStation[this.selectedMRTsLine];
-        },
-        changeMRTsStation() {
-            console.log("MRTs Station 觸發", this.selectedMRTsStation);
-        },
         filterByRoomLocation(res) {
             if (this.selectedLocation === "請選擇城市") {
                 //
@@ -1393,6 +1388,15 @@ export default {
         formatPrice(price) {
             price.replace(/\d(?=(\d{3})+\.)/g, "$&,").replace(/\.\d*/, "");
             return price; // 12,345.67
+        },
+        changeMRTsLine() {
+            console.log("MRTs Event 觸發");
+            this.renderMRTsStation = this.mrtStation[this.selectedMRTsLine];
+
+            this.filterRoomsMobileMRTsLine();
+        },
+        changeMRTsStation() {
+            console.log("MRTs Station 觸發", this.selectedMRTsStation);
         }
     },
     components: {
@@ -1406,14 +1410,22 @@ export default {
         Datepicker
     },
     mounted() {
-        // catch roomsData
+        //loader
+        let loader = this.$loading.show({
+            // Optional parameters
+            container: this.fullPage ? null : this.$refs.formContainer,
+            canCancel: true,
+            onCancel: this.onCancel
+        });
         this.axios
             .get("http://localhost:3000/rooms")
             .then(result => {
-                // console.log(result.data);
                 this.rooms = result.data;
                 this.temp = this.rooms;
-                // console.log(this.rooms);
+                // success get data
+                setTimeout(() => {
+                    loader.hide(); // simulate AJAX
+                }, 1500);
             })
             .catch(err => {
                 console.warn(err);
