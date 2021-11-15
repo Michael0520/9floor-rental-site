@@ -1387,10 +1387,10 @@ export default {
         },
         filterRoomsMobileMRTsStation(mobileRes) {
             if (this.selectedMRTsStation === "請選擇捷運站") {
-                console.log("請選擇捷運線", this.selectedMRTsStation);
+                // console.log("請選擇捷運線", this.selectedMRTsStation);
             } else {
                 // mobileRes = mobileRes.filter();
-                console.log("已經選擇了捷運站", this.selectedMRTsStation);
+                // console.log("已經選擇了捷運站", this.selectedMRTsStation);
                 mobileRes = mobileRes.filter(item => {
                     // console.log(item.trafficInformation.MRTline);
                     return (
@@ -1407,11 +1407,11 @@ export default {
             return price; // 12,345.67
         },
         changeMRTsLine() {
-            console.log("MRTs Event 觸發", this.selectedMRTsLine);
+            // console.log("MRTs Event 觸發", this.selectedMRTsLine);
             this.renderMRTsStation = this.mrtStation[this.selectedMRTsLine];
         },
         changeMRTsStation() {
-            console.log("MRTs Station 觸發", this.selectedMRTsStation);
+            // console.log("MRTs Station 觸發", this.selectedMRTsStation);
         }
     },
     components: {

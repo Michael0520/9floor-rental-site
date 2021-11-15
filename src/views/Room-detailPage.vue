@@ -1064,11 +1064,9 @@ export default {
                 .then(result => {
                     // console.log(result);
                     // hide loader
-
                     setTimeout(() => {
                         loader.hide(); // simulate AJAX
                     }, 1000);
-
                     return result.data;
                 })
                 .catch(err => {
@@ -1088,8 +1086,6 @@ export default {
                 .toFixed(2)
                 .replace(/\d(?=(\d{3})+\.)/g, "$&,")
                 .replace(/\.\d*/, "");
-
-            // console.log(typeof price);
             return res;
             // 12,345.67
         }
