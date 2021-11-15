@@ -1370,12 +1370,12 @@ export default {
         },
         filterRoomsMobileMRTsLine(mobileRes) {
             if (this.selectedMRTsLine === "請選擇捷運線") {
-                console.log("請選擇捷運線", this.selectedMRTsLine);
+                // console.log("請選擇捷運線", this.selectedMRTsLine);
             } else {
                 // mobileRes = mobileRes.filter();
-                console.log("已經選擇了捷運線", this.selectedMRTsLine);
+                // console.log("已經選擇了捷運線", this.selectedMRTsLine);
                 mobileRes = mobileRes.filter(item => {
-                    console.log(item.trafficInformation.MRTline);
+                    // console.log(item.trafficInformation.MRTline);
                     return (
                         item.trafficInformation.MRTline.code ===
                         this.selectedMRTsLine
@@ -1481,8 +1481,8 @@ export default {
                 this.mrtCode = data.MRTCodes;
                 this.mrtStation = data.MRTStaions;
 
-                console.log("mrtCode", this.mrtCode);
-                console.log("mrtStation", this.mrtStation);
+                // console.log("mrtCode", this.mrtCode);
+                // console.log("mrtStation", this.mrtStation);
             })
             .catch(err => {
                 console.warn(err);
