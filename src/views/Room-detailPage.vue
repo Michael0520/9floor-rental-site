@@ -1005,15 +1005,15 @@ export default {
             roomsSite: "",
             roomsRoomStyle: "",
             // 首款期項
-            roomsDeposit: "",
-            roomsAdministrativeFee: "",
-            roomsCheckOutCleaningFee: "",
+            roomsDeposit: Number,
+            roomsAdministrativeFee: Number,
+            roomsCheckOutCleaningFee: Number,
             // 每月小記
-            roomsEnergyFee: "",
-            roomsServiceFee: "",
+            roomsEnergyFee: Number,
+            roomsServiceFee: Number,
             // 短租方案
-            roomsShortTermRentalThreeToFive: "",
-            roomsShortTermRentalOneToTwo: "",
+            roomsShortTermRentalThreeToFive: Number,
+            roomsShortTermRentalOneToTwo: Number,
             // 面積
             roomsArea: "",
             // 捷運站
