@@ -1082,10 +1082,14 @@ export default {
             };
         },
         formatPrice(price) {
-            let res = price
+            // 由於 price 還未被使用，所以必須先將它定義為 Number ，
+            // 這樣再過 toFixed function 才不會爆出錯誤
+            let res = Number(price)
                 .toFixed(2)
                 .replace(/\d(?=(\d{3})+\.)/g, "$&,")
                 .replace(/\.\d*/, "");
+
+            // console.log(typeof price);
             return res;
             // 12,345.67
         }
