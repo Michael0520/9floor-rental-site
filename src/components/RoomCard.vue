@@ -35,7 +35,7 @@
                 <span>
                     NTD
                     <span class="index_price">
-                        {{ price }}
+                        {{ formatPrice(price) }}
                     </span>
                     / 月
                 </span>
@@ -56,9 +56,28 @@ export default {
                 // any other styles you might need to add on as an example
                 "background-image": `url(${image})`
             };
+        },
+        formatPrice(price) {
+            // 由於 price 還未被使用，所以必須先將它定義為 Number ，
+            // 這樣再過 toFixed function 才不會爆出錯誤
+            let res = Number(price)
+                .toFixed(2)
+                .replace(/\d(?=(\d{3})+\.)/g, "$&,")
+                .replace(/\.\d*/, "");
+            return res;
+            // 12,345.67
         }
     },
-    props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
+    // props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
+    props: {
+        name: String,
+        secondName: String,
+        roomStyle: String,
+        status: String,
+        price: Number,
+        image: String,
+        id: String
+    }
 };
 </script>
 
