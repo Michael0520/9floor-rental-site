@@ -299,9 +299,12 @@
                                                 <div>
                                                     <p>押金</p>
                                                     <p>
-                                                        <span>
+                                                        <span
+                                                            >NTD
                                                             {{
-                                                                roomsDeposit
+                                                                formatPrice(
+                                                                    roomsDeposit
+                                                                )
                                                             }}</span
                                                         >
                                                     </p>
@@ -309,9 +312,12 @@
                                                 <div>
                                                     <p>行政手續費</p>
                                                     <p>
-                                                        <span>
+                                                        <span
+                                                            >NTD
                                                             {{
-                                                                roomsAdministrativeFee
+                                                                formatPrice(
+                                                                    roomsAdministrativeFee
+                                                                )
                                                             }}
                                                         </span>
                                                     </p>
@@ -319,9 +325,12 @@
                                                 <div>
                                                     <p>退房清潔費</p>
                                                     <p>
-                                                        <span>
+                                                        <span
+                                                            >NTD
                                                             {{
-                                                                roomsCheckOutCleaningFee
+                                                                formatPrice(
+                                                                    roomsCheckOutCleaningFee
+                                                                )
                                                             }}
                                                         </span>
                                                     </p>
@@ -350,7 +359,9 @@
                                                         <span
                                                             >NTD
                                                             {{
-                                                                roomsPrice
+                                                                formatPrice(
+                                                                    roomsPrice
+                                                                )
                                                             }}</span
                                                         >
                                                         /月
@@ -394,8 +405,13 @@
                                                         </span>
                                                     </p>
                                                     <p>
-                                                        <span>
-                                                            {{ roomsEnergyFee }}
+                                                        <span
+                                                            >NTD
+                                                            {{
+                                                                formatPrice(
+                                                                    roomsEnergyFee
+                                                                )
+                                                            }}
                                                         </span>
                                                         /月
                                                     </p>
@@ -438,9 +454,14 @@
                                                         </span>
                                                     </p>
                                                     <p>
-                                                        <span>{{
-                                                            roomsServiceFee
-                                                        }}</span>
+                                                        <span
+                                                            >NTD
+                                                            {{
+                                                                formatPrice(
+                                                                    roomsServiceFee
+                                                                )
+                                                            }}</span
+                                                        >
                                                         /月
                                                     </p>
                                                 </div>
@@ -465,9 +486,12 @@
                                                 <div>
                                                     <p>短租3-5月</p>
                                                     <p>
-                                                        <span>
+                                                        <span
+                                                            >NTD
                                                             {{
-                                                                roomsShortTermRentalThreeToFive
+                                                                formatPrice(
+                                                                    roomsShortTermRentalThreeToFive
+                                                                )
                                                             }}
                                                         </span>
                                                     </p>
@@ -475,9 +499,12 @@
                                                 <div>
                                                     <p>短租1-2月</p>
                                                     <p>
-                                                        <span>
+                                                        <span
+                                                            >NTD
                                                             {{
-                                                                roomsShortTermRentalOneToTwo
+                                                                formatPrice(
+                                                                    roomsShortTermRentalOneToTwo
+                                                                )
                                                             }}</span
                                                         >
                                                         /月
