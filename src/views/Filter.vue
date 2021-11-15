@@ -625,7 +625,7 @@
                                                         v-model="
                                                             selectedMRTsLine
                                                         "
-                                                        @change="changeMRTsLine"
+                                                        @change="typeMoblieMenu"
                                                     >
                                                         <option
                                                             selected
@@ -667,9 +667,7 @@
                                                         v-model="
                                                             selectedMRTsStation
                                                         "
-                                                        @change="
-                                                            changeMRTsStation
-                                                        "
+                                                        @change="typeMoblieMenu"
                                                     >
                                                         <option
                                                             selected
@@ -1146,6 +1144,7 @@ export default {
             mobileRes = this.filterRoomsMoblieSite(mobileRes);
             mobileRes = this.filterRoomsMobileRoomStyle(mobileRes);
             mobileRes = this.filterRoomsMobileMRTsLine(mobileRes);
+            // mobileRes = this.filterRoomsMobileMRTsStation(mobileRes);
             this.temp = [...mobileRes];
         },
         typeMenu() {
@@ -1373,27 +1372,43 @@ export default {
             if (this.selectedMRTsLine === "請選擇捷運線") {
                 console.log("請選擇捷運線", this.selectedMRTsLine);
             } else {
-                console.log("捷運", this.selectedMRTsStation);
+                // mobileRes = mobileRes.filter();
+                console.log("已經選擇了捷運線", this.selectedMRTsLine);
                 mobileRes = mobileRes.filter(item => {
-                    // console.log("捷運線名稱", item.trafficInformation.MRTline);
-                    item.trafficInformation.MRTline === this.selectedMRTsLine;
-                    return this.selectedMRTsLine.includes(
-                        item.trafficInformation.MRTline
+                    console.log(item.trafficInformation.MRTline);
+                    return (
+                        item.trafficInformation.MRTline.code ===
+                        this.selectedMRTsLine
                     );
                 });
             }
-
+            this.changeMRTsLine();
             return mobileRes;
         },
+        filterRoomsMobileMRTsStation(mobileRes) {
+            if (this.selectedMRTsStation === "請選擇捷運線") {
+                console.log("請選擇捷運線", this.selectedMRTsStation);
+            } else {
+                // mobileRes = mobileRes.filter();
+                console.log("已經選擇了捷運站", this.selectedMRTsStation);
+                mobileRes = mobileRes.filter(item => {
+                    // console.log(item.trafficInformation.MRTline);
+                    return (
+                        item.trafficInformation.MRTline.MRTstation ===
+                        this.selectedMRTsStation
+                    );
+                });
+            }
+            return mobileRes;
+        },
+
         formatPrice(price) {
             price.replace(/\d(?=(\d{3})+\.)/g, "$&,").replace(/\.\d*/, "");
             return price; // 12,345.67
         },
         changeMRTsLine() {
-            console.log("MRTs Event 觸發");
+            console.log("MRTs Event 觸發", this.selectedMRTsLine);
             this.renderMRTsStation = this.mrtStation[this.selectedMRTsLine];
-
-            this.filterRoomsMobileMRTsLine();
         },
         changeMRTsStation() {
             console.log("MRTs Station 觸發", this.selectedMRTsStation);

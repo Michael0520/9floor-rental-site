@@ -55,7 +55,10 @@
                 "公園"
             ],
             "trafficInformation": {
-                "MRTline": "G 松山新店",
+                "MRTline": {
+                    "code": "G",
+                    "name": "松山新店"
+                },
                 "MRTstation": "萬隆站",
                 "walkingTime": "0mins"
             }
@@ -126,7 +129,10 @@
                 "餐廳"
             ],
             "trafficInformation": {
-                "MRTline": "BL 板橋南港",
+                "MRTline": {
+                    "code": "BL",
+                    "name": "板橋南港"
+                },
                 "MRTstation": "西門站",
                 "walkingTime": "7mins"
             }
@@ -186,7 +192,10 @@
                 "公園"
             ],
             "trafficInformation": {
-                "MRTline": "G 松山新店",
+                "MRTline": {
+                    "code": "G",
+                    "name": "松山新店"
+                },
                 "MRTstation": "萬隆站",
                 "walkingTime": "0mins"
             }
@@ -256,10 +265,10 @@
                 "咖啡廳"
             ],
             "trafficInformation": {
-                "MRTline": [
-                    "BL 板橋南港",
-                    "O 中和新蘆"
-                ],
+                "MRTline": {
+                    "code": "BL",
+                    "name": "板橋南港"
+                },
                 "MRTstation": "忠孝新生",
                 "walkingTime": "8mins"
             }
@@ -335,10 +344,10 @@
                 "咖啡廳"
             ],
             "trafficInformation": {
-                "MRTline": [
-                    "BL 板橋南港",
-                    "O 中和新蘆"
-                ],
+                "MRTline": {
+                    "code": "BL",
+                    "name": "板橋南港"
+                },
                 "MRTstation": "忠孝新生",
                 "walkingTime": "8mins"
             }
@@ -407,10 +416,10 @@
                 "咖啡廳"
             ],
             "trafficInformation": {
-                "MRTline": [
-                    "BL 板橋南港",
-                    "O 中和新蘆"
-                ],
+                "MRTline": {
+                    "code": "BL",
+                    "name": "板橋南港"
+                },
                 "MRTstation": "忠孝新生",
                 "walkingTime": "8mins"
             }
@@ -466,9 +475,10 @@
             },
             "nearbyFunction": [],
             "trafficInformation": {
-                "MRTline": [
-                    "BR 文山內湖"
-                ],
+                "MRTline": {
+                    "code": "BR",
+                    "name": "文山內湖"
+                },
                 "MRTstation": "科技大樓站",
                 "walkingTime": "12mins"
             }
@@ -523,9 +533,10 @@
             },
             "nearbyFunction": [],
             "trafficInformation": {
-                "MRTline": [
-                    "BR 文山內湖"
-                ],
+                "MRTline": {
+                    "code": "BR",
+                    "name": "文山內湖"
+                },
                 "MRTstation": "科技大樓站",
                 "walkingTime": "12mins"
             }
