@@ -28,17 +28,17 @@
             ],
             "livingSpaceEquipment": [],
             "initialPayment": {
-                "deposit": "NTD 27000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 27000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 0",
-                "serviceFee": "NTD 0"
+                "energyFee": 0,
+                "serviceFee": 0
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 17600",
-                "shortTermRentalOneToTwo": "NTD 21600"
+                "shortTermRentalThreeToFive": 17600,
+                "shortTermRentalOneToTwo": 21600
             },
             "housingInformation": 4,
             "housingSpaceInformation": {
@@ -95,17 +95,17 @@
             ],
             "livingSpaceEquipment": [],
             "initialPayment": {
-                "deposit": "NTD 43600",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 43600,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 1500",
-                "serviceFee": "NTD 1500"
+                "energyFee": 1500,
+                "serviceFee": 1500
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 28300",
-                "shortTermRentalOneToTwo": "NTD 34900"
+                "shortTermRentalThreeToFive": 28300,
+                "shortTermRentalOneToTwo": 34900
             },
             "housingInformation": 6,
             "housingSpaceInformation": {
@@ -165,17 +165,17 @@
             ],
             "livingSpaceEquipment": [],
             "initialPayment": {
-                "deposit": "NTD 25000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 25000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 0",
-                "serviceFee": "NTD 0"
+                "energyFee": 0,
+                "serviceFee": 0
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 16300",
-                "shortTermRentalOneToTwo": "NTD 20000"
+                "shortTermRentalThreeToFive": 16300,
+                "shortTermRentalOneToTwo": 20000
             },
             "housingInformation": 4,
             "housingSpaceInformation": {
@@ -238,17 +238,17 @@
                 "吹風機"
             ],
             "initialPayment": {
-                "deposit": "NTD 33000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 33000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 2000",
-                "serviceFee": "NTD 2000"
+                "energyFee": 2000,
+                "serviceFee": 2000
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 21500",
-                "shortTermRentalOneToTwo": "NTD 26400"
+                "shortTermRentalThreeToFive": 21500,
+                "shortTermRentalOneToTwo": 26400
             },
             "housingInformation": 10,
             "housingSpaceInformation": {
@@ -317,17 +317,17 @@
                 "吹風機"
             ],
             "initialPayment": {
-                "deposit": "NTD 27000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 27000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 2000",
-                "serviceFee": "NTD 2000"
+                "energyFee": 2000,
+                "serviceFee": 2000
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 17600",
-                "shortTermRentalOneToTwo": "NTD 21600"
+                "shortTermRentalThreeToFive": 17600,
+                "shortTermRentalOneToTwo": 21600
             },
             "housingInformation": 5,
             "housingSpaceInformation": {
@@ -389,17 +389,17 @@
                 "吹風機"
             ],
             "initialPayment": {
-                "deposit": "NTD 33000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 33000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 2000",
-                "serviceFee": "NTD 2000"
+                "energyFee": 2000,
+                "serviceFee": 2000
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 21500",
-                "shortTermRentalOneToTwo": "NTD 26400"
+                "shortTermRentalThreeToFive": 21500,
+                "shortTermRentalOneToTwo": 26400
             },
             "housingInformation": 5,
             "housingSpaceInformation": {
@@ -451,17 +451,17 @@
             ],
             "livingSpaceEquipment": [],
             "initialPayment": {
-                "deposit": "NTD 22000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 22000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 1300",
-                "serviceFee": "NTD 1300"
+                "energyFee": 1300,
+                "serviceFee": 1300
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 14300",
-                "shortTermRentalOneToTwo": "NTD 17600"
+                "shortTermRentalThreeToFive": 14300,
+                "shortTermRentalOneToTwo": 17600
             },
             "housingInformation": 4,
             "housingSpaceInformation": {
@@ -509,17 +509,17 @@
             ],
             "livingSpaceEquipment": [],
             "initialPayment": {
-                "deposit": "NTD 22000",
-                "administrativeFee": "NTD 1500",
-                "checkOutCleaningFee": "NTD 1500"
+                "deposit": 22000,
+                "administrativeFee": 1500,
+                "checkOutCleaningFee": 1500
             },
             "monthlyFee": {
-                "energyFee": "NTD 1300",
-                "serviceFee": "NTD 1300"
+                "energyFee": 1300,
+                "serviceFee": 1300
             },
             "shortTermRentalPlan": {
-                "shortTermRentalThreeToFive": "NTD 14300",
-                "shortTermRentalOneToTwo": "NTD 17600"
+                "shortTermRentalThreeToFive": 14300,
+                "shortTermRentalOneToTwo": 17600
             },
             "housingInformation": 4,
             "housingSpaceInformation": {
