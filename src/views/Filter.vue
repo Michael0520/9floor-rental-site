@@ -1144,7 +1144,7 @@ export default {
             mobileRes = this.filterRoomsMoblieSite(mobileRes);
             mobileRes = this.filterRoomsMobileRoomStyle(mobileRes);
             mobileRes = this.filterRoomsMobileMRTsLine(mobileRes);
-            // mobileRes = this.filterRoomsMobileMRTsStation(mobileRes);
+            mobileRes = this.filterRoomsMobileMRTsStation(mobileRes);
             this.temp = [...mobileRes];
         },
         typeMenu() {
@@ -1386,7 +1386,7 @@ export default {
             return mobileRes;
         },
         filterRoomsMobileMRTsStation(mobileRes) {
-            if (this.selectedMRTsStation === "請選擇捷運線") {
+            if (this.selectedMRTsStation === "請選擇捷運站") {
                 console.log("請選擇捷運線", this.selectedMRTsStation);
             } else {
                 // mobileRes = mobileRes.filter();
@@ -1394,7 +1394,7 @@ export default {
                 mobileRes = mobileRes.filter(item => {
                     // console.log(item.trafficInformation.MRTline);
                     return (
-                        item.trafficInformation.MRTline.MRTstation ===
+                        item.trafficInformation.MRTstation ===
                         this.selectedMRTsStation
                     );
                 });
