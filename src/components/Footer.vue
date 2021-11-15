@@ -7,68 +7,60 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="index_footer-sitmap">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="index_footer-column">
-                                            <h5>入住玖樓</h5>
-                                            <router-link to="filter"
-                                                >條件搜尋</router-link
-                                            >
-                                            <router-link to="/map"
-                                                >地圖搜尋</router-link
-                                            >
-                                            <router-link
-                                                to="https://pure.9floor.co/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                class=""
-                                                >玖樓璞園</router-link
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="index_footer-column">
-                                            <h5>玖樓</h5>
-                                            <router-link to="/about"
-                                                >關於玖樓</router-link
-                                            >
-                                            <router-link to="/team"
-                                                >團隊夥伴</router-link
-                                            >
-                                            <router-link to="/space"
-                                                >空間管理</router-link
-                                            >
-                                            <router-link to="/coliving"
-                                                >共同生活</router-link
-                                            >
-                                            <router-link
-                                                to="https://medium.com/9floor-co-living/tagged/9fnews"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                >最新消息</router-link
-                                            >
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="index_footer-column">
-                                            <h5>協助</h5>
-                                            <router-link to="/service"
-                                                >如何申請</router-link
-                                            >
-                                            <router-link
-                                                to="https://medium.com/9floor-co-living"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                >常見問題</router-link
-                                            >
-                                            <router-link to="/contact"
-                                                >聯繫我們</router-link
-                                            >
-                                            <router-link to="/media"
-                                                >媒體專區</router-link
-                                            >
-                                        </div>
-                                    </div>
+                                <div class="index_footer-column">
+                                    <h5>入住玖樓</h5>
+                                    <router-link to="filter"
+                                        >條件搜尋</router-link
+                                    >
+                                    <router-link to="/map"
+                                        >地圖搜尋</router-link
+                                    >
+                                    <router-link
+                                        to="https://pure.9floor.co/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class=""
+                                        >玖樓璞園</router-link
+                                    >
+                                </div>
+                                <div class="index_footer-column">
+                                    <h5>玖樓</h5>
+                                    <router-link to="/about"
+                                        >關於玖樓</router-link
+                                    >
+                                    <router-link to="/team"
+                                        >團隊夥伴</router-link
+                                    >
+                                    <router-link to="/space"
+                                        >空間管理</router-link
+                                    >
+                                    <router-link to="/coliving"
+                                        >共同生活</router-link
+                                    >
+                                    <router-link
+                                        to="https://medium.com/9floor-co-living/tagged/9fnews"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >最新消息</router-link
+                                    >
+                                </div>
+                                <div class="index_footer-column">
+                                    <h5>協助</h5>
+                                    <router-link to="/service"
+                                        >如何申請</router-link
+                                    >
+                                    <router-link
+                                        to="https://medium.com/9floor-co-living"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >常見問題</router-link
+                                    >
+                                    <router-link to="/contact"
+                                        >聯繫我們</router-link
+                                    >
+                                    <router-link to="/media"
+                                        >媒體專區</router-link
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -260,6 +252,8 @@ footer {
         margin: auto;
         .index_footer-sitmap {
             display: flex;
+            justify-content: start;
+            width: 100%;
             @include md {
                 display: none;
             }
