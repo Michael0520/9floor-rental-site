@@ -68,8 +68,12 @@
                         >
                     </div>
                     <ul>
-                        <li><router-link to="filter">條件搜尋</router-link></li>
-                        <li><router-link to="filter">地圖搜尋</router-link></li>
+                        <li>
+                            <router-link to="/filter">條件搜尋</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/filter">地圖搜尋</router-link>
+                        </li>
                         <li>
                             <router-link
                                 to="https://pure.9floor.co/"
@@ -85,10 +89,10 @@
                         玖樓<i class="material-icons">keyboard_arrow_down</i>
                     </div>
                     <ul>
-                        <li><a href="/zh-tw/about">關於</a></li>
-                        <li><a href="/zh-tw/media">媒體</a></li>
-                        <li><a href="/zh-tw/team">團隊</a></li>
-                        <li><a href="/zh-tw/contact">聯繫</a></li>
+                        <li><router-link to="/about">關於</router-link></li>
+                        <li><router-link to="/media">媒體</router-link></li>
+                        <li><router-link to="/team">團隊</router-link></li>
+                        <li><router-link to="/contact">聯繫</router-link></li>
                     </ul>
                 </li>
                 <li class="index_dropdown ">
@@ -96,17 +100,19 @@
                         服務<i class="material-icons">keyboard_arrow_down</i>
                     </div>
                     <ul>
-                        <li><a href="/zh-tw/space">空間管理</a></li>
-                        <li><a href="/zh-tw/coliving">共居生活</a></li>
+                        <li><router-link to="/space">空間管理</router-link></li>
+                        <li>
+                            <router-link to="/coliving">共居生活</router-link>
+                        </li>
                     </ul>
                 </li>
                 <li class="index_dropdown ">
                     <div class="index_title">
-                        <a
+                        <router-link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://medium.com/9floor-co-living"
-                            >日誌</a
+                            to="https://medium.com/9floor-co-living"
+                            >日誌</router-link
                         >
                     </div>
                 </li>
@@ -137,7 +143,7 @@
                         <div class="index_inner"></div>
                     </div>
                 </div>
-                <a href="/"
+                <router-link to="/"
                     ><svg
                         width="30px"
                         height="30px"
@@ -189,7 +195,7 @@
                             </g>
                         </g>
                     </svg>
-                </a>
+                </router-link>
                 <button>登入/註冊</button>
             </nav>
             <div class="index_mobile-menu" :class="{ index_open: isOpen }">
@@ -203,48 +209,48 @@
                     <div class="index_menu-block">
                         <div class="index_title">入住</div>
                         <div class="index_list">
-                            <a class="index_list-item" href="/zh-tw/room"
-                                >條件搜尋</a
-                            ><a class="index_list-item" href="/zh-tw/map"
-                                >地域搜尋</a
-                            ><a
+                            <router-link class="index_list-item" to="/room"
+                                >條件搜尋</router-link
+                            ><router-link class="index_list-item" to="/map"
+                                >地域搜尋</router-link
+                            ><router-link
                                 class="index_list-item"
-                                href="https://pure.9floor.co/"
+                                to="https://pure.9floor.co/"
                                 target="_blank"
-                                >玖樓璞園</a
+                                >玖樓璞園</router-link
                             >
                         </div>
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title">玖樓</div>
                         <div class="index_list">
-                            <a class="index_list-item" href="/zh-tw/about"
-                                >關於</a
-                            ><a class="index_list-item" href="/zh-tw/media"
-                                >媒體</a
-                            ><a class="index_list-item" href="/zh-tw/team"
-                                >團隊</a
-                            ><a class="index_list-item" href="/zh-tw/contact"
-                                >聯繫</a
+                            <router-link class="index_list-item" to="/about"
+                                >關於</router-link
+                            ><router-link class="index_list-item" to="/media"
+                                >媒體</router-link
+                            ><router-link class="index_list-item" to="/team"
+                                >團隊</router-link
+                            ><router-link class="index_list-item" to="/contact"
+                                >聯繫</router-link
                             >
                         </div>
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title">服務</div>
                         <div class="index_list">
-                            <a class="index_list-item" href="/zh-tw/space"
-                                >空間管理</a
-                            ><a class="index_list-item" href="/zh-tw/coliving"
-                                >共居生活</a
+                            <router-link class="index_list-item" to="/space"
+                                >空間管理</router-link
+                            ><router-link class="index_list-item" to="/coliving"
+                                >共居生活</router-link
                             >
                         </div>
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title" style="color:#444647">
-                            <a
-                                href="https://medium.com/9floor-co-living"
+                            <router-link
+                                to="https://medium.com/9floor-co-living"
                                 target="_blank"
-                                >日誌</a
+                                >日誌</router-link
                             >
                         </div>
                         <div class="index_list"></div>
@@ -252,40 +258,40 @@
                     <div class="index_menu-block">
                         <div class="index_title">協助</div>
                         <div class="index_list">
-                            <a class="index_list-item" href="/zh-tw/service"
-                                >如何申請</a
+                            <router-link class="index_list-item" to="/service"
+                                >如何申請</router-link
                             >
-                            <a
+                            <router-link
                                 class="index_list-item"
-                                href="https://medium.com/9floor-co-living"
+                                to="https://medium.com/9floor-co-living"
                                 target="_blank"
-                                >常見問題</a
+                                >常見問題</router-link
                             >
-                            <a class="index_list-item" href="/zh-tw/contact"
-                                >聯繫我們</a
+                            <router-link class="index_list-item" to="/contact"
+                                >聯繫我們</router-link
                             >
                         </div>
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title"></div>
                         <div class="index_list">
-                            <a class="index_list-item" href="/zh-tw/terms"
-                                >服務條款</a
+                            <router-link class="index_list-item" to="/terms"
+                                >服務條款</router-link
                             >
-                            <a class="index_list-item" href="/zh-tw/privacy"
-                                >隱私權政策</a
+                            <router-link class="index_list-item" to="/privacy"
+                                >隱私權政策</router-link
                             >
-                            <a class="index_list-item" href="/zh-tw/sitemap"
-                                >網站地圖</a
+                            <router-link class="index_list-item" to="/sitemap"
+                                >網站地圖</router-link
                             >
                         </div>
                     </div>
                 </div>
                 <div class="index_bottom">
                     <div class="index_social-media">
-                        <a
+                        <router-link
                             target="_blank"
-                            href="https://www.instagram.com/9floor.co/"
+                            to="https://www.instagram.com/9floor.co/"
                             rel="noopener noreferrer"
                             ><svg
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -299,10 +305,10 @@
                                         fill="#000000"
                                     ></path>
                                 </g></svg
-                        ></a>
-                        <a
+                        ></router-link>
+                        <router-link
                             target="_blank"
-                            href="https://www.facebook.com/9floor.co/"
+                            to="https://www.facebook.com/9floor.co/"
                             rel="noopener noreferrer"
                         >
                             <svg
@@ -318,10 +324,10 @@
                                     ></path>
                                 </g>
                             </svg>
-                        </a>
-                        <a
+                        </router-link>
+                        <router-link
                             target="_blank"
-                            href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
+                            to="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
                             rel="noopener noreferrer"
                         >
                             <svg viewBox="0 0 24 24" fill="#000000">
@@ -330,7 +336,7 @@
                                     fill="#000000"
                                 ></path>
                             </svg>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
