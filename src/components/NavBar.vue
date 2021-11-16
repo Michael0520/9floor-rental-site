@@ -5,7 +5,7 @@
             :class="{ index_transparent: backgroundWhite }"
         >
             <router-link to="/">
-                ><svg
+                <svg
                     width="72px"
                     height="29px"
                     viewBox="0 0 72 29"
