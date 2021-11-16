@@ -6,6 +6,7 @@ import FilterPage from "../views/Filter.vue";
 import HomePage from "../views/HomePage.vue";
 import Media from "../views/Media.vue";
 import RoomDetailPage from "../views/Room-detailPage.vue";
+import Space from "../views/Space.vue";
 import Team from "../views/Team.vue";
 const routes = [
   {
@@ -47,6 +48,11 @@ const routes = [
     path: "/contact",
     name: "ContactPage",
     component: Contact,
+  },
+  {
+    path: "/space",
+    name: "SpacePage",
+    component: Space,
   },
 ];
 
