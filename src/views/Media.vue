@@ -1,6 +1,5 @@
 <template>
     <WhiteNavBar />
-
     <div class="index_media">
         <Breadcrumb />
         <ImgBox
