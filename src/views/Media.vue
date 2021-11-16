@@ -11,6 +11,10 @@
         <div class="index_content">
             <SiderBar />
             <div class="index_center">
+                <div class="index_section-title index_sectionTitle">
+                    <div class="index_title">媒體</div>
+                    <div class="index_sub-title">Media</div>
+                </div>
                 <div class="index_section">
                     <h3>採訪玖樓</h3>
                     <div class="index_sectionContent">
@@ -378,8 +382,38 @@ export default {
             flex-direction: column;
             width: 100%;
             padding-bottom: 40px;
+            .index_sectionTitle {
+                margin-top: 30px;
+                margin-bottom: 0;
+                @media screen and (min-width: 576px) {
+                    display: none;
+                }
+            }
+
             .index_section {
                 margin: 74px 0 0 44px;
+                &:nth-of-type(2) {
+                    margin-bottom: 20px;
+                }
+                @media screen and (max-width: 576px) {
+                    margin: 0 20px;
+                    h3 {
+                        margin: 30px 0;
+                        min-width: 300px;
+                        text-align: center;
+                    }
+                    .index_sectionContent {
+                        width: 100%;
+                    }
+                    .index_sectionArticleGroup {
+                        padding-top: 15px;
+                        a {
+                            hr.index_horizontal {
+                                margin: 15px -20px 15px 0;
+                            }
+                        }
+                    }
+                }
                 h3 {
                     margin-bottom: 30px;
                     color: $success;
@@ -433,5 +467,11 @@ export default {
             }
         }
     }
+}
+.index_section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
 }
 </style>
