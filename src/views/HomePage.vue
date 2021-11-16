@@ -633,15 +633,6 @@ export default {
     align-items: center;
     padding: 42px 0;
     background-color: #e9ece5;
-    div {
-        max-width: 344px;
-        font-size: 15px;
-        font-weight: 300;
-        line-height: 1.35;
-        letter-spacing: 2.5px;
-        text-align: center;
-        color: $primary;
-    }
 }
 
 // mobile slider section
