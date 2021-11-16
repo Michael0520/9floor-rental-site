@@ -5,6 +5,7 @@ import FilterPage from "../views/Filter.vue";
 import HomePage from "../views/HomePage.vue";
 import Media from "../views/Media.vue";
 import RoomDetailPage from "../views/Room-detailPage.vue";
+import Team from "../views/Team.vue";
 const routes = [
   {
     path: "/",
@@ -35,6 +36,11 @@ const routes = [
     path: "/media",
     name: "MediaPage",
     component: Media,
+  },
+  {
+    path: "/team",
+    name: "TeamPage",
+    component: Team,
   },
 ];
 
