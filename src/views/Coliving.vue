@@ -1,7 +1,6 @@
 <template>
     <div>
         <white-nav-bar />
-
         <div class="index_content">
             <div class="index_coliving">
                 <Breadcrumb />
