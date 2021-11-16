@@ -1316,15 +1316,15 @@ export default {
         },
         filterRoomsSort(res) {
             if (this.cacheSort === "0") {
-                console.log("最新", 0);
+                // console.log("最新", 0);
             } else if (this.cacheSort === "2") {
                 res = res.sort((a, b) => {
-                    console.log("最低價格", 1);
+                    // console.log("最低價格", 1);
                     return a.monthlyRent - b.monthlyRent;
                 });
             } else {
                 res = res.sort((a, b) => {
-                    console.log("最高價格", 2);
+                    // console.log("最高價格", 2);
                     return b.monthlyRent - a.monthlyRent;
                 });
             }
