@@ -9,10 +9,10 @@
                             <div class="index_footer-sitmap">
                                 <div class="index_footer-column">
                                     <h5>入住玖樓</h5>
-                                    <router-link to="filter"
+                                    <router-link to="/filter"
                                         >條件搜尋</router-link
                                     >
-                                    <router-link to="/map"
+                                    <router-link to="/filter"
                                         >地圖搜尋</router-link
                                     >
                                     <router-link
@@ -199,14 +199,10 @@
                     >
                 </div>
                 <div class="col-sm-12 col-lg-6 index_footer-policy">
-                    <router-link to="/terms"><span>服務條款</span></router-link>
-                    <router-link to="/service"
-                        ><span>服務說明</span></router-link
-                    ><router-link to="/privacy"
-                        ><span>隱私權政策</span></router-link
-                    ><router-link to="/sitemap"
-                        ><span>網站地圖</span></router-link
-                    >
+                    <router-link to="#"><span>服務條款</span></router-link>
+                    <router-link to="#"><span>服務說明</span></router-link
+                    ><router-link to="#"><span>隱私權政策</span></router-link
+                    ><router-link to="#"><span>網站地圖</span></router-link>
                 </div>
             </div>
         </div>
