@@ -68,16 +68,16 @@ export default {
             // 12,345.67
         }
     },
-    // props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
-    props: {
-        name: String,
-        secondName: String,
-        roomStyle: String,
-        status: String,
-        price: Number,
-        image: String,
-        id: String
-    }
+    props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
+    // props: {
+    //     name: String,
+    //     secondName: String,
+    //     roomStyle: String,
+    //     status: String,
+    //     price: Number,
+    //     image: String,
+    //     id: String
+    // }
 };
 </script>
 
