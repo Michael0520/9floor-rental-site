@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import AboutPage from "../views/About.vue";
 import Coliving from "../views/Coliving.vue";
+import Contact from "../views/Contact.vue";
 import FilterPage from "../views/Filter.vue";
 import HomePage from "../views/HomePage.vue";
 import Media from "../views/Media.vue";
@@ -41,6 +42,11 @@ const routes = [
     path: "/team",
     name: "TeamPage",
     component: Team,
+  },
+  {
+    path: "/contact",
+    name: "ContactPage",
+    component: Contact,
   },
 ];
 
