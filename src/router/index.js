@@ -3,6 +3,7 @@ import AboutPage from "../views/About.vue";
 import Coliving from "../views/Coliving.vue";
 import FilterPage from "../views/Filter.vue";
 import HomePage from "../views/HomePage.vue";
+import Media from "../views/Media.vue";
 import RoomDetailPage from "../views/Room-detailPage.vue";
 const routes = [
   {
@@ -29,6 +30,11 @@ const routes = [
     path: "/coliving",
     name: "ColivingPage",
     component: Coliving,
+  },
+  {
+    path: "/media",
+    name: "MediaPage",
+    component: Media,
   },
 ];
 
