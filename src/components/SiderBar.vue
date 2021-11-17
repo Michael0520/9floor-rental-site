@@ -5,12 +5,12 @@
     >
         <div class="index_side-bar-content index_fade-in-out ">
             <div class="index_vertical-word">
-                <span>房</span>
-                <span>源</span>
-                <span>搜</span>
-                <span>尋</span>
+                <span>{{ title1 }}</span>
+                <span>{{ title2 }}</span>
+                <span>{{ title3 }}</span>
+                <span>{{ title4 }}</span>
             </div>
-            <div class="index_vertical-en">Room search</div>
+            <div class="index_vertical-en">{{ siderName }}</div>
         </div>
     </div>
 </template>
@@ -22,6 +22,8 @@ export default {
             isTop: false
         };
     },
+    props: ["siderName", "title1", "title2", "title3", "title4"],
+
     mounted() {
         // if isTop = 0 , add fixed class , else remove
         window.addEventListener("scroll", () => {
