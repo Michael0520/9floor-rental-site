@@ -8,7 +8,11 @@
             :title2="bannerTitle.title2"
         />
         <div class="index_content">
-            <SiderBar />
+            <SiderBar
+                :title1="bannerTitle.title1"
+                :title2="bannerTitle.title2"
+                :siderName="siderName"
+            />
             <div class="index_center">
                 <div class="index_section-title index_sectionTitle">
                     <div class="index_title">團隊</div>
@@ -235,6 +239,7 @@ import Footer from "../components/Footer.vue";
 export default {
     data() {
         return {
+            siderName: "Team",
             bannerTitle: {
                 imgUrl:
                     "https://9floor.co/assets/team-hero__d61548abc98909d7fc96571ccdaf2db8.jpg",
