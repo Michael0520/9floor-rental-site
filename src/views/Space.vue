@@ -10,7 +10,13 @@
             :title4="bannerTitle.title4"
         />
         <div class="index_space-content">
-            <SiderBar />
+            <SiderBar
+                :title1="bannerTitle.title1"
+                :title2="bannerTitle.title2"
+                :title3="bannerTitle.title3"
+                :title4="bannerTitle.title4"
+                :siderName="siderName"
+            />
             <div class="index_center">
                 <div
                     class="index_section-title index_sectionTitle index_space-sectionTitle"
@@ -226,6 +232,7 @@ import Footer from "../components/Footer.vue";
 export default {
     data() {
         return {
+            siderName: "Space Management",
             bannerTitle: {
                 imgUrl:
                     "https://9floor.co/assets/space-hero__d2fe1180fbd17afb77631a571675eb87.jpg",
