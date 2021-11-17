@@ -209,9 +209,9 @@
                     <div class="index_menu-block">
                         <div class="index_title">入住</div>
                         <div class="index_list">
-                            <router-link class="index_list-item" to="/room"
+                            <router-link class="index_list-item" to="/filter"
                                 >條件搜尋</router-link
-                            ><router-link class="index_list-item" to="/map"
+                            ><router-link class="index_list-item" to="/filter"
                                 >地域搜尋</router-link
                             ><router-link
                                 class="index_list-item"

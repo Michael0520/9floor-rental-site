@@ -93,7 +93,7 @@
                         </div>
                         <router-link
                             class="index_button index_primary"
-                            to="/roomDetailPage"
+                            to="/filter"
                         >
                             <div>
                                 <i
