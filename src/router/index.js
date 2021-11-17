@@ -8,6 +8,7 @@ import Media from "../views/Media.vue";
 import RoomDetailPage from "../views/Room-detailPage.vue";
 import Space from "../views/Space.vue";
 import Team from "../views/Team.vue";
+import WishList from "../views/wishList.vue";
 const routes = [
   {
     path: "/",
@@ -53,6 +54,11 @@ const routes = [
     path: "/space",
     name: "SpacePage",
     component: Space,
+  },
+  {
+    path: "/wishList",
+    name: "WishListPage",
+    component: WishList,
   },
 ];
 
