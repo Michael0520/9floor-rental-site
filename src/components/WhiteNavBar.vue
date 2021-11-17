@@ -275,13 +275,13 @@
                     <div class="index_menu-block">
                         <div class="index_title"></div>
                         <div class="index_list">
-                            <router-link class="index_list-item" to="/terms"
+                            <router-link class="index_list-item" to="/"
                                 >服務條款</router-link
                             >
-                            <router-link class="index_list-item" to="/privacy"
+                            <router-link class="index_list-item" to="/"
                                 >隱私權政策</router-link
                             >
-                            <router-link class="index_list-item" to="/sitemap"
+                            <router-link class="index_list-item" to="/"
                                 >網站地圖</router-link
                             >
                         </div>

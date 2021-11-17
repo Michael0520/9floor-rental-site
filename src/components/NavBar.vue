@@ -338,11 +338,11 @@
                     <div class="index_menu-block">
                         <div class="index_title"></div>
                         <div class="index_list">
-                            <router-link to="/terms" class="index_list-item"
+                            <router-link to="/" class="index_list-item"
                                 >服務條款</router-link
-                            ><router-link to="/privacy" class="index_list-item"
+                            ><router-link to="/" class="index_list-item"
                                 >隱私權政策</router-link
-                            ><router-link to="/sitmap" class="index_list-item"
+                            ><router-link to="/" class="index_list-item"
                                 >網站地圖</router-link
                             >
                         </div>
