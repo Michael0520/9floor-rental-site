@@ -250,11 +250,20 @@
                         </div>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-lg-6 col-sm-12">
-                                    <RoomCard />
-                                </div>
-                                <div class="col-lg-6 col-sm-12">
-                                    <RoomCard />
+                                <div
+                                    class="col-lg-6 col-sm-12"
+                                    v-for="(room, index) in temp"
+                                    :key="index"
+                                >
+                                    <RoomCard
+                                        :price="room.monthlyRent"
+                                        :name="room.name"
+                                        :secondName="room.secondName"
+                                        :roomStyle="room.roomStyle"
+                                        :status="room.status"
+                                        :image="room.imgUrl"
+                                        :id="room.id"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -349,7 +358,10 @@ export default {
         filterBigRooms(res) {
             res = res.filter(item => {
                 // console.log("BigRooms", item.name);
-                return item.secondName === ("仁愛 RoomC" || "仁愛 RoomA");
+                let matchTitle = ["仁愛 RoomA", "仁愛 RoomC"];
+                // return item.secondName.match(matchTitle);
+                return matchTitle.includes(item.secondName);
+                // this.temp.includes(matchTitle)
             });
             console.log("res", res);
             console.log("temp", this.temp);
