@@ -339,7 +339,23 @@ export default {
             renderSmallRooms: []
         };
     },
-    methods: {},
+    methods: {
+        renderRooms() {
+            let res = this.temp;
+            res = this.filterBigRooms(res);
+
+            this.temp = [...res];
+        },
+        filterBigRooms(res) {
+            res = res.filter(item => {
+                // console.log("BigRooms", item.name);
+                return item.secondName === ("仁愛 RoomC" || "仁愛 RoomA");
+            });
+            console.log("res", res);
+            console.log("temp", this.temp);
+            return res;
+        }
+    },
     mounted() {
         let loader = this.$loading.show({
             // Optional parameters
@@ -352,6 +368,7 @@ export default {
             .then(result => {
                 this.rooms = result.data;
                 this.temp = this.rooms;
+                this.renderRooms();
                 // success get data
                 setTimeout(() => {
                     loader.hide(); // simulate AJAX
