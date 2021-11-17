@@ -151,7 +151,9 @@
                     class="index_register"
                     :class="{ index_transparent: backgroundWhite }"
                 >
-                    <button class="index_title">登入</button>
+                    <button class="index_title">
+                        登入
+                    </button>
                 </li>
                 <li
                     class="index_register"
@@ -171,6 +173,7 @@
                 </li>
             </ul>
         </nav>
+
         <div class="index_navigator-section">
             <nav
                 class="index_navigator-mobile "
@@ -269,11 +272,9 @@
                             <router-link to="/filter" class="index_list-item"
                                 >條件搜尋</router-link
                             >
-
                             <router-link to="/filter" class="index_list-item"
                                 >地域搜尋</router-link
                             >
-
                             <router-link
                                 to="https://pure.9floor.co/"
                                 class="index_list-item"
