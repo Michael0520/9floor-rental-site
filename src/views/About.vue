@@ -11,7 +11,13 @@
                 :title4="bannerTitle.title4"
             />
             <div class="index_aboutSection-content">
-                <SiderBar />
+                <SiderBar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :siderName="siderName"
+                />
                 <div class="index_center">
                     <div
                         class="index_section-title index_sectionTitle mobile-show"
@@ -123,6 +129,7 @@ export default {
             name: "AboutPage",
             scrollNum: 0,
             isTop: false,
+            siderName: "About 9floor",
             bannerTitle: {
                 imgUrl:
                     "https://9floor.co/assets/about-hero__06d0e04ed24912eb1ecded6dbc310901.jpg",
