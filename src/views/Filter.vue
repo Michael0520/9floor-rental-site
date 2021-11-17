@@ -1348,7 +1348,10 @@ export default {
         },
         // mobile menu
         filterRoomsMoblieLocation(mobileRes) {
-            if (this.selectedMobileLocation === "全國") {
+            if (
+                this.selectedMobileLocation === "全國" ||
+                this.selectedMobileLocation === "請選擇城市"
+            ) {
                 // ...arg 傳參考避免出錯
                 // console.log(this.selectedMobileLocation);
             } else {
