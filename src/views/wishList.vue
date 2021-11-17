@@ -21,10 +21,35 @@
                 >
             </div>
             <div class="index_wishList-content">
-                <SiderBar />
+                <SiderBar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :title5="bannerTitle.title5"
+                    :siderName="siderName"
+                />
                 <div class="index_center">
                     <div class="index_wishList-roomList">
-                        <roomCard />
+                        <div class="container-fluid">
+                            <div class="row g-0">
+                                <div
+                                    class="col-lg-6"
+                                    v-for="(room, index) in temp"
+                                    :key="index"
+                                >
+                                    <roomCard
+                                        :price="room.monthlyRent"
+                                        :name="room.name"
+                                        :secondName="room.secondName"
+                                        :roomStyle="room.roomStyle"
+                                        :status="room.status"
+                                        :image="room.imgUrl"
+                                        :id="room.id"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <rightSiderBar />
@@ -44,6 +69,15 @@ import roomCard from "../components/RoomCard.vue";
 export default {
     data() {
         return {
+            siderName: "Saved rooms",
+            bannerTitle: {
+                imgUrl: "",
+                title1: "收",
+                title2: "藏",
+                title3: "的",
+                title4: "房",
+                title5: "源"
+            },
             rooms: [],
             temp: []
         };
@@ -68,7 +102,6 @@ export default {
             .then(result => {
                 this.rooms = result.data;
                 this.temp = this.rooms;
-                this.renderRooms();
                 // success get data
                 setTimeout(() => {
                     loader.hide(); // simulate AJAX
@@ -112,6 +145,24 @@ export default {
             .index_report {
                 margin-left: auto;
                 margin-right: 5px;
+            }
+        }
+        .index_wishList-content {
+            display: flex;
+            width: 100%;
+            max-width: 1280px;
+            min-height: calc(100vh - 432px);
+            .index_center {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .index_wishList-roomList {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding: 15px;
+                    margin-bottom: 70px;
+                }
             }
         }
     }
