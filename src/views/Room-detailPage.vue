@@ -194,7 +194,13 @@
                     </div>
                 </div>
                 <!-- side-bar-left -->
-                <SiderBar />
+                <SiderBar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :siderName="siderName"
+                />
                 <div class="index_center">
                     <div class="index_view-marker"></div>
                     <section class="index_room-info">
@@ -1019,7 +1025,17 @@ export default {
             // 捷運站
             roomsMRTsLine: [],
             roomsMRTsStation: "",
-            roomsWalkingTime: ""
+            roomsWalkingTime: "",
+
+            // siderData
+            siderName: "Room Info",
+            bannerTitle: {
+                imgUrl: "",
+                title1: "房",
+                title2: "間",
+                title3: "資",
+                title4: "訊"
+            }
         };
     },
     components: {
