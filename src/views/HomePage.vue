@@ -184,16 +184,22 @@
                             </div>
                         </div>
                         <div class="index_mobile-section-buttons">
-                            <a class="index_button index_primary">
+                            <router-link
+                                to="/filter"
+                                class="index_button index_primary"
+                            >
                                 <div>
                                     <i class="material-icons index_icon"
                                         >search</i
                                     >搜尋物件
                                 </div>
-                            </a>
-                            <a class="index_button index_primary">
+                            </router-link>
+                            <router-link
+                                to="/coliving"
+                                class="index_button index_primary"
+                            >
                                 <div>服務詳情</div>
-                            </a>
+                            </router-link>
                         </div>
                         <div class="index_mobile-section-detail">
                             <div class="index_mobile-section-detail-content">
