@@ -267,6 +267,10 @@ export default {
     p {
         width: 446px;
         text-align: center;
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            text-align: left;
+        }
     }
 }
 
@@ -302,6 +306,9 @@ export default {
                     }
                     p {
                         width: 500px;
+                        @media screen and (max-width: 576px) {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -310,6 +317,10 @@ export default {
                 justify-content: center;
                 flex: 1;
                 position: relative;
+                @media screen and (max-width: 576px) {
+                    flex-direction: column;
+                    width: 100%;
+                }
                 .index_serviceContainer {
                     display: flex;
                     flex-direction: column;
@@ -334,6 +345,9 @@ export default {
                                 p {
                                     width: 220px;
                                     margin: auto;
+                                    @media screen and (max-width: 576px) {
+                                        text-align: left;
+                                    }
                                 }
                             }
                         }
@@ -368,6 +382,10 @@ export default {
                         }
                         p {
                             width: 220px;
+                            @media screen and (max-width: 576px) {
+                                width: 100%;
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -381,6 +399,9 @@ export default {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 40px;
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
     .index_slogan {
         display: flex;
         h2.vertical {
@@ -405,4 +426,6 @@ export default {
         }
     }
 }
+
+// mobile
 </style>
