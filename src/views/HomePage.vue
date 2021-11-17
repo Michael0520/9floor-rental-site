@@ -271,7 +271,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div
-                                    class="col-sm-12  col-lg-4"
+                                    class="col-md-6  col-lg-4"
                                     v-for="(room, index) in renderSmallRooms"
                                     :key="index"
                                 >
