@@ -9,7 +9,11 @@
                 :title2="bannerTitle.title2"
             />
             <div class="index_contact-content">
-                <sider-bar />
+                <sider-bar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :siderName="siderName"
+                />
                 <div class="index_center">
                     <div class="index_section-title index_section-title">
                         <div class="index_title">聯繫</div>
@@ -133,6 +137,7 @@ import RightSiderBar from "../components/rightSiderBar.vue";
 export default {
     data() {
         return {
+            siderName: "Contact",
             bannerTitle: {
                 imgUrl:
                     "https://9floor.co/assets/contact-hero__d7371d9a42f24b0f8280532e3ca7adb7.jpg",
