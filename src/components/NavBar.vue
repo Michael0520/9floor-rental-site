@@ -138,13 +138,13 @@
                     :class="{ index_transparent: backgroundWhite }"
                 >
                     <div class="index_title">
-                        <router-link
-                            to="https://medium.com/9floor-co-living"
+                        <a
+                            href="https://medium.com/9floor-co-living"
                             target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
                             日誌
-                        </router-link>
+                        </a>
                     </div>
                 </li>
                 <li
@@ -309,12 +309,12 @@
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title">
-                            <router-link
-                                to="https://medium.com/9floor-co-living"
+                            <a
+                                href="https://medium.com/9floor-co-living"
                                 class="index_list-item"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
-                                >日誌</router-link
+                                >日誌</a
                             >
                         </div>
                         <div class="index_list"></div>
@@ -324,12 +324,12 @@
                         <div class="index_list">
                             <router-link to="/" class="index_list-item"
                                 >如何申請</router-link
-                            ><router-link
-                                to="https://medium.com/9floor-co-living"
+                            ><a
+                                href="https://medium.com/9floor-co-living"
                                 class="index_list-item"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
-                                >常見問題</router-link
+                                >常見問題</a
                             ><router-link to="/contact" class="index_list-item"
                                 >聯繫我們</router-link
                             >
@@ -388,8 +388,8 @@
                                 </g>
                             </svg>
                         </router-link>
-                        <router-link
-                            to="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
+                        <a
+                            href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
                             target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
@@ -399,7 +399,7 @@
                                     fill="#000000"
                                 ></path>
                             </svg>
-                        </router-link>
+                        </a>
                     </div>
                 </div>
             </div>

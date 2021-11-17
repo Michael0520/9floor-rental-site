@@ -108,11 +108,11 @@
                 </li>
                 <li class="index_dropdown ">
                     <div class="index_title">
-                        <router-link
+                        <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            to="https://medium.com/9floor-co-living"
-                            >日誌</router-link
+                            href="https://medium.com/9floor-co-living"
+                            >日誌</a
                         >
                     </div>
                 </li>
@@ -247,10 +247,10 @@
                     </div>
                     <div class="index_menu-block">
                         <div class="index_title" style="color:#444647">
-                            <router-link
-                                to="https://medium.com/9floor-co-living"
+                            <a
+                                href="https://medium.com/9floor-co-living"
                                 target="_blank"
-                                >日誌</router-link
+                                >日誌</a
                             >
                         </div>
                         <div class="index_list"></div>
@@ -261,11 +261,11 @@
                             <router-link class="index_list-item" to="/"
                                 >如何申請</router-link
                             >
-                            <router-link
+                            <a
                                 class="index_list-item"
-                                to="https://medium.com/9floor-co-living"
+                                href="https://medium.com/9floor-co-living"
                                 target="_blank"
-                                >常見問題</router-link
+                                >常見問題</a
                             >
                             <router-link class="index_list-item" to="/contact"
                                 >聯繫我們</router-link
@@ -325,9 +325,9 @@
                                 </g>
                             </svg>
                         </router-link>
-                        <router-link
+                        <a
                             target="_blank"
-                            to="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
+                            href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
                             rel="noopener noreferrer"
                         >
                             <svg viewBox="0 0 24 24" fill="#000000">
@@ -336,7 +336,7 @@
                                     fill="#000000"
                                 ></path>
                             </svg>
-                        </router-link>
+                        </a>
                     </div>
                 </div>
             </div>
