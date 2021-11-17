@@ -361,6 +361,7 @@ export default {
 
             let res2 = this.temp;
             res2 = this.filterSmallRooms(res2);
+            res2 = this.sortByPrice(res2);
 
             this.renderBigRooms = [...res];
             this.renderSmallRooms = [...res2];
@@ -385,8 +386,14 @@ export default {
                 return matchTitle.includes(item.name);
                 // this.temp.includes(matchTitle)
             });
-            console.log("res2", res2);
+            // console.log("res2", res2);
             // console.log("temp", this.temp);
+            return res2;
+        },
+        sortByPrice(res2) {
+            res2 = res2.sort((a, b) => {
+                return b.monthlyRent - a.monthlyRent;
+            });
             return res2;
         }
     },
