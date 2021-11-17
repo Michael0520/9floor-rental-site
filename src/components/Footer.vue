@@ -15,12 +15,12 @@
                                     <router-link to="/filter"
                                         >地圖搜尋</router-link
                                     >
-                                    <router-link
-                                        to="https://pure.9floor.co/"
+                                    <a
+                                        href="https://pure.9floor.co/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class=""
-                                        >玖樓璞園</router-link
+                                        >玖樓璞園</a
                                     >
                                 </div>
                                 <div class="index_footer-column">
@@ -132,9 +132,9 @@
                                     </button>
                                 </div>
                                 <div class="index_social-media">
-                                    <router-link
+                                    <a
                                         target="_blank"
-                                        to="https://www.instagram.com/9floor.co/"
+                                        href="https://www.instagram.com/9floor.co/"
                                         rel="noopener noreferrer"
                                         ><svg
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -148,10 +148,10 @@
                                                     fill="#000000"
                                                 ></path>
                                             </g></svg
-                                    ></router-link>
-                                    <router-link
+                                    ></a>
+                                    <a
                                         target="_blank"
-                                        to="https://www.facebook.com/9floor.co/"
+                                        href="https://www.facebook.com/9floor.co/"
                                         rel="noopener noreferrer"
                                         ><svg
                                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -165,7 +165,7 @@
                                                     fill="#000000"
                                                 ></path>
                                             </g></svg
-                                    ></router-link>
+                                    ></a>
                                     <a
                                         target="_blank"
                                         href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"

@@ -275,12 +275,12 @@
                             <router-link to="/filter" class="index_list-item"
                                 >地域搜尋</router-link
                             >
-                            <router-link
-                                to="https://pure.9floor.co/"
+                            <a
+                                href="https://pure.9floor.co/"
                                 class="index_list-item"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
-                                >玖樓璞園</router-link
+                                >玖樓璞園</a
                             >
                         </div>
                     </div>
@@ -351,8 +351,8 @@
                 </div>
                 <div class="index_bottom">
                     <div class="index_social-media">
-                        <router-link
-                            to="https://www.instagram.com/9floor.co/"
+                        <a
+                            href="https://www.instagram.com/9floor.co/"
                             target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
@@ -369,9 +369,9 @@
                                     ></path>
                                 </g>
                             </svg>
-                        </router-link>
-                        <router-link
-                            to="https://www.facebook.com/9floor.co/"
+                        </a>
+                        <a
+                            href="https://www.facebook.com/9floor.co/"
                             target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
@@ -388,7 +388,7 @@
                                     ></path>
                                 </g>
                             </svg>
-                        </router-link>
+                        </a>
                         <a
                             href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
                             target="_blank"

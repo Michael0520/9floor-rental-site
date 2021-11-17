@@ -75,11 +75,11 @@
                             <router-link to="/filter">地圖搜尋</router-link>
                         </li>
                         <li>
-                            <router-link
-                                to="https://pure.9floor.co/"
+                            <a
+                                href="https://pure.9floor.co/"
                                 target="_blank"
                                 rel="noopener noreferrer nofollow"
-                                >玖樓璞園</router-link
+                                >玖樓璞園</a
                             >
                         </li>
                     </ul>
@@ -213,11 +213,11 @@
                                 >條件搜尋</router-link
                             ><router-link class="index_list-item" to="/filter"
                                 >地域搜尋</router-link
-                            ><router-link
+                            ><a
                                 class="index_list-item"
-                                to="https://pure.9floor.co/"
+                                href="https://pure.9floor.co/"
                                 target="_blank"
-                                >玖樓璞園</router-link
+                                >玖樓璞園</a
                             >
                         </div>
                     </div>
