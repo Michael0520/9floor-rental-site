@@ -331,10 +331,35 @@ export default {
                 title2: "居",
                 title3: "生",
                 title4: "活"
-            }
+            },
+            // roomData
+            rooms: [],
+            temp: [],
+            renderBigRooms: [],
+            renderSmallRooms: []
         };
     },
+    methods: {},
     mounted() {
+        let loader = this.$loading.show({
+            // Optional parameters
+            container: this.fullPage ? null : this.$refs.formContainer,
+            canCancel: true,
+            onCancel: this.onCancel
+        });
+        this.axios
+            .get("http://localhost:3000/rooms")
+            .then(result => {
+                this.rooms = result.data;
+                this.temp = this.rooms;
+                // success get data
+                setTimeout(() => {
+                    loader.hide(); // simulate AJAX
+                }, 1500);
+            })
+            .catch(err => {
+                console.warn(err);
+            });
         // if isTop = 0 , add fixed class , else remove
         window.addEventListener("scroll", () => {
             let clientTop =
