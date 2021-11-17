@@ -44,7 +44,13 @@
             <!-- home-content -->
             <div class="index_home-content">
                 <!-- side-bar -->
-                <SiderBar />
+                <SiderBar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :siderName="siderName"
+                />
                 <!-- room-content -->
                 <div class="index_center w-100">
                     <!-- view-marker -->
@@ -317,7 +323,15 @@ export default {
     data() {
         return {
             name: "HomePage",
-            isTop: false
+            isTop: false,
+            siderName: " Coliving",
+            bannerTitle: {
+                imgUrl: "",
+                title1: "共",
+                title2: "居",
+                title3: "生",
+                title4: "活"
+            }
         };
     },
     mounted() {
