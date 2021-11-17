@@ -31,16 +31,16 @@
                             >
                         </p>
                         <div class="index_button-group">
-                            <router-link
+                            <a
                                 class="index_button index_marginButton index_primary"
-                                to="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
+                                href="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
                                 target="_blank"
                                 ><div>
                                     <i class="material-icons index_icon"
                                         >open_in_new</i
                                     >
                                     聯繫我們
-                                </div></router-link
+                                </div></a
                             >
                         </div>
                     </div>
@@ -49,11 +49,11 @@
                             <h3>物業夥伴</h3>
                             <p>
                                 <span
-                                    >物業委託管理服務，歡迎留下<router-link
-                                        to="https://www.surveycake.com/s/DpLrb"
+                                    >物業委託管理服務，歡迎留下<a
+                                        href="https://www.surveycake.com/s/DpLrb"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >空間基本資料與需求</router-link
+                                        >空間基本資料與需求</a
                                     >，我們會儘速與您聯繫</span
                                 >
                             </p>
@@ -72,9 +72,9 @@
                             <h3>投資夥伴</h3>
                             <p>
                                 <span
-                                    >如果有興趣與我們一起創造更棒的居住生活產業，請聯繫<router-link
-                                        to="mailto:invest@9floor.co"
-                                        >invest@9floor.co</router-link
+                                    >如果有興趣與我們一起創造更棒的居住生活產業，請聯繫<a
+                                        href="mailto:invest@9floor.co"
+                                        >invest@9floor.co</a
                                     ></span
                                 >
                             </p>
@@ -96,11 +96,11 @@
                             <h3>合作提案</h3>
                             <p>
                                 <span
-                                    >歡迎留下<router-link
-                                        to="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
+                                    >歡迎留下<a
+                                        href="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >相關資料</router-link
+                                        >相關資料</a
                                     >，我們會儘速與您聯繫</span
                                 >
                             </p>
@@ -109,11 +109,11 @@
                             <h3>顧問諮詢</h3>
                             <p>
                                 <span
-                                    >空間規劃諮詢，歡迎留下<router-link
-                                        to="https://www.surveycake.com/s/DpLrb"
+                                    >空間規劃諮詢，歡迎留下<a
+                                        href="https://www.surveycake.com/s/DpLrb"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >空間基本資料與需求</router-link
+                                        >空間基本資料與需求</a
                                     >，我們會儘速與您聯繫</span
                                 >
                             </p>
