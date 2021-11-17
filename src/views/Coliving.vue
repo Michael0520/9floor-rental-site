@@ -382,7 +382,7 @@ h2.vertical {
     }
 }
 .index_circleGroup {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 576px) {
         display: flex;
         justify-content: space-around;
     }
@@ -486,7 +486,7 @@ h2.vertical {
         }
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 576px) {
     .index_section-title.index_sectionTitle {
         display: none;
     }
