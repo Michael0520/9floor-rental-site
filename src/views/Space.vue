@@ -12,7 +12,9 @@
         <div class="index_space-content">
             <SiderBar />
             <div class="index_center">
-                <div class="index_section-title index_sectionTitle">
+                <div
+                    class="index_section-title index_sectionTitle index_space-sectionTitle"
+                >
                     <div class="index_title">空間管理</div>
                     <div class="index_sub-title">Space Management</div>
                 </div>
@@ -253,6 +255,11 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 60px 0;
+    @media screen and (max-width: 576px) {
+        padding-top: 10px;
+        padding-bottom: 70px;
+        margin: 0 47px;
+    }
     .index_space-title {
         font-size: 20px;
         margin: 10px 0 15px;
@@ -293,7 +300,13 @@ export default {
                 margin-bottom: 88px;
                 text-align: center;
             }
+            .index_space-sectionTitle {
+                margin: 30px 0;
+            }
             .index_section {
+                @media screen and (max-width: 576px) {
+                    margin: 0 20px;
+                }
                 .index_section-article {
                     display: flex;
                     flex-direction: column;
@@ -327,6 +340,10 @@ export default {
                     align-items: center;
                     border-right: 1px solid $info;
                     flex: 1;
+                    @media screen and (max-width: 576px) {
+                        border-bottom: 1px solid $border;
+                        margin-top: 50px;
+                    }
                     h4 {
                         display: inline-block;
                         align-self: center;
@@ -357,6 +374,9 @@ export default {
             .index_styledLine {
                 margin: 60px;
                 width: auto;
+                @media screen and (max-width: 576px) {
+                    display: none;
+                }
             }
             hr {
                 width: 100%;
@@ -373,8 +393,16 @@ export default {
                     display: flex;
                     justify-content: space-around;
                     margin: 60px 0;
+                    @media screen and (max-width: 576px) {
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 60px 20px 0;
+                    }
                     .index_coperationContent {
                         text-align: center;
+                        @media screen and (max-width: 576px) {
+                            margin-bottom: 60px;
+                        }
                         h4 {
                             font-size: 18px;
                             letter-spacing: 3px;
