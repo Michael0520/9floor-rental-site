@@ -11,7 +11,13 @@
                 :title4="bannerTitle.title4"
             />
             <div class="index_coliving-content">
-                <sider-bar />
+                <sider-bar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :siderName="siderName"
+                />
                 <div class="index_center">
                     <div class="index_section-title index_sectionTitle ">
                         <div class="index_title">共同生活</div>
@@ -270,6 +276,7 @@ export default {
     },
     data() {
         return {
+            siderName: "9floor Coliving",
             bannerTitle: {
                 imgUrl:
                     "https://9floor.co/assets/coliving-hero__51cb6b6ea9987fcbe2de2cf4da936212.jpg",
