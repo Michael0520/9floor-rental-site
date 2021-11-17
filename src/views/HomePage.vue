@@ -252,7 +252,7 @@
                             <div class="row">
                                 <div
                                     class="col-lg-6 col-sm-12"
-                                    v-for="(room, index) in temp"
+                                    v-for="(room, index) in renderBigRooms"
                                     :key="index"
                                 >
                                     <RoomCard
@@ -270,14 +270,20 @@
                         <!-- room-list-small -->
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-sm-12  col-lg-4">
-                                    <RoomCard />
-                                </div>
-                                <div class="col-sm-12  col-lg-4">
-                                    <RoomCard />
-                                </div>
-                                <div class="col-sm-12  col-lg-4">
-                                    <RoomCard />
+                                <div
+                                    class="col-sm-12  col-lg-4"
+                                    v-for="(room, index) in renderSmallRooms"
+                                    :key="index"
+                                >
+                                    <RoomCard
+                                        :price="room.monthlyRent"
+                                        :name="room.name"
+                                        :secondName="room.secondName"
+                                        :roomStyle="room.roomStyle"
+                                        :status="room.status"
+                                        :image="room.imgUrl"
+                                        :id="room.id"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -353,7 +359,11 @@ export default {
             let res = this.temp;
             res = this.filterBigRooms(res);
 
-            this.temp = [...res];
+            let res2 = this.temp;
+            res2 = this.filterSmallRooms(res2);
+
+            this.renderBigRooms = [...res];
+            this.renderSmallRooms = [...res2];
         },
         filterBigRooms(res) {
             res = res.filter(item => {
@@ -363,9 +373,21 @@ export default {
                 return matchTitle.includes(item.secondName);
                 // this.temp.includes(matchTitle)
             });
-            console.log("res", res);
-            console.log("temp", this.temp);
+            // console.log("res", res);
+            // console.log("temp", this.temp);
             return res;
+        },
+        filterSmallRooms(res2) {
+            res2 = res2.filter(item => {
+                // console.log("BigRooms", item.name);
+                let matchTitle = ["玖樓宅度假 -漫步旅店", "玖樓璞園"];
+                // return item.secondName.match(matchTitle);
+                return matchTitle.includes(item.name);
+                // this.temp.includes(matchTitle)
+            });
+            console.log("res2", res2);
+            // console.log("temp", this.temp);
+            return res2;
         }
     },
     mounted() {
