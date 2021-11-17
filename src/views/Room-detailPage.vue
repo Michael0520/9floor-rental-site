@@ -128,7 +128,7 @@
                                 </button>
                             </div>
                             <!-- TODO:router-link to 區域詳細資訊頁面-->
-                            <router-link class="index_apartment-name" to="#">
+                            <router-link class="index_apartment-name" to="/">
                                 {{ roomsTitle }}
                             </router-link>
                             <!-- TODO:房間 title -->
@@ -966,7 +966,7 @@
                         </div>
                     </div>
                     <router-link
-                        to="filter"
+                        to="/filter"
                         class="index_button index_more-button index_primary"
                     >
                         <div>更多</div>
