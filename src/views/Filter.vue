@@ -41,7 +41,13 @@
             </div>
             <div class="index_room-section" style="width:100%;display:flex">
                 <!-- sider-bar -->
-                <SiderBar />
+                <SiderBar
+                    :title1="bannerTitle.title1"
+                    :title2="bannerTitle.title2"
+                    :title3="bannerTitle.title3"
+                    :title4="bannerTitle.title4"
+                    :siderName="siderName"
+                />
                 <div
                     class="index_room-list"
                     style="border-top:1px solid #d2c8bd"
@@ -1125,7 +1131,17 @@ export default {
             renderMRTsStation: [],
             //
             mrtCode: {},
-            mrtStation: {}
+            mrtStation: {},
+
+            // siderData
+            siderName: "Room search",
+            bannerTitle: {
+                imgUrl: "",
+                title1: "房",
+                title2: "源",
+                title3: "搜",
+                title4: "尋"
+            }
         };
     },
     methods: {
