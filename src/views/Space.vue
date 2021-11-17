@@ -70,32 +70,31 @@
                             <span
                                 ><span
                                     >玖樓（9floor）為台灣共同生活空間的先驅及專業品牌。從零開始，我們逐步嘗試並期許能做出一個有理想性的共居生活品牌。短短三年內累積近三千人次申請入住，並擁有三萬多名網路社群粉絲。獲得媒體高度關注外，亦與公部門攜手，規劃三峽青銀共居宅與永和社會住宅。並於2017年成為
-                                    <router-link
+                                    <a
                                         class="underline"
-                                        to="https://news.ltn.com.tw/news/local/paper/1138446"
+                                        href="https://news.ltn.com.tw/news/local/paper/1138446"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >台北市政府認證專業房東</router-link
+                                        >台北市政府認證專業房東</a
                                     ></span
                                 ></span
                             ><span
                                 ><span
                                     >放眼亞洲，我們與國內外相關創新組織緊密互動，更於2017年獲得香港
-                                    <router-link
+                                    <a
                                         class="underline"
-                                        to="https://www.socialinnovationaward.asia/about-us/"
+                                        href="https://www.socialinnovationaward.asia/about-us/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >Asia Social Innovation
-                                        Award</router-link
+                                        >Asia Social Innovation Award</a
                                     >
                                     、2016年首爾
-                                    <router-link
+                                    <a
                                         class="underline"
-                                        to="https://www.facebook.com/Anyse.Asia/"
+                                        href="https://www.facebook.com/Anyse.Asia/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        >ANYSE</router-link
+                                        >ANYSE</a
                                     >
                                     台灣代表、及社企流iLab與台北市產發局育成計輔導。作為一個同時具備國際視野、在地經驗及新創管理能力，玖樓，將會是與您一起透過品牌加成，為資產創造更高價值的首選團隊。</span
                                 ></span
@@ -205,14 +204,14 @@
                     <div class="index_more-room-content">
                         想了解更多嗎？歡迎留下相關資料，我們會儘速安排專人與您聯繫
                     </div>
-                    <router-link
+                    <a
                         class="index_button index_primary"
-                        to="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
+                        href="https://www.surveycake.com/s/eVGgX?ssn0&amp;ssn1=%2B886%20null&amp;ssn2=po2319987%40gmail.com"
                         target="_blank"
                         ><div>
                             <i class="material-icons index_icon">open_in_new</i
                             >與我們聯繫
-                        </div></router-link
+                        </div></a
                     >
                 </section>
             </div>
