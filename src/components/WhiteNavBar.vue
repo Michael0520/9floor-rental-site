@@ -289,9 +289,9 @@
                 </div>
                 <div class="index_bottom">
                     <div class="index_social-media">
-                        <router-link
+                        <a
                             target="_blank"
-                            to="https://www.instagram.com/9floor.co/"
+                            href="https://www.instagram.com/9floor.co/"
                             rel="noopener noreferrer"
                             ><svg
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -305,10 +305,10 @@
                                         fill="#000000"
                                     ></path>
                                 </g></svg
-                        ></router-link>
-                        <router-link
+                        ></a>
+                        <a
                             target="_blank"
-                            to="https://www.facebook.com/9floor.co/"
+                            href="https://www.facebook.com/9floor.co/"
                             rel="noopener noreferrer"
                         >
                             <svg
@@ -324,7 +324,7 @@
                                     ></path>
                                 </g>
                             </svg>
-                        </router-link>
+                        </a>
                         <a
                             target="_blank"
                             href="https://open.spotify.com/user/cmas3ut0ye02tk1q56qwkf3pu?si=1MWz3EIzQYyVmYMd2CbmbQ"
