@@ -322,7 +322,7 @@
                     <div class="index_menu-block">
                         <div class="index_title">協助</div>
                         <div class="index_list">
-                            <router-link to="/service" class="index_list-item"
+                            <router-link to="/" class="index_list-item"
                                 >如何申請</router-link
                             ><router-link
                                 to="https://medium.com/9floor-co-living"

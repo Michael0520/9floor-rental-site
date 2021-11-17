@@ -46,9 +46,7 @@
                                 </div>
                                 <div class="index_footer-column">
                                     <h5>協助</h5>
-                                    <router-link to="/service"
-                                        >如何申請</router-link
-                                    >
+                                    <router-link to="/">如何申請</router-link>
                                     <router-link
                                         to="https://medium.com/9floor-co-living"
                                         target="_blank"

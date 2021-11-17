@@ -258,7 +258,7 @@
                     <div class="index_menu-block">
                         <div class="index_title">協助</div>
                         <div class="index_list">
-                            <router-link class="index_list-item" to="/service"
+                            <router-link class="index_list-item" to="/"
                                 >如何申請</router-link
                             >
                             <router-link

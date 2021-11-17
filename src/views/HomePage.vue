@@ -89,7 +89,7 @@
                                                         index_button
                                                         index_primary
                                                     "
-                                                    to="/zh-tw/room"
+                                                    to="/filter"
                                                 >
                                                     <div>
                                                         <svg
@@ -280,7 +280,7 @@
                         </div>
                         <router-link
                             class="index_button index_primary"
-                            to="/room"
+                            to="/filter"
                             ><div>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
