@@ -1499,14 +1499,17 @@ export default {
             });
 
         this.axios
-            .get("http://localhost:3000/location")
+            .get("https://michael-backend.herokuapp.com/option.json")
             .then(result => {
-                let data = result.data[0];
-                this.mrtCode = data.MRTCodes;
-                this.mrtStation = data.MRTStaions;
+                let data = result.data;
+                // console.log(data.location[0].MRTStaions);
+                let locationData = data.location[0];
+                // console.log(data);
+                this.mrtCode = locationData.MRTCodes;
+                this.mrtStation = locationData.MRTStaions;
 
-                // console.log("mrtCode", this.mrtCode);
-                // console.log("mrtStation", this.mrtStation);
+                console.log("mrtCode", this.mrtCode);
+                console.log("mrtStation", this.mrtStation);
             })
             .catch(err => {
                 console.warn(err);
