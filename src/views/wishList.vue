@@ -38,7 +38,7 @@
                                     v-for="(room, index) in temp"
                                     :key="index"
                                 >
-                                    <roomCard
+                                    <wishListRoomCard
                                         :price="room.monthlyRent"
                                         :name="room.name"
                                         :secondName="room.secondName"
@@ -65,7 +65,7 @@ import SiderBar from "../components/SiderBar.vue";
 import WhiteNavBar from "../components/WhiteNavBar.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
 import rightSiderBar from "../components/rightSiderBar.vue";
-import roomCard from "../components/RoomCard.vue";
+import wishListRoomCard from "../components/wishListRoomCard.vue";
 export default {
     data() {
         return {
@@ -88,7 +88,7 @@ export default {
         SiderBar,
         rightSiderBar,
         Footer,
-        roomCard
+        wishListRoomCard
     },
     mounted() {
         let loader = this.$loading.show({
@@ -131,7 +131,7 @@ export default {
             height: 45px;
             width: 100%;
             padding-left: 60px;
-            border-bottom: 1px solid $border;
+            border-bottom: 1px solid $info;
             a.index_marked {
                 color: $success;
             }
