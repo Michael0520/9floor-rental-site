@@ -98,7 +98,7 @@ export default {
             onCancel: this.onCancel
         });
         this.axios
-            .get("http://localhost:3000/rooms")
+            .get("https://michael-backend.herokuapp.com/rooms")
             .then(result => {
                 this.rooms = result.data;
                 this.temp = this.rooms;
