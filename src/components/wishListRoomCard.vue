@@ -101,14 +101,14 @@ export default {
             font-weight: 500;
             line-height: 1.35;
             letter-spacing: 3px;
-            color: #945443;
+            color: $success;
         }
         .index_rightTitle span {
             font-size: 18px;
             font-weight: 300;
             line-height: 1.35;
             letter-spacing: 3px;
-            color: #444647;
+            color: $primary;
             margin-left: 10px;
         }
     }
@@ -120,7 +120,7 @@ export default {
         font-weight: 300;
         line-height: 2;
         letter-spacing: 1px;
-        color: #444647;
+        color: $primary;
     }
     .index_detail {
         height: 26px;
@@ -129,7 +129,7 @@ export default {
             font-weight: 300;
             line-height: 2;
             letter-spacing: 1px;
-            color: #444647;
+            color: $primary;
             .index_price {
                 font-size: 18px;
                 font-weight: 300;
@@ -169,7 +169,7 @@ export default {
 .index_button-icon {
     i {
         font-size: 16px;
-        color: #857c7c;
+        color: $secondary;
         transition: all 0.3s;
     }
 }
