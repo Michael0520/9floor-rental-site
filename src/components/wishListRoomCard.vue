@@ -76,6 +76,7 @@ export default {
 
 <style lang="scss" scope>
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "../assets/custom.scss";
 
 .index_room-card {
     margin: 17px;
@@ -156,6 +157,12 @@ export default {
         z-index: 5;
         opacity: 1;
         transition: all 0.2s;
+        &:hover {
+            background: $lightOrange;
+            i {
+                color: #fff;
+            }
+        }
     }
 }
 
