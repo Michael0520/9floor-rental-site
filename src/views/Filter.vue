@@ -1470,24 +1470,24 @@ export default {
                 console.warn(err);
             });
         // catch roomOptions
+
         this.axios
-            .get("http://localhost:3000/roomOptions")
+            .get("https://michael-backend.herokuapp.com/option.json")
             .then(result => {
-                // console.log(result.data);
-                this.roomOptions = result.data;
+                // console.log("result", result.data);
+                let roomOptionsData = result.data.roomOptions;
+                // console.log("roomOptionsData : ", roomOptionsData);
+
+                this.roomOptions = roomOptionsData;
                 this.locations = this.roomOptions.location;
                 this.roomStyles = this.roomOptions.roomStyle;
                 this.specificLivingSpaces = this.roomOptions.specificLivingSpace;
                 this.specificLivingFeatures = this.roomOptions.specificLivingFeature;
                 this.MRTsLine = this.roomOptions.MRT.map(item => {
-                    // console.log(item, index, array);
-                    // console.log(item.line);
                     return item.line;
                 });
                 // console.log("捷運線們", this.MRTsLine);
                 this.MRTsStation = this.roomOptions.MRT.map(item => {
-                    // console.log(item, index, array);
-                    // console.log(item.line);
                     return item.name;
                 });
                 // console.log("捷運站們", this.MRTsStation);
@@ -1508,8 +1508,8 @@ export default {
                 this.mrtCode = locationData.MRTCodes;
                 this.mrtStation = locationData.MRTStaions;
 
-                console.log("mrtCode", this.mrtCode);
-                console.log("mrtStation", this.mrtStation);
+                // console.log("mrtCode", this.mrtCode);
+                // console.log("mrtStation", this.mrtStation);
             })
             .catch(err => {
                 console.warn(err);
