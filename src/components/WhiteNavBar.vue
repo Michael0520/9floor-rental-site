@@ -158,7 +158,7 @@
                     aria-labelledby="offcanvasRightLabel"
                 >
                     <div class="offcanvas-header">
-                        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                        <h5 id="offcanvasRightLabel">最愛收藏</h5>
                         <button
                             type="button"
                             class="btn-close text-reset"
