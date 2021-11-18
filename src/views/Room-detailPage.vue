@@ -986,6 +986,7 @@
     </div>
 </template>
 
+
 <script>
 import Footer from "../components/Footer.vue";
 import Breadcrumb from "../components/Breadcrumb.vue";
@@ -1076,9 +1077,9 @@ export default {
             });
 
             return await this.axios
-                .get("http://localhost:3000/rooms/" + id)
+                .get("https://michael-backend.herokuapp.com/rooms/" + id)
                 .then(result => {
-                    // console.log(result);
+                    // console.log(result.data);
                     // hide loader
                     setTimeout(() => {
                         loader.hide(); // simulate AJAX
@@ -1108,9 +1109,11 @@ export default {
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
-
+        console.log("roomsInfo :", this.roomsInfo);
         // image
         this.roomsImgUrl = this.roomsInfo.imgUrl;
+        console.log("roomsImgUrl :", this.roomsImgUrl);
+
         this.roomsSecondImgUrl = this.roomsInfo.secondImgUrl;
         //
         this.roomsTitle = this.roomsInfo.name;
