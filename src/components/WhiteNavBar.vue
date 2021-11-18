@@ -119,13 +119,58 @@
                 <li class="">
                     <button class="index_title">登入</button>
                 </li>
-                <li class="">
+                <!-- <li class="">
                     <div>
                         <button class="index_button ">
                             <div class="index_button-register">註冊</div>
                         </button>
                     </div>
-                </li>
+                </li> -->
+
+                <div>
+                    <button
+                        class="btn btn-success ms-4"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-suit-heart-fill "
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"
+                            />
+                        </svg>
+
+                        <span class="ms-1">2</span>
+                    </button>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+                        <button
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        ...
+                    </div>
+                </div>
             </ul>
         </nav>
         <div class="index_navigator-section">
