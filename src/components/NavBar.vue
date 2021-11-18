@@ -155,22 +155,59 @@
                         登入
                     </button>
                 </li>
-                <li
-                    class="index_register"
-                    :class="{ index_transparent: backgroundWhite }"
+                <button
+                    :class="
+                        backgroundWhite ? 'btn-outline-success' : 'btn-success'
+                    "
+                    class="btn mx-4"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
                 >
-                    <div>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-suit-heart-fill mx-2"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"
+                        />
+                    </svg>
+                    <button
+                        :class="
+                            backgroundWhite
+                                ? ['bg-success', 'text-white']
+                                : ['bg-white', 'text-success']
+                        "
+                        class="index_count px-2 rounded-circle "
+                    >
+                        2
+                    </button>
+                </button>
+
+                <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Offcanvas right</h5>
                         <button
-                            class="index_button  "
-                            :class="{
-                                index_transparent: backgroundWhite,
-                                index_inverse: backgroundWhite
-                            }"
-                        >
-                            <div class="index_button-register">註冊</div>
-                        </button>
+                            type="button"
+                            class="btn-close text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
                     </div>
-                </li>
+                    <div class="offcanvas-body">
+                        ...
+                    </div>
+                </div>
             </ul>
         </nav>
 
@@ -415,15 +452,39 @@ export default {
             name: "NavBar",
             isOpen: false,
             scrollNum: 0,
-            backgroundWhite: false
+            backgroundWhite: false,
+            //  OffCanvas
+            rooms: [],
+            temp: []
         };
     },
+    components: {},
     methods: {
         openmenu() {
             this.isOpen = !this.isOpen;
         }
     },
     mounted() {
+        let loader = this.$loading.show({
+            // Optional parameters
+            container: this.fullPage ? null : this.$refs.formContainer,
+            canCancel: true,
+            onCancel: this.onCancel
+        });
+        this.axios
+            .get("http://localhost:3000/rooms")
+            .then(result => {
+                this.rooms = result.data;
+                this.temp = this.rooms;
+                // success get data
+                setTimeout(() => {
+                    loader.hide(); // simulate AJAX
+                }, 1500);
+            })
+            .catch(err => {
+                console.warn(err);
+            });
+
         window.addEventListener("scroll", () => {
             let top =
                 document.documentElement.scrollTop ||
