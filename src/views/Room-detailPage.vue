@@ -1109,10 +1109,10 @@ export default {
     },
     async created() {
         this.roomsInfo = await this.getRooms(this.$route.params.id);
-        console.log("roomsInfo :", this.roomsInfo);
+        // console.log("roomsInfo :", this.roomsInfo);
         // image
         this.roomsImgUrl = this.roomsInfo.imgUrl;
-        console.log("roomsImgUrl :", this.roomsImgUrl);
+        // console.log("roomsImgUrl :", this.roomsImgUrl);
 
         this.roomsSecondImgUrl = this.roomsInfo.secondImgUrl;
         //
