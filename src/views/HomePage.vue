@@ -410,12 +410,18 @@ export default {
             canCancel: true,
             onCancel: this.onCancel
         });
+
         this.axios
-            .get("http://localhost:3000/rooms")
+            .get("https://michael-backend.herokuapp.com/rooms")
             .then(result => {
+                // console.log("result:", result);
                 this.rooms = result.data;
+                // console.log(" this.rooms:", this.rooms);
                 this.temp = this.rooms;
+
+                // render Rooms
                 this.renderRooms();
+
                 // success get data
                 setTimeout(() => {
                     loader.hide(); // simulate AJAX
@@ -424,6 +430,7 @@ export default {
             .catch(err => {
                 console.warn(err);
             });
+
         // if isTop = 0 , add fixed class , else remove
         window.addEventListener("scroll", () => {
             let clientTop =
