@@ -1,6 +1,9 @@
 <template>
     <div class="index_room-card">
         <div class="index_card-wrapper">
+            <button class="index_button-icon index_remove-button">
+                <i class="material-icons index_icon">close</i>
+            </button>
             <router-link :to="`/rooms/${id}`">
                 <div
                     class="index_card-image img-fluid"
@@ -29,7 +32,6 @@
                 {{ status }}
             </span>
         </div>
-
         <div class="index_detail">
             <span>
                 <span>
@@ -69,19 +71,10 @@ export default {
         }
     },
     props: ["name", "secondName", "roomStyle", "status", "price", "image", "id"]
-    // props: {
-    //     name: String,
-    //     secondName: String,
-    //     roomStyle: String,
-    //     status: String,
-    //     price: Number,
-    //     image: String,
-    //     id: String
-    // }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .index_room-card {
@@ -143,6 +136,34 @@ export default {
                 letter-spacing: 1px;
             }
         }
+    }
+}
+
+// close button styles
+
+.index_card-wrapper {
+    position: relative;
+    &:not(:hover) {
+        .index_remove-button {
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+    .index_remove-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        z-index: 5;
+        opacity: 1;
+        transition: all 0.2s;
+    }
+}
+
+.index_button-icon {
+    i {
+        font-size: 16px;
+        color: #857c7c;
+        transition: all 0.3s;
     }
 }
 </style>
