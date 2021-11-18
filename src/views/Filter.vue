@@ -1457,10 +1457,13 @@ export default {
             onCancel: this.onCancel
         });
         this.axios
-            .get("http://localhost:3000/rooms")
+            .get("https://michael-backend.herokuapp.com/rooms")
             .then(result => {
+                // console.log("result:", result);
                 this.rooms = result.data;
+                // console.log(" this.rooms:", this.rooms);
                 this.temp = this.rooms;
+
                 // success get data
                 setTimeout(() => {
                     loader.hide(); // simulate AJAX
@@ -1469,8 +1472,8 @@ export default {
             .catch(err => {
                 console.warn(err);
             });
-        // catch roomOptions
 
+        // catch roomOptions
         this.axios
             .get("https://michael-backend.herokuapp.com/option.json")
             .then(result => {
