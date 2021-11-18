@@ -1128,8 +1128,9 @@ export default {
         this.roomsAdministrativeFee = this.roomsInfo.initialPayment.administrativeFee;
         this.roomsCheckOutCleaningFee = this.roomsInfo.initialPayment.checkOutCleaningFee;
         // 每月小記
-        this.roomsEnergyFee = this.roomsInfo.monthlyFee.energyFee;
-        this.roomsServiceFee = this.roomsInfo.monthlyFee.serviceFee;
+        this.roomsEnergyFee = this.roomsInfo.monthlyfee.energyFee;
+        // console.log(this.roomsEnergyFee);
+        this.roomsServiceFee = this.roomsInfo.monthlyfee.serviceFee;
         // 短租方案
         this.roomsShortTermRentalThreeToFive = this.roomsInfo.shortTermRentalPlan.shortTermRentalThreeToFive;
         this.roomsShortTermRentalOneToTwo = this.roomsInfo.shortTermRentalPlan.shortTermRentalOneToTwo;
