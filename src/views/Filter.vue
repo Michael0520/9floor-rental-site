@@ -841,7 +841,7 @@
                                 :step="locationStep"
                                 :min="locationMin"
                                 :max="locationMax"
-                                @change="checkEventBinding"
+                                @change="typeMoblieMenu"
                             />
                             <div
                                 class="index_unit pt-2 d-flex justify-content-between "
@@ -1183,6 +1183,8 @@ export default {
             mobileRes = this.filterRoomsMobileRoomStyle(mobileRes);
             mobileRes = this.filterRoomsMobileMRTsLine(mobileRes);
             mobileRes = this.filterRoomsMobileMRTsStation(mobileRes);
+            mobileRes = this.filterByRoomFloor(mobileRes);
+
             this.temp = [...mobileRes];
         },
         typeMenu() {
@@ -1232,6 +1234,7 @@ export default {
                 // console.log("有一個勾");
                 res = res.filter(item => {
                     item.roomStyle === this.selectedRoomStyles;
+                    // console.log(item.roomStyle);
                     return this.selectedRoomStyles.includes(item.roomStyle);
                 });
             }
