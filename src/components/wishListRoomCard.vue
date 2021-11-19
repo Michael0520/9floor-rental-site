@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
 .index_room-card {
