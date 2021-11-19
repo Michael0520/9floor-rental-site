@@ -106,7 +106,7 @@
                         <label for="floatingTextarea">請輸入關鍵字</label>
                     </div>
                     <!-- location -->
-                    <div class="index_dropdown-group">
+                    <!-- <div class="index_dropdown-group">
                         <p class="small">城市</p>
                         <select
                             class="form-select form-select-sm index_dropdown-basic"
@@ -115,7 +115,6 @@
                             @change="typeMenu"
                         >
                             <option selected value="全國">全國</option>
-                            <!-- TODO:value 可以來改為動態更新 -->
                             <option
                                 v-for="(option, keys) in locations"
                                 :key="keys"
@@ -125,6 +124,29 @@
                                 {{ option.name }}
                             </option>
                         </select>
+                    </div> -->
+                    <div class="form-floating " style="margin:0 17px 17px;">
+                        <select
+                            class="form-select"
+                            id="floatingSelect"
+                            aria-label="Floating label select example"
+                            v-model="selectedLocation"
+                            @change="typeMenu"
+                        >
+                            <option selected disabled value="請選擇城市"
+                                >請選擇城市</option
+                            >
+                            <option value="全國">全國</option>
+                            <option
+                                v-for="(option, keys) in locations"
+                                :key="keys"
+                                :value="option.name"
+                            >
+                                {{ keys + 1 }}.
+                                {{ option.name }}
+                            </option>
+                        </select>
+                        <label for="floatingSelect">城市</label>
                     </div>
                     <div class="index_division"></div>
                     <!-- roomStyle -->
