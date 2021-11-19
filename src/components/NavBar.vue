@@ -504,7 +504,7 @@ export default {
 
 
 <style lang="scss" >
-@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 
 // desktop
