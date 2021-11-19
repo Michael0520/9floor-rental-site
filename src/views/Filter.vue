@@ -1104,7 +1104,7 @@ export default {
             MRTsStation: [],
             sites: [],
             // select array
-            selectedLocation: "全國",
+            selectedLocation: "請選擇城市",
             selectedRoomStyles: [],
             selectedRoomSpaces: "顯示特定居住空間",
             selectedRoomFeatures: [],
@@ -1211,9 +1211,10 @@ export default {
             // this.typeMenu();
         },
         filterByRoomLocation(res) {
-            if (this.selectedLocation === "請選擇城市") {
-                //
-            } else if (this.selectedLocation === "全國") {
+            if (
+                this.selectedLocation === "請選擇城市" ||
+                this.selectedLocation === "全國"
+            ) {
                 //
             } else {
                 res = res.filter(
