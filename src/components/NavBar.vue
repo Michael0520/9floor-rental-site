@@ -155,7 +155,25 @@
                         登入
                     </button>
                 </li>
-                <button
+                <li
+                    class="index_register"
+                    :class="{
+                        index_transparent: backgroundWhite
+                    }"
+                >
+                    <div>
+                        <button
+                            class="index_button"
+                            :class="{
+                                index_transparent: backgroundWhite,
+                                index_inverse: backgroundWhite
+                            }"
+                        >
+                            <div class="index_button-register">註冊</div>
+                        </button>
+                    </div>
+                </li>
+                <!-- <button
                     :class="
                         backgroundWhite ? 'btn-outline-success' : 'btn-success'
                     "
@@ -207,7 +225,7 @@
                     <div class="offcanvas-body">
                         ...
                     </div>
-                </div>
+                </div> -->
             </ul>
         </nav>
 
@@ -452,10 +470,8 @@ export default {
             name: "NavBar",
             isOpen: false,
             scrollNum: 0,
-            backgroundWhite: false,
+            backgroundWhite: false
             //  OffCanvas
-            rooms: [],
-            temp: []
         };
     },
     components: {},
@@ -465,26 +481,6 @@ export default {
         }
     },
     mounted() {
-        let loader = this.$loading.show({
-            // Optional parameters
-            container: this.fullPage ? null : this.$refs.formContainer,
-            canCancel: true,
-            onCancel: this.onCancel
-        });
-        this.axios
-            .get("http://localhost:3000/rooms")
-            .then(result => {
-                this.rooms = result.data;
-                this.temp = this.rooms;
-                // success get data
-                setTimeout(() => {
-                    loader.hide(); // simulate AJAX
-                }, 1500);
-            })
-            .catch(err => {
-                console.warn(err);
-            });
-
         window.addEventListener("scroll", () => {
             let top =
                 document.documentElement.scrollTop ||
