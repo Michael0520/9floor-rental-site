@@ -455,7 +455,7 @@ export default {
 };
 </script>
 <style  lang="scss" >
-@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 .index_content {
     opacity: 1;

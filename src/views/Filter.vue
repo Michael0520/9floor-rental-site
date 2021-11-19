@@ -1526,7 +1526,7 @@ export default {
 </style>
 
 <style  lang="scss" scoped>
-@import "~bootstrap/dist/css/bootstrap.css";
+// @import "~bootstrap/dist/css/bootstrap.css";
 @import "../assets/custom.scss";
 // date styles
 ::v-global(.dp__overlay_cell_active) {
