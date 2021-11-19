@@ -91,13 +91,13 @@
                                                     "
                                                     to="/filter"
                                                 >
-                                                    <div>
+                                                    <div class="">
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
                                                             width="14"
                                                             height="14"
                                                             fill="currentColor"
-                                                            class="bi bi-search"
+                                                            class="bi bi-search text-primary"
                                                             viewBox="0 0 16 16"
                                                         >
                                                             <path
@@ -127,6 +127,7 @@
                                                             class="
                                                                 bi
                                                                 bi-chevron-left
+                                                                text-primary
                                                             "
                                                             viewBox="0 0 16 16"
                                                         >
@@ -144,6 +145,7 @@
                                                             class="
                                                                 bi
                                                                 bi-chevron-right
+                                                                text-primary
                                                             "
                                                             viewBox="0 0 16 16"
                                                         >
@@ -188,7 +190,7 @@
                                 to="/filter"
                                 class="index_button index_primary"
                             >
-                                <div>
+                                <div class="">
                                     <i class="material-icons index_icon"
                                         >search</i
                                     >搜尋物件
