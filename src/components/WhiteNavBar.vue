@@ -119,15 +119,15 @@
                 <li class="">
                     <button class="index_title">登入</button>
                 </li>
-                <!-- <li class="">
+                <li class="">
                     <div>
                         <button class="index_button ">
                             <div class="index_button-register">註冊</div>
                         </button>
                     </div>
-                </li> -->
+                </li>
 
-                <div>
+                <!-- <div>
                     <button
                         class="btn btn-success ms-4"
                         type="button"
@@ -173,7 +173,7 @@
                             <offCanvasRoomCard />
                         </div>
                     </div>
-                </div>
+                </div> -->
             </ul>
         </nav>
         <div class="index_navigator-section">
@@ -393,7 +393,7 @@
 </template>
 
 <script>
-import offCanvasRoomCard from "../components/OffCanvasRoomCard.vue";
+// import offCanvasRoomCard from "../components/OffCanvasRoomCard.vue";
 export default {
     data() {
         return {
@@ -401,7 +401,7 @@ export default {
         };
     },
     components: {
-        offCanvasRoomCard
+        // offCanvasRoomCard
     },
     methods: {
         openmenu() {
