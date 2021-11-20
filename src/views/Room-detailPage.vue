@@ -956,11 +956,20 @@
                     <div class="index_content">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-lg-6 col-sm-12">
-                                    <RoomCard />
-                                </div>
-                                <div class="col-lg-6 col-sm-12">
-                                    <RoomCard />
+                                <div
+                                    class=" col-sm-12 col-lg-6"
+                                    v-for="(room, index) in temp"
+                                    :key="index"
+                                >
+                                    <RoomCard
+                                        :price="room.monthlyRent"
+                                        :name="room.name"
+                                        :secondName="room.secondName"
+                                        :roomStyle="room.roomStyle"
+                                        :status="room.status"
+                                        :image="room.imgUrl"
+                                        :id="room.id"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -1000,6 +1009,9 @@ export default {
             name: "RoomDetailPage",
             scrollNum: 0,
             isTop: false,
+            //
+            rooms: [],
+            temp: [],
             //
             roomsInfo: {},
             roomsImgUrl: "",
@@ -1081,6 +1093,18 @@ export default {
                 .then(result => {
                     // console.log(result.data);
                     // hide loader
+                    this.axios
+                        .get("https://michael-backend.herokuapp.com/rooms")
+                        .then(result => {
+                            // console.log(result);
+                            this.rooms = result.data;
+                            // console.log(" this.rooms:", this.rooms);
+                            this.temp = this.rooms;
+                            this.renderSimilarRooms();
+                        })
+                        .catch(err => {
+                            console.warn(err);
+                        });
                     setTimeout(() => {
                         loader.hide(); // simulate AJAX
                     }, 1000);
@@ -1105,6 +1129,35 @@ export default {
                 .replace(/\.\d*/, "");
             return res;
             // 12,345.67
+        },
+        renderSimilarRooms() {
+            let res = this.temp;
+            // let res2 = [];
+            let matchTitle = this.roomsTitle;
+            let currentRoom = this.roomsSecondTitle;
+
+            res = res.filter(item => {
+                return item.name.match(matchTitle);
+            });
+            // console.log("res", res);
+
+            let res2 = res.filter(item => {
+                return item.secondName !== currentRoom;
+            });
+
+            this.temp = [...res2];
+            // this.temp.length = 2;
+            // console.log(
+            //     "matchTitle:",
+            //     matchTitle,
+            //     ";",
+            //     "res :",
+            //     res,
+            //     "res2 :",
+            //     res2,
+            //     "temp :",
+            //     this.temp
+            // );
         }
     },
     async created() {
