@@ -1,4 +1,4 @@
-# 9floor-rental-site
+# 9floor-rental-site 租屋網站
 
 ## Project setup
 ```
@@ -9,17 +9,7 @@ npm install
 ```
 npm run serve
 ```
+## Intro
 
-### Compiles and minifies for production
-```
-npm run build
-```
+參考範例租屋網站來做切版以及製作功能
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# 9floor-rental-site
