@@ -1,15 +1,7 @@
 # 9floor-rental-site 租屋網站
 
-## Project setup
-```
-npm install
-```
+## 簡介
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-## Intro
-
-參考範例租屋網站來做切版以及製作功能
+參考範例租屋網站來做切版以及製作功能，
+可以透過搜尋頁面內的搜尋欄位，來快速尋找到您需求的房屋
 
