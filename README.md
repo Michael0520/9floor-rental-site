@@ -1,5 +1,8 @@
 # 9floor-rental-site 租屋網站
 
+## Demo
+https://michael0520.github.io/9floor-rental-site/#/
+
 ## 簡介
 
 參考範例租屋網站來做切版以及製作功能，
