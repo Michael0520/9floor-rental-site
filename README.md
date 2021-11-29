@@ -1,7 +1,7 @@
 # 9floor-rental-site 租屋網站
 
 ## Demo
-https://michael0520.github.io/9floor-rental-site/#/
+https://michael0520.github.io/9floor-rental-site/#/filter
 
 ## 簡介
 
